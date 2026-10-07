@@ -207,7 +207,7 @@ function RecCard({ r }: { r: ScorecardData["recs"][number] }) {
         <span className="mono text-[11px] text-ink-3">{r.id}</span>
         <span className="mono text-[11px] text-ink-3">{r.part_id}</span>
       </div>
-      <div className="text-[13.5px] font-medium leading-snug">Dual-source {r.part_desc.toLowerCase()}</div>
+      <div className="text-[13.5px] font-medium leading-snug">Dual-source: {r.part_desc}</div>
       <div className="mt-1 text-[12.5px] text-ink-2">
         From {r.current_name} to {r.candidate_names.join(" or ")}
       </div>

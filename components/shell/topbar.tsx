@@ -16,13 +16,13 @@ export function TopBar({ index }: { index: SearchItem[] }) {
   const setFlagOpen = useStore((s) => s.setFlagOpen);
   const setDevOpen = useStore((s) => s.setDevOpen);
   return (
-    <header className="fixed left-[240px] right-0 top-0 z-20 flex h-14 items-center gap-4 border-b border-rule bg-paper px-6">
+    <header className="fixed left-[240px] right-0 top-0 z-20 flex h-14 items-center gap-4 whitespace-nowrap border-b border-rule bg-paper px-6">
       <GlobalSearch index={index} />
-      <div className="ml-auto flex items-center gap-4">
-        <span className="mono hidden border border-dashed border-rule-2 px-2 py-0.5 text-[10px] uppercase tracking-[0.06em] text-ink-3 xl:inline">
+      <div className="ml-auto flex items-center gap-3 min-[1440px]:gap-4">
+        <span className="mono border border-dashed border-rule-2 px-2 py-0.5 text-[10px] uppercase tracking-[0.06em] text-ink-3">
           Prototype, synthetic data
         </span>
-        <span className="text-[12.5px] text-ink-2">Commercial Aerospace</span>
+        <span className="text-[12.5px] text-ink-2" title="Business unit">Commercial Aerospace</span>
         <button
           onClick={() => setDevOpen(true)}
           className="group flex items-center gap-2 border-l border-rule pl-4 text-left"
@@ -118,7 +118,7 @@ function GlobalSearch({ index }: { index: SearchItem[] }) {
     router.push(it.href);
   };
   return (
-    <div className="relative w-[380px]">
+    <div className="relative w-[260px] min-[1440px]:w-[380px]">
       <Search size={14} className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-ink-3" />
       <input
         ref={inputRef}
@@ -140,7 +140,7 @@ function GlobalSearch({ index }: { index: SearchItem[] }) {
         aria-label="Global search"
         className="h-8 w-full border border-rule bg-paper-2 pl-8 pr-12 text-[13px] placeholder:text-ink-3 focus:border-accent focus:bg-paper focus:outline-none"
       />
-      <span className="mono pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-[10px] text-ink-3">Ctrl K</span>
+      <span className="mono pointer-events-none absolute right-2 top-1/2 hidden -translate-y-1/2 text-[10px] text-ink-3 min-[1440px]:inline">Ctrl K</span>
       {open && q && (
         <div className="absolute left-0 top-10 z-40 w-[520px] border border-rule-2 bg-paper">
           {results.length === 0 ? (

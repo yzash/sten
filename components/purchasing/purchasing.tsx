@@ -34,8 +34,9 @@ export function Purchasing({
   calls: Call[];
   initial: { supplierId?: string; lineId?: string; filter?: string };
 }) {
-  const [supplierId, setSupplierId] = useState<string | undefined>(initial.supplierId ?? rows.find((r) => r.split_candidate)?.supplier.id);
-  const [lineId, setLineId] = useState<string | undefined>(initial.lineId);
+  const firstCall = lines.find((l) => l.id === calls[0]?.po_line_id);
+  const [supplierId, setSupplierId] = useState<string | undefined>(initial.supplierId ?? firstCall?.supplier_id ?? rows.find((r) => r.split_candidate)?.supplier.id);
+  const [lineId, setLineId] = useState<string | undefined>(initial.lineId ?? (initial.supplierId ? undefined : firstCall?.id));
   const supplierLines = lines.filter((l) => l.supplier_id === supplierId).sort((a, b) => a.needed_date.localeCompare(b.needed_date));
   const line = lines.find((l) => l.id === lineId) ?? supplierLines[0];
 
@@ -51,7 +52,7 @@ export function Purchasing({
           Opened from search: <span className="mono">{initial.filter}</span>
         </div>
       )}
-      <div className="grid grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+      <div className="grid grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
         <div className="min-w-0 border-r border-rule px-8 py-5">
           <SectionHead label={`Open PO board · ${rows.length} suppliers`} right={<span className="text-[11.5px] text-ink-3">{rows.filter((r) => r.split_candidate).length} split candidates</span>} />
           <table className="w-full text-[12.5px]" data-testid="po-board">
@@ -172,7 +173,9 @@ function SplitBuilder({ line }: { line: LineView }) {
   const currentActive = line.sources.find((s) => s.supplier_id === line.supplier_id && s.status === "active");
   const usable = line.sources.filter((s) => s.status === "active");
   const [aId, setAId] = useState(currentActive?.supplier_id ?? usable[0]?.supplier_id);
-  const [bId, setBId] = useState(usable.find((s) => s.supplier_id !== (currentActive?.supplier_id ?? usable[0]?.supplier_id))?.supplier_id);
+  const [bId, setBId] = useState(
+    [...usable].filter((s) => s.supplier_id !== (currentActive?.supplier_id ?? usable[0]?.supplier_id)).sort((x, y) => x.lead - y.lead)[0]?.supplier_id,
+  );
   const [ratio, setRatio] = useState(70);
   const [confirm, setConfirm] = useState(false);
   const approve = useStore((s) => s.approve);

@@ -76,8 +76,15 @@ body {
 }
 
 .tnum {
+  white-space: nowrap;
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
+}
+
+/* Dense tables: hairline rows, consistent column gutter */
+table th + th,
+table td + td {
+  padding-left: 12px;
 }
 
 .label {

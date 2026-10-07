@@ -7,7 +7,7 @@ export function Tag({ children, className, tone = "default", title }: { children
     <span
       title={title}
       className={cn(
-        "mono inline-flex h-[18px] shrink-0 items-center border px-1.5 text-[10px] leading-none tracking-[0.04em] uppercase",
+        "mono inline-flex h-[18px] shrink-0 items-center whitespace-nowrap border px-1.5 text-[10px] leading-none tracking-[0.04em] uppercase",
         tone === "default" && "border-rule-2 text-ink-2",
         tone === "muted" && "border-rule text-ink-3",
         tone === "accent" && "border-accent text-accent",

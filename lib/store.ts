@@ -2,7 +2,7 @@
 
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { executeActions } from "./agents/execute";
+import { ADAPTERS, executeActions } from "./agents/execute";
 import { DEFAULT_CLOCK, PERSONAS, type PersonaId } from "./personas";
 import type { AgentActionSpec, DisruptionType, ExecutionAction, Signal } from "./schema";
 import type { FeedSignal } from "./view";
@@ -265,16 +265,34 @@ export const useStore = create<State & Actions>()(
         return Object.fromEntries(Object.entries(rest).filter(([, v]) => typeof v !== "function"));
       },
       onRehydrateStorage: () => (state) => {
-        // Executions interrupted by a reload: written ones were accepted, earlier ones did not run.
-        const log = (state?.log ?? []).map((l) =>
-          l.status === "written"
-            ? { ...l, status: "confirmed" as const }
-            : l.status === "queued" || l.status === "writing"
-              ? { ...l, status: "failed" as const, payload: { ...l.payload, _system_message: "Interrupted by page reload; not written" } }
-              : l,
-        );
+        // Executions interrupted by a reload: written ones were accepted; queued or writing ones resume.
+        const log = (state?.log ?? []).map((l) => (l.status === "written" ? { ...l, status: "confirmed" as const } : l));
         useStore.setState({ hydrated: true, log });
+        void resumeInterrupted();
       },
     },
   ),
 );
+
+/** Re-run agent actions that were queued or mid-write when the page reloaded. */
+async function resumeInterrupted() {
+  const pending = useStore
+    .getState()
+    .log.filter((l) => l.actor === "agent" && (l.status === "queued" || l.status === "writing") && l.system !== "Prototype")
+    .sort((a, b) => a.created_at.localeCompare(b.created_at));
+  const patch = (id: string, p: Partial<ExecutionAction>) =>
+    useStore.setState({ log: useStore.getState().log.map((l) => (l.id === id ? { ...l, ...p, updated_at: useStore.getState().clock } : l)) });
+  for (const l of pending) {
+    patch(l.id, { status: "writing" });
+    const adapter = ADAPTERS[l.system as keyof typeof ADAPTERS];
+    const res = await adapter.execute({ system: adapter.system, action: l.action, label: l.label, payload: l.payload }, {
+      nextSeq: () => {
+        const n = useStore.getState().docSeq + 1;
+        useStore.setState({ docSeq: n });
+        return n;
+      },
+    });
+    patch(l.id, { status: res.status === "written" ? "written" : "failed", doc_number: res.doc_number });
+    setTimeout(() => patch(l.id, { status: "confirmed" }), 400);
+  }
+}
