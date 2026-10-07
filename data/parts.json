@@ -26,7 +26,7 @@
    },
    {
     "supplier_id": "100141",
-    "price_usd": 20010,
+    "price_usd": 17980,
     "lead_time_days": 3,
     "kind": "distributor"
    }
@@ -63,7 +63,7 @@
    },
    {
     "supplier_id": "100141",
-    "price_usd": 22080,
+    "price_usd": 19840,
     "lead_time_days": 3,
     "kind": "distributor"
    }
@@ -100,7 +100,7 @@
    },
    {
     "supplier_id": "100141",
-    "price_usd": 18768,
+    "price_usd": 16864,
     "lead_time_days": 3,
     "kind": "distributor"
    }

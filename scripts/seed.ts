@@ -261,7 +261,7 @@ for (const [id, d, cost] of RINGS) {
       src(ID.aerotech, cost, 120),
       src(ID.meridian, cost * 1.12, 28),
       src(ID.valcourt, cost * 0.82, 24, "pma"),
-      src(ID.pacific, cost * 1.38, 3, "distributor"),
+      src(ID.pacific, cost * 1.24, 3, "distributor"),
     ],
     airworthiness_doc: "Dual release",
     criticality: "A",
@@ -690,7 +690,7 @@ addWo({ id: "WO-2611", kind: "engine", customer: "CUS-02", induction: "2026-11-1
 addWo({ id: "WO-2612", kind: "component", customer: "CUS-08", induction: "2026-11-18", tat: 30, float: 30, ld: 1_000, bom: [{ part: "RAW-9100-050", qty: 40, line: L.ti1 }, ...filler("raw_alloy", 1)] });
 addWo({ id: "WO-2613", kind: "airframe", customer: "CUS-05", induction: "2026-10-19", tat: 21, float: 5, ld: 3_000, bom: [{ part: "CON-8100-110", qty: 300, line: L.quake1 }, ...filler("consumable", 2)] });
 addWo({ id: "WO-2614", kind: "airframe", customer: "CUS-07", induction: "2026-10-16", tat: 26, float: 3, ld: 4_000, bom: [{ part: "CON-8200-210", qty: 180, line: L.klang1 }, ...filler("seal", 2)] });
-addWo({ id: "WO-2615", kind: "engine", customer: "CUS-06", induction: "2026-11-30", tat: 60, float: 14, ld: 0, bom: [{ part: "SEA-3100-510", qty: 120 }, ...filler("engine_lru", 3)] });
+addWo({ id: "WO-2615", kind: "engine", customer: "CUS-06", induction: "2026-11-30", tat: 60, float: 14, ld: 0, bom: [{ part: "SEA-3100-510", qty: 400 }, ...filler("engine_lru", 3)] });
 addWo({ id: "WO-2616", kind: "component", customer: "CUS-04", induction: "2026-11-16", tat: 28, float: 20, ld: 2_000, bom: [{ part: "RAW-9300-610", qty: 60, line: L.magnet1 }] });
 addWo({ id: "WO-2617", kind: "engine", customer: "CUS-03", induction: "2026-10-26", tat: 66, float: 6, ld: 12_000, bom: [{ part: "CON-8400-310", qty: 45, line: L.harness1 }, ...filler("engine_lru", 2)] });
 addWo({ id: "WO-2618", kind: "engine", customer: "CUS-01", induction: "2026-11-08", tat: 72, float: 16, ld: 9_000, bom: [{ part: "ENG-4810-310", qty: 36, line: L.lpt1 }, ...filler("engine_lru", 3)] });
@@ -1139,7 +1139,7 @@ for (const p of parts) {
   if (skip.has(p.id)) continue;
   if (p.id === "SEA-3100-510") {
     inventory.push({ id: `INV-${String(invSeq++).padStart(4, "0")}`, part_id: p.id, location: "SG01-QM-BLK", on_hand: 400, allocated: 0, free: 0, batch: "DSL-26-0918", inspection_status: "rejected", allocated_to_wo: null });
-    inventory.push({ id: `INV-${String(invSeq++).padStart(4, "0")}`, part_id: p.id, location: "SG01-K-02", on_hand: 160, allocated: 120, free: 40, batch: "DSL-26-0811", inspection_status: "released", allocated_to_wo: "WO-2615" });
+    inventory.push({ id: `INV-${String(invSeq++).padStart(4, "0")}`, part_id: p.id, location: "SG01-K-02", on_hand: 440, allocated: 400, free: 40, batch: "DSL-26-0811", inspection_status: "released", allocated_to_wo: "WO-2615" });
     continue;
   }
   const [q0, q1] = QTY[p.category];

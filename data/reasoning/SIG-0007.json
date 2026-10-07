@@ -1,0 +1,198 @@
+{
+  "signal_id": "SIG-0007",
+  "summary": "Aerotech Precision, the only active source for the stage 3, 4 and 5 HPC blade retention rings, is in receivership and has frozen shipments. Three open POs worth USD 1.40M are stranded and two engine inductions lose their rings. Tanjong Pacific's engine on line E-17 moves 15 days beyond float unless the rings are resourced this week.",
+  "impact": {
+    "cost": {
+      "usd": 2259500,
+      "severity": 78,
+      "rationale": "USD 1.40M of open PO value across 3 POs, a USD 420K expedite estimate for sole-source rings and USD 440K of LD exposure if nothing is done."
+    },
+    "delay": {
+      "days": 15,
+      "severity": 64,
+      "rationale": "WO-2601 slips 34 days against 19 days of float, so the Tanjong Pacific redelivery moves from 6 Jan to 21 Jan."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 2,
+      "severity": 55,
+      "rationale": "Two work-order ring lines are short and engine shop line E-17 is at risk; WO-2602 absorbs its 21 day slip in float."
+    },
+    "reputation": {
+      "weighted_usd": 426900,
+      "severity": 70,
+      "rationale": "Tanjong Pacific is a strategic customer with an LD clause of USD 12K per day, worth USD 408K at the unmitigated slip."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Switch to approved second source with air expedite",
+      "mechanism": "Split all three lines 70/30: Meridian Turbine Components (approved, dormant) at 28 days by air, Pacific Aero Spares broker stock at 3 days to start the 28 Oct induction.",
+      "cost_usd": 222000,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 4,
+      "precedent_id": "PRE-03",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_split_po",
+          "label": "Create split PO 70/30: Meridian Turbine Components 67 rings, Pacific Aero Spares 28 rings",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "source_lines": ["4500018226-00010", "4500018251-00010", "4500018284-00010"],
+            "split": [
+              { "lifnr": "100102", "share": 0.7, "qty": 67, "lead_time_days": 28 },
+              { "lifnr": "100141", "share": 0.3, "qty": 28, "lead_time_days": 3 }
+            ],
+            "net_value_usd": 1617584
+          }
+        },
+        {
+          "system": "SAP FI",
+          "action": "set_payment_block",
+          "label": "Hold payment on Aerotech Precision (vendor 100118)",
+          "payload": { "lifnr": "100118", "company_code": "SG10", "block_key": "R", "reason": "Receivership; open items under review" }
+        },
+        {
+          "system": "Forwarder",
+          "action": "raise_expedite",
+          "label": "Raise air expedite with Transpac Air Logistics: Meridian CVG to SIN, next flight out",
+          "payload": { "forwarder": "Transpac Air Logistics", "origin": "CVG", "destination": "SIN", "service": "next_flight_out", "pieces": 67, "est_cost_usd": 4400 }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: ring ETAs for WO-2601 and WO-2602 move to 10 Oct (broker) and 5 Nov (Meridian)",
+          "payload": { "work_orders": ["WO-2601", "WO-2602"], "eta_broker": "2026-10-10", "eta_second_source": "2026-11-05", "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "PMA alternate with customer approval",
+      "mechanism": "Buy Valcourt Aeroparts PMA rings at 18% below Aerotech price once Tanjong Pacific and Coralline Air accept PMA on HPC parts.",
+      "cost_usd": -156000,
+      "residual_delay_days": 5,
+      "risk": "high",
+      "speed_days": 20,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "request_customer_approval",
+          "label": "Request PMA acceptance from Tanjong Pacific and Coralline Air technical records",
+          "payload": { "customers": ["CUS-03", "CUS-02"], "parts": ["ENG-4471-120", "ENG-4471-130", "ENG-4471-140"], "pma_holder": "100107", "response_due": "2026-10-17" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Valcourt Aeroparts for 95 PMA rings, released on customer acceptance",
+          "payload": { "doc_type": "NB", "lifnr": "100107", "qty": 95, "net_value_usd": 1148000, "release_strategy": "hold_until_approval" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Buy forward from broker stock",
+      "mechanism": "Take all 70 stage 3 and 4 rings Pacific Aero Spares holds ex-stock; resource stage 5 to Meridian later at standard lead time.",
+      "cost_usd": 297000,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 3,
+      "precedent_id": "PRE-06",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Pacific Aero Spares for 70 rings (40 stage 3, 30 stage 4)",
+          "payload": { "doc_type": "NB", "lifnr": "100141", "lines": [{ "matnr": "ENG-4471-120", "qty": 40 }, { "matnr": "ENG-4471-130", "qty": 30 }], "net_value_usd": 1314400, "doc_check": "dual release and back-to-birth trace" }
+        },
+        {
+          "system": "SAP FI",
+          "action": "set_payment_block",
+          "label": "Hold payment on Aerotech Precision (vendor 100118)",
+          "payload": { "lifnr": "100118", "company_code": "SG10", "block_key": "R", "reason": "Receivership; open items under review" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Re-sequence inductions",
+      "mechanism": "Push WO-2601 induction back 15 days and pull a later engine with kitted parts into line E-17, then agree a revised redelivery with Tanjong Pacific.",
+      "cost_usd": 96000,
+      "residual_delay_days": 15,
+      "risk": "medium",
+      "speed_days": 2,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "reschedule_induction",
+          "label": "Move WO-2601 induction from 28 Oct to 12 Nov and offer slot E-17 to the next kitted engine",
+          "payload": { "work_order": "WO-2601", "from": "2026-10-28", "to": "2026-11-12", "slot": "Engine shop line E-17" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Tanjong Pacific a revised redelivery proposal with partial LD relief",
+          "payload": { "customer": "CUS-03", "new_redelivery": "2027-01-21", "ld_relief_requested_pct": 50 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-5",
+      "name": "Pay Aerotech's receiver for in-process WIP",
+      "mechanism": "Settle the receiver's claim to release finished and in-process rings, then run a full airworthiness traceability review before kitting.",
+      "cost_usd": 192000,
+      "residual_delay_days": 6,
+      "risk": "high",
+      "speed_days": 18,
+      "precedent_id": "PRE-04",
+      "actions": [
+        {
+          "system": "SAP FI",
+          "action": "create_payment",
+          "label": "Pay the Aerotech receivers USD 96K to release finished rings",
+          "payload": { "payee": "Receivers of Aerotech Precision Pte Ltd", "amount_usd": 96000, "reference": "Release of finished goods and WIP" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_inspection_lot",
+          "label": "Create receiving inspection lots for released rings with full trace review",
+          "payload": { "matnr": ["ENG-4471-120", "ENG-4471-130", "ENG-4471-140"], "inspection_type": "01", "trace_review": true }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Confirm open orders and WIP position to the receivers by 10 Oct",
+          "payload": { "to": "Receivers of Aerotech Precision Pte Ltd", "po_lines": ["4500018226-00010", "4500018251-00010", "4500018284-00010"] }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Splitting 70/30 between Meridian and broker stock holds both inductions for USD 222K, against USD 440K of LD exposure if the 28 Oct induction slips. Broker-only is USD 75K dearer and puts all trace paperwork on one distributor, while the PMA route is cheaper on paper but approval alone would consume Tanjong Pacific's float. The 2023 forging insolvency (PRE-03) used the same split because a dormant second source cannot ramp to 100% inside four weeks.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Five options. Switch to Meridian with broker stock for the first induction (USD 222K, no redelivery slip, recommended), PMA rings from Valcourt (saves USD 156K net but needs customer acceptance and likely moves Tanjong Pacific 5 days), buy forward from Pacific Aero Spares broker stock (USD 297K, no slip), re-sequence inductions (USD 96K but Tanjong Pacific still moves 15 days), or pay the receiver for WIP (USD 192K, slow and high trace risk)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "The PMA alternate is the cheapest: Valcourt rings are 18% below Aerotech price, so it nets a USD 156K saving after approval effort and the expected 5 days of LDs. It only works if Tanjong Pacific and Coralline Air accept PMA on HPC parts, which takes about 20 days. The cheapest option that holds every redelivery is the recommended split at USD 222K."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2023 a sole-source ring forging shop went into liquidation with three open POs (PRE-03). We reactivated the approved but dormant second source with air expedite and used broker stock for the first induction, for USD 296K and 4 days of slip inside float. The lesson was to split the first wave 70/30 because the second source could not ramp to 100% inside four weeks."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2601 needs 30 stage 4 rings at induction on 28 Oct. Aerotech's frozen shipments move the ring ETA to 1 Dec, a 34 day slip against 19 days of work-order float, so redelivery to Tanjong Pacific moves 15 days to 21 Jan. WO-2602 slips 21 days but has 25 days of float, so its redelivery holds."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}
