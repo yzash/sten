@@ -1,0 +1,1207 @@
+[
+ {
+  "id": "SHP-880436",
+  "po_line_ids": [
+   "4500018425-00010"
+  ],
+  "carrier": "Nordvik Air Cargo",
+  "mode": "air",
+  "origin": "Stavanger",
+  "route_legs": [
+   {
+    "from": "SVG",
+    "to": "FRA",
+    "corridor": "SVG-FRA",
+    "mode": "road"
+   },
+   {
+    "from": "FRA",
+    "to": "SIN",
+    "corridor": "FRA-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-09",
+  "status": "in_transit",
+  "risk_flags": [
+   "Time critical",
+   "Oversize ULD"
+  ]
+ },
+ {
+  "id": "SHP-880451",
+  "po_line_ids": [
+   "4500018822-00010"
+  ],
+  "carrier": "Nordvik Air Cargo",
+  "mode": "air",
+  "origin": "Neuss",
+  "route_legs": [
+   {
+    "from": "NSS",
+    "to": "FRA",
+    "corridor": "DUS-FRA",
+    "mode": "road"
+   },
+   {
+    "from": "FRA",
+    "to": "SIN",
+    "corridor": "FRA-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-10",
+  "status": "in_transit",
+  "risk_flags": [
+   "DG class 9"
+  ]
+ },
+ {
+  "id": "SHP-880471",
+  "po_line_ids": [
+   "4500018854-00010"
+  ],
+  "carrier": "Nordvik Air Cargo",
+  "mode": "air",
+  "origin": "Augsburg",
+  "route_legs": [
+   {
+    "from": "AGB",
+    "to": "FRA",
+    "corridor": "MUC-FRA",
+    "mode": "road"
+   },
+   {
+    "from": "FRA",
+    "to": "SIN",
+    "corridor": "FRA-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-11",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880488",
+  "po_line_ids": [
+   "4500018687-00010"
+  ],
+  "carrier": "Selat Feeder Lines",
+  "mode": "sea",
+  "origin": "Klang",
+  "route_legs": [
+   {
+    "from": "PKG",
+    "to": "SIN",
+    "corridor": "PKG",
+    "mode": "sea"
+   }
+  ],
+  "eta": "2026-10-12",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880509",
+  "po_line_ids": [
+   "4500018894-00010"
+  ],
+  "carrier": "Lowlands Ocean Freight",
+  "mode": "sea",
+  "origin": "Rotterdam",
+  "route_legs": [
+   {
+    "from": "RTM",
+    "to": "SIN",
+    "corridor": "RTM",
+    "mode": "sea"
+   }
+  ],
+  "eta": "2026-10-14",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880525",
+  "po_line_ids": [
+   "4500019056-00020"
+  ],
+  "carrier": "Gallic Air Freight",
+  "mode": "air",
+  "origin": "Macon",
+  "route_legs": [
+   {
+    "from": "CDG",
+    "to": "SIN",
+    "corridor": "CDG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-20",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880541",
+  "po_line_ids": [
+   "4500018980-00010"
+  ],
+  "carrier": "Kanto Air Express",
+  "mode": "air",
+  "origin": "Sakai",
+  "route_legs": [
+   {
+    "from": "NRT",
+    "to": "SIN",
+    "corridor": "NRT-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-14",
+  "status": "booked",
+  "risk_flags": [
+   "DG class 9"
+  ]
+ },
+ {
+  "id": "SHP-880547",
+  "po_line_ids": [
+   "4500020282-00040"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Pittsburgh",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-11-07",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880568",
+  "po_line_ids": [
+   "4500019806-00040"
+  ],
+  "carrier": "Gallic Air Freight",
+  "mode": "air",
+  "origin": "Blagnac",
+  "route_legs": [
+   {
+    "from": "CDG",
+    "to": "SIN",
+    "corridor": "CDG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-29",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880585",
+  "po_line_ids": [
+   "4500019423-00020"
+  ],
+  "carrier": "Nordvik Air Cargo",
+  "mode": "air",
+  "origin": "Stavanger",
+  "route_legs": [
+   {
+    "from": "OSL",
+    "to": "SIN",
+    "corridor": "OSL-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-16",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880604",
+  "po_line_ids": [
+   "4500019423-00010"
+  ],
+  "carrier": "Nordvik Air Cargo",
+  "mode": "air",
+  "origin": "Stavanger",
+  "route_legs": [
+   {
+    "from": "OSL",
+    "to": "SIN",
+    "corridor": "OSL-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-24",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880617",
+  "po_line_ids": [
+   "4500019240-00050"
+  ],
+  "carrier": "Vltava Air Freight",
+  "mode": "air",
+  "origin": "Ostrava",
+  "route_legs": [
+   {
+    "from": "PRG",
+    "to": "SIN",
+    "corridor": "PRG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-20",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880626",
+  "po_line_ids": [
+   "4500019413-00010"
+  ],
+  "carrier": "Kanto Air Express",
+  "mode": "air",
+  "origin": "Sendai",
+  "route_legs": [
+   {
+    "from": "NRT",
+    "to": "SIN",
+    "corridor": "NRT-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-27",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880648",
+  "po_line_ids": [
+   "4500019229-00020"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Cincinnati",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-24",
+  "status": "booked",
+  "risk_flags": [
+   "Temperature controlled"
+  ]
+ },
+ {
+  "id": "SHP-880651",
+  "po_line_ids": [
+   "4500020324-00040"
+  ],
+  "carrier": "Causeway Trucking",
+  "mode": "road",
+  "origin": "Klang",
+  "route_legs": [
+   {
+    "from": "JHB",
+    "to": "SIN",
+    "corridor": "JHB-SIN",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-09-29",
+  "status": "delivered",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880658",
+  "po_line_ids": [
+   "4500019372-00020"
+  ],
+  "carrier": "Thames Air Freight",
+  "mode": "air",
+  "origin": "Telford",
+  "route_legs": [
+   {
+    "from": "LHR",
+    "to": "SIN",
+    "corridor": "LHR-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-28",
+  "status": "booked",
+  "risk_flags": [
+   "Time critical"
+  ]
+ },
+ {
+  "id": "SHP-880677",
+  "po_line_ids": [
+   "4500019372-00050"
+  ],
+  "carrier": "Thames Air Freight",
+  "mode": "air",
+  "origin": "Telford",
+  "route_legs": [
+   {
+    "from": "LHR",
+    "to": "SIN",
+    "corridor": "LHR-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-22",
+  "status": "booked",
+  "risk_flags": [
+   "Time critical"
+  ]
+ },
+ {
+  "id": "SHP-880703",
+  "po_line_ids": [
+   "4500020050-00050"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Wichita",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-09",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880729",
+  "po_line_ids": [
+   "4500019109-00010"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Spokane",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-28",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880737",
+  "po_line_ids": [
+   "4500019482-00030"
+  ],
+  "carrier": "Isthmus Road Freight",
+  "mode": "road",
+  "origin": "Chonburi",
+  "route_legs": [
+   {
+    "from": "BKK",
+    "to": "SIN",
+    "corridor": "BKK-SIN",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-10-19",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880740",
+  "po_line_ids": [
+   "4500020098-00020"
+  ],
+  "carrier": "Gallic Air Freight",
+  "mode": "air",
+  "origin": "Toulouse",
+  "route_legs": [
+   {
+    "from": "CDG",
+    "to": "SIN",
+    "corridor": "CDG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-18",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880752",
+  "po_line_ids": [
+   "4500020324-00030"
+  ],
+  "carrier": "Causeway Trucking",
+  "mode": "road",
+  "origin": "Klang",
+  "route_legs": [
+   {
+    "from": "JHB",
+    "to": "SIN",
+    "corridor": "JHB-SIN",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-11-06",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880771",
+  "po_line_ids": [
+   "4500020198-00010"
+  ],
+  "carrier": "Red River Air Freight",
+  "mode": "air",
+  "origin": "Haiphong",
+  "route_legs": [
+   {
+    "from": "HAN",
+    "to": "SIN",
+    "corridor": "HAN-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-28",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880798",
+  "po_line_ids": [
+   "4500020282-00030"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Pittsburgh",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-25",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880802",
+  "po_line_ids": [
+   "4500018995-00010"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Wichita",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-12",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880831",
+  "po_line_ids": [
+   "4500019463-00020"
+  ],
+  "carrier": "Kanto Air Express",
+  "mode": "air",
+  "origin": "Sagamihara",
+  "route_legs": [
+   {
+    "from": "NRT",
+    "to": "SIN",
+    "corridor": "NRT-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-11-05",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880860",
+  "po_line_ids": [
+   "4500020198-00020"
+  ],
+  "carrier": "Red River Air Freight",
+  "mode": "air",
+  "origin": "Haiphong",
+  "route_legs": [
+   {
+    "from": "HAN",
+    "to": "SIN",
+    "corridor": "HAN-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-11-05",
+  "status": "booked",
+  "risk_flags": [
+   "Temperature controlled"
+  ]
+ },
+ {
+  "id": "SHP-880889",
+  "po_line_ids": [
+   "4500019482-00050"
+  ],
+  "carrier": "Isthmus Road Freight",
+  "mode": "road",
+  "origin": "Chonburi",
+  "route_legs": [
+   {
+    "from": "BKK",
+    "to": "SIN",
+    "corridor": "BKK-SIN",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-10-31",
+  "status": "booked",
+  "risk_flags": [
+   "Time critical"
+  ]
+ },
+ {
+  "id": "SHP-880901",
+  "po_line_ids": [
+   "4500019240-00020"
+  ],
+  "carrier": "Vltava Air Freight",
+  "mode": "air",
+  "origin": "Ostrava",
+  "route_legs": [
+   {
+    "from": "PRG",
+    "to": "SIN",
+    "corridor": "PRG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-09-30",
+  "status": "delivered",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880927",
+  "po_line_ids": [
+   "4500019652-00040"
+  ],
+  "carrier": "Island Logistics",
+  "mode": "road",
+  "origin": "Seletar",
+  "route_legs": [
+   {
+    "from": "SIN",
+    "to": "SG01",
+    "corridor": "SIN-local",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-10-09",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880934",
+  "po_line_ids": [
+   "4500019619-00040"
+  ],
+  "carrier": "Formosa Air Cargo",
+  "mode": "air",
+  "origin": "Hsinchu",
+  "route_legs": [
+   {
+    "from": "TPE",
+    "to": "SIN",
+    "corridor": "TPE-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-14",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880952",
+  "po_line_ids": [
+   "4500020198-00040"
+  ],
+  "carrier": "Red River Air Freight",
+  "mode": "air",
+  "origin": "Haiphong",
+  "route_legs": [
+   {
+    "from": "HAN",
+    "to": "SIN",
+    "corridor": "HAN-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-29",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880980",
+  "po_line_ids": [
+   "4500018945-00040"
+  ],
+  "carrier": "Gallic Air Freight",
+  "mode": "air",
+  "origin": "Macon",
+  "route_legs": [
+   {
+    "from": "CDG",
+    "to": "SIN",
+    "corridor": "CDG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-29",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-880994",
+  "po_line_ids": [
+   "4500019366-00040"
+  ],
+  "carrier": "Kanto Air Express",
+  "mode": "air",
+  "origin": "Chita",
+  "route_legs": [
+   {
+    "from": "NRT",
+    "to": "SIN",
+    "corridor": "NRT-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-23",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881020",
+  "po_line_ids": [
+   "4500019455-00020"
+  ],
+  "carrier": "Causeway Trucking",
+  "mode": "road",
+  "origin": "Klang",
+  "route_legs": [
+   {
+    "from": "JHB",
+    "to": "SIN",
+    "corridor": "JHB-SIN",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-10-19",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881045",
+  "po_line_ids": [
+   "4500019463-00060"
+  ],
+  "carrier": "Kanto Air Express",
+  "mode": "air",
+  "origin": "Sagamihara",
+  "route_legs": [
+   {
+    "from": "NRT",
+    "to": "SIN",
+    "corridor": "NRT-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-06",
+  "status": "delivered",
+  "risk_flags": [
+   "Time critical"
+  ]
+ },
+ {
+  "id": "SHP-881060",
+  "po_line_ids": [
+   "4500019652-00020"
+  ],
+  "carrier": "Island Logistics",
+  "mode": "road",
+  "origin": "Seletar",
+  "route_legs": [
+   {
+    "from": "SIN",
+    "to": "SG01",
+    "corridor": "SIN-local",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-11-02",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881072",
+  "po_line_ids": [
+   "4500019033-00010"
+  ],
+  "carrier": "Alpen Cargo",
+  "mode": "air",
+  "origin": "Bremen",
+  "route_legs": [
+   {
+    "from": "MUC",
+    "to": "SIN",
+    "corridor": "MUC-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-11",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881096",
+  "po_line_ids": [
+   "4500019652-00030"
+  ],
+  "carrier": "Island Logistics",
+  "mode": "road",
+  "origin": "Seletar",
+  "route_legs": [
+   {
+    "from": "SIN",
+    "to": "SG01",
+    "corridor": "SIN-local",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-10-09",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881113",
+  "po_line_ids": [
+   "4500020324-00020"
+  ],
+  "carrier": "Causeway Trucking",
+  "mode": "road",
+  "origin": "Klang",
+  "route_legs": [
+   {
+    "from": "JHB",
+    "to": "SIN",
+    "corridor": "JHB-SIN",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-11-08",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881142",
+  "po_line_ids": [
+   "4500019109-00020"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Spokane",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-08",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881168",
+  "po_line_ids": [
+   "4500020298-00030"
+  ],
+  "carrier": "Island Logistics",
+  "mode": "road",
+  "origin": "Changi",
+  "route_legs": [
+   {
+    "from": "SIN",
+    "to": "SG01",
+    "corridor": "SIN-local",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-10-10",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881186",
+  "po_line_ids": [
+   "4500019751-00050"
+  ],
+  "carrier": "Formosa Air Cargo",
+  "mode": "air",
+  "origin": "Hsinchu",
+  "route_legs": [
+   {
+    "from": "TPE",
+    "to": "SIN",
+    "corridor": "TPE-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-30",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881191",
+  "po_line_ids": [
+   "4500018980-00030"
+  ],
+  "carrier": "Kanto Air Express",
+  "mode": "air",
+  "origin": "Sakai",
+  "route_legs": [
+   {
+    "from": "NRT",
+    "to": "SIN",
+    "corridor": "NRT-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-11-08",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881194",
+  "po_line_ids": [
+   "4500019568-00030"
+  ],
+  "carrier": "Alpen Cargo",
+  "mode": "air",
+  "origin": "Augsburg",
+  "route_legs": [
+   {
+    "from": "MUC",
+    "to": "SIN",
+    "corridor": "MUC-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-06",
+  "status": "delivered",
+  "risk_flags": [
+   "DG class 9"
+  ]
+ },
+ {
+  "id": "SHP-881218",
+  "po_line_ids": [
+   "4500019717-00030"
+  ],
+  "carrier": "Kattegat Air Cargo",
+  "mode": "air",
+  "origin": "Boras",
+  "route_legs": [
+   {
+    "from": "GOT",
+    "to": "SIN",
+    "corridor": "GOT-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-08",
+  "status": "in_transit",
+  "risk_flags": [
+   "Time critical"
+  ]
+ },
+ {
+  "id": "SHP-881234",
+  "po_line_ids": [
+   "4500019708-00040"
+  ],
+  "carrier": "Alpen Cargo",
+  "mode": "air",
+  "origin": "Neuss",
+  "route_legs": [
+   {
+    "from": "MUC",
+    "to": "SIN",
+    "corridor": "MUC-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-11",
+  "status": "in_transit",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881256",
+  "po_line_ids": [
+   "4500019482-00020"
+  ],
+  "carrier": "Isthmus Road Freight",
+  "mode": "road",
+  "origin": "Chonburi",
+  "route_legs": [
+   {
+    "from": "BKK",
+    "to": "SIN",
+    "corridor": "BKK-SIN",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-10-13",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881273",
+  "po_line_ids": [
+   "4500019835-00020"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Spokane",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-31",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881291",
+  "po_line_ids": [
+   "4500020050-00010"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Wichita",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-20",
+  "status": "booked",
+  "risk_flags": [
+   "DG class 9"
+  ]
+ },
+ {
+  "id": "SHP-881305",
+  "po_line_ids": [
+   "4500019109-00040"
+  ],
+  "carrier": "Transpac Air Logistics",
+  "mode": "air",
+  "origin": "Spokane",
+  "route_legs": [
+   {
+    "from": "CVG",
+    "to": "SIN",
+    "corridor": "CVG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-11-02",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881331",
+  "po_line_ids": [
+   "4500019606-00030"
+  ],
+  "carrier": "Causeway Trucking",
+  "mode": "road",
+  "origin": "Shah Alam",
+  "route_legs": [
+   {
+    "from": "JHB",
+    "to": "SIN",
+    "corridor": "JHB-SIN",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-11-07",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881348",
+  "po_line_ids": [
+   "4500019260-00060"
+  ],
+  "carrier": "Formosa Air Cargo",
+  "mode": "air",
+  "origin": "Taoyuan",
+  "route_legs": [
+   {
+    "from": "TPE",
+    "to": "SIN",
+    "corridor": "TPE-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-03",
+  "status": "delivered",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881366",
+  "po_line_ids": [
+   "4500018945-00030"
+  ],
+  "carrier": "Gallic Air Freight",
+  "mode": "air",
+  "origin": "Macon",
+  "route_legs": [
+   {
+    "from": "CDG",
+    "to": "SIN",
+    "corridor": "CDG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-11-02",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881384",
+  "po_line_ids": [
+   "4500019281-00010"
+  ],
+  "carrier": "Gallic Air Freight",
+  "mode": "air",
+  "origin": "Macon",
+  "route_legs": [
+   {
+    "from": "CDG",
+    "to": "SIN",
+    "corridor": "CDG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-09-24",
+  "status": "delivered",
+  "risk_flags": [
+   "Time critical"
+  ]
+ },
+ {
+  "id": "SHP-881395",
+  "po_line_ids": [
+   "4500020035-00020"
+  ],
+  "carrier": "Isthmus Road Freight",
+  "mode": "road",
+  "origin": "Chonburi",
+  "route_legs": [
+   {
+    "from": "BKK",
+    "to": "SIN",
+    "corridor": "BKK-SIN",
+    "mode": "road"
+   }
+  ],
+  "eta": "2026-10-02",
+  "status": "delivered",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881413",
+  "po_line_ids": [
+   "4500019056-00010"
+  ],
+  "carrier": "Gallic Air Freight",
+  "mode": "air",
+  "origin": "Macon",
+  "route_legs": [
+   {
+    "from": "CDG",
+    "to": "SIN",
+    "corridor": "CDG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-24",
+  "status": "booked",
+  "risk_flags": []
+ },
+ {
+  "id": "SHP-881441",
+  "po_line_ids": [
+   "4500020108-00020"
+  ],
+  "carrier": "Gallic Air Freight",
+  "mode": "air",
+  "origin": "Blagnac",
+  "route_legs": [
+   {
+    "from": "CDG",
+    "to": "SIN",
+    "corridor": "CDG-SIN",
+    "mode": "air"
+   }
+  ],
+  "eta": "2026-10-24",
+  "status": "booked",
+  "risk_flags": []
+ }
+]

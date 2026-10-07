@@ -1,0 +1,82 @@
+[
+ {
+  "id": "SC-01",
+  "po_line_id": "4500018251-00010",
+  "risk": "Supplier in receivership; shipments suspended",
+  "action": "split",
+  "rationale": "Split 70/30 between Meridian (approved second source) and Pacific Aero Spares broker stock to protect the 28 Oct induction.",
+  "lead_time_risk_days": 34
+ },
+ {
+  "id": "SC-02",
+  "po_line_id": "4500018746-00010",
+  "risk": "Furnace rebuild cuts output to 40% for six weeks",
+  "action": "split",
+  "rationale": "Move 40% to Takamori, which is approved and quotes 84 days; the remaining 60% fits Lindqvist's reduced output.",
+  "lead_time_risk_days": 28
+ },
+ {
+  "id": "SC-03",
+  "po_line_id": "4500018391-00010",
+  "risk": "Force majeure on deliveries to 20 Oct",
+  "action": "pull_forward",
+  "rationale": "Pull 2,400 pins forward from Kingsbury distributor stock; the premium is small against a heavy check slot.",
+  "lead_time_risk_days": 4
+ },
+ {
+  "id": "SC-04",
+  "po_line_id": "4500018425-00010",
+  "risk": "FRA-SIN freighter rotation suspended",
+  "action": "expedite",
+  "rationale": "Reroute by truck to AMS and fly AMS-SIN; lands 4 days earlier than waiting for the rotation.",
+  "lead_time_risk_days": 3
+ },
+ {
+  "id": "SC-05",
+  "po_line_id": "4500020305-00030",
+  "risk": "Cebu Composite Works Inc confirms 29d after need date",
+  "action": "hold",
+  "rationale": "Need date has float in the work plan; hold and re-confirm in 7 days rather than pay expedite.",
+  "lead_time_risk_days": 29
+ },
+ {
+  "id": "SC-06",
+  "po_line_id": "4500019806-00010",
+  "risk": "Garonne Aerostructures SARL confirms 29d after need date",
+  "action": "expedite",
+  "rationale": "Ask Garonne Aerostructures SARL for a partial air shipment of the first 50% to cover the nearest requirement.",
+  "lead_time_risk_days": 29
+ },
+ {
+  "id": "SC-07",
+  "po_line_id": "4500020305-00010",
+  "risk": "Cebu Composite Works Inc confirms 23d after need date",
+  "action": "split",
+  "rationale": "Backlog at Cebu Composite Works Inc is chronic. Split 30% to Halvorsen Composites AS, which quotes 80 days.",
+  "lead_time_risk_days": 23
+ },
+ {
+  "id": "SC-08",
+  "po_line_id": "4500020305-00050",
+  "risk": "Cebu Composite Works Inc confirms 30d after need date",
+  "action": "expedite",
+  "rationale": "Ask Cebu Composite Works Inc for a partial air shipment of the first 50% to cover the nearest requirement.",
+  "lead_time_risk_days": 30
+ },
+ {
+  "id": "SC-09",
+  "po_line_id": "4500019806-00040",
+  "risk": "Garonne Aerostructures SARL confirms 17d after need date",
+  "action": "split",
+  "rationale": "Backlog at Garonne Aerostructures SARL is chronic. Split 30% to Weser Nacelle Systems GmbH, which quotes 63 days.",
+  "lead_time_risk_days": 17
+ },
+ {
+  "id": "SC-10",
+  "po_line_id": "4500019770-00040",
+  "risk": "Cebu Composite Works Inc confirms 25d after need date",
+  "action": "pull_forward",
+  "rationale": "Pull forward from free stock and reorder; the line is a recurring short.",
+  "lead_time_risk_days": 25
+ }
+]

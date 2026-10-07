@@ -1,0 +1,1711 @@
+[
+ {
+  "id": "SIG-0033",
+  "received_at": "2026-10-07T00:21:00.000Z",
+  "channel": "sap",
+  "headline": "Vendor master 100118: central posting block set",
+  "raw_text": "LFA1 change log: SPERR set by FI master data at 08:21. Open items: 3 POs, USD 1.40M.",
+  "type": "supplier_distress",
+  "state": "operational",
+  "confidence": 0.86,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0007",
+  "affected_supplier_ids": [
+   "100118"
+  ],
+  "affected_part_ids": [
+   "ENG-4471-120",
+   "ENG-4471-130",
+   "ENG-4471-140"
+  ],
+  "affected_po_line_ids": [
+   "4500018226-00010",
+   "4500018251-00010",
+   "4500018284-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 42,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0032",
+  "received_at": "2026-10-07T00:05:00.000Z",
+  "channel": "email",
+  "headline": "Notice to trade creditors: Aerotech Precision Pte Ltd (in receivership)",
+  "raw_text": "Receivers ask customers to confirm open orders and in-process WIP by 10 Oct; release of finished goods subject to settlement of outstanding invoices.",
+  "type": "supplier_distress",
+  "state": "operational",
+  "confidence": 0.86,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0007",
+  "affected_supplier_ids": [
+   "100118"
+  ],
+  "affected_part_ids": [
+   "ENG-4471-120",
+   "ENG-4471-130",
+   "ENG-4471-140"
+  ],
+  "affected_po_line_ids": [
+   "4500018226-00010",
+   "4500018251-00010",
+   "4500018284-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 42,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0031",
+  "received_at": "2026-10-06T23:40:00.000Z",
+  "channel": "news",
+  "headline": "Penang forging shop placed under receivership; 140 jobs at risk",
+  "raw_text": "Receivers appointed for Aerotech Precision; outbound shipments suspended pending inventory count.",
+  "type": "supplier_distress",
+  "state": "operational",
+  "confidence": 0.86,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0007",
+  "affected_supplier_ids": [
+   "100118"
+  ],
+  "affected_part_ids": [
+   "ENG-4471-120",
+   "ENG-4471-130",
+   "ENG-4471-140"
+  ],
+  "affected_po_line_ids": [
+   "4500018226-00010",
+   "4500018251-00010",
+   "4500018284-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 42,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0007",
+  "received_at": "2026-10-06T22:52:00.000Z",
+  "channel": "credit_monitor",
+  "headline": "Titanium forging supplier Aerotech Precision (Tier 2, sole source for 3 HPC blade retention rings) enters receivership",
+  "raw_text": "Credit alert, severity 1. Aerotech Precision Pte Ltd (registered Singapore, plant Batu Kawan, Penang) has had receivers and managers appointed by its secured lender effective 6 Oct 2026. The receivers have suspended outbound shipments pending an inventory count. The forging line restart is not expected before late November. Trade creditors are asked to direct correspondence to the receivers. Credit score moved from 29 to 18.",
+  "type": "supplier_distress",
+  "state": "operational",
+  "confidence": 0.91,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100118"
+  ],
+  "affected_part_ids": [
+   "ENG-4471-120",
+   "ENG-4471-130",
+   "ENG-4471-140"
+  ],
+  "affected_po_line_ids": [
+   "4500018226-00010",
+   "4500018251-00010",
+   "4500018284-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 42,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "credit_monitor",
+    "received_at": "2026-10-06T22:52:00.000Z",
+    "snippet": "Credit alert, severity 1. Aerotech Precision Pte Ltd (registered Singapore, plant Batu Kawan, Penang) has had receivers and managers appointed by its secured lender effective 6 Oct 2026."
+   },
+   {
+    "channel": "news",
+    "received_at": "2026-10-06T23:40:00.000Z",
+    "snippet": "Receivers appointed for Aerotech Precision; outbound shipments suspended pending inventory count."
+   },
+   {
+    "channel": "email",
+    "received_at": "2026-10-07T00:05:00.000Z",
+    "snippet": "Receivers ask customers to confirm open orders and in-process WIP by 10 Oct; release of finished goods subject to settlement of outstanding invoices."
+   },
+   {
+    "channel": "sap",
+    "received_at": "2026-10-07T00:21:00.000Z",
+    "snippet": "LFA1 change log: SPERR set by FI master data at 08:21. Open items: 3 POs, USD 1.40M."
+   }
+  ],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0037",
+  "received_at": "2026-10-06T09:30:00.000Z",
+  "channel": "email",
+  "headline": "Receiving inspection: seal batch DSL-26-0918 rejected",
+  "raw_text": "Durometer out of tolerance on 3 of 5 samples. WO-2608 kit short 400 seals; induction 10 Oct.",
+  "type": "supply_shortage",
+  "state": "operational",
+  "confidence": 0.8999999999999999,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0019",
+  "affected_supplier_ids": [
+   "100201"
+  ],
+  "affected_part_ids": [
+   "SEA-3100-510",
+   "SEA-8851-050",
+   "SEA-4302-170",
+   "SEA-9269-050",
+   "SEA-3555-720",
+   "SEA-5350-760",
+   "SEA-7310-280",
+   "SEA-5596-970"
+  ],
+  "affected_po_line_ids": [
+   "4500018457-00010",
+   "4500019185-00010",
+   "4500019185-00020",
+   "4500019185-00030",
+   "4500019185-00040",
+   "4500019938-00010",
+   "4500019938-00020",
+   "4500019938-00030",
+   "4500019938-00040",
+   "4500020003-00010",
+   "4500020003-00020",
+   "4500020003-00030"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 14,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "warehouse",
+  "library": false
+ },
+ {
+  "id": "SIG-0019",
+  "received_at": "2026-10-06T08:45:00.000Z",
+  "channel": "sap",
+  "headline": "Receiving inspection rejects batch of 400 fuel nozzle O-ring seals from Daejeon Seal Technologies",
+  "raw_text": "SAP QM inspection lot 0400012877, usage decision R (reject). Material SEA-3100-510, batch DSL-26-0918, quantity 400. Defect code D14: durometer out of tolerance on 3 of 5 samples. Batch moved to blocked stock. Vendor notified via QM notification Q2 0010043.",
+  "type": "supply_shortage",
+  "state": "operational",
+  "confidence": 0.95,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100201"
+  ],
+  "affected_part_ids": [
+   "SEA-3100-510",
+   "SEA-8851-050",
+   "SEA-4302-170",
+   "SEA-9269-050",
+   "SEA-3555-720",
+   "SEA-5350-760",
+   "SEA-7310-280",
+   "SEA-5596-970"
+  ],
+  "affected_po_line_ids": [
+   "4500018457-00010",
+   "4500019185-00010",
+   "4500019185-00020",
+   "4500019185-00030",
+   "4500019185-00040",
+   "4500019938-00010",
+   "4500019938-00020",
+   "4500019938-00030",
+   "4500019938-00040",
+   "4500020003-00010",
+   "4500020003-00020",
+   "4500020003-00030"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 14,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "sap",
+    "received_at": "2026-10-06T08:45:00.000Z",
+    "snippet": "SAP QM inspection lot 0400012877, usage decision R (reject). Material SEA-3100-510, batch DSL-26-0918, quantity 400."
+   },
+   {
+    "channel": "email",
+    "received_at": "2026-10-06T09:30:00.000Z",
+    "snippet": "Durometer out of tolerance on 3 of 5 samples. WO-2608 kit short 400 seals; induction 10 Oct."
+   }
+  ],
+  "checkpoint": "warehouse",
+  "library": false
+ },
+ {
+  "id": "SIG-0036",
+  "received_at": "2026-10-06T05:05:00.000Z",
+  "channel": "email",
+  "headline": "Nordvik Air Cargo: rebooking options for FRA tendered cargo",
+  "raw_text": "Options offered: wait for next rotation (about 6 days), truck to AMS and fly AMS-SIN (+USD 4.8K, 2 days), or split via DOH.",
+  "type": "route_disruption",
+  "state": "operational",
+  "confidence": 0.88,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0015",
+  "affected_supplier_ids": [],
+  "affected_part_ids": [
+   "NAC-7200-210",
+   "CON-8300-410",
+   "ENG-5600-710"
+  ],
+  "affected_po_line_ids": [
+   "4500018425-00010",
+   "4500018822-00010",
+   "4500018854-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [
+   "FRA-SIN"
+  ],
+  "est_delay_days": 6,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "shipment",
+  "library": false
+ },
+ {
+  "id": "SIG-0015",
+  "received_at": "2026-10-06T03:20:00.000Z",
+  "channel": "forwarder_edi",
+  "headline": "Carrier suspends Frankfurt to Singapore freighter rotation; three in-transit shipments affected",
+  "raw_text": "IFTSTA status update from Nordvik Air Cargo: freighter rotation FRA-SIN suspended from 6 Oct for aircraft maintenance. Shipments already tendered at FRA will be rebooked on the next available capacity, current estimate six days. Shippers may request reroute via alternative gateways at additional cost.",
+  "type": "route_disruption",
+  "state": "operational",
+  "confidence": 0.93,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [
+   "NAC-7200-210",
+   "CON-8300-410",
+   "ENG-5600-710"
+  ],
+  "affected_po_line_ids": [
+   "4500018425-00010",
+   "4500018822-00010",
+   "4500018854-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [
+   "FRA-SIN"
+  ],
+  "est_delay_days": 6,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "forwarder_edi",
+    "received_at": "2026-10-06T03:20:00.000Z",
+    "snippet": "IFTSTA status update from Nordvik Air Cargo: freighter rotation FRA-SIN suspended from 6 Oct for aircraft maintenance. Shipments already tendered at FRA will be rebooked on the next available capacity, current estimate six days."
+   },
+   {
+    "channel": "email",
+    "received_at": "2026-10-06T05:05:00.000Z",
+    "snippet": "Options offered: wait for next rotation (about 6 days), truck to AMS and fly AMS-SIN (+USD 4.8K, 2 days), or split via DOH."
+   }
+  ],
+  "checkpoint": "shipment",
+  "library": false
+ },
+ {
+  "id": "SIG-0035",
+  "received_at": "2026-10-06T01:15:00.000Z",
+  "channel": "email",
+  "headline": "Hsinchu Fastener: force majeure notice",
+  "raw_text": "Hsinchu Fastener declares force majeure on deliveries due 6 Oct to 20 Oct; heat-treat hall restart under assessment.",
+  "type": "natural_calamity",
+  "state": "operational",
+  "confidence": 0.8099999999999999,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0012",
+  "affected_supplier_ids": [
+   "100181"
+  ],
+  "affected_part_ids": [
+   "FST-2110-010",
+   "FST-2110-020",
+   "FST-7607-650",
+   "FST-4269-100",
+   "FST-4976-960",
+   "FST-5036-800",
+   "FST-8006-020",
+   "FST-8574-360",
+   "FST-1452-620",
+   "FST-4969-490",
+   "FST-1029-650",
+   "FST-7301-680",
+   "FST-1715-430",
+   "FST-3503-040",
+   "FST-7407-670"
+  ],
+  "affected_po_line_ids": [
+   "4500018391-00010",
+   "4500018417-00010",
+   "4500019260-00010",
+   "4500019260-00030",
+   "4500019260-00040",
+   "4500019260-00050",
+   "4500019260-00060",
+   "4500019331-00020",
+   "4500019331-00040",
+   "4500019619-00010",
+   "4500019619-00020",
+   "4500019619-00030",
+   "4500019619-00040",
+   "4500019619-00050",
+   "4500019619-00060",
+   "4500019751-00010",
+   "4500019751-00020",
+   "4500019751-00030",
+   "4500019751-00040",
+   "4500019751-00050",
+   "4500019907-00010",
+   "4500019907-00030",
+   "4500019907-00040"
+  ],
+  "affected_regions": [
+   "TW-north"
+  ],
+  "affected_categories": [
+   "fastener"
+  ],
+  "affected_corridors": [],
+  "est_delay_days": 10,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0022",
+  "received_at": "2026-10-05T23:30:00.000Z",
+  "channel": "news",
+  "headline": "Dockworkers strike halts container handling at Santos, Brazil",
+  "raw_text": "Port workers at Santos have begun an indefinite strike. Container handling is suspended.",
+  "type": "conflict_unrest",
+  "state": "operational",
+  "confidence": 0.88,
+  "disposition": "discarded",
+  "material": false,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [],
+  "affected_po_line_ids": [],
+  "affected_regions": [
+   "BR-sp"
+  ],
+  "affected_categories": [],
+  "affected_corridors": [
+   "SANTOS"
+  ],
+  "est_delay_days": 0,
+  "discard_reason": "No exposure: no open POs with suppliers in the affected region; no in-transit shipments through the affected corridor",
+  "evidence": [],
+  "checkpoint": "shipment",
+  "library": false
+ },
+ {
+  "id": "SIG-0034",
+  "received_at": "2026-10-05T10:30:00.000Z",
+  "channel": "forwarder_edi",
+  "headline": "TPE departures cancelled for 48 hours",
+  "raw_text": "Formosa Air Cargo cancels TPE departures for 48 hours; cargo acceptance closed.",
+  "type": "natural_calamity",
+  "state": "operational",
+  "confidence": 0.8099999999999999,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0012",
+  "affected_supplier_ids": [
+   "100181"
+  ],
+  "affected_part_ids": [
+   "FST-2110-010",
+   "FST-2110-020",
+   "FST-7607-650",
+   "FST-4269-100",
+   "FST-4976-960",
+   "FST-5036-800",
+   "FST-8006-020",
+   "FST-8574-360",
+   "FST-1452-620",
+   "FST-4969-490",
+   "FST-1029-650",
+   "FST-7301-680",
+   "FST-1715-430",
+   "FST-3503-040",
+   "FST-7407-670"
+  ],
+  "affected_po_line_ids": [
+   "4500018391-00010",
+   "4500018417-00010",
+   "4500019260-00010",
+   "4500019260-00030",
+   "4500019260-00040",
+   "4500019260-00050",
+   "4500019260-00060",
+   "4500019331-00020",
+   "4500019331-00040",
+   "4500019619-00010",
+   "4500019619-00020",
+   "4500019619-00030",
+   "4500019619-00040",
+   "4500019619-00050",
+   "4500019619-00060",
+   "4500019751-00010",
+   "4500019751-00020",
+   "4500019751-00030",
+   "4500019751-00040",
+   "4500019751-00050",
+   "4500019907-00010",
+   "4500019907-00030",
+   "4500019907-00040"
+  ],
+  "affected_regions": [
+   "TW-north"
+  ],
+  "affected_categories": [
+   "fastener"
+  ],
+  "affected_corridors": [],
+  "est_delay_days": 10,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0012",
+  "received_at": "2026-10-05T06:10:00.000Z",
+  "channel": "news",
+  "headline": "Typhoon closes north Taiwan fastener plants for an estimated 10 days",
+  "raw_text": "Regional news: Typhoon landfall over Hsinchu and Taoyuan has triggered flooding in two industrial parks. Hsinchu Fastener Industrial reports water ingress in its heat-treat hall; Taoyuan Aero Fasteners has suspended operations as a precaution. Local officials estimate 10 days before power and road access are fully restored.",
+  "type": "natural_calamity",
+  "state": "operational",
+  "confidence": 0.86,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100181"
+  ],
+  "affected_part_ids": [
+   "FST-2110-010",
+   "FST-2110-020",
+   "FST-7607-650",
+   "FST-4269-100",
+   "FST-4976-960",
+   "FST-5036-800",
+   "FST-8006-020",
+   "FST-8574-360",
+   "FST-1452-620",
+   "FST-4969-490",
+   "FST-1029-650",
+   "FST-7301-680",
+   "FST-1715-430",
+   "FST-3503-040",
+   "FST-7407-670"
+  ],
+  "affected_po_line_ids": [
+   "4500018391-00010",
+   "4500018417-00010",
+   "4500019260-00010",
+   "4500019260-00030",
+   "4500019260-00040",
+   "4500019260-00050",
+   "4500019260-00060",
+   "4500019331-00020",
+   "4500019331-00040",
+   "4500019619-00010",
+   "4500019619-00020",
+   "4500019619-00030",
+   "4500019619-00040",
+   "4500019619-00050",
+   "4500019619-00060",
+   "4500019751-00010",
+   "4500019751-00020",
+   "4500019751-00030",
+   "4500019751-00040",
+   "4500019751-00050",
+   "4500019907-00010",
+   "4500019907-00030",
+   "4500019907-00040"
+  ],
+  "affected_regions": [
+   "TW-north"
+  ],
+  "affected_categories": [
+   "fastener"
+  ],
+  "affected_corridors": [],
+  "est_delay_days": 10,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "news",
+    "received_at": "2026-10-05T06:10:00.000Z",
+    "snippet": "Regional news: Typhoon landfall over Hsinchu and Taoyuan has triggered flooding in two industrial parks. Hsinchu Fastener Industrial reports water ingress in its heat-treat hall; Taoyuan Aero Fasteners has suspended operations as a precaution."
+   },
+   {
+    "channel": "forwarder_edi",
+    "received_at": "2026-10-05T10:30:00.000Z",
+    "snippet": "Formosa Air Cargo cancels TPE departures for 48 hours; cargo acceptance closed."
+   },
+   {
+    "channel": "email",
+    "received_at": "2026-10-06T01:15:00.000Z",
+    "snippet": "Hsinchu Fastener declares force majeure on deliveries due 6 Oct to 20 Oct; heat-treat hall restart under assessment."
+   }
+  ],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0021",
+  "received_at": "2026-10-05T01:00:00.000Z",
+  "channel": "forwarder_edi",
+  "headline": "Red Sea routing notice: carriers extend Cape of Good Hope diversions for Asia to Europe sailings",
+  "raw_text": "Ocean carrier advisory: Red Sea transits remain suspended. Asia to Europe services continue to route via the Cape of Good Hope, adding 10 to 14 days.",
+  "type": "route_disruption",
+  "state": "operational",
+  "confidence": 0.92,
+  "disposition": "discarded",
+  "material": false,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [],
+  "affected_po_line_ids": [],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [
+   "RED-SEA"
+  ],
+  "est_delay_days": 0,
+  "discard_reason": "No exposure: no in-transit shipments through the affected corridor",
+  "evidence": [],
+  "checkpoint": "shipment",
+  "library": false
+ },
+ {
+  "id": "SIG-0023",
+  "received_at": "2026-10-04T13:00:00.000Z",
+  "channel": "news",
+  "headline": "Armed clashes reported near border crossings in the Sahel",
+  "raw_text": "Reports of armed clashes near several border crossings in the Sahel region. Road freight is suspended locally.",
+  "type": "conflict_unrest",
+  "state": "strategic",
+  "confidence": 0.7,
+  "disposition": "discarded",
+  "material": false,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [],
+  "affected_po_line_ids": [],
+  "affected_regions": [
+   "SAHEL"
+  ],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 0,
+  "discard_reason": "No exposure: no open POs with suppliers in the affected region",
+  "evidence": [],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0020",
+  "received_at": "2026-10-03T07:20:00.000Z",
+  "channel": "email",
+  "headline": "Arden Nacelle Services: request for payment plan",
+  "raw_text": "Arden account manager requests a payment plan for invoices over 60 days and flags possible shipment holds.",
+  "type": "supplier_distress",
+  "state": "strategic",
+  "confidence": 0.7699999999999999,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0024",
+  "affected_supplier_ids": [
+   "100168"
+  ],
+  "affected_part_ids": [
+   "NAC-7500-310",
+   "NAC-7500-320"
+  ],
+  "affected_po_line_ids": [
+   "4500018464-00010",
+   "4500018467-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 14,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "relationships",
+  "library": false
+ },
+ {
+  "id": "SIG-0024",
+  "received_at": "2026-10-03T02:00:00.000Z",
+  "channel": "sap",
+  "headline": "Strategic supplier Arden Nacelle Services: invoices ageing past 60 days, dispute count rising",
+  "raw_text": "SAP FI vendor ageing (FBL1N extract): Arden Nacelle Services Ltd, 7 invoices over 60 days totalling USD 412K, 4 open price disputes (up from 1 in June). Supplier account manager has flagged cash pressure and requested a payment plan. Supplier credit score down 24 points in 12 months.",
+  "type": "supplier_distress",
+  "state": "strategic",
+  "confidence": 0.82,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100168"
+  ],
+  "affected_part_ids": [
+   "NAC-7500-310",
+   "NAC-7500-320"
+  ],
+  "affected_po_line_ids": [
+   "4500018464-00010",
+   "4500018467-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 14,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "sap",
+    "received_at": "2026-10-03T02:00:00.000Z",
+    "snippet": "SAP FI vendor ageing (FBL1N extract): Arden Nacelle Services Ltd, 7 invoices over 60 days totalling USD 412K, 4 open price disputes (up from 1 in June). Supplier account manager has flagged cash pressure and requested a payment plan."
+   },
+   {
+    "channel": "email",
+    "received_at": "2026-10-03T07:20:00.000Z",
+    "snippet": "Arden account manager requests a payment plan for invoices over 60 days and flags possible shipment holds."
+   }
+  ],
+  "checkpoint": "relationships",
+  "library": false
+ },
+ {
+  "id": "SIG-0039",
+  "received_at": "2026-10-02T23:30:00.000Z",
+  "channel": "news",
+  "headline": "Superalloy mill outage tightens nickel casting supply",
+  "raw_text": "Trade press: vacuum melt outage at a US mill tightens Q4 superalloy supply.",
+  "type": "supply_shortage",
+  "state": "operational",
+  "confidence": 0.83,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0002",
+  "affected_supplier_ids": [
+   "100241"
+  ],
+  "affected_part_ids": [
+   "ENG-5210-110",
+   "ENG-5210-120",
+   "ENG-9691-930",
+   "ENG-2120-230",
+   "RAW-4600-280",
+   "RAW-7532-480"
+  ],
+  "affected_po_line_ids": [
+   "4500018304-00010",
+   "4500018324-00010",
+   "4500019372-00010",
+   "4500019372-00020",
+   "4500019372-00030",
+   "4500019372-00040",
+   "4500019372-00050"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 30,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0018",
+  "received_at": "2026-10-02T08:00:00.000Z",
+  "channel": "news",
+  "headline": "Port Klang congestion worsens as transshipment volumes surge",
+  "raw_text": "Westport berth waiting times reach 9 days.",
+  "type": "route_disruption",
+  "state": "operational",
+  "confidence": 0.85,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0013",
+  "affected_supplier_ids": [],
+  "affected_part_ids": [
+   "CON-8200-210"
+  ],
+  "affected_po_line_ids": [
+   "4500018687-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [
+   "PKG"
+  ],
+  "est_delay_days": 9,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "shipment",
+  "library": false
+ },
+ {
+  "id": "SIG-0029",
+  "received_at": "2026-10-02T05:10:00.000Z",
+  "channel": "sphera",
+  "headline": "Measles outbreak advisory issued for Lagos state",
+  "raw_text": "Health advisory for Lagos state following a measles outbreak. No movement restrictions announced.",
+  "type": "pandemic_health",
+  "state": "strategic",
+  "confidence": 0.68,
+  "disposition": "discarded",
+  "material": false,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [],
+  "affected_po_line_ids": [],
+  "affected_regions": [
+   "NG-lagos"
+  ],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 0,
+  "discard_reason": "No exposure: no open POs with suppliers in the affected region",
+  "evidence": [],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0038",
+  "received_at": "2026-10-02T04:00:00.000Z",
+  "channel": "sphera",
+  "headline": "Supplier risk event: nickel melt allocation cut at US mill",
+  "raw_text": "Sphera event: Q4 melt allocation reduced 40% for downstream casting customers.",
+  "type": "supply_shortage",
+  "state": "operational",
+  "confidence": 0.83,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0002",
+  "affected_supplier_ids": [
+   "100241"
+  ],
+  "affected_part_ids": [
+   "ENG-5210-110",
+   "ENG-5210-120",
+   "ENG-9691-930",
+   "ENG-2120-230",
+   "RAW-4600-280",
+   "RAW-7532-480"
+  ],
+  "affected_po_line_ids": [
+   "4500018304-00010",
+   "4500018324-00010",
+   "4500019372-00010",
+   "4500019372-00020",
+   "4500019372-00030",
+   "4500019372-00040",
+   "4500019372-00050"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 30,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0001",
+  "received_at": "2026-10-02T02:00:00.000Z",
+  "channel": "sphera",
+  "headline": "Trade compliance event: tariff line change for composite panels",
+  "raw_text": "Sphera trade event: 25% additional duty on EU-origin composite acoustic panels from 1 Nov.",
+  "type": "tariff",
+  "state": "strategic",
+  "confidence": 0.7899999999999999,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0003",
+  "affected_supplier_ids": [
+   "100151",
+   "100154"
+  ],
+  "affected_part_ids": [
+   "NAC-7100-110",
+   "NAC-7100-120",
+   "NAC-7100-130",
+   "NAC-3091-950",
+   "NAC-7719-300",
+   "NAC-9834-170",
+   "NAC-6108-190"
+  ],
+  "affected_po_line_ids": [
+   "4500018351-00010",
+   "4500018359-00010",
+   "4500018374-00010",
+   "4500019033-00010",
+   "4500019033-00020",
+   "4500019033-00030",
+   "4500019033-00040",
+   "4500020251-00010",
+   "4500020251-00020",
+   "4500020251-00030",
+   "4500020251-00040"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 3,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0013",
+  "received_at": "2026-10-02T01:40:00.000Z",
+  "channel": "forwarder_edi",
+  "headline": "Port Klang berth congestion adds 9 days to feeder sailings to Singapore",
+  "raw_text": "IFTSTA status update from Selat Feeder Lines: berth congestion at Port Klang Westport. Vessel waiting time currently 7 to 9 days. Feeder sailings to Singapore delayed accordingly.",
+  "type": "route_disruption",
+  "state": "operational",
+  "confidence": 0.9,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [
+   "CON-8200-210"
+  ],
+  "affected_po_line_ids": [
+   "4500018687-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [
+   "PKG"
+  ],
+  "est_delay_days": 9,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "forwarder_edi",
+    "received_at": "2026-10-02T01:40:00.000Z",
+    "snippet": "IFTSTA status update from Selat Feeder Lines: berth congestion at Port Klang Westport. Vessel waiting time currently 7 to 9 days."
+   },
+   {
+    "channel": "news",
+    "received_at": "2026-10-02T08:00:00.000Z",
+    "snippet": "Westport berth waiting times reach 9 days."
+   }
+  ],
+  "checkpoint": "shipment",
+  "library": false
+ },
+ {
+  "id": "SIG-0002",
+  "received_at": "2026-10-02T00:15:00.000Z",
+  "channel": "email",
+  "headline": "US nickel superalloy mill cuts Q4 allocation 40% to Brightwater Castings; NGV casting deliveries to slip",
+  "raw_text": "From Brightwater Castings commercial team: our nickel superalloy mill partner has notified a 40% reduction in Q4 melt allocation. We are prioritising contractual volumes by date of order. Your open orders for stage 1 and stage 2 HPT nozzle guide vane castings are expected to move by four to five weeks. We will confirm revised dates by 9 Oct.",
+  "type": "supply_shortage",
+  "state": "operational",
+  "confidence": 0.88,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100241"
+  ],
+  "affected_part_ids": [
+   "ENG-5210-110",
+   "ENG-5210-120",
+   "ENG-9691-930",
+   "ENG-2120-230",
+   "RAW-4600-280",
+   "RAW-7532-480"
+  ],
+  "affected_po_line_ids": [
+   "4500018304-00010",
+   "4500018324-00010",
+   "4500019372-00010",
+   "4500019372-00020",
+   "4500019372-00030",
+   "4500019372-00040",
+   "4500019372-00050"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 30,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "email",
+    "received_at": "2026-10-02T00:15:00.000Z",
+    "snippet": "From Brightwater Castings commercial team: our nickel superalloy mill partner has notified a 40% reduction in Q4 melt allocation. We are prioritising contractual volumes by date of order."
+   },
+   {
+    "channel": "sphera",
+    "received_at": "2026-10-02T04:00:00.000Z",
+    "snippet": "Sphera event: Q4 melt allocation reduced 40% for downstream casting customers."
+   },
+   {
+    "channel": "news",
+    "received_at": "2026-10-02T23:30:00.000Z",
+    "snippet": "Trade press: vacuum melt outage at a US mill tightens Q4 superalloy supply."
+   }
+  ],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0028",
+  "received_at": "2026-10-01T07:30:00.000Z",
+  "channel": "forwarder_edi",
+  "headline": "Panama Canal draft restrictions extended for neopanamax vessels",
+  "raw_text": "Canal authority extends draft restrictions. Some transpacific to US east coast services may reroute.",
+  "type": "route_disruption",
+  "state": "strategic",
+  "confidence": 0.85,
+  "disposition": "discarded",
+  "material": false,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [],
+  "affected_po_line_ids": [],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [
+   "PANAMA"
+  ],
+  "est_delay_days": 0,
+  "discard_reason": "No exposure: no in-transit shipments through the affected corridor",
+  "evidence": [],
+  "checkpoint": "shipment",
+  "library": false
+ },
+ {
+  "id": "SIG-0040",
+  "received_at": "2026-10-01T06:00:00.000Z",
+  "channel": "email",
+  "headline": "Customs broker advisory: EU acoustic panel reclassification",
+  "raw_text": "Broker expects classification holds of 2 to 4 days at entry while the new tariff line beds in.",
+  "type": "tariff",
+  "state": "strategic",
+  "confidence": 0.7899999999999999,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0003",
+  "affected_supplier_ids": [
+   "100151",
+   "100154"
+  ],
+  "affected_part_ids": [
+   "NAC-7100-110",
+   "NAC-7100-120",
+   "NAC-7100-130",
+   "NAC-3091-950",
+   "NAC-7719-300",
+   "NAC-9834-170",
+   "NAC-6108-190"
+  ],
+  "affected_po_line_ids": [
+   "4500018351-00010",
+   "4500018359-00010",
+   "4500018374-00010",
+   "4500019033-00010",
+   "4500019033-00020",
+   "4500019033-00030",
+   "4500019033-00040",
+   "4500020251-00010",
+   "4500020251-00020",
+   "4500020251-00030",
+   "4500020251-00040"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 3,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0003",
+  "received_at": "2026-09-30T22:00:00.000Z",
+  "channel": "news",
+  "headline": "US reclassifies EU-origin nacelle acoustic panels; 25% duty from 1 Nov",
+  "raw_text": "Trade press: the US customs authority has issued a binding reclassification moving composite acoustic panels of EU origin into a tariff line carrying 25% additional duty from 1 November 2026. The change affects goods routed through US bonded facilities and US-origin content rules for re-export. Brokers expect classification holds at entry while the new line beds in.",
+  "type": "tariff",
+  "state": "strategic",
+  "confidence": 0.84,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100151",
+   "100154"
+  ],
+  "affected_part_ids": [
+   "NAC-7100-110",
+   "NAC-7100-120",
+   "NAC-7100-130",
+   "NAC-3091-950",
+   "NAC-7719-300",
+   "NAC-9834-170",
+   "NAC-6108-190"
+  ],
+  "affected_po_line_ids": [
+   "4500018351-00010",
+   "4500018359-00010",
+   "4500018374-00010",
+   "4500019033-00010",
+   "4500019033-00020",
+   "4500019033-00030",
+   "4500019033-00040",
+   "4500020251-00010",
+   "4500020251-00020",
+   "4500020251-00030",
+   "4500020251-00040"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 3,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "news",
+    "received_at": "2026-09-30T22:00:00.000Z",
+    "snippet": "Trade press: the US customs authority has issued a binding reclassification moving composite acoustic panels of EU origin into a tariff line carrying 25% additional duty from 1 November 2026. The change affects goods routed through US bonded facilities and US-origin content rules for re-export."
+   },
+   {
+    "channel": "email",
+    "received_at": "2026-10-01T06:00:00.000Z",
+    "snippet": "Broker expects classification holds of 2 to 4 days at entry while the new tariff line beds in."
+   },
+   {
+    "channel": "sphera",
+    "received_at": "2026-10-02T02:00:00.000Z",
+    "snippet": "Sphera trade event: 25% additional duty on EU-origin composite acoustic panels from 1 Nov."
+   }
+  ],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0027",
+  "received_at": "2026-09-30T12:00:00.000Z",
+  "channel": "news",
+  "headline": "Protests in Lima disrupt road access to the airport",
+  "raw_text": "Protesters have blocked several roads leading to Lima airport.",
+  "type": "conflict_unrest",
+  "state": "operational",
+  "confidence": 0.72,
+  "disposition": "discarded",
+  "material": false,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [],
+  "affected_po_line_ids": [],
+  "affected_regions": [
+   "PE-lima"
+  ],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 0,
+  "discard_reason": "No exposure: no open POs with suppliers in the affected region",
+  "evidence": [],
+  "checkpoint": "shipment",
+  "library": false
+ },
+ {
+  "id": "SIG-0004",
+  "received_at": "2026-09-30T09:00:00.000Z",
+  "channel": "news",
+  "headline": "Japan revises dual-use control list",
+  "raw_text": "Revised list adds certain speed sensor classes; individual licences required.",
+  "type": "export_control",
+  "state": "operational",
+  "confidence": 0.82,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0005",
+  "affected_supplier_ids": [
+   "100131"
+  ],
+  "affected_part_ids": [
+   "ENG-6120-210",
+   "ENG-1761-110",
+   "ENG-5484-810",
+   "ENG-1522-720",
+   "ENG-2115-760"
+  ],
+  "affected_po_line_ids": [
+   "4500018783-00010",
+   "4500018814-00010",
+   "4500019463-00010",
+   "4500019463-00020",
+   "4500019463-00030",
+   "4500019463-00060"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 30,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0017",
+  "received_at": "2026-09-30T03:00:00.000Z",
+  "channel": "email",
+  "headline": "Lindqvist Rotating Parts announces 6 week vacuum furnace rebuild; LPT seal ring output cut",
+  "raw_text": "From Lindqvist Rotating Parts: an unplanned rebuild of vacuum furnace 3 will take approximately six weeks. LPT seal ring segment output will run at 40% until completion. Open orders will be re-confirmed this week.",
+  "type": "supply_shortage",
+  "state": "operational",
+  "confidence": 0.89,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100110"
+  ],
+  "affected_part_ids": [
+   "ENG-4810-310",
+   "ENG-8170-690",
+   "ENG-8146-440",
+   "ENG-6776-690"
+  ],
+  "affected_po_line_ids": [
+   "4500018746-00010",
+   "4500019717-00010",
+   "4500019717-00020",
+   "4500019717-00030",
+   "4500019717-00040",
+   "4500020067-00020",
+   "4500020067-00030"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 42,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "email",
+    "received_at": "2026-09-30T03:00:00.000Z",
+    "snippet": "From Lindqvist Rotating Parts: an unplanned rebuild of vacuum furnace 3 will take approximately six weeks. LPT seal ring segment output will run at 40% until completion."
+   }
+  ],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0005",
+  "received_at": "2026-09-30T01:00:00.000Z",
+  "channel": "email",
+  "headline": "Japan adds N2 speed sensor class to dual-use export list; Hokushin Sensor Works shipments need individual licences",
+  "raw_text": "From Hokushin Sensor Works export compliance: following the revision of the dual-use control list effective 1 Oct, our N2 speed sensor family now requires an individual export licence per consignment. Licence processing is currently 4 to 6 weeks. Shipments without a licence will be held at origin.",
+  "type": "export_control",
+  "state": "operational",
+  "confidence": 0.87,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100131"
+  ],
+  "affected_part_ids": [
+   "ENG-6120-210",
+   "ENG-1761-110",
+   "ENG-5484-810",
+   "ENG-1522-720",
+   "ENG-2115-760"
+  ],
+  "affected_po_line_ids": [
+   "4500018783-00010",
+   "4500018814-00010",
+   "4500019463-00010",
+   "4500019463-00020",
+   "4500019463-00030",
+   "4500019463-00060"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 30,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "email",
+    "received_at": "2026-09-30T01:00:00.000Z",
+    "snippet": "From Hokushin Sensor Works export compliance: following the revision of the dual-use control list effective 1 Oct, our N2 speed sensor family now requires an individual export licence per consignment. Licence processing is currently 4 to 6 weeks."
+   },
+   {
+    "channel": "news",
+    "received_at": "2026-09-30T09:00:00.000Z",
+    "snippet": "Revised list adds certain speed sensor classes; individual licences required."
+   }
+  ],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0006",
+  "received_at": "2026-09-29T07:00:00.000Z",
+  "channel": "email",
+  "headline": "Garonne Aerostructures: delivery reschedule notice",
+  "raw_text": "Garonne reschedules October deliveries of TR brackets and hinge fittings by up to two weeks.",
+  "type": "conflict_unrest",
+  "state": "operational",
+  "confidence": 0.75,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0008",
+  "affected_supplier_ids": [
+   "100162"
+  ],
+  "affected_part_ids": [
+   "NAC-7300-210",
+   "NAC-7300-220",
+   "NAC-3091-950",
+   "NAC-8068-460",
+   "NAC-2492-310",
+   "NAC-2334-690"
+  ],
+  "affected_po_line_ids": [
+   "4500018506-00010",
+   "4500018540-00010",
+   "4500019806-00010",
+   "4500019806-00020",
+   "4500019806-00040",
+   "4500020108-00020",
+   "4500020108-00030",
+   "4500020108-00040",
+   "4500020108-00050",
+   "4500020108-00060"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 12,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0026",
+  "received_at": "2026-09-29T04:00:00.000Z",
+  "channel": "news",
+  "headline": "Duty increase announced on Canadian softwood lumber imports",
+  "raw_text": "Trade press: additional duties on Canadian softwood lumber take effect next month.",
+  "type": "tariff",
+  "state": "strategic",
+  "confidence": 0.9,
+  "disposition": "discarded",
+  "material": false,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [],
+  "affected_po_line_ids": [],
+  "affected_regions": [
+   "CA-bc"
+  ],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 0,
+  "discard_reason": "No exposure: no open POs with suppliers in the affected region",
+  "evidence": [],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0008",
+  "received_at": "2026-09-29T00:00:00.000Z",
+  "channel": "news",
+  "headline": "Rolling strikes at Blagnac aerostructures plants hit Garonne Aerostructures output",
+  "raw_text": "Regional press: unions at three aerostructures sites near Blagnac have called rolling 48 hour strikes through October over wage indexation. Garonne Aerostructures confirms reduced output on machined nacelle brackets and hinge fittings and is rescheduling customer deliveries.",
+  "type": "conflict_unrest",
+  "state": "operational",
+  "confidence": 0.8,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100162"
+  ],
+  "affected_part_ids": [
+   "NAC-7300-210",
+   "NAC-7300-220",
+   "NAC-3091-950",
+   "NAC-8068-460",
+   "NAC-2492-310",
+   "NAC-2334-690"
+  ],
+  "affected_po_line_ids": [
+   "4500018506-00010",
+   "4500018540-00010",
+   "4500019806-00010",
+   "4500019806-00020",
+   "4500019806-00040",
+   "4500020108-00020",
+   "4500020108-00030",
+   "4500020108-00040",
+   "4500020108-00050",
+   "4500020108-00060"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 12,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "news",
+    "received_at": "2026-09-29T00:00:00.000Z",
+    "snippet": "Regional press: unions at three aerostructures sites near Blagnac have called rolling 48 hour strikes through October over wage indexation. Garonne Aerostructures confirms reduced output on machined nacelle brackets and hinge fittings and is rescheduling customer deliveries."
+   },
+   {
+    "channel": "email",
+    "received_at": "2026-09-29T07:00:00.000Z",
+    "snippet": "Garonne reschedules October deliveries of TR brackets and hinge fittings by up to two weeks."
+   }
+  ],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0030",
+  "received_at": "2026-09-28T01:00:00.000Z",
+  "channel": "sphera",
+  "headline": "Supplier risk event: Kemuning Machining financial score drop",
+  "raw_text": "Sphera financial health score down 21 points in 90 days.",
+  "type": "supplier_distress",
+  "state": "strategic",
+  "confidence": 0.73,
+  "disposition": "merged",
+  "material": false,
+  "parent_id": "SIG-0009",
+  "affected_supplier_ids": [
+   "100124"
+  ],
+  "affected_part_ids": [
+   "ENG-4902-410",
+   "ENG-4902-420"
+  ],
+  "affected_po_line_ids": [
+   "4500018574-00010",
+   "4500018600-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 21,
+  "discard_reason": null,
+  "evidence": [],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0016",
+  "received_at": "2026-09-27T23:45:00.000Z",
+  "channel": "news",
+  "headline": "Respiratory outbreak prompts 3 week closure order for Haiphong industrial zone",
+  "raw_text": "Local health authority orders a three week closure of an industrial zone in Haiphong after a cluster of respiratory infections. Manufacturers in the zone, including wire harness producers, have suspended production.",
+  "type": "pandemic_health",
+  "state": "operational",
+  "confidence": 0.79,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [
+   "CON-8400-310",
+   "CON-7862-710",
+   "CON-3760-370",
+   "CON-7838-210",
+   "CON-2016-370",
+   "CON-7797-900",
+   "CON-2771-900"
+  ],
+  "affected_po_line_ids": [
+   "4500018722-00010",
+   "4500019884-00010",
+   "4500019884-00020",
+   "4500019884-00030",
+   "4500019884-00040",
+   "4500019884-00050",
+   "4500020198-00010",
+   "4500020198-00020",
+   "4500020198-00030",
+   "4500020198-00040"
+  ],
+  "affected_regions": [
+   "VN-north"
+  ],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 18,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "news",
+    "received_at": "2026-09-27T23:45:00.000Z",
+    "snippet": "Local health authority orders a three week closure of an industrial zone in Haiphong after a cluster of respiratory infections. Manufacturers in the zone, including wire harness producers, have suspended production."
+   }
+  ],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0025",
+  "received_at": "2026-09-27T08:00:00.000Z",
+  "channel": "news",
+  "headline": "Bushfire closes industrial estate south of Perth",
+  "raw_text": "Emergency services have closed an industrial estate south of Perth as a bushfire approaches.",
+  "type": "natural_calamity",
+  "state": "operational",
+  "confidence": 0.74,
+  "disposition": "discarded",
+  "material": false,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [],
+  "affected_po_line_ids": [],
+  "affected_regions": [
+   "AU-wa"
+  ],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 0,
+  "discard_reason": "No exposure: no open POs with suppliers in the affected region",
+  "evidence": [],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0009",
+  "received_at": "2026-09-27T02:30:00.000Z",
+  "channel": "credit_monitor",
+  "headline": "Kemuning Machining credit rating cut two notches; covenant breach reported",
+  "raw_text": "Credit alert, severity 2. Kemuning Machining Sdn Bhd (Johor Bahru) rating moved from BB to B. Lender reports covenant breach on its working capital facility; waiver under negotiation. Days payable outstanding to its own suppliers rose from 48 to 81.",
+  "type": "supplier_distress",
+  "state": "strategic",
+  "confidence": 0.78,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100124"
+  ],
+  "affected_part_ids": [
+   "ENG-4902-410",
+   "ENG-4902-420"
+  ],
+  "affected_po_line_ids": [
+   "4500018574-00010",
+   "4500018600-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 21,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "credit_monitor",
+    "received_at": "2026-09-27T02:30:00.000Z",
+    "snippet": "Credit alert, severity 2. Kemuning Machining Sdn Bhd (Johor Bahru) rating moved from BB to B."
+   },
+   {
+    "channel": "sphera",
+    "received_at": "2026-09-28T01:00:00.000Z",
+    "snippet": "Sphera financial health score down 21 points in 90 days."
+   }
+  ],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0011",
+  "received_at": "2026-09-25T19:20:00.000Z",
+  "channel": "news",
+  "headline": "M6.1 earthquake near Sakai; Kansai industrial suppliers pause for inspections",
+  "raw_text": "A magnitude 6.1 earthquake struck near Sakai early this morning. Several industrial suppliers in the Kansai region have paused operations for structural inspections, expected to take up to five days.",
+  "type": "natural_calamity",
+  "state": "operational",
+  "confidence": 0.76,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [],
+  "affected_part_ids": [
+   "CON-8100-110",
+   "CON-7287-900",
+   "CON-7838-210",
+   "CON-5523-020"
+  ],
+  "affected_po_line_ids": [
+   "4500018648-00010",
+   "4500018980-00010",
+   "4500018980-00020",
+   "4500018980-00030",
+   "4500018980-00050"
+  ],
+  "affected_regions": [
+   "JP-kansai"
+  ],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 5,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "news",
+    "received_at": "2026-09-25T19:20:00.000Z",
+    "snippet": "A magnitude 6.1 earthquake struck near Sakai early this morning. Several industrial suppliers in the Kansai region have paused operations for structural inspections, expected to take up to five days."
+   }
+  ],
+  "checkpoint": "purchasing",
+  "library": false
+ },
+ {
+  "id": "SIG-0010",
+  "received_at": "2026-09-25T03:00:00.000Z",
+  "channel": "sphera",
+  "headline": "Titanium sponge shortage: Sendai Titanium Bar moves Ti-6Al-4V bar to allocation",
+  "raw_text": "Sphera supplier risk event: Sendai Titanium Bar Co has placed Ti-6Al-4V bar on customer allocation through Q1 2027 citing sponge supply constraints. Lead times quoted at 155 days, up from 120.",
+  "type": "supply_shortage",
+  "state": "strategic",
+  "confidence": 0.83,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100247"
+  ],
+  "affected_part_ids": [
+   "RAW-9100-050",
+   "RAW-1719-170",
+   "RAW-2472-280",
+   "RAW-1303-100",
+   "RAW-6827-030"
+  ],
+  "affected_po_line_ids": [
+   "4500018629-00010",
+   "4500019399-00010",
+   "4500019399-00020",
+   "4500019399-00030",
+   "4500019413-00010",
+   "4500019413-00020",
+   "4500019413-00030"
+  ],
+  "affected_regions": [
+   "JP-tohoku"
+  ],
+  "affected_categories": [
+   "raw_alloy"
+  ],
+  "affected_corridors": [],
+  "est_delay_days": 35,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "sphera",
+    "received_at": "2026-09-25T03:00:00.000Z",
+    "snippet": "Sphera supplier risk event: Sendai Titanium Bar Co has placed Ti-6Al-4V bar on customer allocation through Q1 2027 citing sponge supply constraints. Lead times quoted at 155 days, up from 120."
+   }
+  ],
+  "checkpoint": "sourcing",
+  "library": false
+ },
+ {
+  "id": "SIG-0014",
+  "received_at": "2026-09-24T05:00:00.000Z",
+  "channel": "news",
+  "headline": "China tightens export licensing on samarium-cobalt magnets",
+  "raw_text": "Trade press: new export licensing requirements apply to samarium-cobalt permanent magnets from 1 Oct. Exporters report licence lead times of 30 to 45 days for aerospace end users.",
+  "type": "export_control",
+  "state": "strategic",
+  "confidence": 0.81,
+  "disposition": "material",
+  "material": true,
+  "parent_id": null,
+  "affected_supplier_ids": [
+   "100253"
+  ],
+  "affected_part_ids": [
+   "RAW-9300-610"
+  ],
+  "affected_po_line_ids": [
+   "4500018694-00010"
+  ],
+  "affected_regions": [],
+  "affected_categories": [],
+  "affected_corridors": [],
+  "est_delay_days": 30,
+  "discard_reason": null,
+  "evidence": [
+   {
+    "channel": "news",
+    "received_at": "2026-09-24T05:00:00.000Z",
+    "snippet": "Trade press: new export licensing requirements apply to samarium-cobalt permanent magnets from 1 Oct. Exporters report licence lead times of 30 to 45 days for aerospace end users."
+   }
+  ],
+  "checkpoint": "sourcing",
+  "library": false
+ }
+]

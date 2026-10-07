@@ -1,0 +1,4862 @@
+[
+ {
+  "id": "ENG-4471-120",
+  "description": "HPC stage 3 blade retention ring",
+  "category": "engine_lru",
+  "lead_time_days": 120,
+  "unit_cost_usd": 14500,
+  "approved_sources": [
+   {
+    "supplier_id": "100118",
+    "price_usd": 14500,
+    "lead_time_days": 120,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100102",
+    "price_usd": 16240,
+    "lead_time_days": 28,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100107",
+    "price_usd": 11890,
+    "lead_time_days": 24,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100141",
+    "price_usd": 20010,
+    "lead_time_days": 3,
+    "kind": "distributor"
+   }
+  ],
+  "airworthiness_doc": "Dual release",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "MY-penang"
+ },
+ {
+  "id": "ENG-4471-130",
+  "description": "HPC stage 4 blade retention ring",
+  "category": "engine_lru",
+  "lead_time_days": 120,
+  "unit_cost_usd": 16000,
+  "approved_sources": [
+   {
+    "supplier_id": "100118",
+    "price_usd": 16000,
+    "lead_time_days": 120,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100102",
+    "price_usd": 17920,
+    "lead_time_days": 28,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100107",
+    "price_usd": 13120,
+    "lead_time_days": 24,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100141",
+    "price_usd": 22080,
+    "lead_time_days": 3,
+    "kind": "distributor"
+   }
+  ],
+  "airworthiness_doc": "Dual release",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "MY-penang"
+ },
+ {
+  "id": "ENG-4471-140",
+  "description": "HPC stage 5 blade retention ring",
+  "category": "engine_lru",
+  "lead_time_days": 120,
+  "unit_cost_usd": 13600,
+  "approved_sources": [
+   {
+    "supplier_id": "100118",
+    "price_usd": 13600,
+    "lead_time_days": 120,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100102",
+    "price_usd": 15232,
+    "lead_time_days": 28,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100107",
+    "price_usd": 11152,
+    "lead_time_days": 24,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100141",
+    "price_usd": 18768,
+    "lead_time_days": 3,
+    "kind": "distributor"
+   }
+  ],
+  "airworthiness_doc": "Dual release",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "MY-penang"
+ },
+ {
+  "id": "ENG-5210-110",
+  "description": "HPT nozzle guide vane casting, stage 1",
+  "category": "engine_lru",
+  "lead_time_days": 90,
+  "unit_cost_usd": 8800,
+  "approved_sources": [
+   {
+    "supplier_id": "100241",
+    "price_usd": 8800,
+    "lead_time_days": 90,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100116",
+    "price_usd": 9500,
+    "lead_time_days": 70,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "ENG-5210-120",
+  "description": "HPT nozzle guide vane casting, stage 2",
+  "category": "engine_lru",
+  "lead_time_days": 90,
+  "unit_cost_usd": 7400,
+  "approved_sources": [
+   {
+    "supplier_id": "100241",
+    "price_usd": 7400,
+    "lead_time_days": 90,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100116",
+    "price_usd": 8100,
+    "lead_time_days": 70,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "ENG-6120-210",
+  "description": "N2 speed sensor, dual-use controlled",
+  "category": "engine_lru",
+  "lead_time_days": 75,
+  "unit_cost_usd": 6900,
+  "approved_sources": [
+   {
+    "supplier_id": "100131",
+    "price_usd": 6900,
+    "lead_time_days": 75,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100127",
+    "price_usd": 9400,
+    "lead_time_days": 14,
+    "kind": "distributor"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "JP-kanto"
+ },
+ {
+  "id": "ENG-4810-310",
+  "description": "LPT seal ring segment",
+  "category": "engine_lru",
+  "lead_time_days": 100,
+  "unit_cost_usd": 6200,
+  "approved_sources": [
+   {
+    "supplier_id": "100110",
+    "price_usd": 6200,
+    "lead_time_days": 100,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100116",
+    "price_usd": 6700,
+    "lead_time_days": 84,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100138",
+    "price_usd": 6550,
+    "lead_time_days": 90,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "SE-west"
+ },
+ {
+  "id": "ENG-4902-410",
+  "description": "Compressor case bracket, machined",
+  "category": "engine_lru",
+  "lead_time_days": 60,
+  "unit_cost_usd": 3800,
+  "approved_sources": [
+   {
+    "supplier_id": "100124",
+    "price_usd": 3800,
+    "lead_time_days": 60,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100134",
+    "price_usd": 3950,
+    "lead_time_days": 45,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100120",
+    "price_usd": 4100,
+    "lead_time_days": 50,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "MY-johor"
+ },
+ {
+  "id": "ENG-4902-420",
+  "description": "Bearing housing cover, machined",
+  "category": "engine_lru",
+  "lead_time_days": 55,
+  "unit_cost_usd": 2650,
+  "approved_sources": [
+   {
+    "supplier_id": "100124",
+    "price_usd": 2650,
+    "lead_time_days": 55,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100145",
+    "price_usd": 2800,
+    "lead_time_days": 40,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "MY-johor"
+ },
+ {
+  "id": "NAC-7100-110",
+  "description": "Inlet acoustic panel, inner barrel",
+  "category": "nacelle",
+  "lead_time_days": 110,
+  "unit_cost_usd": 68000,
+  "approved_sources": [
+   {
+    "supplier_id": "100151",
+    "price_usd": 68000,
+    "lead_time_days": 110,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100171",
+    "price_usd": 74500,
+    "lead_time_days": 130,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "NAC-7100-120",
+  "description": "Fan cowl acoustic liner",
+  "category": "nacelle",
+  "lead_time_days": 100,
+  "unit_cost_usd": 41000,
+  "approved_sources": [
+   {
+    "supplier_id": "100154",
+    "price_usd": 41000,
+    "lead_time_days": 100,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100171",
+    "price_usd": 45200,
+    "lead_time_days": 120,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "DE-north"
+ },
+ {
+  "id": "NAC-7100-130",
+  "description": "Exhaust acoustic panel",
+  "category": "nacelle",
+  "lead_time_days": 105,
+  "unit_cost_usd": 52500,
+  "approved_sources": [
+   {
+    "supplier_id": "100151",
+    "price_usd": 52500,
+    "lead_time_days": 105,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100154",
+    "price_usd": 54000,
+    "lead_time_days": 105,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "NAC-7200-210",
+  "description": "Fan cowl composite panel",
+  "category": "nacelle",
+  "lead_time_days": 80,
+  "unit_cost_usd": 38500,
+  "approved_sources": [
+   {
+    "supplier_id": "100158",
+    "price_usd": 38500,
+    "lead_time_days": 80,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100165",
+    "price_usd": 35900,
+    "lead_time_days": 95,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "NO-west"
+ },
+ {
+  "id": "NAC-7300-210",
+  "description": "Thrust reverser bracket",
+  "category": "nacelle",
+  "lead_time_days": 50,
+  "unit_cost_usd": 4200,
+  "approved_sources": [
+   {
+    "supplier_id": "100162",
+    "price_usd": 4200,
+    "lead_time_days": 50,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100171",
+    "price_usd": 4650,
+    "lead_time_days": 60,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "FR-occitanie"
+ },
+ {
+  "id": "NAC-7300-220",
+  "description": "Nacelle hinge fitting",
+  "category": "nacelle",
+  "lead_time_days": 45,
+  "unit_cost_usd": 2900,
+  "approved_sources": [
+   {
+    "supplier_id": "100162",
+    "price_usd": 2900,
+    "lead_time_days": 45,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": true,
+  "origin_region": "FR-occitanie"
+ },
+ {
+  "id": "NAC-7500-310",
+  "description": "Translating sleeve repair kit",
+  "category": "nacelle",
+  "lead_time_days": 60,
+  "unit_cost_usd": 96000,
+  "approved_sources": [
+   {
+    "supplier_id": "100168",
+    "price_usd": 96000,
+    "lead_time_days": 60,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "NAC-7500-320",
+  "description": "Thrust reverser cascade overhaul",
+  "category": "nacelle",
+  "lead_time_days": 45,
+  "unit_cost_usd": 54000,
+  "approved_sources": [
+   {
+    "supplier_id": "100168",
+    "price_usd": 54000,
+    "lead_time_days": 45,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100171",
+    "price_usd": 61000,
+    "lead_time_days": 70,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "NAC-7600-410",
+  "description": "Composite access panel",
+  "category": "nacelle",
+  "lead_time_days": 40,
+  "unit_cost_usd": 6400,
+  "approved_sources": [
+   {
+    "supplier_id": "100165",
+    "price_usd": 6400,
+    "lead_time_days": 40,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100158",
+    "price_usd": 7100,
+    "lead_time_days": 45,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "PH-visayas"
+ },
+ {
+  "id": "FST-2110-010",
+  "description": "Hi-lock pin, titanium, 5/32",
+  "category": "fastener",
+  "lead_time_days": 30,
+  "unit_cost_usd": 18,
+  "approved_sources": [
+   {
+    "supplier_id": "100181",
+    "price_usd": 18,
+    "lead_time_days": 30,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100187",
+    "price_usd": 24,
+    "lead_time_days": 21,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-2110-020",
+  "description": "Lockbolt collar, A286",
+  "category": "fastener",
+  "lead_time_days": 30,
+  "unit_cost_usd": 11,
+  "approved_sources": [
+   {
+    "supplier_id": "100184",
+    "price_usd": 11,
+    "lead_time_days": 30,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100187",
+    "price_usd": 15,
+    "lead_time_days": 21,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-2120-030",
+  "description": "Blind rivet, monel",
+  "category": "fastener",
+  "lead_time_days": 25,
+  "unit_cost_usd": 4,
+  "approved_sources": [
+   {
+    "supplier_id": "100193",
+    "price_usd": 4,
+    "lead_time_days": 25,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 5,
+    "lead_time_days": 28,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "SEA-3100-510",
+  "description": "Fuel nozzle O-ring seal kit",
+  "category": "seal",
+  "lead_time_days": 40,
+  "unit_cost_usd": 85,
+  "approved_sources": [
+   {
+    "supplier_id": "100201",
+    "price_usd": 85,
+    "lead_time_days": 40,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100207",
+    "price_usd": 112,
+    "lead_time_days": 18,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "KR-central"
+ },
+ {
+  "id": "SEA-3100-520",
+  "description": "Gearbox carbon face seal",
+  "category": "seal",
+  "lead_time_days": 55,
+  "unit_cost_usd": 640,
+  "approved_sources": [
+   {
+    "supplier_id": "100204",
+    "price_usd": 640,
+    "lead_time_days": 55,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100207",
+    "price_usd": 690,
+    "lead_time_days": 35,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "NL-south"
+ },
+ {
+  "id": "RAW-9100-050",
+  "description": "Ti-6Al-4V bar, 50 mm, AMS 4928",
+  "category": "raw_alloy",
+  "lead_time_days": 120,
+  "unit_cost_usd": 2600,
+  "approved_sources": [
+   {
+    "supplier_id": "100247",
+    "price_usd": 2600,
+    "lead_time_days": 120,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100250",
+    "price_usd": 3050,
+    "lead_time_days": 45,
+    "kind": "distributor"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "JP-tohoku"
+ },
+ {
+  "id": "RAW-9300-610",
+  "description": "SmCo magnet set, actuator motor",
+  "category": "raw_alloy",
+  "lead_time_days": 90,
+  "unit_cost_usd": 1150,
+  "approved_sources": [
+   {
+    "supplier_id": "100253",
+    "price_usd": 1150,
+    "lead_time_days": 90,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "CN-jiangsu"
+ },
+ {
+  "id": "CON-8100-110",
+  "description": "Abrasive blast media, aluminium oxide",
+  "category": "consumable",
+  "lead_time_days": 14,
+  "unit_cost_usd": 45,
+  "approved_sources": [
+   {
+    "supplier_id": "100233",
+    "price_usd": 45,
+    "lead_time_days": 14,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100221",
+    "price_usd": 52,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-kansai"
+ },
+ {
+  "id": "CON-8200-210",
+  "description": "Aqueous cleaning concentrate",
+  "category": "consumable",
+  "lead_time_days": 21,
+  "unit_cost_usd": 62,
+  "approved_sources": [
+   {
+    "supplier_id": "100224",
+    "price_usd": 62,
+    "lead_time_days": 21,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100221",
+    "price_usd": 70,
+    "lead_time_days": 4,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "CON-8400-310",
+  "description": "Ignition lead harness kit",
+  "category": "consumable",
+  "lead_time_days": 45,
+  "unit_cost_usd": 2300,
+  "approved_sources": [
+   {
+    "supplier_id": "100227",
+    "price_usd": 2300,
+    "lead_time_days": 45,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100127",
+    "price_usd": 2900,
+    "lead_time_days": 21,
+    "kind": "distributor"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "VN-north"
+ },
+ {
+  "id": "CON-8300-410",
+  "description": "Corrosion inhibiting compound",
+  "category": "consumable",
+  "lead_time_days": 18,
+  "unit_cost_usd": 38,
+  "approved_sources": [
+   {
+    "supplier_id": "100230",
+    "price_usd": 38,
+    "lead_time_days": 18,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100221",
+    "price_usd": 44,
+    "lead_time_days": 4,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "DE-west"
+ },
+ {
+  "id": "ENG-5600-710",
+  "description": "Fan blade dovetail forging",
+  "category": "engine_lru",
+  "lead_time_days": 85,
+  "unit_cost_usd": 9700,
+  "approved_sources": [
+   {
+    "supplier_id": "100113",
+    "price_usd": 9700,
+    "lead_time_days": 85,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100138",
+    "price_usd": 10300,
+    "lead_time_days": 90,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "DE-bavaria"
+ },
+ {
+  "id": "ENG-1298-410",
+  "description": "HPC variable stator vane",
+  "category": "engine_lru",
+  "lead_time_days": 159,
+  "unit_cost_usd": 47724,
+  "approved_sources": [
+   {
+    "supplier_id": "100241",
+    "price_usd": 47724,
+    "lead_time_days": 159,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": true,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "ENG-2939-180",
+  "description": "LPC blade, stage 2",
+  "category": "engine_lru",
+  "lead_time_days": 160,
+  "unit_cost_usd": 11671,
+  "approved_sources": [
+   {
+    "supplier_id": "100127",
+    "price_usd": 11671,
+    "lead_time_days": 160,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100110",
+    "price_usd": 12619,
+    "lead_time_days": 140,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "SG"
+ },
+ {
+  "id": "ENG-9402-410",
+  "description": "Combustor liner segment",
+  "category": "engine_lru",
+  "lead_time_days": 62,
+  "unit_cost_usd": 42283,
+  "approved_sources": [
+   {
+    "supplier_id": "100145",
+    "price_usd": 42283,
+    "lead_time_days": 62,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100110",
+    "price_usd": 44669,
+    "lead_time_days": 57,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100107",
+    "price_usd": 50700,
+    "lead_time_days": 38,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "TH-eastern"
+ },
+ {
+  "id": "ENG-3429-990",
+  "description": "Fuel nozzle assembly",
+  "category": "engine_lru",
+  "lead_time_days": 69,
+  "unit_cost_usd": 4025,
+  "approved_sources": [
+   {
+    "supplier_id": "100116",
+    "price_usd": 4025,
+    "lead_time_days": 69,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100110",
+    "price_usd": 4451,
+    "lead_time_days": 67,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100113",
+    "price_usd": 4904,
+    "lead_time_days": 57,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "JP-chubu"
+ },
+ {
+  "id": "ENG-1053-910",
+  "description": "HPT shroud segment",
+  "category": "engine_lru",
+  "lead_time_days": 124,
+  "unit_cost_usd": 4462,
+  "approved_sources": [
+   {
+    "supplier_id": "100113",
+    "price_usd": 4462,
+    "lead_time_days": 124,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100102",
+    "price_usd": 4864,
+    "lead_time_days": 134,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "DE-bavaria"
+ },
+ {
+  "id": "ENG-8170-690",
+  "description": "Bearing support housing",
+  "category": "engine_lru",
+  "lead_time_days": 134,
+  "unit_cost_usd": 29852,
+  "approved_sources": [
+   {
+    "supplier_id": "100113",
+    "price_usd": 29852,
+    "lead_time_days": 134,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100120",
+    "price_usd": 32243,
+    "lead_time_days": 126,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100110",
+    "price_usd": 36442,
+    "lead_time_days": 120,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "DE-bavaria"
+ },
+ {
+  "id": "ENG-6863-360",
+  "description": "Oil pump assembly",
+  "category": "engine_lru",
+  "lead_time_days": 74,
+  "unit_cost_usd": 46475,
+  "approved_sources": [
+   {
+    "supplier_id": "100116",
+    "price_usd": 46475,
+    "lead_time_days": 74,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100107",
+    "price_usd": 49495,
+    "lead_time_days": 58,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "JP-chubu"
+ },
+ {
+  "id": "ENG-9691-930",
+  "description": "Accessory gearbox shaft",
+  "category": "engine_lru",
+  "lead_time_days": 73,
+  "unit_cost_usd": 28575,
+  "approved_sources": [
+   {
+    "supplier_id": "100241",
+    "price_usd": 28575,
+    "lead_time_days": 73,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100113",
+    "price_usd": 30161,
+    "lead_time_days": 71,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100138",
+    "price_usd": 32521,
+    "lead_time_days": 73,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "ENG-8204-060",
+  "description": "Fan case abradable panel",
+  "category": "engine_lru",
+  "lead_time_days": 159,
+  "unit_cost_usd": 8158,
+  "approved_sources": [
+   {
+    "supplier_id": "100124",
+    "price_usd": 8158,
+    "lead_time_days": 159,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100138",
+    "price_usd": 8892,
+    "lead_time_days": 169,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "MY-johor"
+ },
+ {
+  "id": "ENG-1761-110",
+  "description": "Turbine disk spacer",
+  "category": "engine_lru",
+  "lead_time_days": 114,
+  "unit_cost_usd": 2351,
+  "approved_sources": [
+   {
+    "supplier_id": "100131",
+    "price_usd": 2351,
+    "lead_time_days": 114,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": true,
+  "origin_region": "JP-kanto"
+ },
+ {
+  "id": "ENG-8146-440",
+  "description": "Compressor seal land",
+  "category": "engine_lru",
+  "lead_time_days": 132,
+  "unit_cost_usd": 2153,
+  "approved_sources": [
+   {
+    "supplier_id": "100110",
+    "price_usd": 2153,
+    "lead_time_days": 132,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100102",
+    "price_usd": 2327,
+    "lead_time_days": 125,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "SE-west"
+ },
+ {
+  "id": "ENG-3567-720",
+  "description": "Fuel metering unit",
+  "category": "engine_lru",
+  "lead_time_days": 66,
+  "unit_cost_usd": 2601,
+  "approved_sources": [
+   {
+    "supplier_id": "100145",
+    "price_usd": 2601,
+    "lead_time_days": 66,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100102",
+    "price_usd": 2859,
+    "lead_time_days": 49,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100134",
+    "price_usd": 2864,
+    "lead_time_days": 60,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "TH-eastern"
+ },
+ {
+  "id": "ENG-8978-230",
+  "description": "Bleed valve actuator",
+  "category": "engine_lru",
+  "lead_time_days": 84,
+  "unit_cost_usd": 38733,
+  "approved_sources": [
+   {
+    "supplier_id": "100141",
+    "price_usd": 38733,
+    "lead_time_days": 84,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100107",
+    "price_usd": 43041,
+    "lead_time_days": 64,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100113",
+    "price_usd": 43409,
+    "lead_time_days": 54,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "SG"
+ },
+ {
+  "id": "ENG-3581-900",
+  "description": "Starter air valve",
+  "category": "engine_lru",
+  "lead_time_days": 86,
+  "unit_cost_usd": 2536,
+  "approved_sources": [
+   {
+    "supplier_id": "100138",
+    "price_usd": 2536,
+    "lead_time_days": 86,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100110",
+    "price_usd": 2764,
+    "lead_time_days": 96,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "US-pnw"
+ },
+ {
+  "id": "ENG-7865-530",
+  "description": "LPT nozzle segment",
+  "category": "engine_lru",
+  "lead_time_days": 143,
+  "unit_cost_usd": 5442,
+  "approved_sources": [
+   {
+    "supplier_id": "100107",
+    "price_usd": 5442,
+    "lead_time_days": 143,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100241",
+    "price_usd": 5777,
+    "lead_time_days": 129,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "FR-occitanie"
+ },
+ {
+  "id": "ENG-8501-050",
+  "description": "Igniter plug",
+  "category": "engine_lru",
+  "lead_time_days": 115,
+  "unit_cost_usd": 41385,
+  "approved_sources": [
+   {
+    "supplier_id": "100141",
+    "price_usd": 41385,
+    "lead_time_days": 115,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100120",
+    "price_usd": 45764,
+    "lead_time_days": 109,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100116",
+    "price_usd": 49626,
+    "lead_time_days": 83,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "SG"
+ },
+ {
+  "id": "ENG-2978-080",
+  "description": "Oil scavenge pump",
+  "category": "engine_lru",
+  "lead_time_days": 132,
+  "unit_cost_usd": 2131,
+  "approved_sources": [
+   {
+    "supplier_id": "100116",
+    "price_usd": 2131,
+    "lead_time_days": 132,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100141",
+    "price_usd": 2323,
+    "lead_time_days": 142,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "JP-chubu"
+ },
+ {
+  "id": "ENG-1619-270",
+  "description": "Thrust bearing",
+  "category": "engine_lru",
+  "lead_time_days": 164,
+  "unit_cost_usd": 2915,
+  "approved_sources": [
+   {
+    "supplier_id": "100134",
+    "price_usd": 2915,
+    "lead_time_days": 164,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "IN-karnataka"
+ },
+ {
+  "id": "ENG-5663-240",
+  "description": "Inlet guide vane",
+  "category": "engine_lru",
+  "lead_time_days": 118,
+  "unit_cost_usd": 15720,
+  "approved_sources": [
+   {
+    "supplier_id": "100124",
+    "price_usd": 15720,
+    "lead_time_days": 118,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100138",
+    "price_usd": 17539,
+    "lead_time_days": 118,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "MY-johor"
+ },
+ {
+  "id": "ENG-6295-510",
+  "description": "Exhaust mixer segment",
+  "category": "engine_lru",
+  "lead_time_days": 149,
+  "unit_cost_usd": 28870,
+  "approved_sources": [
+   {
+    "supplier_id": "100145",
+    "price_usd": 28870,
+    "lead_time_days": 149,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100120",
+    "price_usd": 31468,
+    "lead_time_days": 159,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "TH-eastern"
+ },
+ {
+  "id": "ENG-7137-770",
+  "description": "HPC variable stator vane, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 79,
+  "unit_cost_usd": 6880,
+  "approved_sources": [
+   {
+    "supplier_id": "100141",
+    "price_usd": 6880,
+    "lead_time_days": 79,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "SG"
+ },
+ {
+  "id": "ENG-3678-270",
+  "description": "LPC blade, stage 2, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 119,
+  "unit_cost_usd": 31459,
+  "approved_sources": [
+   {
+    "supplier_id": "100113",
+    "price_usd": 31459,
+    "lead_time_days": 119,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100134",
+    "price_usd": 34610,
+    "lead_time_days": 109,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100131",
+    "price_usd": 38650,
+    "lead_time_days": 109,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "DE-bavaria"
+ },
+ {
+  "id": "ENG-1271-660",
+  "description": "Combustor liner segment, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 99,
+  "unit_cost_usd": 28891,
+  "approved_sources": [
+   {
+    "supplier_id": "100131",
+    "price_usd": 28891,
+    "lead_time_days": 99,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "JP-kanto"
+ },
+ {
+  "id": "ENG-6776-690",
+  "description": "Fuel nozzle assembly, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 112,
+  "unit_cost_usd": 10223,
+  "approved_sources": [
+   {
+    "supplier_id": "100145",
+    "price_usd": 10223,
+    "lead_time_days": 112,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100110",
+    "price_usd": 11143,
+    "lead_time_days": 122,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "TH-eastern"
+ },
+ {
+  "id": "ENG-7602-690",
+  "description": "HPT shroud segment, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 179,
+  "unit_cost_usd": 23215,
+  "approved_sources": [
+   {
+    "supplier_id": "100241",
+    "price_usd": 23215,
+    "lead_time_days": 179,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100102",
+    "price_usd": 24225,
+    "lead_time_days": 177,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "ENG-5473-380",
+  "description": "Bearing support housing, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 122,
+  "unit_cost_usd": 30380,
+  "approved_sources": [
+   {
+    "supplier_id": "100127",
+    "price_usd": 30380,
+    "lead_time_days": 122,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100241",
+    "price_usd": 32037,
+    "lead_time_days": 121,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "SG"
+ },
+ {
+  "id": "ENG-6251-290",
+  "description": "Oil pump assembly, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 146,
+  "unit_cost_usd": 21813,
+  "approved_sources": [
+   {
+    "supplier_id": "100124",
+    "price_usd": 21813,
+    "lead_time_days": 146,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100116",
+    "price_usd": 22917,
+    "lead_time_days": 130,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "MY-johor"
+ },
+ {
+  "id": "ENG-2115-760",
+  "description": "Accessory gearbox shaft, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 139,
+  "unit_cost_usd": 31068,
+  "approved_sources": [
+   {
+    "supplier_id": "100131",
+    "price_usd": 31068,
+    "lead_time_days": 139,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100145",
+    "price_usd": 33864,
+    "lead_time_days": 149,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "JP-kanto"
+ },
+ {
+  "id": "ENG-6681-050",
+  "description": "Fan case abradable panel, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 169,
+  "unit_cost_usd": 3603,
+  "approved_sources": [
+   {
+    "supplier_id": "100124",
+    "price_usd": 3603,
+    "lead_time_days": 169,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100241",
+    "price_usd": 4003,
+    "lead_time_days": 152,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "MY-johor"
+ },
+ {
+  "id": "ENG-1040-920",
+  "description": "Turbine disk spacer, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 75,
+  "unit_cost_usd": 8169,
+  "approved_sources": [
+   {
+    "supplier_id": "100241",
+    "price_usd": 8169,
+    "lead_time_days": 75,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100124",
+    "price_usd": 8969,
+    "lead_time_days": 68,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "ENG-6003-270",
+  "description": "Compressor seal land, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 74,
+  "unit_cost_usd": 23756,
+  "approved_sources": [
+   {
+    "supplier_id": "100120",
+    "price_usd": 23756,
+    "lead_time_days": 74,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100138",
+    "price_usd": 26135,
+    "lead_time_days": 65,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "CZ-moravia"
+ },
+ {
+  "id": "ENG-6495-300",
+  "description": "Fuel metering unit, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 82,
+  "unit_cost_usd": 2108,
+  "approved_sources": [
+   {
+    "supplier_id": "100113",
+    "price_usd": 2108,
+    "lead_time_days": 82,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100134",
+    "price_usd": 2283,
+    "lead_time_days": 69,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100127",
+    "price_usd": 2543,
+    "lead_time_days": 76,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "DE-bavaria"
+ },
+ {
+  "id": "ENG-1522-720",
+  "description": "Bleed valve actuator, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 64,
+  "unit_cost_usd": 4664,
+  "approved_sources": [
+   {
+    "supplier_id": "100131",
+    "price_usd": 4664,
+    "lead_time_days": 64,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100120",
+    "price_usd": 5084,
+    "lead_time_days": 74,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "JP-kanto"
+ },
+ {
+  "id": "ENG-2257-610",
+  "description": "Starter air valve, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 97,
+  "unit_cost_usd": 9159,
+  "approved_sources": [
+   {
+    "supplier_id": "100107",
+    "price_usd": 9159,
+    "lead_time_days": 97,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100134",
+    "price_usd": 9983,
+    "lead_time_days": 107,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "FR-occitanie"
+ },
+ {
+  "id": "ENG-7278-280",
+  "description": "LPT nozzle segment, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 69,
+  "unit_cost_usd": 9472,
+  "approved_sources": [
+   {
+    "supplier_id": "100131",
+    "price_usd": 9472,
+    "lead_time_days": 69,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "JP-kanto"
+ },
+ {
+  "id": "ENG-5892-750",
+  "description": "Igniter plug, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 90,
+  "unit_cost_usd": 36276,
+  "approved_sources": [
+   {
+    "supplier_id": "100145",
+    "price_usd": 36276,
+    "lead_time_days": 90,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100113",
+    "price_usd": 40569,
+    "lead_time_days": 72,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100127",
+    "price_usd": 41894,
+    "lead_time_days": 74,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "TH-eastern"
+ },
+ {
+  "id": "ENG-2120-230",
+  "description": "Oil scavenge pump, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 146,
+  "unit_cost_usd": 2244,
+  "approved_sources": [
+   {
+    "supplier_id": "100113",
+    "price_usd": 2244,
+    "lead_time_days": 146,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100241",
+    "price_usd": 2491,
+    "lead_time_days": 132,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "DE-bavaria"
+ },
+ {
+  "id": "ENG-1245-010",
+  "description": "Thrust bearing, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 81,
+  "unit_cost_usd": 2419,
+  "approved_sources": [
+   {
+    "supplier_id": "100113",
+    "price_usd": 2419,
+    "lead_time_days": 81,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100141",
+    "price_usd": 2607,
+    "lead_time_days": 64,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "DE-bavaria"
+ },
+ {
+  "id": "ENG-5779-980",
+  "description": "Inlet guide vane, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 82,
+  "unit_cost_usd": 30126,
+  "approved_sources": [
+   {
+    "supplier_id": "100116",
+    "price_usd": 30126,
+    "lead_time_days": 82,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100102",
+    "price_usd": 32837,
+    "lead_time_days": 92,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "JP-chubu"
+ },
+ {
+  "id": "ENG-5484-810",
+  "description": "Exhaust mixer segment, rev B",
+  "category": "engine_lru",
+  "lead_time_days": 132,
+  "unit_cost_usd": 15654,
+  "approved_sources": [
+   {
+    "supplier_id": "100131",
+    "price_usd": 15654,
+    "lead_time_days": 132,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100141",
+    "price_usd": 16328,
+    "lead_time_days": 129,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100120",
+    "price_usd": 19340,
+    "lead_time_days": 104,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "JP-kanto"
+ },
+ {
+  "id": "NAC-8512-960",
+  "description": "Fan cowl latch assembly",
+  "category": "nacelle",
+  "lead_time_days": 93,
+  "unit_cost_usd": 23933,
+  "approved_sources": [
+   {
+    "supplier_id": "100151",
+    "price_usd": 23933,
+    "lead_time_days": 93,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100168",
+    "price_usd": 26005,
+    "lead_time_days": 89,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "NAC-2334-690",
+  "description": "Thrust reverser actuator",
+  "category": "nacelle",
+  "lead_time_days": 138,
+  "unit_cost_usd": 39551,
+  "approved_sources": [
+   {
+    "supplier_id": "100158",
+    "price_usd": 39551,
+    "lead_time_days": 138,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100162",
+    "price_usd": 42202,
+    "lead_time_days": 129,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "NO-west"
+ },
+ {
+  "id": "NAC-2492-310",
+  "description": "Inlet lip skin",
+  "category": "nacelle",
+  "lead_time_days": 93,
+  "unit_cost_usd": 26464,
+  "approved_sources": [
+   {
+    "supplier_id": "100168",
+    "price_usd": 26464,
+    "lead_time_days": 93,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100158",
+    "price_usd": 27747,
+    "lead_time_days": 92,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100162",
+    "price_usd": 32791,
+    "lead_time_days": 85,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "NAC-4464-280",
+  "description": "Pylon fairing",
+  "category": "nacelle",
+  "lead_time_days": 40,
+  "unit_cost_usd": 16023,
+  "approved_sources": [
+   {
+    "supplier_id": "100171",
+    "price_usd": 16023,
+    "lead_time_days": 40,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100158",
+    "price_usd": 16821,
+    "lead_time_days": 30,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100162",
+    "price_usd": 18805,
+    "lead_time_days": 20,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "US-kansas"
+ },
+ {
+  "id": "NAC-8068-460",
+  "description": "Blocker door",
+  "category": "nacelle",
+  "lead_time_days": 65,
+  "unit_cost_usd": 5103,
+  "approved_sources": [
+   {
+    "supplier_id": "100165",
+    "price_usd": 5103,
+    "lead_time_days": 65,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100162",
+    "price_usd": 5548,
+    "lead_time_days": 57,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "PH-visayas"
+ },
+ {
+  "id": "NAC-5992-260",
+  "description": "Hold-open rod",
+  "category": "nacelle",
+  "lead_time_days": 114,
+  "unit_cost_usd": 5676,
+  "approved_sources": [
+   {
+    "supplier_id": "100158",
+    "price_usd": 5676,
+    "lead_time_days": 114,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100151",
+    "price_usd": 6304,
+    "lead_time_days": 114,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "NO-west"
+ },
+ {
+  "id": "NAC-1188-310",
+  "description": "Cascade segment",
+  "category": "nacelle",
+  "lead_time_days": 78,
+  "unit_cost_usd": 3092,
+  "approved_sources": [
+   {
+    "supplier_id": "100168",
+    "price_usd": 3092,
+    "lead_time_days": 78,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100171",
+    "price_usd": 3370,
+    "lead_time_days": 88,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "NAC-9834-170",
+  "description": "Fire seal strip",
+  "category": "nacelle",
+  "lead_time_days": 103,
+  "unit_cost_usd": 64648,
+  "approved_sources": [
+   {
+    "supplier_id": "100158",
+    "price_usd": 64648,
+    "lead_time_days": 103,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100154",
+    "price_usd": 71019,
+    "lead_time_days": 92,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "NO-west"
+ },
+ {
+  "id": "NAC-5861-260",
+  "description": "Access door assembly",
+  "category": "nacelle",
+  "lead_time_days": 126,
+  "unit_cost_usd": 11856,
+  "approved_sources": [
+   {
+    "supplier_id": "100158",
+    "price_usd": 11856,
+    "lead_time_days": 126,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100165",
+    "price_usd": 12903,
+    "lead_time_days": 109,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100171",
+    "price_usd": 14369,
+    "lead_time_days": 114,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "NO-west"
+ },
+ {
+  "id": "NAC-8874-100",
+  "description": "Drag link fitting",
+  "category": "nacelle",
+  "lead_time_days": 100,
+  "unit_cost_usd": 70418,
+  "approved_sources": [
+   {
+    "supplier_id": "100151",
+    "price_usd": 70418,
+    "lead_time_days": 100,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": true,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "NAC-9120-450",
+  "description": "Fan cowl latch assembly, rev B",
+  "category": "nacelle",
+  "lead_time_days": 81,
+  "unit_cost_usd": 3907,
+  "approved_sources": [
+   {
+    "supplier_id": "100168",
+    "price_usd": 3907,
+    "lead_time_days": 81,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": true,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "NAC-5443-950",
+  "description": "Thrust reverser actuator, rev B",
+  "category": "nacelle",
+  "lead_time_days": 87,
+  "unit_cost_usd": 77626,
+  "approved_sources": [
+   {
+    "supplier_id": "100171",
+    "price_usd": 77626,
+    "lead_time_days": 87,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100151",
+    "price_usd": 86650,
+    "lead_time_days": 83,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100158",
+    "price_usd": 84029,
+    "lead_time_days": 85,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "US-kansas"
+ },
+ {
+  "id": "NAC-4739-850",
+  "description": "Inlet lip skin, rev B",
+  "category": "nacelle",
+  "lead_time_days": 117,
+  "unit_cost_usd": 27686,
+  "approved_sources": [
+   {
+    "supplier_id": "100162",
+    "price_usd": 27686,
+    "lead_time_days": 117,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100168",
+    "price_usd": 30076,
+    "lead_time_days": 117,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "FR-occitanie"
+ },
+ {
+  "id": "NAC-6292-770",
+  "description": "Pylon fairing, rev B",
+  "category": "nacelle",
+  "lead_time_days": 116,
+  "unit_cost_usd": 4730,
+  "approved_sources": [
+   {
+    "supplier_id": "100171",
+    "price_usd": 4730,
+    "lead_time_days": 116,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100168",
+    "price_usd": 5192,
+    "lead_time_days": 101,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "US-kansas"
+ },
+ {
+  "id": "NAC-6108-190",
+  "description": "Blocker door, rev B",
+  "category": "nacelle",
+  "lead_time_days": 129,
+  "unit_cost_usd": 52529,
+  "approved_sources": [
+   {
+    "supplier_id": "100168",
+    "price_usd": 52529,
+    "lead_time_days": 129,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100158",
+    "price_usd": 57772,
+    "lead_time_days": 119,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100154",
+    "price_usd": 58998,
+    "lead_time_days": 89,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "NAC-7517-500",
+  "description": "Hold-open rod, rev B",
+  "category": "nacelle",
+  "lead_time_days": 129,
+  "unit_cost_usd": 5549,
+  "approved_sources": [
+   {
+    "supplier_id": "100168",
+    "price_usd": 5549,
+    "lead_time_days": 129,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100158",
+    "price_usd": 6048,
+    "lead_time_days": 139,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "NAC-3091-950",
+  "description": "Cascade segment, rev B",
+  "category": "nacelle",
+  "lead_time_days": 63,
+  "unit_cost_usd": 18533,
+  "approved_sources": [
+   {
+    "supplier_id": "100154",
+    "price_usd": 18533,
+    "lead_time_days": 63,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100162",
+    "price_usd": 19607,
+    "lead_time_days": 45,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "DE-north"
+ },
+ {
+  "id": "NAC-6969-010",
+  "description": "Fire seal strip, rev B",
+  "category": "nacelle",
+  "lead_time_days": 86,
+  "unit_cost_usd": 74830,
+  "approved_sources": [
+   {
+    "supplier_id": "100171",
+    "price_usd": 74830,
+    "lead_time_days": 86,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100158",
+    "price_usd": 82750,
+    "lead_time_days": 77,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "US-kansas"
+ },
+ {
+  "id": "NAC-5503-480",
+  "description": "Access door assembly, rev B",
+  "category": "nacelle",
+  "lead_time_days": 82,
+  "unit_cost_usd": 3270,
+  "approved_sources": [
+   {
+    "supplier_id": "100165",
+    "price_usd": 3270,
+    "lead_time_days": 82,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100151",
+    "price_usd": 3602,
+    "lead_time_days": 71,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "PH-visayas"
+ },
+ {
+  "id": "NAC-8108-770",
+  "description": "Drag link fitting, rev B",
+  "category": "nacelle",
+  "lead_time_days": 138,
+  "unit_cost_usd": 81523,
+  "approved_sources": [
+   {
+    "supplier_id": "100171",
+    "price_usd": 81523,
+    "lead_time_days": 138,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "A",
+  "sole_source": true,
+  "origin_region": "US-kansas"
+ },
+ {
+  "id": "NAC-7719-300",
+  "description": "Fan cowl latch assembly, rev C",
+  "category": "nacelle",
+  "lead_time_days": 96,
+  "unit_cost_usd": 7445,
+  "approved_sources": [
+   {
+    "supplier_id": "100165",
+    "price_usd": 7445,
+    "lead_time_days": 96,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100154",
+    "price_usd": 8080,
+    "lead_time_days": 92,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100171",
+    "price_usd": 8486,
+    "lead_time_days": 94,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "A",
+  "sole_source": false,
+  "origin_region": "PH-visayas"
+ },
+ {
+  "id": "FST-4952-490",
+  "description": "Hex bolt, Inconel",
+  "category": "fastener",
+  "lead_time_days": 50,
+  "unit_cost_usd": 4,
+  "approved_sources": [
+   {
+    "supplier_id": "100184",
+    "price_usd": 4,
+    "lead_time_days": 50,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 4,
+    "lead_time_days": 43,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100187",
+    "price_usd": 5,
+    "lead_time_days": 46,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-7615-440",
+  "description": "Self-locking nut",
+  "category": "fastener",
+  "lead_time_days": 56,
+  "unit_cost_usd": 42,
+  "approved_sources": [
+   {
+    "supplier_id": "100190",
+    "price_usd": 42,
+    "lead_time_days": 56,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100196",
+    "price_usd": 45,
+    "lead_time_days": 54,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "FST-3302-420",
+  "description": "Washer, countersunk",
+  "category": "fastener",
+  "lead_time_days": 56,
+  "unit_cost_usd": 56,
+  "approved_sources": [
+   {
+    "supplier_id": "100193",
+    "price_usd": 56,
+    "lead_time_days": 56,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100196",
+    "price_usd": 63,
+    "lead_time_days": 52,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 61,
+    "lead_time_days": 48,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "FST-4969-490",
+  "description": "Taper-lok bolt",
+  "category": "fastener",
+  "lead_time_days": 23,
+  "unit_cost_usd": 6,
+  "approved_sources": [
+   {
+    "supplier_id": "100184",
+    "price_usd": 6,
+    "lead_time_days": 23,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100187",
+    "price_usd": 6,
+    "lead_time_days": 8,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100181",
+    "price_usd": 7,
+    "lead_time_days": 17,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-3309-480",
+  "description": "Shear pin",
+  "category": "fastener",
+  "lead_time_days": 54,
+  "unit_cost_usd": 38,
+  "approved_sources": [
+   {
+    "supplier_id": "100190",
+    "price_usd": 38,
+    "lead_time_days": 54,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 42,
+    "lead_time_days": 37,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100181",
+    "price_usd": 46,
+    "lead_time_days": 36,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "FST-4398-880",
+  "description": "Clevis pin",
+  "category": "fastener",
+  "lead_time_days": 47,
+  "unit_cost_usd": 158,
+  "approved_sources": [
+   {
+    "supplier_id": "100190",
+    "price_usd": 158,
+    "lead_time_days": 47,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100196",
+    "price_usd": 177,
+    "lead_time_days": 33,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 175,
+    "lead_time_days": 45,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "FST-1029-650",
+  "description": "Rivnut",
+  "category": "fastener",
+  "lead_time_days": 24,
+  "unit_cost_usd": 7,
+  "approved_sources": [
+   {
+    "supplier_id": "100184",
+    "price_usd": 7,
+    "lead_time_days": 24,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100181",
+    "price_usd": 8,
+    "lead_time_days": 18,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 9,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-3503-040",
+  "description": "Cotter pin, stainless",
+  "category": "fastener",
+  "lead_time_days": 24,
+  "unit_cost_usd": 81,
+  "approved_sources": [
+   {
+    "supplier_id": "100184",
+    "price_usd": 81,
+    "lead_time_days": 24,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 85,
+    "lead_time_days": 24,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-4269-100",
+  "description": "Swage collar",
+  "category": "fastener",
+  "lead_time_days": 49,
+  "unit_cost_usd": 109,
+  "approved_sources": [
+   {
+    "supplier_id": "100187",
+    "price_usd": 109,
+    "lead_time_days": 49,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100184",
+    "price_usd": 118,
+    "lead_time_days": 49,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "US-california"
+ },
+ {
+  "id": "FST-6508-960",
+  "description": "Threaded insert",
+  "category": "fastener",
+  "lead_time_days": 56,
+  "unit_cost_usd": 10,
+  "approved_sources": [
+   {
+    "supplier_id": "100187",
+    "price_usd": 10,
+    "lead_time_days": 56,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 10,
+    "lead_time_days": 55,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "US-california"
+ },
+ {
+  "id": "FST-2361-310",
+  "description": "Hex bolt, Inconel, rev B",
+  "category": "fastener",
+  "lead_time_days": 54,
+  "unit_cost_usd": 178,
+  "approved_sources": [
+   {
+    "supplier_id": "100193",
+    "price_usd": 178,
+    "lead_time_days": 54,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100196",
+    "price_usd": 196,
+    "lead_time_days": 45,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100187",
+    "price_usd": 215,
+    "lead_time_days": 44,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "FST-2734-110",
+  "description": "Self-locking nut, rev B",
+  "category": "fastener",
+  "lead_time_days": 54,
+  "unit_cost_usd": 5,
+  "approved_sources": [
+   {
+    "supplier_id": "100181",
+    "price_usd": 5,
+    "lead_time_days": 54,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 5,
+    "lead_time_days": 46,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-7947-860",
+  "description": "Washer, countersunk, rev B",
+  "category": "fastener",
+  "lead_time_days": 54,
+  "unit_cost_usd": 17,
+  "approved_sources": [
+   {
+    "supplier_id": "100193",
+    "price_usd": 17,
+    "lead_time_days": 54,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 18,
+    "lead_time_days": 45,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "FST-8836-890",
+  "description": "Taper-lok bolt, rev B",
+  "category": "fastener",
+  "lead_time_days": 53,
+  "unit_cost_usd": 5,
+  "approved_sources": [
+   {
+    "supplier_id": "100193",
+    "price_usd": 5,
+    "lead_time_days": 53,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100184",
+    "price_usd": 6,
+    "lead_time_days": 35,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100181",
+    "price_usd": 6,
+    "lead_time_days": 41,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "FST-7547-620",
+  "description": "Shear pin, rev B",
+  "category": "fastener",
+  "lead_time_days": 32,
+  "unit_cost_usd": 4,
+  "approved_sources": [
+   {
+    "supplier_id": "100187",
+    "price_usd": 4,
+    "lead_time_days": 32,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 4,
+    "lead_time_days": 16,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "US-california"
+ },
+ {
+  "id": "FST-1715-430",
+  "description": "Clevis pin, rev B",
+  "category": "fastener",
+  "lead_time_days": 44,
+  "unit_cost_usd": 27,
+  "approved_sources": [
+   {
+    "supplier_id": "100196",
+    "price_usd": 27,
+    "lead_time_days": 44,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100181",
+    "price_usd": 30,
+    "lead_time_days": 38,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100187",
+    "price_usd": 33,
+    "lead_time_days": 36,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-chubu"
+ },
+ {
+  "id": "FST-8045-440",
+  "description": "Rivnut, rev B",
+  "category": "fastener",
+  "lead_time_days": 51,
+  "unit_cost_usd": 99,
+  "approved_sources": [
+   {
+    "supplier_id": "100181",
+    "price_usd": 99,
+    "lead_time_days": 51,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100184",
+    "price_usd": 110,
+    "lead_time_days": 50,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100196",
+    "price_usd": 109,
+    "lead_time_days": 27,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-8006-020",
+  "description": "Cotter pin, stainless, rev B",
+  "category": "fastener",
+  "lead_time_days": 34,
+  "unit_cost_usd": 75,
+  "approved_sources": [
+   {
+    "supplier_id": "100184",
+    "price_usd": 75,
+    "lead_time_days": 34,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 82,
+    "lead_time_days": 26,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-6554-250",
+  "description": "Swage collar, rev B",
+  "category": "fastener",
+  "lead_time_days": 51,
+  "unit_cost_usd": 133,
+  "approved_sources": [
+   {
+    "supplier_id": "100184",
+    "price_usd": 133,
+    "lead_time_days": 51,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100196",
+    "price_usd": 143,
+    "lead_time_days": 43,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-6666-680",
+  "description": "Threaded insert, rev B",
+  "category": "fastener",
+  "lead_time_days": 14,
+  "unit_cost_usd": 76,
+  "approved_sources": [
+   {
+    "supplier_id": "100193",
+    "price_usd": 76,
+    "lead_time_days": 14,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 80,
+    "lead_time_days": 6,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100181",
+    "price_usd": 90,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "FST-3321-340",
+  "description": "Hex bolt, Inconel, rev C",
+  "category": "fastener",
+  "lead_time_days": 14,
+  "unit_cost_usd": 52,
+  "approved_sources": [
+   {
+    "supplier_id": "100190",
+    "price_usd": 52,
+    "lead_time_days": 14,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100196",
+    "price_usd": 55,
+    "lead_time_days": 3,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100187",
+    "price_usd": 60,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "FST-3597-950",
+  "description": "Self-locking nut, rev C",
+  "category": "fastener",
+  "lead_time_days": 52,
+  "unit_cost_usd": 145,
+  "approved_sources": [
+   {
+    "supplier_id": "100193",
+    "price_usd": 145,
+    "lead_time_days": 52,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 155,
+    "lead_time_days": 41,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "FST-9482-360",
+  "description": "Washer, countersunk, rev C",
+  "category": "fastener",
+  "lead_time_days": 41,
+  "unit_cost_usd": 60,
+  "approved_sources": [
+   {
+    "supplier_id": "100196",
+    "price_usd": 60,
+    "lead_time_days": 41,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 64,
+    "lead_time_days": 34,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-chubu"
+ },
+ {
+  "id": "FST-2917-670",
+  "description": "Taper-lok bolt, rev C",
+  "category": "fastener",
+  "lead_time_days": 27,
+  "unit_cost_usd": 3,
+  "approved_sources": [
+   {
+    "supplier_id": "100181",
+    "price_usd": 3,
+    "lead_time_days": 27,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 3,
+    "lead_time_days": 11,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "TW-north"
+ },
+ {
+  "id": "FST-8574-360",
+  "description": "Shear pin, rev C",
+  "category": "fastener",
+  "lead_time_days": 28,
+  "unit_cost_usd": 121,
+  "approved_sources": [
+   {
+    "supplier_id": "100187",
+    "price_usd": 121,
+    "lead_time_days": 28,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100181",
+    "price_usd": 127,
+    "lead_time_days": 13,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 147,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "US-california"
+ },
+ {
+  "id": "FST-4976-960",
+  "description": "Clevis pin, rev C",
+  "category": "fastener",
+  "lead_time_days": 55,
+  "unit_cost_usd": 79,
+  "approved_sources": [
+   {
+    "supplier_id": "100187",
+    "price_usd": 79,
+    "lead_time_days": 55,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 87,
+    "lead_time_days": 37,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100184",
+    "price_usd": 85,
+    "lead_time_days": 19,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "US-california"
+ },
+ {
+  "id": "FST-5036-800",
+  "description": "Rivnut, rev C",
+  "category": "fastener",
+  "lead_time_days": 19,
+  "unit_cost_usd": 27,
+  "approved_sources": [
+   {
+    "supplier_id": "100190",
+    "price_usd": 27,
+    "lead_time_days": 19,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 29,
+    "lead_time_days": 16,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100184",
+    "price_usd": 32,
+    "lead_time_days": 9,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "FST-9235-260",
+  "description": "Cotter pin, stainless, rev C",
+  "category": "fastener",
+  "lead_time_days": 55,
+  "unit_cost_usd": 5,
+  "approved_sources": [
+   {
+    "supplier_id": "100190",
+    "price_usd": 5,
+    "lead_time_days": 55,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100193",
+    "price_usd": 5,
+    "lead_time_days": 54,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100187",
+    "price_usd": 6,
+    "lead_time_days": 23,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "FST-1452-620",
+  "description": "Swage collar, rev C",
+  "category": "fastener",
+  "lead_time_days": 27,
+  "unit_cost_usd": 64,
+  "approved_sources": [
+   {
+    "supplier_id": "100196",
+    "price_usd": 64,
+    "lead_time_days": 27,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 71,
+    "lead_time_days": 15,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100181",
+    "price_usd": 71,
+    "lead_time_days": 3,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-chubu"
+ },
+ {
+  "id": "FST-7607-650",
+  "description": "Threaded insert, rev C",
+  "category": "fastener",
+  "lead_time_days": 26,
+  "unit_cost_usd": 174,
+  "approved_sources": [
+   {
+    "supplier_id": "100196",
+    "price_usd": 174,
+    "lead_time_days": 26,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100184",
+    "price_usd": 190,
+    "lead_time_days": 16,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-chubu"
+ },
+ {
+  "id": "FST-7407-670",
+  "description": "Hex bolt, Inconel, rev D",
+  "category": "fastener",
+  "lead_time_days": 49,
+  "unit_cost_usd": 8,
+  "approved_sources": [
+   {
+    "supplier_id": "100190",
+    "price_usd": 8,
+    "lead_time_days": 49,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100184",
+    "price_usd": 9,
+    "lead_time_days": 38,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "FR-auvergne"
+ },
+ {
+  "id": "FST-7301-680",
+  "description": "Self-locking nut, rev D",
+  "category": "fastener",
+  "lead_time_days": 45,
+  "unit_cost_usd": 170,
+  "approved_sources": [
+   {
+    "supplier_id": "100187",
+    "price_usd": 170,
+    "lead_time_days": 45,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100181",
+    "price_usd": 181,
+    "lead_time_days": 30,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100190",
+    "price_usd": 207,
+    "lead_time_days": 11,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "US-california"
+ },
+ {
+  "id": "SEA-1092-460",
+  "description": "Packing ring, fluorocarbon",
+  "category": "seal",
+  "lead_time_days": 29,
+  "unit_cost_usd": 29,
+  "approved_sources": [
+   {
+    "supplier_id": "100204",
+    "price_usd": 29,
+    "lead_time_days": 29,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 30,
+    "lead_time_days": 21,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "NL-south"
+ },
+ {
+  "id": "SEA-1857-340",
+  "description": "Labyrinth seal strip",
+  "category": "seal",
+  "lead_time_days": 42,
+  "unit_cost_usd": 547,
+  "approved_sources": [
+   {
+    "supplier_id": "100213",
+    "price_usd": 547,
+    "lead_time_days": 42,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100201",
+    "price_usd": 577,
+    "lead_time_days": 32,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100204",
+    "price_usd": 623,
+    "lead_time_days": 16,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "IN-tamilnadu"
+ },
+ {
+  "id": "SEA-5350-760",
+  "description": "Static seal, metallic C-ring",
+  "category": "seal",
+  "lead_time_days": 62,
+  "unit_cost_usd": 101,
+  "approved_sources": [
+   {
+    "supplier_id": "100201",
+    "price_usd": 101,
+    "lead_time_days": 62,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100207",
+    "price_usd": 108,
+    "lead_time_days": 44,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 122,
+    "lead_time_days": 60,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "KR-central"
+ },
+ {
+  "id": "SEA-5111-200",
+  "description": "Lip seal, PTFE",
+  "category": "seal",
+  "lead_time_days": 63,
+  "unit_cost_usd": 177,
+  "approved_sources": [
+   {
+    "supplier_id": "100213",
+    "price_usd": 177,
+    "lead_time_days": 63,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100207",
+    "price_usd": 192,
+    "lead_time_days": 51,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "IN-tamilnadu"
+ },
+ {
+  "id": "SEA-1058-020",
+  "description": "Gasket, compressor case",
+  "category": "seal",
+  "lead_time_days": 42,
+  "unit_cost_usd": 173,
+  "approved_sources": [
+   {
+    "supplier_id": "100207",
+    "price_usd": 173,
+    "lead_time_days": 42,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 188,
+    "lead_time_days": 42,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100213",
+    "price_usd": 198,
+    "lead_time_days": 4,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "US-ohio"
+ },
+ {
+  "id": "SEA-9269-050",
+  "description": "O-ring kit, hydraulic",
+  "category": "seal",
+  "lead_time_days": 46,
+  "unit_cost_usd": 100,
+  "approved_sources": [
+   {
+    "supplier_id": "100207",
+    "price_usd": 100,
+    "lead_time_days": 46,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 107,
+    "lead_time_days": 40,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100201",
+    "price_usd": 117,
+    "lead_time_days": 14,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "US-ohio"
+ },
+ {
+  "id": "SEA-6868-340",
+  "description": "Brush seal segment",
+  "category": "seal",
+  "lead_time_days": 44,
+  "unit_cost_usd": 181,
+  "approved_sources": [
+   {
+    "supplier_id": "100201",
+    "price_usd": 181,
+    "lead_time_days": 44,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100204",
+    "price_usd": 201,
+    "lead_time_days": 26,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 203,
+    "lead_time_days": 14,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "KR-central"
+ },
+ {
+  "id": "SEA-1549-290",
+  "description": "Packing ring, fluorocarbon, rev B",
+  "category": "seal",
+  "lead_time_days": 21,
+  "unit_cost_usd": 34,
+  "approved_sources": [
+   {
+    "supplier_id": "100213",
+    "price_usd": 34,
+    "lead_time_days": 21,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 38,
+    "lead_time_days": 17,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100204",
+    "price_usd": 41,
+    "lead_time_days": 21,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "IN-tamilnadu"
+ },
+ {
+  "id": "SEA-6403-690",
+  "description": "Labyrinth seal strip, rev B",
+  "category": "seal",
+  "lead_time_days": 50,
+  "unit_cost_usd": 219,
+  "approved_sources": [
+   {
+    "supplier_id": "100204",
+    "price_usd": 219,
+    "lead_time_days": 50,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 228,
+    "lead_time_days": 34,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "NL-south"
+ },
+ {
+  "id": "SEA-8851-050",
+  "description": "Static seal, metallic C-ring, rev B",
+  "category": "seal",
+  "lead_time_days": 25,
+  "unit_cost_usd": 721,
+  "approved_sources": [
+   {
+    "supplier_id": "100213",
+    "price_usd": 721,
+    "lead_time_days": 25,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100201",
+    "price_usd": 757,
+    "lead_time_days": 6,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100204",
+    "price_usd": 819,
+    "lead_time_days": 3,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "IN-tamilnadu"
+ },
+ {
+  "id": "SEA-3580-410",
+  "description": "Lip seal, PTFE, rev B",
+  "category": "seal",
+  "lead_time_days": 24,
+  "unit_cost_usd": 425,
+  "approved_sources": [
+   {
+    "supplier_id": "100213",
+    "price_usd": 425,
+    "lead_time_days": 24,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100204",
+    "price_usd": 473,
+    "lead_time_days": 15,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "IN-tamilnadu"
+ },
+ {
+  "id": "SEA-4302-170",
+  "description": "Gasket, compressor case, rev B",
+  "category": "seal",
+  "lead_time_days": 70,
+  "unit_cost_usd": 604,
+  "approved_sources": [
+   {
+    "supplier_id": "100213",
+    "price_usd": 604,
+    "lead_time_days": 70,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100201",
+    "price_usd": 665,
+    "lead_time_days": 54,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100204",
+    "price_usd": 704,
+    "lead_time_days": 50,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "IN-tamilnadu"
+ },
+ {
+  "id": "SEA-5596-970",
+  "description": "O-ring kit, hydraulic, rev B",
+  "category": "seal",
+  "lead_time_days": 66,
+  "unit_cost_usd": 510,
+  "approved_sources": [
+   {
+    "supplier_id": "100204",
+    "price_usd": 510,
+    "lead_time_days": 66,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100201",
+    "price_usd": 557,
+    "lead_time_days": 55,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "NL-south"
+ },
+ {
+  "id": "SEA-3555-720",
+  "description": "Brush seal segment, rev B",
+  "category": "seal",
+  "lead_time_days": 26,
+  "unit_cost_usd": 388,
+  "approved_sources": [
+   {
+    "supplier_id": "100201",
+    "price_usd": 388,
+    "lead_time_days": 26,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 406,
+    "lead_time_days": 12,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "KR-central"
+ },
+ {
+  "id": "SEA-7310-280",
+  "description": "Packing ring, fluorocarbon, rev C",
+  "category": "seal",
+  "lead_time_days": 22,
+  "unit_cost_usd": 15,
+  "approved_sources": [
+   {
+    "supplier_id": "100201",
+    "price_usd": 15,
+    "lead_time_days": 22,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100213",
+    "price_usd": 16,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "KR-central"
+ },
+ {
+  "id": "SEA-2685-530",
+  "description": "Labyrinth seal strip, rev C",
+  "category": "seal",
+  "lead_time_days": 15,
+  "unit_cost_usd": 460,
+  "approved_sources": [
+   {
+    "supplier_id": "100201",
+    "price_usd": 460,
+    "lead_time_days": 15,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100213",
+    "price_usd": 491,
+    "lead_time_days": 13,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100204",
+    "price_usd": 526,
+    "lead_time_days": 3,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "EASA Form 1",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "KR-central"
+ },
+ {
+  "id": "SEA-5592-700",
+  "description": "Static seal, metallic C-ring, rev C",
+  "category": "seal",
+  "lead_time_days": 28,
+  "unit_cost_usd": 939,
+  "approved_sources": [
+   {
+    "supplier_id": "100213",
+    "price_usd": 939,
+    "lead_time_days": 28,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100207",
+    "price_usd": 1024,
+    "lead_time_days": 17,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "IN-tamilnadu"
+ },
+ {
+  "id": "SEA-9183-520",
+  "description": "Lip seal, PTFE, rev C",
+  "category": "seal",
+  "lead_time_days": 50,
+  "unit_cost_usd": 12,
+  "approved_sources": [
+   {
+    "supplier_id": "100204",
+    "price_usd": 12,
+    "lead_time_days": 50,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100207",
+    "price_usd": 13,
+    "lead_time_days": 39,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 13,
+    "lead_time_days": 38,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "NL-south"
+ },
+ {
+  "id": "SEA-8104-910",
+  "description": "Gasket, compressor case, rev C",
+  "category": "seal",
+  "lead_time_days": 28,
+  "unit_cost_usd": 647,
+  "approved_sources": [
+   {
+    "supplier_id": "100201",
+    "price_usd": 647,
+    "lead_time_days": 28,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100207",
+    "price_usd": 723,
+    "lead_time_days": 15,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "KR-central"
+ },
+ {
+  "id": "SEA-1085-940",
+  "description": "O-ring kit, hydraulic, rev C",
+  "category": "seal",
+  "lead_time_days": 62,
+  "unit_cost_usd": 12,
+  "approved_sources": [
+   {
+    "supplier_id": "100204",
+    "price_usd": 12,
+    "lead_time_days": 62,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100207",
+    "price_usd": 13,
+    "lead_time_days": 61,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 13,
+    "lead_time_days": 42,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "NL-south"
+ },
+ {
+  "id": "SEA-6402-460",
+  "description": "Brush seal segment, rev C",
+  "category": "seal",
+  "lead_time_days": 47,
+  "unit_cost_usd": 397,
+  "approved_sources": [
+   {
+    "supplier_id": "100201",
+    "price_usd": 397,
+    "lead_time_days": 47,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100213",
+    "price_usd": 443,
+    "lead_time_days": 37,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100204",
+    "price_usd": 448,
+    "lead_time_days": 35,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "KR-central"
+ },
+ {
+  "id": "SEA-4135-920",
+  "description": "Packing ring, fluorocarbon, rev D",
+  "category": "seal",
+  "lead_time_days": 21,
+  "unit_cost_usd": 220,
+  "approved_sources": [
+   {
+    "supplier_id": "100201",
+    "price_usd": 220,
+    "lead_time_days": 21,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100207",
+    "price_usd": 236,
+    "lead_time_days": 5,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "KR-central"
+ },
+ {
+  "id": "SEA-4992-590",
+  "description": "Labyrinth seal strip, rev D",
+  "category": "seal",
+  "lead_time_days": 46,
+  "unit_cost_usd": 697,
+  "approved_sources": [
+   {
+    "supplier_id": "100207",
+    "price_usd": 697,
+    "lead_time_days": 46,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100201",
+    "price_usd": 761,
+    "lead_time_days": 38,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100210",
+    "price_usd": 762,
+    "lead_time_days": 18,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "FAA 8130-3",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "US-ohio"
+ },
+ {
+  "id": "CON-7862-710",
+  "description": "Sealant, polysulfide",
+  "category": "consumable",
+  "lead_time_days": 25,
+  "unit_cost_usd": 195,
+  "approved_sources": [
+   {
+    "supplier_id": "100227",
+    "price_usd": 195,
+    "lead_time_days": 25,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100230",
+    "price_usd": 207,
+    "lead_time_days": 21,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "VN-north"
+ },
+ {
+  "id": "CON-9370-570",
+  "description": "Primer, epoxy",
+  "category": "consumable",
+  "lead_time_days": 26,
+  "unit_cost_usd": 107,
+  "approved_sources": [
+   {
+    "supplier_id": "100224",
+    "price_usd": 107,
+    "lead_time_days": 26,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100230",
+    "price_usd": 118,
+    "lead_time_days": 7,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100227",
+    "price_usd": 129,
+    "lead_time_days": 3,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "CON-4206-930",
+  "description": "Lockwire, 0.032",
+  "category": "consumable",
+  "lead_time_days": 3,
+  "unit_cost_usd": 431,
+  "approved_sources": [
+   {
+    "supplier_id": "100224",
+    "price_usd": 431,
+    "lead_time_days": 3,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100233",
+    "price_usd": 461,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "CON-2771-900",
+  "description": "Penetrant, NDT",
+  "category": "consumable",
+  "lead_time_days": 4,
+  "unit_cost_usd": 54,
+  "approved_sources": [
+   {
+    "supplier_id": "100224",
+    "price_usd": 54,
+    "lead_time_days": 4,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100233",
+    "price_usd": 58,
+    "lead_time_days": 3,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100227",
+    "price_usd": 63,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "CON-5001-140",
+  "description": "Lubricant, turbine oil",
+  "category": "consumable",
+  "lead_time_days": 29,
+  "unit_cost_usd": 9,
+  "approved_sources": [
+   {
+    "supplier_id": "100221",
+    "price_usd": 9,
+    "lead_time_days": 29,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100227",
+    "price_usd": 10,
+    "lead_time_days": 15,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "SG"
+ },
+ {
+  "id": "CON-7287-900",
+  "description": "Masking tape, high temp",
+  "category": "consumable",
+  "lead_time_days": 13,
+  "unit_cost_usd": 209,
+  "approved_sources": [
+   {
+    "supplier_id": "100221",
+    "price_usd": 209,
+    "lead_time_days": 13,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100233",
+    "price_usd": 224,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "SG"
+ },
+ {
+  "id": "CON-2566-460",
+  "description": "Abrasive disc",
+  "category": "consumable",
+  "lead_time_days": 22,
+  "unit_cost_usd": 131,
+  "approved_sources": [
+   {
+    "supplier_id": "100233",
+    "price_usd": 131,
+    "lead_time_days": 22,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100230",
+    "price_usd": 139,
+    "lead_time_days": 10,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-kansai"
+ },
+ {
+  "id": "CON-2016-370",
+  "description": "Solvent wipe",
+  "category": "consumable",
+  "lead_time_days": 29,
+  "unit_cost_usd": 25,
+  "approved_sources": [
+   {
+    "supplier_id": "100227",
+    "price_usd": 25,
+    "lead_time_days": 29,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100221",
+    "price_usd": 27,
+    "lead_time_days": 23,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "VN-north"
+ },
+ {
+  "id": "CON-3320-190",
+  "description": "Sealant, polysulfide, rev B",
+  "category": "consumable",
+  "lead_time_days": 4,
+  "unit_cost_usd": 33,
+  "approved_sources": [
+   {
+    "supplier_id": "100233",
+    "price_usd": 33,
+    "lead_time_days": 4,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100224",
+    "price_usd": 35,
+    "lead_time_days": 3,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100221",
+    "price_usd": 39,
+    "lead_time_days": 3,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-kansai"
+ },
+ {
+  "id": "CON-1349-600",
+  "description": "Primer, epoxy, rev B",
+  "category": "consumable",
+  "lead_time_days": 15,
+  "unit_cost_usd": 8,
+  "approved_sources": [
+   {
+    "supplier_id": "100233",
+    "price_usd": 8,
+    "lead_time_days": 15,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100221",
+    "price_usd": 8,
+    "lead_time_days": 11,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100227",
+    "price_usd": 10,
+    "lead_time_days": 5,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "JP-kansai"
+ },
+ {
+  "id": "CON-6269-850",
+  "description": "Lockwire, 0.032, rev B",
+  "category": "consumable",
+  "lead_time_days": 26,
+  "unit_cost_usd": 37,
+  "approved_sources": [
+   {
+    "supplier_id": "100221",
+    "price_usd": 37,
+    "lead_time_days": 26,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100224",
+    "price_usd": 39,
+    "lead_time_days": 17,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "SG"
+ },
+ {
+  "id": "CON-5482-260",
+  "description": "Penetrant, NDT, rev B",
+  "category": "consumable",
+  "lead_time_days": 4,
+  "unit_cost_usd": 68,
+  "approved_sources": [
+   {
+    "supplier_id": "100224",
+    "price_usd": 68,
+    "lead_time_days": 4,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100227",
+    "price_usd": 75,
+    "lead_time_days": 3,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100233",
+    "price_usd": 75,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "CON-2348-780",
+  "description": "Lubricant, turbine oil, rev B",
+  "category": "consumable",
+  "lead_time_days": 19,
+  "unit_cost_usd": 250,
+  "approved_sources": [
+   {
+    "supplier_id": "100230",
+    "price_usd": 250,
+    "lead_time_days": 19,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100233",
+    "price_usd": 269,
+    "lead_time_days": 16,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100221",
+    "price_usd": 295,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "DE-west"
+ },
+ {
+  "id": "CON-7797-900",
+  "description": "Masking tape, high temp, rev B",
+  "category": "consumable",
+  "lead_time_days": 30,
+  "unit_cost_usd": 299,
+  "approved_sources": [
+   {
+    "supplier_id": "100230",
+    "price_usd": 299,
+    "lead_time_days": 30,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100224",
+    "price_usd": 313,
+    "lead_time_days": 27,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100227",
+    "price_usd": 334,
+    "lead_time_days": 24,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "DE-west"
+ },
+ {
+  "id": "CON-4210-680",
+  "description": "Abrasive disc, rev B",
+  "category": "consumable",
+  "lead_time_days": 24,
+  "unit_cost_usd": 13,
+  "approved_sources": [
+   {
+    "supplier_id": "100224",
+    "price_usd": 13,
+    "lead_time_days": 24,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100221",
+    "price_usd": 14,
+    "lead_time_days": 4,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "CON-2937-610",
+  "description": "Solvent wipe, rev B",
+  "category": "consumable",
+  "lead_time_days": 5,
+  "unit_cost_usd": 423,
+  "approved_sources": [
+   {
+    "supplier_id": "100224",
+    "price_usd": 423,
+    "lead_time_days": 5,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100227",
+    "price_usd": 442,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "MY-selangor"
+ },
+ {
+  "id": "CON-2359-950",
+  "description": "Sealant, polysulfide, rev C",
+  "category": "consumable",
+  "lead_time_days": 20,
+  "unit_cost_usd": 308,
+  "approved_sources": [
+   {
+    "supplier_id": "100233",
+    "price_usd": 308,
+    "lead_time_days": 20,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100230",
+    "price_usd": 332,
+    "lead_time_days": 15,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100227",
+    "price_usd": 372,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-kansai"
+ },
+ {
+  "id": "CON-8256-900",
+  "description": "Primer, epoxy, rev C",
+  "category": "consumable",
+  "lead_time_days": 3,
+  "unit_cost_usd": 15,
+  "approved_sources": [
+   {
+    "supplier_id": "100221",
+    "price_usd": 15,
+    "lead_time_days": 3,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100230",
+    "price_usd": 17,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "SG"
+ },
+ {
+  "id": "CON-3760-370",
+  "description": "Lockwire, 0.032, rev C",
+  "category": "consumable",
+  "lead_time_days": 24,
+  "unit_cost_usd": 72,
+  "approved_sources": [
+   {
+    "supplier_id": "100227",
+    "price_usd": 72,
+    "lead_time_days": 24,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100230",
+    "price_usd": 78,
+    "lead_time_days": 21,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "VN-north"
+ },
+ {
+  "id": "CON-7838-210",
+  "description": "Penetrant, NDT, rev C",
+  "category": "consumable",
+  "lead_time_days": 4,
+  "unit_cost_usd": 287,
+  "approved_sources": [
+   {
+    "supplier_id": "100227",
+    "price_usd": 287,
+    "lead_time_days": 4,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100233",
+    "price_usd": 301,
+    "lead_time_days": 3,
+    "kind": "pma"
+   },
+   {
+    "supplier_id": "100221",
+    "price_usd": 313,
+    "lead_time_days": 3,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "VN-north"
+ },
+ {
+  "id": "CON-5523-020",
+  "description": "Lubricant, turbine oil, rev C",
+  "category": "consumable",
+  "lead_time_days": 11,
+  "unit_cost_usd": 26,
+  "approved_sources": [
+   {
+    "supplier_id": "100230",
+    "price_usd": 26,
+    "lead_time_days": 11,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100233",
+    "price_usd": 28,
+    "lead_time_days": 3,
+    "kind": "pma"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "DE-west"
+ },
+ {
+  "id": "RAW-2043-080",
+  "description": "Inconel 718 bar",
+  "category": "raw_alloy",
+  "lead_time_days": 46,
+  "unit_cost_usd": 704,
+  "approved_sources": [
+   {
+    "supplier_id": "100250",
+    "price_usd": 704,
+    "lead_time_days": 46,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100247",
+    "price_usd": 759,
+    "lead_time_days": 26,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "CZ-bohemia"
+ },
+ {
+  "id": "RAW-1303-100",
+  "description": "Waspaloy forging stock",
+  "category": "raw_alloy",
+  "lead_time_days": 132,
+  "unit_cost_usd": 1682,
+  "approved_sources": [
+   {
+    "supplier_id": "100253",
+    "price_usd": 1682,
+    "lead_time_days": 132,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100247",
+    "price_usd": 1874,
+    "lead_time_days": 112,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100250",
+    "price_usd": 1859,
+    "lead_time_days": 100,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "CN-jiangsu"
+ },
+ {
+  "id": "RAW-1787-490",
+  "description": "Ti-6Al-4V plate",
+  "category": "raw_alloy",
+  "lead_time_days": 88,
+  "unit_cost_usd": 1081,
+  "approved_sources": [
+   {
+    "supplier_id": "100241",
+    "price_usd": 1081,
+    "lead_time_days": 88,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100247",
+    "price_usd": 1186,
+    "lead_time_days": 79,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "RAW-5842-530",
+  "description": "A286 bar",
+  "category": "raw_alloy",
+  "lead_time_days": 70,
+  "unit_cost_usd": 775,
+  "approved_sources": [
+   {
+    "supplier_id": "100253",
+    "price_usd": 775,
+    "lead_time_days": 70,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100247",
+    "price_usd": 818,
+    "lead_time_days": 65,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100250",
+    "price_usd": 955,
+    "lead_time_days": 46,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "CN-jiangsu"
+ },
+ {
+  "id": "RAW-8409-770",
+  "description": "17-4PH bar",
+  "category": "raw_alloy",
+  "lead_time_days": 87,
+  "unit_cost_usd": 832,
+  "approved_sources": [
+   {
+    "supplier_id": "100253",
+    "price_usd": 832,
+    "lead_time_days": 87,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100247",
+    "price_usd": 886,
+    "lead_time_days": 85,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100241",
+    "price_usd": 899,
+    "lead_time_days": 75,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "CN-jiangsu"
+ },
+ {
+  "id": "RAW-2472-280",
+  "description": "Haynes-type 188 sheet",
+  "category": "raw_alloy",
+  "lead_time_days": 88,
+  "unit_cost_usd": 1496,
+  "approved_sources": [
+   {
+    "supplier_id": "100247",
+    "price_usd": 1496,
+    "lead_time_days": 88,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100244",
+    "price_usd": 1588,
+    "lead_time_days": 72,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100250",
+    "price_usd": 1668,
+    "lead_time_days": 78,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-tohoku"
+ },
+ {
+  "id": "RAW-6198-580",
+  "description": "Nickel 625 sheet",
+  "category": "raw_alloy",
+  "lead_time_days": 192,
+  "unit_cost_usd": 5158,
+  "approved_sources": [
+   {
+    "supplier_id": "100253",
+    "price_usd": 5158,
+    "lead_time_days": 192,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100250",
+    "price_usd": 5543,
+    "lead_time_days": 186,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "CN-jiangsu"
+ },
+ {
+  "id": "RAW-1719-170",
+  "description": "Inconel 718 bar, rev B",
+  "category": "raw_alloy",
+  "lead_time_days": 196,
+  "unit_cost_usd": 709,
+  "approved_sources": [
+   {
+    "supplier_id": "100244",
+    "price_usd": 709,
+    "lead_time_days": 196,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100247",
+    "price_usd": 757,
+    "lead_time_days": 176,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100250",
+    "price_usd": 782,
+    "lead_time_days": 176,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "US-pennsylvania"
+ },
+ {
+  "id": "RAW-5777-010",
+  "description": "Waspaloy forging stock, rev B",
+  "category": "raw_alloy",
+  "lead_time_days": 174,
+  "unit_cost_usd": 7594,
+  "approved_sources": [
+   {
+    "supplier_id": "100241",
+    "price_usd": 7594,
+    "lead_time_days": 174,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100247",
+    "price_usd": 8219,
+    "lead_time_days": 170,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "RAW-7532-480",
+  "description": "Ti-6Al-4V plate, rev B",
+  "category": "raw_alloy",
+  "lead_time_days": 49,
+  "unit_cost_usd": 700,
+  "approved_sources": [
+   {
+    "supplier_id": "100241",
+    "price_usd": 700,
+    "lead_time_days": 49,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100247",
+    "price_usd": 751,
+    "lead_time_days": 30,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "GB-midlands"
+ },
+ {
+  "id": "RAW-6827-030",
+  "description": "A286 bar, rev B",
+  "category": "raw_alloy",
+  "lead_time_days": 108,
+  "unit_cost_usd": 4503,
+  "approved_sources": [
+   {
+    "supplier_id": "100247",
+    "price_usd": 4503,
+    "lead_time_days": 108,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100244",
+    "price_usd": 4743,
+    "lead_time_days": 104,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "B",
+  "sole_source": false,
+  "origin_region": "JP-tohoku"
+ },
+ {
+  "id": "RAW-4600-280",
+  "description": "17-4PH bar, rev B",
+  "category": "raw_alloy",
+  "lead_time_days": 59,
+  "unit_cost_usd": 3327,
+  "approved_sources": [
+   {
+    "supplier_id": "100253",
+    "price_usd": 3327,
+    "lead_time_days": 59,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100241",
+    "price_usd": 3600,
+    "lead_time_days": 44,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100244",
+    "price_usd": 3976,
+    "lead_time_days": 23,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "CN-jiangsu"
+ },
+ {
+  "id": "RAW-7783-250",
+  "description": "Haynes-type 188 sheet, rev B",
+  "category": "raw_alloy",
+  "lead_time_days": 125,
+  "unit_cost_usd": 3614,
+  "approved_sources": [
+   {
+    "supplier_id": "100247",
+    "price_usd": 3614,
+    "lead_time_days": 125,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100241",
+    "price_usd": 3923,
+    "lead_time_days": 115,
+    "kind": "oem"
+   },
+   {
+    "supplier_id": "100250",
+    "price_usd": 4341,
+    "lead_time_days": 105,
+    "kind": "oem"
+   }
+  ],
+  "airworthiness_doc": "CoC",
+  "criticality": "C",
+  "sole_source": false,
+  "origin_region": "JP-tohoku"
+ }
+]

@@ -1,0 +1,251 @@
+[
+ {
+  "id": "PRE-01",
+  "year": 2022,
+  "title": "Frankfurt hub capacity crunch",
+  "signal_type": "route_disruption",
+  "supplier_ids": [
+   "100154",
+   "100230"
+  ],
+  "summary": "Freighter capacity out of FRA collapsed for three weeks during a peak season crunch. Six nacelle and chemical shipments were stuck at the gateway.",
+  "options_considered": [
+   "Wait for capacity",
+   "Truck to AMS and fly",
+   "Charter part ULD"
+  ],
+  "option_taken": "Truck to AMS and fly",
+  "cost_usd": 21400,
+  "delay_days": 2,
+  "outcome": "All six shipments landed within 2 days of plan; no induction moved.",
+  "lesson": "Pre-agree an AMS gateway fallback rate with the forwarder so the reroute is a one-click booking."
+ },
+ {
+  "id": "PRE-02",
+  "year": 2023,
+  "title": "Johor machine shop administration",
+  "signal_type": "supplier_distress",
+  "supplier_ids": [
+   "100124"
+  ],
+  "summary": "A Tier 2 machine shop in Johor entered administration with 22 open lines of brackets and housings.",
+  "options_considered": [
+   "Pay administrator for WIP",
+   "Resource to India",
+   "Resource to Czechia"
+  ],
+  "option_taken": "Resource to India",
+  "cost_usd": 64000,
+  "delay_days": 9,
+  "outcome": "Lines resourced to Bengaluru within 6 weeks; two inductions absorbed the slip in float.",
+  "lesson": "Machined brackets requalify in 6 weeks; start the first-article inspection the day the credit alert lands."
+ },
+ {
+  "id": "PRE-03",
+  "year": 2023,
+  "title": "Sole-source forging shop insolvency",
+  "signal_type": "supplier_distress",
+  "supplier_ids": [
+   "100102",
+   "100141"
+  ],
+  "summary": "A sole-source ring forging supplier went into liquidation with three open POs. The approved but dormant second source was reactivated and broker stock covered the first induction.",
+  "options_considered": [
+   "Reactivate dormant second source with air expedite",
+   "Broker buy",
+   "PMA alternate",
+   "Re-sequence inductions"
+  ],
+  "option_taken": "Reactivate dormant second source with air expedite, broker stock for the first induction",
+  "cost_usd": 296000,
+  "delay_days": 4,
+  "outcome": "First induction held; second moved 4 days inside float. No LDs paid.",
+  "lesson": "Split the first wave 70/30 between the second source and broker stock; the second source cannot ramp to 100% inside four weeks."
+ },
+ {
+  "id": "PRE-04",
+  "year": 2024,
+  "title": "Paid receiver for in-process WIP",
+  "signal_type": "supplier_distress",
+  "supplier_ids": [],
+  "summary": "A receiver held finished and in-process forgings until outstanding invoices were settled.",
+  "options_considered": [
+   "Pay receiver for WIP",
+   "Litigate for title",
+   "Resource"
+  ],
+  "option_taken": "Pay receiver for WIP",
+  "cost_usd": 410000,
+  "delay_days": 18,
+  "outcome": "Parts released after 18 days, of which 11 went to conformity re-inspection. Two lots failed paperwork review.",
+  "lesson": "WIP from a receiver needs full airworthiness traceability review; budget 10 days and expect partial loss."
+ },
+ {
+  "id": "PRE-05",
+  "year": 2024,
+  "title": "Nickel alloy allocation",
+  "signal_type": "supply_shortage",
+  "supplier_ids": [
+   "100241",
+   "100116"
+  ],
+  "summary": "A US mill cut nickel superalloy allocation by 35% for Q3. Casting houses re-sequenced orders by contractual priority.",
+  "options_considered": [
+   "Accept slip",
+   "Split to second casting source",
+   "Pull forward from Q4 allocation"
+  ],
+  "option_taken": "Split 60/40 to Takamori Precision Castings with a price premium",
+  "cost_usd": 118000,
+  "delay_days": 6,
+  "outcome": "Engine inductions held; premium of 8% on the split share. Brightwater restored volume in Q4.",
+  "lesson": "Lock second-source casting slots in the same week the allocation notice lands; slots sell out within 10 days."
+ },
+ {
+  "id": "PRE-06",
+  "year": 2024,
+  "title": "Typhoon closes north Taiwan fastener plants",
+  "signal_type": "natural_calamity",
+  "supplier_ids": [
+   "100181",
+   "100187"
+  ],
+  "summary": "A typhoon closed two fastener plants for 8 days. Airframe checks needed pins and collars within a week.",
+  "options_considered": [
+   "Wait for restart",
+   "Pull forward from US distributor stock",
+   "Reallocate from later checks"
+  ],
+  "option_taken": "Pull forward from US distributor stock",
+  "cost_usd": 38500,
+  "delay_days": 1,
+  "outcome": "Two heavy checks held their slots; premium of 35% on 6,000 fasteners.",
+  "lesson": "Keep a standing price agreement with the US fastener source for emergency volume."
+ },
+ {
+  "id": "PRE-07",
+  "year": 2025,
+  "title": "Tariff on EU aerostructures",
+  "signal_type": "tariff",
+  "supplier_ids": [
+   "100151",
+   "100171"
+  ],
+  "summary": "A tariff change on EU aerostructures routed via US facilities raised landed cost on panels.",
+  "options_considered": [
+   "Absorb duty",
+   "Route direct EU to SIN",
+   "Shift to US source",
+   "Pull forward shipments before effective date"
+  ],
+  "option_taken": "Pull forward shipments before effective date and route direct EU to SIN",
+  "cost_usd": 46000,
+  "delay_days": 0,
+  "outcome": "Duty avoided on 80% of affected volume; the rest moved to direct routing.",
+  "lesson": "Check routing first: most exposure came from US bonded transit, not origin."
+ },
+ {
+  "id": "PRE-08",
+  "year": 2025,
+  "title": "Licence delay on dual-use sensors",
+  "signal_type": "export_control",
+  "supplier_ids": [
+   "100131",
+   "100127"
+  ],
+  "summary": "Export licence processing for a sensor family stretched to five weeks.",
+  "options_considered": [
+   "Wait for licence",
+   "Buy from Singapore distributor stock",
+   "Borrow from customer pool"
+  ],
+  "option_taken": "Buy from Singapore distributor stock",
+  "cost_usd": 52000,
+  "delay_days": 3,
+  "outcome": "Distributor stock covered two engines; licences arrived in week five.",
+  "lesson": "File licences per quarter in bulk rather than per consignment."
+ },
+ {
+  "id": "PRE-09",
+  "year": 2024,
+  "title": "Seal batch rejected at receiving",
+  "signal_type": "supply_shortage",
+  "supplier_ids": [
+   "100201",
+   "100207"
+  ],
+  "summary": "A batch of O-ring seals failed durometer checks at receiving, short-shipping an engine kit.",
+  "options_considered": [
+   "Wait for replacement batch",
+   "Reallocate from later work order",
+   "Air freight from US source"
+  ],
+  "option_taken": "Reallocate from later work order and backfill from US source",
+  "cost_usd": 9800,
+  "delay_days": 0,
+  "outcome": "Induction held. Later work order backfilled two weeks before need.",
+  "lesson": "Reallocation is the fastest lever when a later work order holds released stock of the same batch family."
+ },
+ {
+  "id": "PRE-10",
+  "year": 2025,
+  "title": "Port Klang congestion",
+  "signal_type": "route_disruption",
+  "supplier_ids": [
+   "100224",
+   "100221"
+  ],
+  "summary": "Berth waiting times at Port Klang reached 10 days for feeder sailings.",
+  "options_considered": [
+   "Wait",
+   "Truck via Johor causeway",
+   "Buy locally in Singapore"
+  ],
+  "option_taken": "Truck via Johor causeway",
+  "cost_usd": 6200,
+  "delay_days": 1,
+  "outcome": "Consumables landed in 2 days by road.",
+  "lesson": "Road via the causeway beats feeder sailings whenever berth waits pass 4 days."
+ },
+ {
+  "id": "PRE-11",
+  "year": 2022,
+  "title": "Harness plant closure",
+  "signal_type": "pandemic_health",
+  "supplier_ids": [
+   "100227",
+   "100127"
+  ],
+  "summary": "A health closure order shut a harness plant for four weeks.",
+  "options_considered": [
+   "Wait",
+   "Distributor buy",
+   "Repair and reuse serviceable leads"
+  ],
+  "option_taken": "Distributor buy for the first two engines, repair for the rest",
+  "cost_usd": 31000,
+  "delay_days": 2,
+  "outcome": "Engines redelivered on time; repair yield 70%.",
+  "lesson": "Repair and reuse is viable for ignition leads within the CMM limits; ask the shop early."
+ },
+ {
+  "id": "PRE-12",
+  "year": 2025,
+  "title": "Early payment for discount with a strategic repair vendor",
+  "signal_type": "supplier_distress",
+  "supplier_ids": [
+   "100168"
+  ],
+  "summary": "A strategic nacelle repair vendor under cash pressure threatened to hold shipments over disputed invoices.",
+  "options_considered": [
+   "Hold position on disputes",
+   "Pay undisputed items early for discount",
+   "Supply chain finance"
+  ],
+  "option_taken": "Pay undisputed items early for a 2% discount and settle disputes within 30 days",
+  "cost_usd": -8200,
+  "delay_days": 0,
+  "outcome": "Shipments continued; discount offset part of the dispute concessions.",
+  "lesson": "Separate undisputed from disputed items; paying the clean ones fast buys goodwill at a profit."
+ }
+]

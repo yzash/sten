@@ -1,0 +1,42 @@
+[
+ {
+  "id": "CUS-01",
+  "name": "Halcyra Airways",
+  "tier": "strategic"
+ },
+ {
+  "id": "CUS-02",
+  "name": "Coralline Air",
+  "tier": "key"
+ },
+ {
+  "id": "CUS-03",
+  "name": "Tanjong Pacific Airlines",
+  "tier": "strategic"
+ },
+ {
+  "id": "CUS-04",
+  "name": "Kestrel Bay Cargo",
+  "tier": "key"
+ },
+ {
+  "id": "CUS-05",
+  "name": "Monsoonal Air",
+  "tier": "standard"
+ },
+ {
+  "id": "CUS-06",
+  "name": "Selatan Air Charter",
+  "tier": "standard"
+ },
+ {
+  "id": "CUS-07",
+  "name": "Orchid Regional Airways",
+  "tier": "key"
+ },
+ {
+  "id": "CUS-08",
+  "name": "Altamira Aircraft Leasing",
+  "tier": "standard"
+ }
+]

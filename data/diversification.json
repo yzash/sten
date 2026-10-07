@@ -1,0 +1,123 @@
+[
+ {
+  "id": "DIV-01",
+  "category": "engine_lru",
+  "part_id": "ENG-4471-120",
+  "current_supplier_id": "100118",
+  "candidate_supplier_ids": [
+   "100102",
+   "100107"
+  ],
+  "qualification_effort": "medium",
+  "qualification_weeks": 10,
+  "cost_delta_pct": 8,
+  "rationale": "All three HPC retention rings sit with one Tier 2 shop now in receivership. Meridian is already approved and only needs a contract; Valcourt PMA needs customer acceptance on two fleets."
+ },
+ {
+  "id": "DIV-02",
+  "category": "engine_lru",
+  "part_id": "ENG-4902-410",
+  "current_supplier_id": "100124",
+  "candidate_supplier_ids": [
+   "100134",
+   "100120"
+  ],
+  "qualification_effort": "low",
+  "qualification_weeks": 6,
+  "cost_delta_pct": 4,
+  "rationale": "Kemuning financial health fell 24 points in a year and its lender reports a covenant breach. Both candidates already hold approvals on this bracket family."
+ },
+ {
+  "id": "DIV-03",
+  "category": "engine_lru",
+  "part_id": "ENG-6120-210",
+  "current_supplier_id": "100131",
+  "candidate_supplier_ids": [
+   "100127"
+  ],
+  "qualification_effort": "high",
+  "qualification_weeks": 26,
+  "cost_delta_pct": 15,
+  "rationale": "The N2 speed sensor is sole source and now under individual export licensing. A Singapore distributor holds licensed stock as a bridge while an alternate part number is qualified."
+ },
+ {
+  "id": "DIV-04",
+  "category": "engine_lru",
+  "part_id": "ENG-4810-310",
+  "current_supplier_id": "100110",
+  "candidate_supplier_ids": [
+   "100116",
+   "100138"
+  ],
+  "qualification_effort": "medium",
+  "qualification_weeks": 12,
+  "cost_delta_pct": 6,
+  "rationale": "LPT seal ring output is at 40% for six weeks. Takamori is approved but carries no open volume; a standing 20% share would have absorbed this outage."
+ },
+ {
+  "id": "DIV-05",
+  "category": "nacelle",
+  "part_id": "NAC-7100-110",
+  "current_supplier_id": "100151",
+  "candidate_supplier_ids": [
+   "100171"
+  ],
+  "qualification_effort": "medium",
+  "qualification_weeks": 14,
+  "cost_delta_pct": 9.5,
+  "rationale": "EU-origin acoustic panels face a 25% duty on US-routed flows from 1 Nov. A US source removes the exposure for US-bound work."
+ },
+ {
+  "id": "DIV-06",
+  "category": "nacelle",
+  "part_id": "NAC-7500-310",
+  "current_supplier_id": "100168",
+  "candidate_supplier_ids": [
+   "100171"
+  ],
+  "qualification_effort": "high",
+  "qualification_weeks": 20,
+  "cost_delta_pct": 11,
+  "rationale": "Translating sleeve repair is sole source with a strategic supplier under cash pressure. A second repair station protects the nacelle line."
+ },
+ {
+  "id": "DIV-07",
+  "category": "fastener",
+  "part_id": "FST-2110-010",
+  "current_supplier_id": "100181",
+  "candidate_supplier_ids": [
+   "100187",
+   "100196"
+  ],
+  "qualification_effort": "low",
+  "qualification_weeks": 4,
+  "cost_delta_pct": 22,
+  "rationale": "Both north Taiwan fastener plants share one flood plain. A standing 25% share outside the region removes the single point of failure."
+ },
+ {
+  "id": "DIV-08",
+  "category": "raw_alloy",
+  "part_id": "RAW-9300-610",
+  "current_supplier_id": "100253",
+  "candidate_supplier_ids": [
+   "100250"
+  ],
+  "qualification_effort": "high",
+  "qualification_weeks": 24,
+  "cost_delta_pct": 18,
+  "rationale": "SmCo magnets are sole source and now under export licensing. A European distributor holds licensed stock as a bridge."
+ },
+ {
+  "id": "DIV-09",
+  "category": "seal",
+  "part_id": "SEA-3100-510",
+  "current_supplier_id": "100201",
+  "candidate_supplier_ids": [
+   "100207"
+  ],
+  "qualification_effort": "low",
+  "qualification_weeks": 3,
+  "cost_delta_pct": 32,
+  "rationale": "Daejeon NCRs are up to 7 in 12 months and a 400 piece batch failed receiving. Ohio Valley is approved and can hold a 20% share."
+ }
+]

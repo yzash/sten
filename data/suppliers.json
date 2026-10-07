@@ -1,0 +1,5862 @@
+[
+ {
+  "id": "100118",
+  "name": "Aerotech Precision Pte Ltd",
+  "tier": 2,
+  "country": "Malaysia",
+  "country_code": "MY",
+  "city": "Penang (Batu Kawan)",
+  "region": "MY-penang",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [
+   "ENG-4471-120",
+   "ENG-4471-130",
+   "ENG-4471-140"
+  ],
+  "financial_health": 18,
+  "capacity": 62,
+  "esg": 64,
+  "geo_risk": 30,
+  "sourcing_depth": 22,
+  "network_depth": 40,
+  "otd_pct": 71.4,
+  "ncr_12m": 9,
+  "certs": [
+   {
+    "name": "AS9100D",
+    "number": "AS91-40218",
+    "expiry": "2026-11-30"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-50921",
+    "expiry": "2028-03-18"
+   }
+  ],
+  "payment_terms": "Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 61,
+    "capacity": 74,
+    "geo_esg": 71,
+    "sourcing": 23,
+    "network": 44
+   },
+   {
+    "month": "2025-12",
+    "financial": 60,
+    "capacity": 74,
+    "geo_esg": 68,
+    "sourcing": 25,
+    "network": 44
+   },
+   {
+    "month": "2026-01",
+    "financial": 60,
+    "capacity": 73,
+    "geo_esg": 68,
+    "sourcing": 24,
+    "network": 43
+   },
+   {
+    "month": "2026-02",
+    "financial": 58,
+    "capacity": 73,
+    "geo_esg": 68,
+    "sourcing": 23,
+    "network": 42
+   },
+   {
+    "month": "2026-03",
+    "financial": 57,
+    "capacity": 72,
+    "geo_esg": 68,
+    "sourcing": 23,
+    "network": 43
+   },
+   {
+    "month": "2026-04",
+    "financial": 55,
+    "capacity": 72,
+    "geo_esg": 70,
+    "sourcing": 23,
+    "network": 41
+   },
+   {
+    "month": "2026-05",
+    "financial": 52,
+    "capacity": 71,
+    "geo_esg": 69,
+    "sourcing": 21,
+    "network": 41
+   },
+   {
+    "month": "2026-06",
+    "financial": 49,
+    "capacity": 70,
+    "geo_esg": 67,
+    "sourcing": 22,
+    "network": 42
+   },
+   {
+    "month": "2026-07",
+    "financial": 44,
+    "capacity": 69,
+    "geo_esg": 68,
+    "sourcing": 22,
+    "network": 42
+   },
+   {
+    "month": "2026-08",
+    "financial": 37,
+    "capacity": 67,
+    "geo_esg": 66,
+    "sourcing": 23,
+    "network": 39
+   },
+   {
+    "month": "2026-09",
+    "financial": 29,
+    "capacity": 65,
+    "geo_esg": 67,
+    "sourcing": 22,
+    "network": 39
+   },
+   {
+    "month": "2026-10",
+    "financial": 18,
+    "capacity": 62,
+    "geo_esg": 67,
+    "sourcing": 22,
+    "network": 40
+   }
+  ],
+  "status": "receivership"
+ },
+ {
+  "id": "100124",
+  "name": "Kemuning Machining Sdn Bhd",
+  "tier": 2,
+  "country": "Malaysia",
+  "country_code": "MY",
+  "city": "Johor Bahru",
+  "region": "MY-johor",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 34,
+  "capacity": 70,
+  "esg": 60,
+  "geo_risk": 25,
+  "sourcing_depth": 58,
+  "network_depth": 55,
+  "otd_pct": 83.7,
+  "ncr_12m": 7,
+  "certs": [
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-23739",
+    "expiry": "2028-06-18"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-74252",
+    "expiry": "2028-01-13"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 58,
+    "capacity": 73,
+    "geo_esg": 69,
+    "sourcing": 60,
+    "network": 56
+   },
+   {
+    "month": "2025-12",
+    "financial": 57,
+    "capacity": 71,
+    "geo_esg": 72,
+    "sourcing": 61,
+    "network": 58
+   },
+   {
+    "month": "2026-01",
+    "financial": 57,
+    "capacity": 75,
+    "geo_esg": 69,
+    "sourcing": 59,
+    "network": 58
+   },
+   {
+    "month": "2026-02",
+    "financial": 56,
+    "capacity": 73,
+    "geo_esg": 71,
+    "sourcing": 58,
+    "network": 56
+   },
+   {
+    "month": "2026-03",
+    "financial": 55,
+    "capacity": 69,
+    "geo_esg": 70,
+    "sourcing": 60,
+    "network": 56
+   },
+   {
+    "month": "2026-04",
+    "financial": 53,
+    "capacity": 71,
+    "geo_esg": 67,
+    "sourcing": 60,
+    "network": 57
+   },
+   {
+    "month": "2026-05",
+    "financial": 50,
+    "capacity": 73,
+    "geo_esg": 68,
+    "sourcing": 58,
+    "network": 55
+   },
+   {
+    "month": "2026-06",
+    "financial": 48,
+    "capacity": 68,
+    "geo_esg": 70,
+    "sourcing": 59,
+    "network": 56
+   },
+   {
+    "month": "2026-07",
+    "financial": 45,
+    "capacity": 68,
+    "geo_esg": 70,
+    "sourcing": 57,
+    "network": 54
+   },
+   {
+    "month": "2026-08",
+    "financial": 42,
+    "capacity": 73,
+    "geo_esg": 70,
+    "sourcing": 58,
+    "network": 55
+   },
+   {
+    "month": "2026-09",
+    "financial": 39,
+    "capacity": 70,
+    "geo_esg": 67,
+    "sourcing": 57,
+    "network": 54
+   },
+   {
+    "month": "2026-10",
+    "financial": 34,
+    "capacity": 70,
+    "geo_esg": 68,
+    "sourcing": 58,
+    "network": 55
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100131",
+  "name": "Hokushin Sensor Works KK",
+  "tier": 1,
+  "country": "Japan",
+  "country_code": "JP",
+  "city": "Sagamihara",
+  "region": "JP-kanto",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [
+   "ENG-6120-210",
+   "ENG-1761-110",
+   "ENG-1271-660",
+   "ENG-7278-280"
+  ],
+  "financial_health": 82,
+  "capacity": 74,
+  "esg": 78,
+  "geo_risk": 28,
+  "sourcing_depth": 26,
+  "network_depth": 62,
+  "otd_pct": 92.3,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-65497",
+    "expiry": "2028-02-10"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-48374",
+    "expiry": "2027-05-22"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-14617",
+    "expiry": "2027-09-01"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-25245",
+    "expiry": "2027-06-25"
+   }
+  ],
+  "payment_terms": "Net 30",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 83,
+    "capacity": 74,
+    "geo_esg": 78,
+    "sourcing": 44,
+    "network": 62
+   },
+   {
+    "month": "2025-12",
+    "financial": 81,
+    "capacity": 78,
+    "geo_esg": 78,
+    "sourcing": 44,
+    "network": 64
+   },
+   {
+    "month": "2026-01",
+    "financial": 84,
+    "capacity": 75,
+    "geo_esg": 75,
+    "sourcing": 44,
+    "network": 65
+   },
+   {
+    "month": "2026-02",
+    "financial": 85,
+    "capacity": 74,
+    "geo_esg": 78,
+    "sourcing": 42,
+    "network": 65
+   },
+   {
+    "month": "2026-03",
+    "financial": 81,
+    "capacity": 78,
+    "geo_esg": 76,
+    "sourcing": 42,
+    "network": 61
+   },
+   {
+    "month": "2026-04",
+    "financial": 82,
+    "capacity": 76,
+    "geo_esg": 77,
+    "sourcing": 40,
+    "network": 62
+   },
+   {
+    "month": "2026-05",
+    "financial": 86,
+    "capacity": 75,
+    "geo_esg": 76,
+    "sourcing": 38,
+    "network": 64
+   },
+   {
+    "month": "2026-06",
+    "financial": 80,
+    "capacity": 78,
+    "geo_esg": 75,
+    "sourcing": 36,
+    "network": 64
+   },
+   {
+    "month": "2026-07",
+    "financial": 81,
+    "capacity": 73,
+    "geo_esg": 75,
+    "sourcing": 34,
+    "network": 62
+   },
+   {
+    "month": "2026-08",
+    "financial": 82,
+    "capacity": 72,
+    "geo_esg": 76,
+    "sourcing": 32,
+    "network": 61
+   },
+   {
+    "month": "2026-09",
+    "financial": 80,
+    "capacity": 73,
+    "geo_esg": 75,
+    "sourcing": 30,
+    "network": 61
+   },
+   {
+    "month": "2026-10",
+    "financial": 82,
+    "capacity": 74,
+    "geo_esg": 75,
+    "sourcing": 26,
+    "network": 62
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100102",
+  "name": "Meridian Turbine Components Inc",
+  "tier": 1,
+  "country": "United States",
+  "country_code": "US",
+  "city": "Cincinnati",
+  "region": "US-ohio",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 84,
+  "capacity": 78,
+  "esg": 72,
+  "geo_risk": 15,
+  "sourcing_depth": 64,
+  "network_depth": 70,
+  "otd_pct": 92.3,
+  "ncr_12m": 0,
+  "certs": [
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-22108",
+    "expiry": "2027-12-19"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-50750",
+    "expiry": "2027-04-09"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-40604",
+    "expiry": "2027-12-21"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-66141",
+    "expiry": "2027-08-13"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": true,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 86,
+    "capacity": 79,
+    "geo_esg": 82,
+    "sourcing": 68,
+    "network": 73
+   },
+   {
+    "month": "2025-12",
+    "financial": 85,
+    "capacity": 77,
+    "geo_esg": 79,
+    "sourcing": 64,
+    "network": 73
+   },
+   {
+    "month": "2026-01",
+    "financial": 84,
+    "capacity": 81,
+    "geo_esg": 82,
+    "sourcing": 67,
+    "network": 73
+   },
+   {
+    "month": "2026-02",
+    "financial": 85,
+    "capacity": 82,
+    "geo_esg": 81,
+    "sourcing": 66,
+    "network": 71
+   },
+   {
+    "month": "2026-03",
+    "financial": 83,
+    "capacity": 80,
+    "geo_esg": 82,
+    "sourcing": 64,
+    "network": 70
+   },
+   {
+    "month": "2026-04",
+    "financial": 87,
+    "capacity": 78,
+    "geo_esg": 80,
+    "sourcing": 66,
+    "network": 72
+   },
+   {
+    "month": "2026-05",
+    "financial": 84,
+    "capacity": 76,
+    "geo_esg": 79,
+    "sourcing": 65,
+    "network": 70
+   },
+   {
+    "month": "2026-06",
+    "financial": 85,
+    "capacity": 81,
+    "geo_esg": 81,
+    "sourcing": 66,
+    "network": 70
+   },
+   {
+    "month": "2026-07",
+    "financial": 84,
+    "capacity": 81,
+    "geo_esg": 81,
+    "sourcing": 66,
+    "network": 69
+   },
+   {
+    "month": "2026-08",
+    "financial": 84,
+    "capacity": 79,
+    "geo_esg": 78,
+    "sourcing": 66,
+    "network": 69
+   },
+   {
+    "month": "2026-09",
+    "financial": 83,
+    "capacity": 76,
+    "geo_esg": 79,
+    "sourcing": 65,
+    "network": 72
+   },
+   {
+    "month": "2026-10",
+    "financial": 84,
+    "capacity": 78,
+    "geo_esg": 79,
+    "sourcing": 64,
+    "network": 70
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100107",
+  "name": "Valcourt Aeroparts SAS",
+  "tier": 1,
+  "country": "France",
+  "country_code": "FR",
+  "city": "Toulouse",
+  "region": "FR-occitanie",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 76,
+  "capacity": 70,
+  "esg": 80,
+  "geo_risk": 15,
+  "sourcing_depth": 60,
+  "network_depth": 66,
+  "otd_pct": 93.2,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-82599",
+    "expiry": "2028-03-11"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-63437",
+    "expiry": "2028-09-09"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 80,
+    "capacity": 70,
+    "geo_esg": 84,
+    "sourcing": 63,
+    "network": 70
+   },
+   {
+    "month": "2025-12",
+    "financial": 76,
+    "capacity": 73,
+    "geo_esg": 86,
+    "sourcing": 60,
+    "network": 67
+   },
+   {
+    "month": "2026-01",
+    "financial": 76,
+    "capacity": 71,
+    "geo_esg": 84,
+    "sourcing": 61,
+    "network": 68
+   },
+   {
+    "month": "2026-02",
+    "financial": 78,
+    "capacity": 70,
+    "geo_esg": 86,
+    "sourcing": 62,
+    "network": 68
+   },
+   {
+    "month": "2026-03",
+    "financial": 79,
+    "capacity": 70,
+    "geo_esg": 84,
+    "sourcing": 61,
+    "network": 68
+   },
+   {
+    "month": "2026-04",
+    "financial": 76,
+    "capacity": 69,
+    "geo_esg": 85,
+    "sourcing": 63,
+    "network": 66
+   },
+   {
+    "month": "2026-05",
+    "financial": 80,
+    "capacity": 69,
+    "geo_esg": 85,
+    "sourcing": 63,
+    "network": 66
+   },
+   {
+    "month": "2026-06",
+    "financial": 76,
+    "capacity": 68,
+    "geo_esg": 83,
+    "sourcing": 62,
+    "network": 68
+   },
+   {
+    "month": "2026-07",
+    "financial": 79,
+    "capacity": 72,
+    "geo_esg": 83,
+    "sourcing": 59,
+    "network": 65
+   },
+   {
+    "month": "2026-08",
+    "financial": 76,
+    "capacity": 69,
+    "geo_esg": 83,
+    "sourcing": 62,
+    "network": 65
+   },
+   {
+    "month": "2026-09",
+    "financial": 76,
+    "capacity": 70,
+    "geo_esg": 82,
+    "sourcing": 61,
+    "network": 65
+   },
+   {
+    "month": "2026-10",
+    "financial": 76,
+    "capacity": 70,
+    "geo_esg": 83,
+    "sourcing": 60,
+    "network": 66
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100110",
+  "name": "Lindqvist Rotating Parts AB",
+  "tier": 1,
+  "country": "Sweden",
+  "country_code": "SE",
+  "city": "Boras",
+  "region": "SE-west",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 80,
+  "capacity": 72,
+  "esg": 86,
+  "geo_risk": 10,
+  "sourcing_depth": 66,
+  "network_depth": 64,
+  "otd_pct": 88.5,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-21819",
+    "expiry": "2028-07-17"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-53747",
+    "expiry": "2027-10-27"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-75715",
+    "expiry": "2028-08-26"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": true,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 80,
+    "capacity": 75,
+    "geo_esg": 89,
+    "sourcing": 69,
+    "network": 66
+   },
+   {
+    "month": "2025-12",
+    "financial": 79,
+    "capacity": 73,
+    "geo_esg": 92,
+    "sourcing": 69,
+    "network": 64
+   },
+   {
+    "month": "2026-01",
+    "financial": 84,
+    "capacity": 74,
+    "geo_esg": 89,
+    "sourcing": 67,
+    "network": 67
+   },
+   {
+    "month": "2026-02",
+    "financial": 84,
+    "capacity": 74,
+    "geo_esg": 88,
+    "sourcing": 67,
+    "network": 66
+   },
+   {
+    "month": "2026-03",
+    "financial": 83,
+    "capacity": 70,
+    "geo_esg": 89,
+    "sourcing": 67,
+    "network": 67
+   },
+   {
+    "month": "2026-04",
+    "financial": 81,
+    "capacity": 75,
+    "geo_esg": 89,
+    "sourcing": 65,
+    "network": 64
+   },
+   {
+    "month": "2026-05",
+    "financial": 83,
+    "capacity": 71,
+    "geo_esg": 90,
+    "sourcing": 67,
+    "network": 67
+   },
+   {
+    "month": "2026-06",
+    "financial": 82,
+    "capacity": 75,
+    "geo_esg": 90,
+    "sourcing": 67,
+    "network": 67
+   },
+   {
+    "month": "2026-07",
+    "financial": 78,
+    "capacity": 71,
+    "geo_esg": 88,
+    "sourcing": 68,
+    "network": 66
+   },
+   {
+    "month": "2026-08",
+    "financial": 81,
+    "capacity": 74,
+    "geo_esg": 87,
+    "sourcing": 65,
+    "network": 64
+   },
+   {
+    "month": "2026-09",
+    "financial": 82,
+    "capacity": 72,
+    "geo_esg": 89,
+    "sourcing": 68,
+    "network": 63
+   },
+   {
+    "month": "2026-10",
+    "financial": 80,
+    "capacity": 72,
+    "geo_esg": 88,
+    "sourcing": 66,
+    "network": 64
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100113",
+  "name": "Kaiserwerk Schmiede GmbH",
+  "tier": 2,
+  "country": "Germany",
+  "country_code": "DE",
+  "city": "Augsburg",
+  "region": "DE-bavaria",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 78,
+  "capacity": 66,
+  "esg": 82,
+  "geo_risk": 12,
+  "sourcing_depth": 62,
+  "network_depth": 60,
+  "otd_pct": 91.4,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "AS9100D",
+    "number": "AS91-59040",
+    "expiry": "2028-07-08"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-59348",
+    "expiry": "2028-04-04"
+   }
+  ],
+  "payment_terms": "Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 82,
+    "capacity": 70,
+    "geo_esg": 87,
+    "sourcing": 66,
+    "network": 62
+   },
+   {
+    "month": "2025-12",
+    "financial": 78,
+    "capacity": 67,
+    "geo_esg": 89,
+    "sourcing": 66,
+    "network": 62
+   },
+   {
+    "month": "2026-01",
+    "financial": 79,
+    "capacity": 67,
+    "geo_esg": 89,
+    "sourcing": 62,
+    "network": 63
+   },
+   {
+    "month": "2026-02",
+    "financial": 81,
+    "capacity": 66,
+    "geo_esg": 86,
+    "sourcing": 65,
+    "network": 63
+   },
+   {
+    "month": "2026-03",
+    "financial": 81,
+    "capacity": 67,
+    "geo_esg": 85,
+    "sourcing": 62,
+    "network": 61
+   },
+   {
+    "month": "2026-04",
+    "financial": 76,
+    "capacity": 66,
+    "geo_esg": 88,
+    "sourcing": 62,
+    "network": 60
+   },
+   {
+    "month": "2026-05",
+    "financial": 77,
+    "capacity": 65,
+    "geo_esg": 86,
+    "sourcing": 62,
+    "network": 63
+   },
+   {
+    "month": "2026-06",
+    "financial": 79,
+    "capacity": 68,
+    "geo_esg": 86,
+    "sourcing": 62,
+    "network": 61
+   },
+   {
+    "month": "2026-07",
+    "financial": 76,
+    "capacity": 68,
+    "geo_esg": 86,
+    "sourcing": 62,
+    "network": 59
+   },
+   {
+    "month": "2026-08",
+    "financial": 77,
+    "capacity": 65,
+    "geo_esg": 84,
+    "sourcing": 62,
+    "network": 59
+   },
+   {
+    "month": "2026-09",
+    "financial": 76,
+    "capacity": 63,
+    "geo_esg": 87,
+    "sourcing": 64,
+    "network": 62
+   },
+   {
+    "month": "2026-10",
+    "financial": 78,
+    "capacity": 66,
+    "geo_esg": 85,
+    "sourcing": 62,
+    "network": 60
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100116",
+  "name": "Takamori Precision Castings KK",
+  "tier": 2,
+  "country": "Japan",
+  "country_code": "JP",
+  "city": "Gifu",
+  "region": "JP-chubu",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 81,
+  "capacity": 75,
+  "esg": 76,
+  "geo_risk": 24,
+  "sourcing_depth": 60,
+  "network_depth": 62,
+  "otd_pct": 92.1,
+  "ncr_12m": 1,
+  "certs": [
+   {
+    "name": "AS9100D",
+    "number": "AS91-40892",
+    "expiry": "2028-02-16"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-19448",
+    "expiry": "2027-01-06"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-52463",
+    "expiry": "2027-03-09"
+   }
+  ],
+  "payment_terms": "Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 81,
+    "capacity": 77,
+    "geo_esg": 77,
+    "sourcing": 61,
+    "network": 63
+   },
+   {
+    "month": "2025-12",
+    "financial": 82,
+    "capacity": 76,
+    "geo_esg": 80,
+    "sourcing": 63,
+    "network": 63
+   },
+   {
+    "month": "2026-01",
+    "financial": 81,
+    "capacity": 74,
+    "geo_esg": 78,
+    "sourcing": 63,
+    "network": 63
+   },
+   {
+    "month": "2026-02",
+    "financial": 81,
+    "capacity": 75,
+    "geo_esg": 78,
+    "sourcing": 62,
+    "network": 64
+   },
+   {
+    "month": "2026-03",
+    "financial": 81,
+    "capacity": 75,
+    "geo_esg": 76,
+    "sourcing": 61,
+    "network": 62
+   },
+   {
+    "month": "2026-04",
+    "financial": 85,
+    "capacity": 79,
+    "geo_esg": 76,
+    "sourcing": 60,
+    "network": 65
+   },
+   {
+    "month": "2026-05",
+    "financial": 83,
+    "capacity": 76,
+    "geo_esg": 76,
+    "sourcing": 63,
+    "network": 62
+   },
+   {
+    "month": "2026-06",
+    "financial": 79,
+    "capacity": 75,
+    "geo_esg": 77,
+    "sourcing": 62,
+    "network": 61
+   },
+   {
+    "month": "2026-07",
+    "financial": 84,
+    "capacity": 75,
+    "geo_esg": 77,
+    "sourcing": 62,
+    "network": 64
+   },
+   {
+    "month": "2026-08",
+    "financial": 81,
+    "capacity": 78,
+    "geo_esg": 75,
+    "sourcing": 61,
+    "network": 63
+   },
+   {
+    "month": "2026-09",
+    "financial": 79,
+    "capacity": 77,
+    "geo_esg": 76,
+    "sourcing": 59,
+    "network": 60
+   },
+   {
+    "month": "2026-10",
+    "financial": 81,
+    "capacity": 75,
+    "geo_esg": 76,
+    "sourcing": 60,
+    "network": 62
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100120",
+  "name": "Ostrava Turbine Machining s.r.o.",
+  "tier": 2,
+  "country": "Czechia",
+  "country_code": "CZ",
+  "city": "Ostrava",
+  "region": "CZ-moravia",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 74,
+  "capacity": 72,
+  "esg": 74,
+  "geo_risk": 18,
+  "sourcing_depth": 64,
+  "network_depth": 60,
+  "otd_pct": 88.9,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-69406",
+    "expiry": "2027-05-05"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-69584",
+    "expiry": "2027-12-30"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-45830",
+    "expiry": "2027-04-18"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-75852",
+    "expiry": "2027-12-18"
+   }
+  ],
+  "payment_terms": "2/10 Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 78,
+    "capacity": 75,
+    "geo_esg": 80,
+    "sourcing": 65,
+    "network": 61
+   },
+   {
+    "month": "2025-12",
+    "financial": 77,
+    "capacity": 74,
+    "geo_esg": 79,
+    "sourcing": 66,
+    "network": 62
+   },
+   {
+    "month": "2026-01",
+    "financial": 78,
+    "capacity": 77,
+    "geo_esg": 81,
+    "sourcing": 65,
+    "network": 63
+   },
+   {
+    "month": "2026-02",
+    "financial": 78,
+    "capacity": 76,
+    "geo_esg": 79,
+    "sourcing": 67,
+    "network": 61
+   },
+   {
+    "month": "2026-03",
+    "financial": 78,
+    "capacity": 71,
+    "geo_esg": 80,
+    "sourcing": 67,
+    "network": 61
+   },
+   {
+    "month": "2026-04",
+    "financial": 75,
+    "capacity": 73,
+    "geo_esg": 81,
+    "sourcing": 64,
+    "network": 62
+   },
+   {
+    "month": "2026-05",
+    "financial": 77,
+    "capacity": 72,
+    "geo_esg": 79,
+    "sourcing": 64,
+    "network": 61
+   },
+   {
+    "month": "2026-06",
+    "financial": 74,
+    "capacity": 73,
+    "geo_esg": 81,
+    "sourcing": 65,
+    "network": 59
+   },
+   {
+    "month": "2026-07",
+    "financial": 77,
+    "capacity": 74,
+    "geo_esg": 79,
+    "sourcing": 64,
+    "network": 62
+   },
+   {
+    "month": "2026-08",
+    "financial": 77,
+    "capacity": 75,
+    "geo_esg": 77,
+    "sourcing": 64,
+    "network": 60
+   },
+   {
+    "month": "2026-09",
+    "financial": 74,
+    "capacity": 74,
+    "geo_esg": 78,
+    "sourcing": 63,
+    "network": 59
+   },
+   {
+    "month": "2026-10",
+    "financial": 74,
+    "capacity": 72,
+    "geo_esg": 78,
+    "sourcing": 64,
+    "network": 60
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100127",
+  "name": "Seletar Engine Parts Pte Ltd",
+  "tier": 1,
+  "country": "Singapore",
+  "country_code": "SG",
+  "city": "Seletar",
+  "region": "SG",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 86,
+  "capacity": 80,
+  "esg": 78,
+  "geo_risk": 10,
+  "sourcing_depth": 70,
+  "network_depth": 72,
+  "otd_pct": 94.7,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-89432",
+    "expiry": "2027-04-28"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-94012",
+    "expiry": "2027-01-01"
+   }
+  ],
+  "payment_terms": "2/10 Net 45",
+  "strategic": true,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 91,
+    "capacity": 83,
+    "geo_esg": 86,
+    "sourcing": 74,
+    "network": 76
+   },
+   {
+    "month": "2025-12",
+    "financial": 88,
+    "capacity": 81,
+    "geo_esg": 87,
+    "sourcing": 70,
+    "network": 73
+   },
+   {
+    "month": "2026-01",
+    "financial": 87,
+    "capacity": 82,
+    "geo_esg": 88,
+    "sourcing": 71,
+    "network": 74
+   },
+   {
+    "month": "2026-02",
+    "financial": 88,
+    "capacity": 81,
+    "geo_esg": 85,
+    "sourcing": 72,
+    "network": 74
+   },
+   {
+    "month": "2026-03",
+    "financial": 85,
+    "capacity": 79,
+    "geo_esg": 87,
+    "sourcing": 70,
+    "network": 75
+   },
+   {
+    "month": "2026-04",
+    "financial": 86,
+    "capacity": 80,
+    "geo_esg": 84,
+    "sourcing": 72,
+    "network": 74
+   },
+   {
+    "month": "2026-05",
+    "financial": 85,
+    "capacity": 79,
+    "geo_esg": 84,
+    "sourcing": 69,
+    "network": 72
+   },
+   {
+    "month": "2026-06",
+    "financial": 87,
+    "capacity": 78,
+    "geo_esg": 84,
+    "sourcing": 71,
+    "network": 72
+   },
+   {
+    "month": "2026-07",
+    "financial": 89,
+    "capacity": 82,
+    "geo_esg": 85,
+    "sourcing": 70,
+    "network": 74
+   },
+   {
+    "month": "2026-08",
+    "financial": 89,
+    "capacity": 82,
+    "geo_esg": 85,
+    "sourcing": 70,
+    "network": 72
+   },
+   {
+    "month": "2026-09",
+    "financial": 86,
+    "capacity": 79,
+    "geo_esg": 83,
+    "sourcing": 72,
+    "network": 74
+   },
+   {
+    "month": "2026-10",
+    "financial": 86,
+    "capacity": 80,
+    "geo_esg": 84,
+    "sourcing": 70,
+    "network": 72
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100134",
+  "name": "Bengaluru Aero Machining Pvt Ltd",
+  "tier": 2,
+  "country": "India",
+  "country_code": "IN",
+  "city": "Bengaluru",
+  "region": "IN-karnataka",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [
+   "ENG-1619-270"
+  ],
+  "financial_health": 72,
+  "capacity": 76,
+  "esg": 68,
+  "geo_risk": 30,
+  "sourcing_depth": 66,
+  "network_depth": 66,
+  "otd_pct": 87.8,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-84786",
+    "expiry": "2028-09-13"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-46880",
+    "expiry": "2027-06-21"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 74,
+    "capacity": 75,
+    "geo_esg": 72,
+    "sourcing": 69,
+    "network": 70
+   },
+   {
+    "month": "2025-12",
+    "financial": 76,
+    "capacity": 77,
+    "geo_esg": 69,
+    "sourcing": 70,
+    "network": 69
+   },
+   {
+    "month": "2026-01",
+    "financial": 73,
+    "capacity": 79,
+    "geo_esg": 72,
+    "sourcing": 69,
+    "network": 67
+   },
+   {
+    "month": "2026-02",
+    "financial": 75,
+    "capacity": 78,
+    "geo_esg": 69,
+    "sourcing": 67,
+    "network": 69
+   },
+   {
+    "month": "2026-03",
+    "financial": 75,
+    "capacity": 79,
+    "geo_esg": 72,
+    "sourcing": 69,
+    "network": 68
+   },
+   {
+    "month": "2026-04",
+    "financial": 71,
+    "capacity": 76,
+    "geo_esg": 70,
+    "sourcing": 66,
+    "network": 67
+   },
+   {
+    "month": "2026-05",
+    "financial": 70,
+    "capacity": 75,
+    "geo_esg": 71,
+    "sourcing": 67,
+    "network": 65
+   },
+   {
+    "month": "2026-06",
+    "financial": 73,
+    "capacity": 79,
+    "geo_esg": 68,
+    "sourcing": 66,
+    "network": 65
+   },
+   {
+    "month": "2026-07",
+    "financial": 75,
+    "capacity": 75,
+    "geo_esg": 69,
+    "sourcing": 66,
+    "network": 65
+   },
+   {
+    "month": "2026-08",
+    "financial": 70,
+    "capacity": 78,
+    "geo_esg": 67,
+    "sourcing": 65,
+    "network": 67
+   },
+   {
+    "month": "2026-09",
+    "financial": 74,
+    "capacity": 78,
+    "geo_esg": 69,
+    "sourcing": 68,
+    "network": 67
+   },
+   {
+    "month": "2026-10",
+    "financial": 72,
+    "capacity": 76,
+    "geo_esg": 69,
+    "sourcing": 66,
+    "network": 66
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100138",
+  "name": "Cascadia Alloy Forge Inc",
+  "tier": 2,
+  "country": "United States",
+  "country_code": "US",
+  "city": "Spokane",
+  "region": "US-pnw",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 79,
+  "capacity": 68,
+  "esg": 74,
+  "geo_risk": 14,
+  "sourcing_depth": 62,
+  "network_depth": 64,
+  "otd_pct": 91.2,
+  "ncr_12m": 4,
+  "certs": [
+   {
+    "name": "ISO 14001",
+    "number": "ISO-63328",
+    "expiry": "2027-04-11"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-49824",
+    "expiry": "2027-09-26"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-27354",
+    "expiry": "2027-12-18"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-88792",
+    "expiry": "2027-10-02"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 82,
+    "capacity": 68,
+    "geo_esg": 82,
+    "sourcing": 65,
+    "network": 65
+   },
+   {
+    "month": "2025-12",
+    "financial": 80,
+    "capacity": 72,
+    "geo_esg": 81,
+    "sourcing": 64,
+    "network": 66
+   },
+   {
+    "month": "2026-01",
+    "financial": 79,
+    "capacity": 72,
+    "geo_esg": 83,
+    "sourcing": 63,
+    "network": 66
+   },
+   {
+    "month": "2026-02",
+    "financial": 83,
+    "capacity": 68,
+    "geo_esg": 83,
+    "sourcing": 65,
+    "network": 67
+   },
+   {
+    "month": "2026-03",
+    "financial": 81,
+    "capacity": 67,
+    "geo_esg": 80,
+    "sourcing": 65,
+    "network": 67
+   },
+   {
+    "month": "2026-04",
+    "financial": 82,
+    "capacity": 67,
+    "geo_esg": 80,
+    "sourcing": 63,
+    "network": 66
+   },
+   {
+    "month": "2026-05",
+    "financial": 81,
+    "capacity": 68,
+    "geo_esg": 83,
+    "sourcing": 64,
+    "network": 66
+   },
+   {
+    "month": "2026-06",
+    "financial": 79,
+    "capacity": 71,
+    "geo_esg": 80,
+    "sourcing": 64,
+    "network": 67
+   },
+   {
+    "month": "2026-07",
+    "financial": 80,
+    "capacity": 70,
+    "geo_esg": 81,
+    "sourcing": 62,
+    "network": 64
+   },
+   {
+    "month": "2026-08",
+    "financial": 80,
+    "capacity": 71,
+    "geo_esg": 82,
+    "sourcing": 64,
+    "network": 65
+   },
+   {
+    "month": "2026-09",
+    "financial": 80,
+    "capacity": 65,
+    "geo_esg": 81,
+    "sourcing": 60,
+    "network": 63
+   },
+   {
+    "month": "2026-10",
+    "financial": 79,
+    "capacity": 68,
+    "geo_esg": 80,
+    "sourcing": 62,
+    "network": 64
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100141",
+  "name": "Pacific Aero Spares Pte Ltd",
+  "tier": 1,
+  "country": "Singapore",
+  "country_code": "SG",
+  "city": "Changi",
+  "region": "SG",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [
+   "ENG-7137-770"
+  ],
+  "financial_health": 83,
+  "capacity": 70,
+  "esg": 72,
+  "geo_risk": 10,
+  "sourcing_depth": 74,
+  "network_depth": 68,
+  "otd_pct": 92.2,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-92940",
+    "expiry": "2027-06-04"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-75812",
+    "expiry": "2027-10-17"
+   }
+  ],
+  "payment_terms": "Net 30",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 87,
+    "capacity": 74,
+    "geo_esg": 84,
+    "sourcing": 78,
+    "network": 72
+   },
+   {
+    "month": "2025-12",
+    "financial": 88,
+    "capacity": 72,
+    "geo_esg": 85,
+    "sourcing": 75,
+    "network": 71
+   },
+   {
+    "month": "2026-01",
+    "financial": 86,
+    "capacity": 73,
+    "geo_esg": 83,
+    "sourcing": 75,
+    "network": 71
+   },
+   {
+    "month": "2026-02",
+    "financial": 85,
+    "capacity": 70,
+    "geo_esg": 81,
+    "sourcing": 76,
+    "network": 69
+   },
+   {
+    "month": "2026-03",
+    "financial": 86,
+    "capacity": 71,
+    "geo_esg": 82,
+    "sourcing": 74,
+    "network": 69
+   },
+   {
+    "month": "2026-04",
+    "financial": 83,
+    "capacity": 71,
+    "geo_esg": 81,
+    "sourcing": 77,
+    "network": 68
+   },
+   {
+    "month": "2026-05",
+    "financial": 82,
+    "capacity": 74,
+    "geo_esg": 81,
+    "sourcing": 75,
+    "network": 70
+   },
+   {
+    "month": "2026-06",
+    "financial": 83,
+    "capacity": 68,
+    "geo_esg": 84,
+    "sourcing": 76,
+    "network": 70
+   },
+   {
+    "month": "2026-07",
+    "financial": 83,
+    "capacity": 69,
+    "geo_esg": 82,
+    "sourcing": 74,
+    "network": 70
+   },
+   {
+    "month": "2026-08",
+    "financial": 83,
+    "capacity": 69,
+    "geo_esg": 80,
+    "sourcing": 76,
+    "network": 68
+   },
+   {
+    "month": "2026-09",
+    "financial": 83,
+    "capacity": 73,
+    "geo_esg": 81,
+    "sourcing": 75,
+    "network": 69
+   },
+   {
+    "month": "2026-10",
+    "financial": 83,
+    "capacity": 70,
+    "geo_esg": 81,
+    "sourcing": 74,
+    "network": 68
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100145",
+  "name": "Laem Chabang Precision Co Ltd",
+  "tier": 2,
+  "country": "Thailand",
+  "country_code": "TH",
+  "city": "Chonburi",
+  "region": "TH-eastern",
+  "categories": [
+   "engine_lru"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 80,
+  "capacity": 78,
+  "esg": 66,
+  "geo_risk": 32,
+  "sourcing_depth": 62,
+  "network_depth": 60,
+  "otd_pct": 91.4,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-63613",
+    "expiry": "2027-05-11"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-38516",
+    "expiry": "2026-12-28"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-43500",
+    "expiry": "2027-07-13"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-22491",
+    "expiry": "2028-04-30"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 79,
+    "capacity": 79,
+    "geo_esg": 69,
+    "sourcing": 65,
+    "network": 63
+   },
+   {
+    "month": "2025-12",
+    "financial": 82,
+    "capacity": 80,
+    "geo_esg": 69,
+    "sourcing": 62,
+    "network": 64
+   },
+   {
+    "month": "2026-01",
+    "financial": 80,
+    "capacity": 78,
+    "geo_esg": 70,
+    "sourcing": 63,
+    "network": 61
+   },
+   {
+    "month": "2026-02",
+    "financial": 81,
+    "capacity": 78,
+    "geo_esg": 70,
+    "sourcing": 63,
+    "network": 60
+   },
+   {
+    "month": "2026-03",
+    "financial": 79,
+    "capacity": 81,
+    "geo_esg": 68,
+    "sourcing": 65,
+    "network": 61
+   },
+   {
+    "month": "2026-04",
+    "financial": 82,
+    "capacity": 77,
+    "geo_esg": 68,
+    "sourcing": 62,
+    "network": 63
+   },
+   {
+    "month": "2026-05",
+    "financial": 78,
+    "capacity": 82,
+    "geo_esg": 69,
+    "sourcing": 64,
+    "network": 60
+   },
+   {
+    "month": "2026-06",
+    "financial": 79,
+    "capacity": 79,
+    "geo_esg": 70,
+    "sourcing": 62,
+    "network": 61
+   },
+   {
+    "month": "2026-07",
+    "financial": 78,
+    "capacity": 80,
+    "geo_esg": 67,
+    "sourcing": 61,
+    "network": 62
+   },
+   {
+    "month": "2026-08",
+    "financial": 81,
+    "capacity": 78,
+    "geo_esg": 66,
+    "sourcing": 64,
+    "network": 61
+   },
+   {
+    "month": "2026-09",
+    "financial": 79,
+    "capacity": 75,
+    "geo_esg": 69,
+    "sourcing": 61,
+    "network": 59
+   },
+   {
+    "month": "2026-10",
+    "financial": 80,
+    "capacity": 78,
+    "geo_esg": 67,
+    "sourcing": 62,
+    "network": 60
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100241",
+  "name": "Brightwater Castings Ltd",
+  "tier": 1,
+  "country": "United Kingdom",
+  "country_code": "GB",
+  "city": "Telford",
+  "region": "GB-midlands",
+  "categories": [
+   "engine_lru",
+   "raw_alloy"
+  ],
+  "sole_source_parts": [
+   "ENG-1298-410"
+  ],
+  "financial_health": 77,
+  "capacity": 70,
+  "esg": 76,
+  "geo_risk": 14,
+  "sourcing_depth": 60,
+  "network_depth": 62,
+  "otd_pct": 89.2,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-60674",
+    "expiry": "2027-01-08"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-70608",
+    "expiry": "2026-11-22"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-36015",
+    "expiry": "2028-06-30"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": true,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 79,
+    "capacity": 70,
+    "geo_esg": 84,
+    "sourcing": 63,
+    "network": 62
+   },
+   {
+    "month": "2025-12",
+    "financial": 80,
+    "capacity": 74,
+    "geo_esg": 83,
+    "sourcing": 63,
+    "network": 62
+   },
+   {
+    "month": "2026-01",
+    "financial": 77,
+    "capacity": 69,
+    "geo_esg": 84,
+    "sourcing": 60,
+    "network": 65
+   },
+   {
+    "month": "2026-02",
+    "financial": 79,
+    "capacity": 69,
+    "geo_esg": 82,
+    "sourcing": 62,
+    "network": 63
+   },
+   {
+    "month": "2026-03",
+    "financial": 78,
+    "capacity": 72,
+    "geo_esg": 82,
+    "sourcing": 63,
+    "network": 63
+   },
+   {
+    "month": "2026-04",
+    "financial": 77,
+    "capacity": 73,
+    "geo_esg": 83,
+    "sourcing": 62,
+    "network": 64
+   },
+   {
+    "month": "2026-05",
+    "financial": 77,
+    "capacity": 69,
+    "geo_esg": 83,
+    "sourcing": 60,
+    "network": 62
+   },
+   {
+    "month": "2026-06",
+    "financial": 77,
+    "capacity": 72,
+    "geo_esg": 81,
+    "sourcing": 60,
+    "network": 64
+   },
+   {
+    "month": "2026-07",
+    "financial": 77,
+    "capacity": 71,
+    "geo_esg": 83,
+    "sourcing": 62,
+    "network": 61
+   },
+   {
+    "month": "2026-08",
+    "financial": 79,
+    "capacity": 71,
+    "geo_esg": 83,
+    "sourcing": 59,
+    "network": 61
+   },
+   {
+    "month": "2026-09",
+    "financial": 78,
+    "capacity": 71,
+    "geo_esg": 83,
+    "sourcing": 60,
+    "network": 63
+   },
+   {
+    "month": "2026-10",
+    "financial": 77,
+    "capacity": 70,
+    "geo_esg": 81,
+    "sourcing": 60,
+    "network": 62
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100151",
+  "name": "Rhone Acoustique SA",
+  "tier": 1,
+  "country": "France",
+  "country_code": "FR",
+  "city": "Lyon",
+  "region": "FR-auvergne",
+  "categories": [
+   "nacelle"
+  ],
+  "sole_source_parts": [
+   "NAC-8874-100"
+  ],
+  "financial_health": 78,
+  "capacity": 72,
+  "esg": 80,
+  "geo_risk": 14,
+  "sourcing_depth": 48,
+  "network_depth": 60,
+  "otd_pct": 92.5,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-21865",
+    "expiry": "2026-11-22"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-66981",
+    "expiry": "2027-05-05"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-12406",
+    "expiry": "2027-01-26"
+   }
+  ],
+  "payment_terms": "Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 81,
+    "capacity": 73,
+    "geo_esg": 86,
+    "sourcing": 52,
+    "network": 61
+   },
+   {
+    "month": "2025-12",
+    "financial": 83,
+    "capacity": 76,
+    "geo_esg": 83,
+    "sourcing": 48,
+    "network": 63
+   },
+   {
+    "month": "2026-01",
+    "financial": 79,
+    "capacity": 73,
+    "geo_esg": 84,
+    "sourcing": 51,
+    "network": 64
+   },
+   {
+    "month": "2026-02",
+    "financial": 78,
+    "capacity": 74,
+    "geo_esg": 85,
+    "sourcing": 49,
+    "network": 60
+   },
+   {
+    "month": "2026-03",
+    "financial": 78,
+    "capacity": 71,
+    "geo_esg": 84,
+    "sourcing": 49,
+    "network": 62
+   },
+   {
+    "month": "2026-04",
+    "financial": 81,
+    "capacity": 71,
+    "geo_esg": 86,
+    "sourcing": 48,
+    "network": 62
+   },
+   {
+    "month": "2026-05",
+    "financial": 76,
+    "capacity": 73,
+    "geo_esg": 86,
+    "sourcing": 51,
+    "network": 61
+   },
+   {
+    "month": "2026-06",
+    "financial": 78,
+    "capacity": 75,
+    "geo_esg": 84,
+    "sourcing": 48,
+    "network": 60
+   },
+   {
+    "month": "2026-07",
+    "financial": 79,
+    "capacity": 72,
+    "geo_esg": 84,
+    "sourcing": 48,
+    "network": 61
+   },
+   {
+    "month": "2026-08",
+    "financial": 77,
+    "capacity": 73,
+    "geo_esg": 85,
+    "sourcing": 48,
+    "network": 61
+   },
+   {
+    "month": "2026-09",
+    "financial": 81,
+    "capacity": 72,
+    "geo_esg": 83,
+    "sourcing": 50,
+    "network": 60
+   },
+   {
+    "month": "2026-10",
+    "financial": 78,
+    "capacity": 72,
+    "geo_esg": 83,
+    "sourcing": 48,
+    "network": 60
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100154",
+  "name": "Weser Nacelle Systems GmbH",
+  "tier": 1,
+  "country": "Germany",
+  "country_code": "DE",
+  "city": "Bremen",
+  "region": "DE-north",
+  "categories": [
+   "nacelle"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 80,
+  "capacity": 74,
+  "esg": 82,
+  "geo_risk": 12,
+  "sourcing_depth": 52,
+  "network_depth": 64,
+  "otd_pct": 92.3,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-12089",
+    "expiry": "2027-02-13"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-43251",
+    "expiry": "2028-02-14"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-15393",
+    "expiry": "2027-07-26"
+   }
+  ],
+  "payment_terms": "2/10 Net 45",
+  "strategic": true,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 82,
+    "capacity": 77,
+    "geo_esg": 86,
+    "sourcing": 55,
+    "network": 66
+   },
+   {
+    "month": "2025-12",
+    "financial": 83,
+    "capacity": 73,
+    "geo_esg": 88,
+    "sourcing": 54,
+    "network": 65
+   },
+   {
+    "month": "2026-01",
+    "financial": 83,
+    "capacity": 76,
+    "geo_esg": 86,
+    "sourcing": 54,
+    "network": 67
+   },
+   {
+    "month": "2026-02",
+    "financial": 81,
+    "capacity": 75,
+    "geo_esg": 86,
+    "sourcing": 52,
+    "network": 67
+   },
+   {
+    "month": "2026-03",
+    "financial": 79,
+    "capacity": 74,
+    "geo_esg": 85,
+    "sourcing": 54,
+    "network": 66
+   },
+   {
+    "month": "2026-04",
+    "financial": 79,
+    "capacity": 78,
+    "geo_esg": 87,
+    "sourcing": 52,
+    "network": 63
+   },
+   {
+    "month": "2026-05",
+    "financial": 79,
+    "capacity": 75,
+    "geo_esg": 86,
+    "sourcing": 53,
+    "network": 67
+   },
+   {
+    "month": "2026-06",
+    "financial": 81,
+    "capacity": 72,
+    "geo_esg": 85,
+    "sourcing": 54,
+    "network": 63
+   },
+   {
+    "month": "2026-07",
+    "financial": 78,
+    "capacity": 77,
+    "geo_esg": 84,
+    "sourcing": 51,
+    "network": 66
+   },
+   {
+    "month": "2026-08",
+    "financial": 80,
+    "capacity": 73,
+    "geo_esg": 85,
+    "sourcing": 54,
+    "network": 65
+   },
+   {
+    "month": "2026-09",
+    "financial": 81,
+    "capacity": 77,
+    "geo_esg": 84,
+    "sourcing": 51,
+    "network": 63
+   },
+   {
+    "month": "2026-10",
+    "financial": 80,
+    "capacity": 74,
+    "geo_esg": 85,
+    "sourcing": 52,
+    "network": 64
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100158",
+  "name": "Halvorsen Composites AS",
+  "tier": 2,
+  "country": "Norway",
+  "country_code": "NO",
+  "city": "Stavanger",
+  "region": "NO-west",
+  "categories": [
+   "nacelle"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 74,
+  "capacity": 66,
+  "esg": 88,
+  "geo_risk": 8,
+  "sourcing_depth": 56,
+  "network_depth": 52,
+  "otd_pct": 88,
+  "ncr_12m": 5,
+  "certs": [
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-51422",
+    "expiry": "2027-09-13"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-68544",
+    "expiry": "2027-04-17"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-50672",
+    "expiry": "2026-12-10"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-41125",
+    "expiry": "2028-07-06"
+   }
+  ],
+  "payment_terms": "Net 30",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 79,
+    "capacity": 66,
+    "geo_esg": 92,
+    "sourcing": 57,
+    "network": 55
+   },
+   {
+    "month": "2025-12",
+    "financial": 76,
+    "capacity": 68,
+    "geo_esg": 93,
+    "sourcing": 58,
+    "network": 53
+   },
+   {
+    "month": "2026-01",
+    "financial": 73,
+    "capacity": 68,
+    "geo_esg": 93,
+    "sourcing": 58,
+    "network": 54
+   },
+   {
+    "month": "2026-02",
+    "financial": 77,
+    "capacity": 69,
+    "geo_esg": 93,
+    "sourcing": 58,
+    "network": 56
+   },
+   {
+    "month": "2026-03",
+    "financial": 78,
+    "capacity": 67,
+    "geo_esg": 91,
+    "sourcing": 57,
+    "network": 54
+   },
+   {
+    "month": "2026-04",
+    "financial": 74,
+    "capacity": 66,
+    "geo_esg": 90,
+    "sourcing": 58,
+    "network": 52
+   },
+   {
+    "month": "2026-05",
+    "financial": 76,
+    "capacity": 66,
+    "geo_esg": 90,
+    "sourcing": 56,
+    "network": 52
+   },
+   {
+    "month": "2026-06",
+    "financial": 74,
+    "capacity": 69,
+    "geo_esg": 90,
+    "sourcing": 55,
+    "network": 53
+   },
+   {
+    "month": "2026-07",
+    "financial": 77,
+    "capacity": 66,
+    "geo_esg": 90,
+    "sourcing": 57,
+    "network": 53
+   },
+   {
+    "month": "2026-08",
+    "financial": 76,
+    "capacity": 65,
+    "geo_esg": 89,
+    "sourcing": 58,
+    "network": 54
+   },
+   {
+    "month": "2026-09",
+    "financial": 74,
+    "capacity": 67,
+    "geo_esg": 89,
+    "sourcing": 57,
+    "network": 54
+   },
+   {
+    "month": "2026-10",
+    "financial": 74,
+    "capacity": 66,
+    "geo_esg": 90,
+    "sourcing": 56,
+    "network": 52
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100162",
+  "name": "Garonne Aerostructures SARL",
+  "tier": 1,
+  "country": "France",
+  "country_code": "FR",
+  "city": "Blagnac",
+  "region": "FR-occitanie",
+  "categories": [
+   "nacelle"
+  ],
+  "sole_source_parts": [
+   "NAC-7300-220"
+  ],
+  "financial_health": 72,
+  "capacity": 68,
+  "esg": 74,
+  "geo_risk": 22,
+  "sourcing_depth": 50,
+  "network_depth": 58,
+  "otd_pct": 91.8,
+  "ncr_12m": 5,
+  "certs": [
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-75019",
+    "expiry": "2028-09-04"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-57161",
+    "expiry": "2028-04-18"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 73,
+    "capacity": 70,
+    "geo_esg": 79,
+    "sourcing": 51,
+    "network": 59
+   },
+   {
+    "month": "2025-12",
+    "financial": 73,
+    "capacity": 69,
+    "geo_esg": 79,
+    "sourcing": 53,
+    "network": 61
+   },
+   {
+    "month": "2026-01",
+    "financial": 72,
+    "capacity": 72,
+    "geo_esg": 80,
+    "sourcing": 51,
+    "network": 60
+   },
+   {
+    "month": "2026-02",
+    "financial": 73,
+    "capacity": 68,
+    "geo_esg": 78,
+    "sourcing": 54,
+    "network": 59
+   },
+   {
+    "month": "2026-03",
+    "financial": 74,
+    "capacity": 70,
+    "geo_esg": 76,
+    "sourcing": 52,
+    "network": 61
+   },
+   {
+    "month": "2026-04",
+    "financial": 73,
+    "capacity": 72,
+    "geo_esg": 78,
+    "sourcing": 50,
+    "network": 60
+   },
+   {
+    "month": "2026-05",
+    "financial": 76,
+    "capacity": 68,
+    "geo_esg": 77,
+    "sourcing": 49,
+    "network": 59
+   },
+   {
+    "month": "2026-06",
+    "financial": 74,
+    "capacity": 69,
+    "geo_esg": 78,
+    "sourcing": 51,
+    "network": 57
+   },
+   {
+    "month": "2026-07",
+    "financial": 72,
+    "capacity": 68,
+    "geo_esg": 75,
+    "sourcing": 50,
+    "network": 57
+   },
+   {
+    "month": "2026-08",
+    "financial": 70,
+    "capacity": 66,
+    "geo_esg": 76,
+    "sourcing": 50,
+    "network": 59
+   },
+   {
+    "month": "2026-09",
+    "financial": 73,
+    "capacity": 70,
+    "geo_esg": 78,
+    "sourcing": 48,
+    "network": 58
+   },
+   {
+    "month": "2026-10",
+    "financial": 72,
+    "capacity": 68,
+    "geo_esg": 76,
+    "sourcing": 50,
+    "network": 58
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100165",
+  "name": "Cebu Composite Works Inc",
+  "tier": 2,
+  "country": "Philippines",
+  "country_code": "PH",
+  "city": "Mactan",
+  "region": "PH-visayas",
+  "categories": [
+   "nacelle"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 66,
+  "capacity": 64,
+  "esg": 60,
+  "geo_risk": 44,
+  "sourcing_depth": 54,
+  "network_depth": 48,
+  "otd_pct": 85.2,
+  "ncr_12m": 6,
+  "certs": [
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-79089",
+    "expiry": "2027-05-25"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-57903",
+    "expiry": "2028-06-22"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-77117",
+    "expiry": "2028-06-20"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-78219",
+    "expiry": "2027-12-26"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 67,
+    "capacity": 69,
+    "geo_esg": 58,
+    "sourcing": 56,
+    "network": 49
+   },
+   {
+    "month": "2025-12",
+    "financial": 71,
+    "capacity": 68,
+    "geo_esg": 60,
+    "sourcing": 56,
+    "network": 51
+   },
+   {
+    "month": "2026-01",
+    "financial": 66,
+    "capacity": 63,
+    "geo_esg": 58,
+    "sourcing": 58,
+    "network": 50
+   },
+   {
+    "month": "2026-02",
+    "financial": 69,
+    "capacity": 66,
+    "geo_esg": 59,
+    "sourcing": 58,
+    "network": 48
+   },
+   {
+    "month": "2026-03",
+    "financial": 65,
+    "capacity": 67,
+    "geo_esg": 61,
+    "sourcing": 53,
+    "network": 49
+   },
+   {
+    "month": "2026-04",
+    "financial": 67,
+    "capacity": 67,
+    "geo_esg": 58,
+    "sourcing": 54,
+    "network": 50
+   },
+   {
+    "month": "2026-05",
+    "financial": 64,
+    "capacity": 64,
+    "geo_esg": 58,
+    "sourcing": 57,
+    "network": 48
+   },
+   {
+    "month": "2026-06",
+    "financial": 65,
+    "capacity": 67,
+    "geo_esg": 57,
+    "sourcing": 55,
+    "network": 47
+   },
+   {
+    "month": "2026-07",
+    "financial": 69,
+    "capacity": 63,
+    "geo_esg": 57,
+    "sourcing": 54,
+    "network": 47
+   },
+   {
+    "month": "2026-08",
+    "financial": 67,
+    "capacity": 66,
+    "geo_esg": 57,
+    "sourcing": 54,
+    "network": 47
+   },
+   {
+    "month": "2026-09",
+    "financial": 63,
+    "capacity": 63,
+    "geo_esg": 58,
+    "sourcing": 56,
+    "network": 50
+   },
+   {
+    "month": "2026-10",
+    "financial": 66,
+    "capacity": 64,
+    "geo_esg": 58,
+    "sourcing": 54,
+    "network": 48
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100168",
+  "name": "Arden Nacelle Services Ltd",
+  "tier": 1,
+  "country": "United Kingdom",
+  "country_code": "GB",
+  "city": "Coventry",
+  "region": "GB-midlands",
+  "categories": [
+   "nacelle"
+  ],
+  "sole_source_parts": [
+   "NAC-7500-310",
+   "NAC-9120-450"
+  ],
+  "financial_health": 38,
+  "capacity": 76,
+  "esg": 72,
+  "geo_risk": 14,
+  "sourcing_depth": 40,
+  "network_depth": 58,
+  "otd_pct": 88,
+  "ncr_12m": 5,
+  "certs": [
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-63538",
+    "expiry": "2027-04-01"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-31217",
+    "expiry": "2028-04-29"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-19768",
+    "expiry": "2028-08-17"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-86311",
+    "expiry": "2028-08-03"
+   }
+  ],
+  "payment_terms": "Net 45",
+  "strategic": true,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 62,
+    "capacity": 81,
+    "geo_esg": 80,
+    "sourcing": 44,
+    "network": 62
+   },
+   {
+    "month": "2025-12",
+    "financial": 61,
+    "capacity": 79,
+    "geo_esg": 81,
+    "sourcing": 43,
+    "network": 60
+   },
+   {
+    "month": "2026-01",
+    "financial": 60,
+    "capacity": 77,
+    "geo_esg": 80,
+    "sourcing": 41,
+    "network": 60
+   },
+   {
+    "month": "2026-02",
+    "financial": 58,
+    "capacity": 78,
+    "geo_esg": 81,
+    "sourcing": 40,
+    "network": 60
+   },
+   {
+    "month": "2026-03",
+    "financial": 57,
+    "capacity": 78,
+    "geo_esg": 80,
+    "sourcing": 40,
+    "network": 61
+   },
+   {
+    "month": "2026-04",
+    "financial": 55,
+    "capacity": 80,
+    "geo_esg": 79,
+    "sourcing": 42,
+    "network": 60
+   },
+   {
+    "month": "2026-05",
+    "financial": 52,
+    "capacity": 77,
+    "geo_esg": 82,
+    "sourcing": 41,
+    "network": 59
+   },
+   {
+    "month": "2026-06",
+    "financial": 50,
+    "capacity": 75,
+    "geo_esg": 80,
+    "sourcing": 41,
+    "network": 58
+   },
+   {
+    "month": "2026-07",
+    "financial": 47,
+    "capacity": 78,
+    "geo_esg": 81,
+    "sourcing": 42,
+    "network": 60
+   },
+   {
+    "month": "2026-08",
+    "financial": 44,
+    "capacity": 76,
+    "geo_esg": 80,
+    "sourcing": 41,
+    "network": 57
+   },
+   {
+    "month": "2026-09",
+    "financial": 41,
+    "capacity": 78,
+    "geo_esg": 79,
+    "sourcing": 41,
+    "network": 59
+   },
+   {
+    "month": "2026-10",
+    "financial": 38,
+    "capacity": 76,
+    "geo_esg": 79,
+    "sourcing": 40,
+    "network": 58
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100171",
+  "name": "Prairie Composites LLC",
+  "tier": 1,
+  "country": "United States",
+  "country_code": "US",
+  "city": "Wichita",
+  "region": "US-kansas",
+  "categories": [
+   "nacelle"
+  ],
+  "sole_source_parts": [
+   "NAC-8108-770"
+  ],
+  "financial_health": 81,
+  "capacity": 70,
+  "esg": 70,
+  "geo_risk": 12,
+  "sourcing_depth": 58,
+  "network_depth": 62,
+  "otd_pct": 94.1,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-68858",
+    "expiry": "2028-02-12"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-17319",
+    "expiry": "2027-08-01"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-72658",
+    "expiry": "2028-07-12"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-55768",
+    "expiry": "2027-08-01"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 84,
+    "capacity": 72,
+    "geo_esg": 81,
+    "sourcing": 60,
+    "network": 64
+   },
+   {
+    "month": "2025-12",
+    "financial": 81,
+    "capacity": 70,
+    "geo_esg": 82,
+    "sourcing": 58,
+    "network": 64
+   },
+   {
+    "month": "2026-01",
+    "financial": 85,
+    "capacity": 72,
+    "geo_esg": 82,
+    "sourcing": 59,
+    "network": 64
+   },
+   {
+    "month": "2026-02",
+    "financial": 83,
+    "capacity": 74,
+    "geo_esg": 82,
+    "sourcing": 58,
+    "network": 62
+   },
+   {
+    "month": "2026-03",
+    "financial": 83,
+    "capacity": 74,
+    "geo_esg": 82,
+    "sourcing": 58,
+    "network": 65
+   },
+   {
+    "month": "2026-04",
+    "financial": 79,
+    "capacity": 70,
+    "geo_esg": 80,
+    "sourcing": 61,
+    "network": 63
+   },
+   {
+    "month": "2026-05",
+    "financial": 81,
+    "capacity": 69,
+    "geo_esg": 78,
+    "sourcing": 57,
+    "network": 62
+   },
+   {
+    "month": "2026-06",
+    "financial": 79,
+    "capacity": 73,
+    "geo_esg": 78,
+    "sourcing": 59,
+    "network": 65
+   },
+   {
+    "month": "2026-07",
+    "financial": 81,
+    "capacity": 69,
+    "geo_esg": 78,
+    "sourcing": 60,
+    "network": 64
+   },
+   {
+    "month": "2026-08",
+    "financial": 82,
+    "capacity": 73,
+    "geo_esg": 80,
+    "sourcing": 60,
+    "network": 63
+   },
+   {
+    "month": "2026-09",
+    "financial": 79,
+    "capacity": 72,
+    "geo_esg": 80,
+    "sourcing": 57,
+    "network": 60
+   },
+   {
+    "month": "2026-10",
+    "financial": 81,
+    "capacity": 70,
+    "geo_esg": 79,
+    "sourcing": 58,
+    "network": 62
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100181",
+  "name": "Hsinchu Fastener Industrial Co",
+  "tier": 1,
+  "country": "Taiwan",
+  "country_code": "TW",
+  "city": "Hsinchu",
+  "region": "TW-north",
+  "categories": [
+   "fastener"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 80,
+  "capacity": 76,
+  "esg": 70,
+  "geo_risk": 46,
+  "sourcing_depth": 44,
+  "network_depth": 60,
+  "otd_pct": 91.7,
+  "ncr_12m": 4,
+  "certs": [
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-46978",
+    "expiry": "2027-10-13"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-47302",
+    "expiry": "2027-06-20"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-89739",
+    "expiry": "2028-08-02"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-36270",
+    "expiry": "2028-08-02"
+   }
+  ],
+  "payment_terms": "2/10 Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 80,
+    "capacity": 78,
+    "geo_esg": 63,
+    "sourcing": 47,
+    "network": 64
+   },
+   {
+    "month": "2025-12",
+    "financial": 85,
+    "capacity": 76,
+    "geo_esg": 65,
+    "sourcing": 46,
+    "network": 60
+   },
+   {
+    "month": "2026-01",
+    "financial": 81,
+    "capacity": 77,
+    "geo_esg": 65,
+    "sourcing": 46,
+    "network": 63
+   },
+   {
+    "month": "2026-02",
+    "financial": 83,
+    "capacity": 78,
+    "geo_esg": 65,
+    "sourcing": 46,
+    "network": 61
+   },
+   {
+    "month": "2026-03",
+    "financial": 79,
+    "capacity": 77,
+    "geo_esg": 64,
+    "sourcing": 45,
+    "network": 61
+   },
+   {
+    "month": "2026-04",
+    "financial": 81,
+    "capacity": 79,
+    "geo_esg": 64,
+    "sourcing": 45,
+    "network": 60
+   },
+   {
+    "month": "2026-05",
+    "financial": 80,
+    "capacity": 76,
+    "geo_esg": 65,
+    "sourcing": 44,
+    "network": 61
+   },
+   {
+    "month": "2026-06",
+    "financial": 78,
+    "capacity": 79,
+    "geo_esg": 64,
+    "sourcing": 43,
+    "network": 60
+   },
+   {
+    "month": "2026-07",
+    "financial": 80,
+    "capacity": 78,
+    "geo_esg": 63,
+    "sourcing": 45,
+    "network": 62
+   },
+   {
+    "month": "2026-08",
+    "financial": 79,
+    "capacity": 75,
+    "geo_esg": 64,
+    "sourcing": 44,
+    "network": 61
+   },
+   {
+    "month": "2026-09",
+    "financial": 79,
+    "capacity": 77,
+    "geo_esg": 62,
+    "sourcing": 44,
+    "network": 61
+   },
+   {
+    "month": "2026-10",
+    "financial": 80,
+    "capacity": 76,
+    "geo_esg": 62,
+    "sourcing": 44,
+    "network": 60
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100184",
+  "name": "Taoyuan Aero Fasteners Co",
+  "tier": 2,
+  "country": "Taiwan",
+  "country_code": "TW",
+  "city": "Taoyuan",
+  "region": "TW-north",
+  "categories": [
+   "fastener"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 74,
+  "capacity": 70,
+  "esg": 66,
+  "geo_risk": 46,
+  "sourcing_depth": 50,
+  "network_depth": 56,
+  "otd_pct": 89.3,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-23018",
+    "expiry": "2028-02-27"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-12981",
+    "expiry": "2028-05-11"
+   }
+  ],
+  "payment_terms": "2/10 Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 78,
+    "capacity": 73,
+    "geo_esg": 62,
+    "sourcing": 53,
+    "network": 60
+   },
+   {
+    "month": "2025-12",
+    "financial": 74,
+    "capacity": 74,
+    "geo_esg": 61,
+    "sourcing": 53,
+    "network": 60
+   },
+   {
+    "month": "2026-01",
+    "financial": 76,
+    "capacity": 74,
+    "geo_esg": 62,
+    "sourcing": 52,
+    "network": 57
+   },
+   {
+    "month": "2026-02",
+    "financial": 77,
+    "capacity": 71,
+    "geo_esg": 62,
+    "sourcing": 51,
+    "network": 56
+   },
+   {
+    "month": "2026-03",
+    "financial": 76,
+    "capacity": 69,
+    "geo_esg": 60,
+    "sourcing": 52,
+    "network": 57
+   },
+   {
+    "month": "2026-04",
+    "financial": 72,
+    "capacity": 73,
+    "geo_esg": 59,
+    "sourcing": 51,
+    "network": 55
+   },
+   {
+    "month": "2026-05",
+    "financial": 75,
+    "capacity": 71,
+    "geo_esg": 62,
+    "sourcing": 52,
+    "network": 58
+   },
+   {
+    "month": "2026-06",
+    "financial": 74,
+    "capacity": 69,
+    "geo_esg": 59,
+    "sourcing": 51,
+    "network": 56
+   },
+   {
+    "month": "2026-07",
+    "financial": 77,
+    "capacity": 69,
+    "geo_esg": 59,
+    "sourcing": 50,
+    "network": 55
+   },
+   {
+    "month": "2026-08",
+    "financial": 77,
+    "capacity": 73,
+    "geo_esg": 62,
+    "sourcing": 49,
+    "network": 58
+   },
+   {
+    "month": "2026-09",
+    "financial": 77,
+    "capacity": 68,
+    "geo_esg": 58,
+    "sourcing": 49,
+    "network": 56
+   },
+   {
+    "month": "2026-10",
+    "financial": 74,
+    "capacity": 70,
+    "geo_esg": 60,
+    "sourcing": 50,
+    "network": 56
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100187",
+  "name": "Kingsbury Fastening Systems Inc",
+  "tier": 1,
+  "country": "United States",
+  "country_code": "US",
+  "city": "Torrance",
+  "region": "US-california",
+  "categories": [
+   "fastener"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 84,
+  "capacity": 80,
+  "esg": 70,
+  "geo_risk": 12,
+  "sourcing_depth": 66,
+  "network_depth": 70,
+  "otd_pct": 92.3,
+  "ncr_12m": 1,
+  "certs": [
+   {
+    "name": "ISO 14001",
+    "number": "ISO-47320",
+    "expiry": "2026-12-25"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-85572",
+    "expiry": "2027-04-02"
+   }
+  ],
+  "payment_terms": "Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 87,
+    "capacity": 80,
+    "geo_esg": 80,
+    "sourcing": 67,
+    "network": 73
+   },
+   {
+    "month": "2025-12",
+    "financial": 87,
+    "capacity": 81,
+    "geo_esg": 81,
+    "sourcing": 69,
+    "network": 71
+   },
+   {
+    "month": "2026-01",
+    "financial": 88,
+    "capacity": 80,
+    "geo_esg": 82,
+    "sourcing": 67,
+    "network": 74
+   },
+   {
+    "month": "2026-02",
+    "financial": 83,
+    "capacity": 84,
+    "geo_esg": 79,
+    "sourcing": 67,
+    "network": 70
+   },
+   {
+    "month": "2026-03",
+    "financial": 83,
+    "capacity": 84,
+    "geo_esg": 79,
+    "sourcing": 69,
+    "network": 72
+   },
+   {
+    "month": "2026-04",
+    "financial": 86,
+    "capacity": 78,
+    "geo_esg": 82,
+    "sourcing": 67,
+    "network": 70
+   },
+   {
+    "month": "2026-05",
+    "financial": 87,
+    "capacity": 79,
+    "geo_esg": 79,
+    "sourcing": 69,
+    "network": 69
+   },
+   {
+    "month": "2026-06",
+    "financial": 85,
+    "capacity": 83,
+    "geo_esg": 81,
+    "sourcing": 68,
+    "network": 73
+   },
+   {
+    "month": "2026-07",
+    "financial": 83,
+    "capacity": 80,
+    "geo_esg": 81,
+    "sourcing": 66,
+    "network": 72
+   },
+   {
+    "month": "2026-08",
+    "financial": 84,
+    "capacity": 78,
+    "geo_esg": 80,
+    "sourcing": 68,
+    "network": 71
+   },
+   {
+    "month": "2026-09",
+    "financial": 83,
+    "capacity": 83,
+    "geo_esg": 81,
+    "sourcing": 67,
+    "network": 72
+   },
+   {
+    "month": "2026-10",
+    "financial": 84,
+    "capacity": 80,
+    "geo_esg": 79,
+    "sourcing": 66,
+    "network": 70
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100190",
+  "name": "Saone Rivets SAS",
+  "tier": 2,
+  "country": "France",
+  "country_code": "FR",
+  "city": "Macon",
+  "region": "FR-auvergne",
+  "categories": [
+   "fastener"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 70,
+  "capacity": 64,
+  "esg": 76,
+  "geo_risk": 14,
+  "sourcing_depth": 58,
+  "network_depth": 54,
+  "otd_pct": 91.2,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-71267",
+    "expiry": "2028-05-13"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-26483",
+    "expiry": "2027-10-13"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 71,
+    "capacity": 65,
+    "geo_esg": 84,
+    "sourcing": 60,
+    "network": 54
+   },
+   {
+    "month": "2025-12",
+    "financial": 73,
+    "capacity": 68,
+    "geo_esg": 83,
+    "sourcing": 59,
+    "network": 54
+   },
+   {
+    "month": "2026-01",
+    "financial": 70,
+    "capacity": 67,
+    "geo_esg": 84,
+    "sourcing": 60,
+    "network": 56
+   },
+   {
+    "month": "2026-02",
+    "financial": 74,
+    "capacity": 67,
+    "geo_esg": 84,
+    "sourcing": 60,
+    "network": 54
+   },
+   {
+    "month": "2026-03",
+    "financial": 74,
+    "capacity": 67,
+    "geo_esg": 82,
+    "sourcing": 59,
+    "network": 55
+   },
+   {
+    "month": "2026-04",
+    "financial": 73,
+    "capacity": 65,
+    "geo_esg": 82,
+    "sourcing": 60,
+    "network": 54
+   },
+   {
+    "month": "2026-05",
+    "financial": 70,
+    "capacity": 67,
+    "geo_esg": 81,
+    "sourcing": 60,
+    "network": 53
+   },
+   {
+    "month": "2026-06",
+    "financial": 70,
+    "capacity": 67,
+    "geo_esg": 80,
+    "sourcing": 58,
+    "network": 54
+   },
+   {
+    "month": "2026-07",
+    "financial": 70,
+    "capacity": 64,
+    "geo_esg": 80,
+    "sourcing": 60,
+    "network": 56
+   },
+   {
+    "month": "2026-08",
+    "financial": 68,
+    "capacity": 66,
+    "geo_esg": 80,
+    "sourcing": 57,
+    "network": 55
+   },
+   {
+    "month": "2026-09",
+    "financial": 71,
+    "capacity": 65,
+    "geo_esg": 82,
+    "sourcing": 57,
+    "network": 55
+   },
+   {
+    "month": "2026-10",
+    "financial": 70,
+    "capacity": 64,
+    "geo_esg": 81,
+    "sourcing": 58,
+    "network": 54
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100193",
+  "name": "Shah Alam Fasteners Sdn Bhd",
+  "tier": 2,
+  "country": "Malaysia",
+  "country_code": "MY",
+  "city": "Shah Alam",
+  "region": "MY-selangor",
+  "categories": [
+   "fastener"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 68,
+  "capacity": 66,
+  "esg": 62,
+  "geo_risk": 26,
+  "sourcing_depth": 56,
+  "network_depth": 50,
+  "otd_pct": 87.1,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-66260",
+    "expiry": "2027-02-17"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-25240",
+    "expiry": "2028-02-04"
+   }
+  ],
+  "payment_terms": "Net 30",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 72,
+    "capacity": 67,
+    "geo_esg": 72,
+    "sourcing": 57,
+    "network": 52
+   },
+   {
+    "month": "2025-12",
+    "financial": 69,
+    "capacity": 68,
+    "geo_esg": 71,
+    "sourcing": 56,
+    "network": 52
+   },
+   {
+    "month": "2026-01",
+    "financial": 71,
+    "capacity": 68,
+    "geo_esg": 71,
+    "sourcing": 58,
+    "network": 53
+   },
+   {
+    "month": "2026-02",
+    "financial": 67,
+    "capacity": 66,
+    "geo_esg": 69,
+    "sourcing": 58,
+    "network": 50
+   },
+   {
+    "month": "2026-03",
+    "financial": 72,
+    "capacity": 66,
+    "geo_esg": 70,
+    "sourcing": 55,
+    "network": 51
+   },
+   {
+    "month": "2026-04",
+    "financial": 69,
+    "capacity": 65,
+    "geo_esg": 68,
+    "sourcing": 56,
+    "network": 52
+   },
+   {
+    "month": "2026-05",
+    "financial": 72,
+    "capacity": 64,
+    "geo_esg": 70,
+    "sourcing": 58,
+    "network": 49
+   },
+   {
+    "month": "2026-06",
+    "financial": 72,
+    "capacity": 69,
+    "geo_esg": 70,
+    "sourcing": 56,
+    "network": 51
+   },
+   {
+    "month": "2026-07",
+    "financial": 67,
+    "capacity": 64,
+    "geo_esg": 70,
+    "sourcing": 55,
+    "network": 51
+   },
+   {
+    "month": "2026-08",
+    "financial": 66,
+    "capacity": 69,
+    "geo_esg": 67,
+    "sourcing": 58,
+    "network": 49
+   },
+   {
+    "month": "2026-09",
+    "financial": 69,
+    "capacity": 63,
+    "geo_esg": 67,
+    "sourcing": 56,
+    "network": 48
+   },
+   {
+    "month": "2026-10",
+    "financial": 68,
+    "capacity": 66,
+    "geo_esg": 68,
+    "sourcing": 56,
+    "network": 50
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100196",
+  "name": "Chita Bolt Works KK",
+  "tier": 2,
+  "country": "Japan",
+  "country_code": "JP",
+  "city": "Chita",
+  "region": "JP-chubu",
+  "categories": [
+   "fastener"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 82,
+  "capacity": 72,
+  "esg": 74,
+  "geo_risk": 24,
+  "sourcing_depth": 60,
+  "network_depth": 58,
+  "otd_pct": 93.4,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-31811",
+    "expiry": "2027-09-20"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-19037",
+    "expiry": "2027-06-13"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-18647",
+    "expiry": "2027-07-27"
+   }
+  ],
+  "payment_terms": "Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 83,
+    "capacity": 77,
+    "geo_esg": 76,
+    "sourcing": 63,
+    "network": 59
+   },
+   {
+    "month": "2025-12",
+    "financial": 82,
+    "capacity": 73,
+    "geo_esg": 79,
+    "sourcing": 64,
+    "network": 59
+   },
+   {
+    "month": "2026-01",
+    "financial": 85,
+    "capacity": 74,
+    "geo_esg": 78,
+    "sourcing": 63,
+    "network": 60
+   },
+   {
+    "month": "2026-02",
+    "financial": 83,
+    "capacity": 76,
+    "geo_esg": 78,
+    "sourcing": 63,
+    "network": 60
+   },
+   {
+    "month": "2026-03",
+    "financial": 86,
+    "capacity": 75,
+    "geo_esg": 75,
+    "sourcing": 60,
+    "network": 59
+   },
+   {
+    "month": "2026-04",
+    "financial": 85,
+    "capacity": 73,
+    "geo_esg": 76,
+    "sourcing": 60,
+    "network": 58
+   },
+   {
+    "month": "2026-05",
+    "financial": 83,
+    "capacity": 75,
+    "geo_esg": 78,
+    "sourcing": 60,
+    "network": 60
+   },
+   {
+    "month": "2026-06",
+    "financial": 86,
+    "capacity": 74,
+    "geo_esg": 75,
+    "sourcing": 61,
+    "network": 58
+   },
+   {
+    "month": "2026-07",
+    "financial": 81,
+    "capacity": 75,
+    "geo_esg": 75,
+    "sourcing": 60,
+    "network": 60
+   },
+   {
+    "month": "2026-08",
+    "financial": 84,
+    "capacity": 70,
+    "geo_esg": 74,
+    "sourcing": 62,
+    "network": 58
+   },
+   {
+    "month": "2026-09",
+    "financial": 84,
+    "capacity": 74,
+    "geo_esg": 75,
+    "sourcing": 60,
+    "network": 60
+   },
+   {
+    "month": "2026-10",
+    "financial": 82,
+    "capacity": 72,
+    "geo_esg": 75,
+    "sourcing": 60,
+    "network": 58
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100201",
+  "name": "Daejeon Seal Technologies Co",
+  "tier": 1,
+  "country": "South Korea",
+  "country_code": "KR",
+  "city": "Daejeon",
+  "region": "KR-central",
+  "categories": [
+   "seal"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 79,
+  "capacity": 74,
+  "esg": 72,
+  "geo_risk": 22,
+  "sourcing_depth": 46,
+  "network_depth": 58,
+  "otd_pct": 91.1,
+  "ncr_12m": 7,
+  "certs": [
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-40615",
+    "expiry": "2027-08-15"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-95159",
+    "expiry": "2027-03-07"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-92417",
+    "expiry": "2027-05-13"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 78,
+    "capacity": 76,
+    "geo_esg": 76,
+    "sourcing": 47,
+    "network": 62
+   },
+   {
+    "month": "2025-12",
+    "financial": 84,
+    "capacity": 75,
+    "geo_esg": 78,
+    "sourcing": 47,
+    "network": 61
+   },
+   {
+    "month": "2026-01",
+    "financial": 82,
+    "capacity": 73,
+    "geo_esg": 76,
+    "sourcing": 47,
+    "network": 62
+   },
+   {
+    "month": "2026-02",
+    "financial": 82,
+    "capacity": 75,
+    "geo_esg": 77,
+    "sourcing": 46,
+    "network": 58
+   },
+   {
+    "month": "2026-03",
+    "financial": 79,
+    "capacity": 78,
+    "geo_esg": 77,
+    "sourcing": 49,
+    "network": 60
+   },
+   {
+    "month": "2026-04",
+    "financial": 80,
+    "capacity": 74,
+    "geo_esg": 75,
+    "sourcing": 46,
+    "network": 58
+   },
+   {
+    "month": "2026-05",
+    "financial": 83,
+    "capacity": 73,
+    "geo_esg": 75,
+    "sourcing": 45,
+    "network": 61
+   },
+   {
+    "month": "2026-06",
+    "financial": 78,
+    "capacity": 74,
+    "geo_esg": 76,
+    "sourcing": 47,
+    "network": 58
+   },
+   {
+    "month": "2026-07",
+    "financial": 83,
+    "capacity": 76,
+    "geo_esg": 74,
+    "sourcing": 48,
+    "network": 59
+   },
+   {
+    "month": "2026-08",
+    "financial": 82,
+    "capacity": 76,
+    "geo_esg": 77,
+    "sourcing": 46,
+    "network": 60
+   },
+   {
+    "month": "2026-09",
+    "financial": 82,
+    "capacity": 73,
+    "geo_esg": 74,
+    "sourcing": 48,
+    "network": 59
+   },
+   {
+    "month": "2026-10",
+    "financial": 79,
+    "capacity": 74,
+    "geo_esg": 75,
+    "sourcing": 46,
+    "network": 58
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100204",
+  "name": "Maas Elastomers BV",
+  "tier": 2,
+  "country": "Netherlands",
+  "country_code": "NL",
+  "city": "Rotterdam",
+  "region": "NL-south",
+  "categories": [
+   "seal"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 76,
+  "capacity": 68,
+  "esg": 82,
+  "geo_risk": 10,
+  "sourcing_depth": 60,
+  "network_depth": 56,
+  "otd_pct": 91.5,
+  "ncr_12m": 2,
+  "certs": [
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-14955",
+    "expiry": "2028-05-27"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-64792",
+    "expiry": "2027-12-16"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-53069",
+    "expiry": "2027-02-17"
+   }
+  ],
+  "payment_terms": "Net 30",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 78,
+    "capacity": 69,
+    "geo_esg": 89,
+    "sourcing": 64,
+    "network": 57
+   },
+   {
+    "month": "2025-12",
+    "financial": 80,
+    "capacity": 67,
+    "geo_esg": 87,
+    "sourcing": 61,
+    "network": 59
+   },
+   {
+    "month": "2026-01",
+    "financial": 78,
+    "capacity": 69,
+    "geo_esg": 89,
+    "sourcing": 61,
+    "network": 58
+   },
+   {
+    "month": "2026-02",
+    "financial": 75,
+    "capacity": 70,
+    "geo_esg": 87,
+    "sourcing": 61,
+    "network": 56
+   },
+   {
+    "month": "2026-03",
+    "financial": 77,
+    "capacity": 67,
+    "geo_esg": 86,
+    "sourcing": 60,
+    "network": 58
+   },
+   {
+    "month": "2026-04",
+    "financial": 74,
+    "capacity": 69,
+    "geo_esg": 87,
+    "sourcing": 60,
+    "network": 58
+   },
+   {
+    "month": "2026-05",
+    "financial": 77,
+    "capacity": 68,
+    "geo_esg": 88,
+    "sourcing": 60,
+    "network": 55
+   },
+   {
+    "month": "2026-06",
+    "financial": 78,
+    "capacity": 70,
+    "geo_esg": 85,
+    "sourcing": 60,
+    "network": 58
+   },
+   {
+    "month": "2026-07",
+    "financial": 75,
+    "capacity": 67,
+    "geo_esg": 85,
+    "sourcing": 61,
+    "network": 58
+   },
+   {
+    "month": "2026-08",
+    "financial": 78,
+    "capacity": 70,
+    "geo_esg": 85,
+    "sourcing": 60,
+    "network": 58
+   },
+   {
+    "month": "2026-09",
+    "financial": 76,
+    "capacity": 68,
+    "geo_esg": 85,
+    "sourcing": 60,
+    "network": 56
+   },
+   {
+    "month": "2026-10",
+    "financial": 76,
+    "capacity": 68,
+    "geo_esg": 86,
+    "sourcing": 60,
+    "network": 56
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100207",
+  "name": "Ohio Valley Seal Co",
+  "tier": 1,
+  "country": "United States",
+  "country_code": "US",
+  "city": "Akron",
+  "region": "US-ohio",
+  "categories": [
+   "seal"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 82,
+  "capacity": 76,
+  "esg": 70,
+  "geo_risk": 12,
+  "sourcing_depth": 64,
+  "network_depth": 66,
+  "otd_pct": 93.8,
+  "ncr_12m": 1,
+  "certs": [
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-86041",
+    "expiry": "2027-07-17"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-39228",
+    "expiry": "2028-05-13"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-94910",
+    "expiry": "2028-05-16"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-54316",
+    "expiry": "2027-02-15"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 86,
+    "capacity": 75,
+    "geo_esg": 81,
+    "sourcing": 65,
+    "network": 66
+   },
+   {
+    "month": "2025-12",
+    "financial": 86,
+    "capacity": 78,
+    "geo_esg": 81,
+    "sourcing": 64,
+    "network": 67
+   },
+   {
+    "month": "2026-01",
+    "financial": 83,
+    "capacity": 78,
+    "geo_esg": 82,
+    "sourcing": 65,
+    "network": 67
+   },
+   {
+    "month": "2026-02",
+    "financial": 83,
+    "capacity": 80,
+    "geo_esg": 80,
+    "sourcing": 66,
+    "network": 68
+   },
+   {
+    "month": "2026-03",
+    "financial": 82,
+    "capacity": 77,
+    "geo_esg": 82,
+    "sourcing": 67,
+    "network": 66
+   },
+   {
+    "month": "2026-04",
+    "financial": 85,
+    "capacity": 79,
+    "geo_esg": 80,
+    "sourcing": 66,
+    "network": 65
+   },
+   {
+    "month": "2026-05",
+    "financial": 84,
+    "capacity": 77,
+    "geo_esg": 80,
+    "sourcing": 65,
+    "network": 69
+   },
+   {
+    "month": "2026-06",
+    "financial": 83,
+    "capacity": 77,
+    "geo_esg": 80,
+    "sourcing": 67,
+    "network": 66
+   },
+   {
+    "month": "2026-07",
+    "financial": 81,
+    "capacity": 79,
+    "geo_esg": 81,
+    "sourcing": 64,
+    "network": 68
+   },
+   {
+    "month": "2026-08",
+    "financial": 82,
+    "capacity": 77,
+    "geo_esg": 78,
+    "sourcing": 63,
+    "network": 68
+   },
+   {
+    "month": "2026-09",
+    "financial": 84,
+    "capacity": 76,
+    "geo_esg": 81,
+    "sourcing": 65,
+    "network": 66
+   },
+   {
+    "month": "2026-10",
+    "financial": 82,
+    "capacity": 76,
+    "geo_esg": 79,
+    "sourcing": 64,
+    "network": 66
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100210",
+  "name": "Penang Polymer Seals Sdn Bhd",
+  "tier": 2,
+  "country": "Malaysia",
+  "country_code": "MY",
+  "city": "Bayan Lepas",
+  "region": "MY-penang",
+  "categories": [
+   "seal"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 70,
+  "capacity": 66,
+  "esg": 64,
+  "geo_risk": 28,
+  "sourcing_depth": 54,
+  "network_depth": 50,
+  "otd_pct": 86.8,
+  "ncr_12m": 4,
+  "certs": [
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-27038",
+    "expiry": "2027-01-19"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-63852",
+    "expiry": "2028-09-14"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-90213",
+    "expiry": "2028-09-25"
+   }
+  ],
+  "payment_terms": "Net 30",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 70,
+    "capacity": 68,
+    "geo_esg": 69,
+    "sourcing": 56,
+    "network": 54
+   },
+   {
+    "month": "2025-12",
+    "financial": 73,
+    "capacity": 66,
+    "geo_esg": 70,
+    "sourcing": 56,
+    "network": 51
+   },
+   {
+    "month": "2026-01",
+    "financial": 71,
+    "capacity": 65,
+    "geo_esg": 70,
+    "sourcing": 54,
+    "network": 51
+   },
+   {
+    "month": "2026-02",
+    "financial": 71,
+    "capacity": 68,
+    "geo_esg": 71,
+    "sourcing": 57,
+    "network": 50
+   },
+   {
+    "month": "2026-03",
+    "financial": 73,
+    "capacity": 67,
+    "geo_esg": 68,
+    "sourcing": 57,
+    "network": 50
+   },
+   {
+    "month": "2026-04",
+    "financial": 72,
+    "capacity": 70,
+    "geo_esg": 71,
+    "sourcing": 55,
+    "network": 53
+   },
+   {
+    "month": "2026-05",
+    "financial": 74,
+    "capacity": 64,
+    "geo_esg": 71,
+    "sourcing": 54,
+    "network": 52
+   },
+   {
+    "month": "2026-06",
+    "financial": 73,
+    "capacity": 65,
+    "geo_esg": 67,
+    "sourcing": 55,
+    "network": 52
+   },
+   {
+    "month": "2026-07",
+    "financial": 69,
+    "capacity": 69,
+    "geo_esg": 68,
+    "sourcing": 54,
+    "network": 49
+   },
+   {
+    "month": "2026-08",
+    "financial": 73,
+    "capacity": 68,
+    "geo_esg": 69,
+    "sourcing": 54,
+    "network": 50
+   },
+   {
+    "month": "2026-09",
+    "financial": 72,
+    "capacity": 64,
+    "geo_esg": 66,
+    "sourcing": 53,
+    "network": 51
+   },
+   {
+    "month": "2026-10",
+    "financial": 70,
+    "capacity": 66,
+    "geo_esg": 68,
+    "sourcing": 54,
+    "network": 50
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100213",
+  "name": "Coromandel Gasket and Seal Pvt Ltd",
+  "tier": 2,
+  "country": "India",
+  "country_code": "IN",
+  "city": "Chennai",
+  "region": "IN-tamilnadu",
+  "categories": [
+   "seal"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 69,
+  "capacity": 70,
+  "esg": 62,
+  "geo_risk": 30,
+  "sourcing_depth": 56,
+  "network_depth": 50,
+  "otd_pct": 87.5,
+  "ncr_12m": 5,
+  "certs": [
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-45614",
+    "expiry": "2027-05-06"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-85932",
+    "expiry": "2028-03-05"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-69940",
+    "expiry": "2027-06-10"
+   },
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-82074",
+    "expiry": "2027-03-14"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 72,
+    "capacity": 71,
+    "geo_esg": 68,
+    "sourcing": 56,
+    "network": 53
+   },
+   {
+    "month": "2025-12",
+    "financial": 71,
+    "capacity": 71,
+    "geo_esg": 68,
+    "sourcing": 58,
+    "network": 51
+   },
+   {
+    "month": "2026-01",
+    "financial": 69,
+    "capacity": 69,
+    "geo_esg": 67,
+    "sourcing": 58,
+    "network": 50
+   },
+   {
+    "month": "2026-02",
+    "financial": 70,
+    "capacity": 71,
+    "geo_esg": 66,
+    "sourcing": 58,
+    "network": 53
+   },
+   {
+    "month": "2026-03",
+    "financial": 68,
+    "capacity": 70,
+    "geo_esg": 66,
+    "sourcing": 59,
+    "network": 51
+   },
+   {
+    "month": "2026-04",
+    "financial": 69,
+    "capacity": 71,
+    "geo_esg": 68,
+    "sourcing": 58,
+    "network": 51
+   },
+   {
+    "month": "2026-05",
+    "financial": 68,
+    "capacity": 70,
+    "geo_esg": 67,
+    "sourcing": 56,
+    "network": 52
+   },
+   {
+    "month": "2026-06",
+    "financial": 72,
+    "capacity": 70,
+    "geo_esg": 67,
+    "sourcing": 56,
+    "network": 49
+   },
+   {
+    "month": "2026-07",
+    "financial": 72,
+    "capacity": 69,
+    "geo_esg": 65,
+    "sourcing": 59,
+    "network": 50
+   },
+   {
+    "month": "2026-08",
+    "financial": 71,
+    "capacity": 68,
+    "geo_esg": 66,
+    "sourcing": 56,
+    "network": 49
+   },
+   {
+    "month": "2026-09",
+    "financial": 68,
+    "capacity": 71,
+    "geo_esg": 68,
+    "sourcing": 56,
+    "network": 52
+   },
+   {
+    "month": "2026-10",
+    "financial": 69,
+    "capacity": 70,
+    "geo_esg": 66,
+    "sourcing": 56,
+    "network": 50
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100221",
+  "name": "Jurong Aero Consumables Pte Ltd",
+  "tier": 1,
+  "country": "Singapore",
+  "country_code": "SG",
+  "city": "Jurong",
+  "region": "SG",
+  "categories": [
+   "consumable"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 85,
+  "capacity": 82,
+  "esg": 76,
+  "geo_risk": 10,
+  "sourcing_depth": 78,
+  "network_depth": 74,
+  "otd_pct": 90.9,
+  "ncr_12m": 1,
+  "certs": [
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-67097",
+    "expiry": "2028-03-30"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-34646",
+    "expiry": "2027-06-19"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-71109",
+    "expiry": "2028-03-31"
+   }
+  ],
+  "payment_terms": "2/10 Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 88,
+    "capacity": 86,
+    "geo_esg": 83,
+    "sourcing": 80,
+    "network": 77
+   },
+   {
+    "month": "2025-12",
+    "financial": 85,
+    "capacity": 83,
+    "geo_esg": 85,
+    "sourcing": 81,
+    "network": 76
+   },
+   {
+    "month": "2026-01",
+    "financial": 89,
+    "capacity": 81,
+    "geo_esg": 86,
+    "sourcing": 80,
+    "network": 76
+   },
+   {
+    "month": "2026-02",
+    "financial": 85,
+    "capacity": 81,
+    "geo_esg": 86,
+    "sourcing": 79,
+    "network": 77
+   },
+   {
+    "month": "2026-03",
+    "financial": 88,
+    "capacity": 83,
+    "geo_esg": 85,
+    "sourcing": 81,
+    "network": 76
+   },
+   {
+    "month": "2026-04",
+    "financial": 87,
+    "capacity": 83,
+    "geo_esg": 84,
+    "sourcing": 81,
+    "network": 75
+   },
+   {
+    "month": "2026-05",
+    "financial": 87,
+    "capacity": 80,
+    "geo_esg": 83,
+    "sourcing": 79,
+    "network": 75
+   },
+   {
+    "month": "2026-06",
+    "financial": 86,
+    "capacity": 84,
+    "geo_esg": 82,
+    "sourcing": 78,
+    "network": 75
+   },
+   {
+    "month": "2026-07",
+    "financial": 84,
+    "capacity": 82,
+    "geo_esg": 82,
+    "sourcing": 80,
+    "network": 76
+   },
+   {
+    "month": "2026-08",
+    "financial": 88,
+    "capacity": 85,
+    "geo_esg": 82,
+    "sourcing": 77,
+    "network": 76
+   },
+   {
+    "month": "2026-09",
+    "financial": 86,
+    "capacity": 81,
+    "geo_esg": 83,
+    "sourcing": 80,
+    "network": 76
+   },
+   {
+    "month": "2026-10",
+    "financial": 85,
+    "capacity": 82,
+    "geo_esg": 83,
+    "sourcing": 78,
+    "network": 74
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100224",
+  "name": "Klang Chemical Supplies Sdn Bhd",
+  "tier": 2,
+  "country": "Malaysia",
+  "country_code": "MY",
+  "city": "Klang",
+  "region": "MY-selangor",
+  "categories": [
+   "consumable"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 72,
+  "capacity": 70,
+  "esg": 58,
+  "geo_risk": 26,
+  "sourcing_depth": 70,
+  "network_depth": 60,
+  "otd_pct": 89.4,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-26580",
+    "expiry": "2028-05-18"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-54458",
+    "expiry": "2028-01-28"
+   }
+  ],
+  "payment_terms": "2/10 Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 75,
+    "capacity": 71,
+    "geo_esg": 68,
+    "sourcing": 73,
+    "network": 64
+   },
+   {
+    "month": "2025-12",
+    "financial": 74,
+    "capacity": 74,
+    "geo_esg": 68,
+    "sourcing": 73,
+    "network": 64
+   },
+   {
+    "month": "2026-01",
+    "financial": 71,
+    "capacity": 72,
+    "geo_esg": 67,
+    "sourcing": 71,
+    "network": 62
+   },
+   {
+    "month": "2026-02",
+    "financial": 75,
+    "capacity": 73,
+    "geo_esg": 69,
+    "sourcing": 71,
+    "network": 62
+   },
+   {
+    "month": "2026-03",
+    "financial": 71,
+    "capacity": 74,
+    "geo_esg": 69,
+    "sourcing": 73,
+    "network": 60
+   },
+   {
+    "month": "2026-04",
+    "financial": 71,
+    "capacity": 69,
+    "geo_esg": 67,
+    "sourcing": 70,
+    "network": 62
+   },
+   {
+    "month": "2026-05",
+    "financial": 71,
+    "capacity": 68,
+    "geo_esg": 67,
+    "sourcing": 71,
+    "network": 63
+   },
+   {
+    "month": "2026-06",
+    "financial": 74,
+    "capacity": 70,
+    "geo_esg": 67,
+    "sourcing": 69,
+    "network": 61
+   },
+   {
+    "month": "2026-07",
+    "financial": 75,
+    "capacity": 71,
+    "geo_esg": 67,
+    "sourcing": 70,
+    "network": 62
+   },
+   {
+    "month": "2026-08",
+    "financial": 71,
+    "capacity": 70,
+    "geo_esg": 65,
+    "sourcing": 70,
+    "network": 61
+   },
+   {
+    "month": "2026-09",
+    "financial": 70,
+    "capacity": 73,
+    "geo_esg": 68,
+    "sourcing": 71,
+    "network": 60
+   },
+   {
+    "month": "2026-10",
+    "financial": 72,
+    "capacity": 70,
+    "geo_esg": 66,
+    "sourcing": 70,
+    "network": 60
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100227",
+  "name": "Haiphong Wire and Harness JSC",
+  "tier": 2,
+  "country": "Vietnam",
+  "country_code": "VN",
+  "city": "Haiphong",
+  "region": "VN-north",
+  "categories": [
+   "consumable"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 64,
+  "capacity": 68,
+  "esg": 56,
+  "geo_risk": 38,
+  "sourcing_depth": 52,
+  "network_depth": 46,
+  "otd_pct": 88.2,
+  "ncr_12m": 5,
+  "certs": [
+   {
+    "name": "ISO 14001",
+    "number": "ISO-30265",
+    "expiry": "2027-01-10"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-50472",
+    "expiry": "2027-09-18"
+   }
+  ],
+  "payment_terms": "Net 30",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 68,
+    "capacity": 73,
+    "geo_esg": 61,
+    "sourcing": 56,
+    "network": 50
+   },
+   {
+    "month": "2025-12",
+    "financial": 63,
+    "capacity": 71,
+    "geo_esg": 59,
+    "sourcing": 55,
+    "network": 47
+   },
+   {
+    "month": "2026-01",
+    "financial": 64,
+    "capacity": 71,
+    "geo_esg": 61,
+    "sourcing": 52,
+    "network": 47
+   },
+   {
+    "month": "2026-02",
+    "financial": 63,
+    "capacity": 70,
+    "geo_esg": 60,
+    "sourcing": 54,
+    "network": 49
+   },
+   {
+    "month": "2026-03",
+    "financial": 67,
+    "capacity": 67,
+    "geo_esg": 59,
+    "sourcing": 55,
+    "network": 49
+   },
+   {
+    "month": "2026-04",
+    "financial": 63,
+    "capacity": 70,
+    "geo_esg": 62,
+    "sourcing": 52,
+    "network": 48
+   },
+   {
+    "month": "2026-05",
+    "financial": 62,
+    "capacity": 71,
+    "geo_esg": 59,
+    "sourcing": 53,
+    "network": 48
+   },
+   {
+    "month": "2026-06",
+    "financial": 63,
+    "capacity": 67,
+    "geo_esg": 61,
+    "sourcing": 53,
+    "network": 46
+   },
+   {
+    "month": "2026-07",
+    "financial": 66,
+    "capacity": 71,
+    "geo_esg": 61,
+    "sourcing": 53,
+    "network": 46
+   },
+   {
+    "month": "2026-08",
+    "financial": 65,
+    "capacity": 71,
+    "geo_esg": 58,
+    "sourcing": 54,
+    "network": 45
+   },
+   {
+    "month": "2026-09",
+    "financial": 65,
+    "capacity": 66,
+    "geo_esg": 60,
+    "sourcing": 54,
+    "network": 47
+   },
+   {
+    "month": "2026-10",
+    "financial": 64,
+    "capacity": 68,
+    "geo_esg": 59,
+    "sourcing": 52,
+    "network": 46
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100230",
+  "name": "Rheinland Aero Chemie GmbH",
+  "tier": 2,
+  "country": "Germany",
+  "country_code": "DE",
+  "city": "Neuss",
+  "region": "DE-west",
+  "categories": [
+   "consumable"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 80,
+  "capacity": 72,
+  "esg": 84,
+  "geo_risk": 10,
+  "sourcing_depth": 66,
+  "network_depth": 62,
+  "otd_pct": 90.7,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "Nadcap NDT",
+    "number": "NADC-64676",
+    "expiry": "2027-08-14"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-81726",
+    "expiry": "2028-09-07"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 83,
+    "capacity": 71,
+    "geo_esg": 89,
+    "sourcing": 67,
+    "network": 65
+   },
+   {
+    "month": "2025-12",
+    "financial": 81,
+    "capacity": 72,
+    "geo_esg": 91,
+    "sourcing": 69,
+    "network": 63
+   },
+   {
+    "month": "2026-01",
+    "financial": 80,
+    "capacity": 77,
+    "geo_esg": 90,
+    "sourcing": 67,
+    "network": 64
+   },
+   {
+    "month": "2026-02",
+    "financial": 82,
+    "capacity": 74,
+    "geo_esg": 87,
+    "sourcing": 69,
+    "network": 65
+   },
+   {
+    "month": "2026-03",
+    "financial": 80,
+    "capacity": 75,
+    "geo_esg": 89,
+    "sourcing": 69,
+    "network": 65
+   },
+   {
+    "month": "2026-04",
+    "financial": 81,
+    "capacity": 70,
+    "geo_esg": 86,
+    "sourcing": 66,
+    "network": 62
+   },
+   {
+    "month": "2026-05",
+    "financial": 79,
+    "capacity": 75,
+    "geo_esg": 88,
+    "sourcing": 68,
+    "network": 65
+   },
+   {
+    "month": "2026-06",
+    "financial": 82,
+    "capacity": 75,
+    "geo_esg": 87,
+    "sourcing": 68,
+    "network": 62
+   },
+   {
+    "month": "2026-07",
+    "financial": 81,
+    "capacity": 74,
+    "geo_esg": 87,
+    "sourcing": 65,
+    "network": 63
+   },
+   {
+    "month": "2026-08",
+    "financial": 79,
+    "capacity": 72,
+    "geo_esg": 89,
+    "sourcing": 68,
+    "network": 62
+   },
+   {
+    "month": "2026-09",
+    "financial": 79,
+    "capacity": 70,
+    "geo_esg": 88,
+    "sourcing": 65,
+    "network": 63
+   },
+   {
+    "month": "2026-10",
+    "financial": 80,
+    "capacity": 72,
+    "geo_esg": 87,
+    "sourcing": 66,
+    "network": 62
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100233",
+  "name": "Kansai Industrial Supply KK",
+  "tier": 2,
+  "country": "Japan",
+  "country_code": "JP",
+  "city": "Sakai",
+  "region": "JP-kansai",
+  "categories": [
+   "consumable"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 78,
+  "capacity": 74,
+  "esg": 72,
+  "geo_risk": 26,
+  "sourcing_depth": 64,
+  "network_depth": 58,
+  "otd_pct": 89.9,
+  "ncr_12m": 1,
+  "certs": [
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-96136",
+    "expiry": "2028-04-02"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-95662",
+    "expiry": "2028-03-11"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 81,
+    "capacity": 78,
+    "geo_esg": 77,
+    "sourcing": 68,
+    "network": 62
+   },
+   {
+    "month": "2025-12",
+    "financial": 83,
+    "capacity": 75,
+    "geo_esg": 76,
+    "sourcing": 65,
+    "network": 60
+   },
+   {
+    "month": "2026-01",
+    "financial": 81,
+    "capacity": 75,
+    "geo_esg": 74,
+    "sourcing": 66,
+    "network": 60
+   },
+   {
+    "month": "2026-02",
+    "financial": 79,
+    "capacity": 78,
+    "geo_esg": 74,
+    "sourcing": 66,
+    "network": 61
+   },
+   {
+    "month": "2026-03",
+    "financial": 82,
+    "capacity": 76,
+    "geo_esg": 73,
+    "sourcing": 67,
+    "network": 60
+   },
+   {
+    "month": "2026-04",
+    "financial": 80,
+    "capacity": 77,
+    "geo_esg": 75,
+    "sourcing": 64,
+    "network": 60
+   },
+   {
+    "month": "2026-05",
+    "financial": 77,
+    "capacity": 76,
+    "geo_esg": 73,
+    "sourcing": 64,
+    "network": 57
+   },
+   {
+    "month": "2026-06",
+    "financial": 79,
+    "capacity": 75,
+    "geo_esg": 73,
+    "sourcing": 66,
+    "network": 59
+   },
+   {
+    "month": "2026-07",
+    "financial": 79,
+    "capacity": 77,
+    "geo_esg": 73,
+    "sourcing": 67,
+    "network": 58
+   },
+   {
+    "month": "2026-08",
+    "financial": 76,
+    "capacity": 73,
+    "geo_esg": 75,
+    "sourcing": 64,
+    "network": 58
+   },
+   {
+    "month": "2026-09",
+    "financial": 80,
+    "capacity": 74,
+    "geo_esg": 72,
+    "sourcing": 63,
+    "network": 56
+   },
+   {
+    "month": "2026-10",
+    "financial": 78,
+    "capacity": 74,
+    "geo_esg": 73,
+    "sourcing": 64,
+    "network": 58
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100244",
+  "name": "Monongahela Specialty Metals Inc",
+  "tier": 2,
+  "country": "United States",
+  "country_code": "US",
+  "city": "Pittsburgh",
+  "region": "US-pennsylvania",
+  "categories": [
+   "raw_alloy"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 76,
+  "capacity": 58,
+  "esg": 64,
+  "geo_risk": 14,
+  "sourcing_depth": 50,
+  "network_depth": 56,
+  "otd_pct": 89.5,
+  "ncr_12m": 5,
+  "certs": [
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-56761",
+    "expiry": "2027-05-08"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-50673",
+    "expiry": "2027-10-07"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-45205",
+    "expiry": "2028-03-11"
+   }
+  ],
+  "payment_terms": "2/10 Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 79,
+    "capacity": 63,
+    "geo_esg": 77,
+    "sourcing": 53,
+    "network": 56
+   },
+   {
+    "month": "2025-12",
+    "financial": 77,
+    "capacity": 58,
+    "geo_esg": 76,
+    "sourcing": 52,
+    "network": 58
+   },
+   {
+    "month": "2026-01",
+    "financial": 80,
+    "capacity": 58,
+    "geo_esg": 78,
+    "sourcing": 50,
+    "network": 57
+   },
+   {
+    "month": "2026-02",
+    "financial": 75,
+    "capacity": 62,
+    "geo_esg": 78,
+    "sourcing": 53,
+    "network": 56
+   },
+   {
+    "month": "2026-03",
+    "financial": 75,
+    "capacity": 62,
+    "geo_esg": 77,
+    "sourcing": 52,
+    "network": 56
+   },
+   {
+    "month": "2026-04",
+    "financial": 79,
+    "capacity": 62,
+    "geo_esg": 77,
+    "sourcing": 51,
+    "network": 57
+   },
+   {
+    "month": "2026-05",
+    "financial": 76,
+    "capacity": 60,
+    "geo_esg": 75,
+    "sourcing": 52,
+    "network": 57
+   },
+   {
+    "month": "2026-06",
+    "financial": 77,
+    "capacity": 58,
+    "geo_esg": 76,
+    "sourcing": 50,
+    "network": 56
+   },
+   {
+    "month": "2026-07",
+    "financial": 77,
+    "capacity": 59,
+    "geo_esg": 77,
+    "sourcing": 52,
+    "network": 55
+   },
+   {
+    "month": "2026-08",
+    "financial": 78,
+    "capacity": 58,
+    "geo_esg": 77,
+    "sourcing": 50,
+    "network": 58
+   },
+   {
+    "month": "2026-09",
+    "financial": 79,
+    "capacity": 60,
+    "geo_esg": 76,
+    "sourcing": 48,
+    "network": 55
+   },
+   {
+    "month": "2026-10",
+    "financial": 76,
+    "capacity": 58,
+    "geo_esg": 75,
+    "sourcing": 50,
+    "network": 56
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100247",
+  "name": "Sendai Titanium Bar Co",
+  "tier": 2,
+  "country": "Japan",
+  "country_code": "JP",
+  "city": "Sendai",
+  "region": "JP-tohoku",
+  "categories": [
+   "raw_alloy"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 72,
+  "capacity": 54,
+  "esg": 70,
+  "geo_risk": 26,
+  "sourcing_depth": 38,
+  "network_depth": 50,
+  "otd_pct": 85.7,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "ISO 14001",
+    "number": "ISO-72972",
+    "expiry": "2028-04-08"
+   },
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-76751",
+    "expiry": "2027-09-29"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-80006",
+    "expiry": "2028-02-17"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-68215",
+    "expiry": "2027-04-22"
+   }
+  ],
+  "payment_terms": "Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 72,
+    "capacity": 58,
+    "geo_esg": 73,
+    "sourcing": 42,
+    "network": 52
+   },
+   {
+    "month": "2025-12",
+    "financial": 73,
+    "capacity": 59,
+    "geo_esg": 74,
+    "sourcing": 39,
+    "network": 50
+   },
+   {
+    "month": "2026-01",
+    "financial": 74,
+    "capacity": 54,
+    "geo_esg": 73,
+    "sourcing": 38,
+    "network": 53
+   },
+   {
+    "month": "2026-02",
+    "financial": 71,
+    "capacity": 55,
+    "geo_esg": 75,
+    "sourcing": 39,
+    "network": 50
+   },
+   {
+    "month": "2026-03",
+    "financial": 76,
+    "capacity": 56,
+    "geo_esg": 72,
+    "sourcing": 40,
+    "network": 53
+   },
+   {
+    "month": "2026-04",
+    "financial": 76,
+    "capacity": 54,
+    "geo_esg": 72,
+    "sourcing": 38,
+    "network": 53
+   },
+   {
+    "month": "2026-05",
+    "financial": 73,
+    "capacity": 57,
+    "geo_esg": 73,
+    "sourcing": 40,
+    "network": 53
+   },
+   {
+    "month": "2026-06",
+    "financial": 75,
+    "capacity": 57,
+    "geo_esg": 74,
+    "sourcing": 37,
+    "network": 53
+   },
+   {
+    "month": "2026-07",
+    "financial": 74,
+    "capacity": 53,
+    "geo_esg": 71,
+    "sourcing": 39,
+    "network": 50
+   },
+   {
+    "month": "2026-08",
+    "financial": 70,
+    "capacity": 52,
+    "geo_esg": 73,
+    "sourcing": 39,
+    "network": 50
+   },
+   {
+    "month": "2026-09",
+    "financial": 73,
+    "capacity": 55,
+    "geo_esg": 73,
+    "sourcing": 37,
+    "network": 49
+   },
+   {
+    "month": "2026-10",
+    "financial": 72,
+    "capacity": 54,
+    "geo_esg": 72,
+    "sourcing": 38,
+    "network": 50
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100250",
+  "name": "Plzen Alloy Distribution s.r.o.",
+  "tier": 2,
+  "country": "Czechia",
+  "country_code": "CZ",
+  "city": "Plzen",
+  "region": "CZ-bohemia",
+  "categories": [
+   "raw_alloy"
+  ],
+  "sole_source_parts": [],
+  "financial_health": 70,
+  "capacity": 66,
+  "esg": 72,
+  "geo_risk": 16,
+  "sourcing_depth": 62,
+  "network_depth": 54,
+  "otd_pct": 88.6,
+  "ncr_12m": 5,
+  "certs": [
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-62825",
+    "expiry": "2027-12-14"
+   },
+   {
+    "name": "FAA Part 145",
+    "number": "FAA-12104",
+    "expiry": "2027-06-03"
+   },
+   {
+    "name": "EASA Part 21G POA",
+    "number": "EASA-52106",
+    "expiry": "2028-01-25"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-36343",
+    "expiry": "2028-03-26"
+   }
+  ],
+  "payment_terms": "Net 60",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 70,
+    "capacity": 70,
+    "geo_esg": 82,
+    "sourcing": 64,
+    "network": 58
+   },
+   {
+    "month": "2025-12",
+    "financial": 73,
+    "capacity": 66,
+    "geo_esg": 80,
+    "sourcing": 65,
+    "network": 54
+   },
+   {
+    "month": "2026-01",
+    "financial": 71,
+    "capacity": 66,
+    "geo_esg": 79,
+    "sourcing": 64,
+    "network": 54
+   },
+   {
+    "month": "2026-02",
+    "financial": 74,
+    "capacity": 65,
+    "geo_esg": 79,
+    "sourcing": 63,
+    "network": 57
+   },
+   {
+    "month": "2026-03",
+    "financial": 72,
+    "capacity": 70,
+    "geo_esg": 78,
+    "sourcing": 65,
+    "network": 57
+   },
+   {
+    "month": "2026-04",
+    "financial": 71,
+    "capacity": 68,
+    "geo_esg": 80,
+    "sourcing": 62,
+    "network": 57
+   },
+   {
+    "month": "2026-05",
+    "financial": 72,
+    "capacity": 67,
+    "geo_esg": 78,
+    "sourcing": 62,
+    "network": 53
+   },
+   {
+    "month": "2026-06",
+    "financial": 71,
+    "capacity": 69,
+    "geo_esg": 77,
+    "sourcing": 61,
+    "network": 53
+   },
+   {
+    "month": "2026-07",
+    "financial": 69,
+    "capacity": 64,
+    "geo_esg": 81,
+    "sourcing": 63,
+    "network": 55
+   },
+   {
+    "month": "2026-08",
+    "financial": 72,
+    "capacity": 67,
+    "geo_esg": 78,
+    "sourcing": 63,
+    "network": 54
+   },
+   {
+    "month": "2026-09",
+    "financial": 68,
+    "capacity": 65,
+    "geo_esg": 79,
+    "sourcing": 62,
+    "network": 55
+   },
+   {
+    "month": "2026-10",
+    "financial": 70,
+    "capacity": 66,
+    "geo_esg": 78,
+    "sourcing": 62,
+    "network": 54
+   }
+  ],
+  "status": "active"
+ },
+ {
+  "id": "100253",
+  "name": "Suzhou Rare Magnetics Co Ltd",
+  "tier": 2,
+  "country": "China",
+  "country_code": "CN",
+  "city": "Suzhou",
+  "region": "CN-jiangsu",
+  "categories": [
+   "raw_alloy"
+  ],
+  "sole_source_parts": [
+   "RAW-9300-610"
+  ],
+  "financial_health": 74,
+  "capacity": 72,
+  "esg": 48,
+  "geo_risk": 58,
+  "sourcing_depth": 30,
+  "network_depth": 52,
+  "otd_pct": 91,
+  "ncr_12m": 3,
+  "certs": [
+   {
+    "name": "EASA Part 145",
+    "number": "EASA-68738",
+    "expiry": "2028-08-28"
+   },
+   {
+    "name": "Nadcap Heat Treating",
+    "number": "NADC-81455",
+    "expiry": "2028-05-28"
+   },
+   {
+    "name": "AS9100D",
+    "number": "AS91-68840",
+    "expiry": "2027-06-25"
+   },
+   {
+    "name": "ISO 14001",
+    "number": "ISO-73116",
+    "expiry": "2027-02-15"
+   }
+  ],
+  "payment_terms": "2/10 Net 45",
+  "strategic": false,
+  "history": [
+   {
+    "month": "2025-11",
+    "financial": 78,
+    "capacity": 72,
+    "geo_esg": 48,
+    "sourcing": 30,
+    "network": 54
+   },
+   {
+    "month": "2025-12",
+    "financial": 74,
+    "capacity": 74,
+    "geo_esg": 48,
+    "sourcing": 31,
+    "network": 53
+   },
+   {
+    "month": "2026-01",
+    "financial": 77,
+    "capacity": 75,
+    "geo_esg": 48,
+    "sourcing": 33,
+    "network": 55
+   },
+   {
+    "month": "2026-02",
+    "financial": 76,
+    "capacity": 72,
+    "geo_esg": 45,
+    "sourcing": 31,
+    "network": 55
+   },
+   {
+    "month": "2026-03",
+    "financial": 77,
+    "capacity": 72,
+    "geo_esg": 48,
+    "sourcing": 33,
+    "network": 54
+   },
+   {
+    "month": "2026-04",
+    "financial": 74,
+    "capacity": 73,
+    "geo_esg": 48,
+    "sourcing": 32,
+    "network": 53
+   },
+   {
+    "month": "2026-05",
+    "financial": 78,
+    "capacity": 73,
+    "geo_esg": 46,
+    "sourcing": 31,
+    "network": 54
+   },
+   {
+    "month": "2026-06",
+    "financial": 77,
+    "capacity": 70,
+    "geo_esg": 47,
+    "sourcing": 30,
+    "network": 52
+   },
+   {
+    "month": "2026-07",
+    "financial": 75,
+    "capacity": 73,
+    "geo_esg": 45,
+    "sourcing": 31,
+    "network": 54
+   },
+   {
+    "month": "2026-08",
+    "financial": 72,
+    "capacity": 73,
+    "geo_esg": 46,
+    "sourcing": 31,
+    "network": 52
+   },
+   {
+    "month": "2026-09",
+    "financial": 77,
+    "capacity": 73,
+    "geo_esg": 44,
+    "sourcing": 30,
+    "network": 52
+   },
+   {
+    "month": "2026-10",
+    "financial": 74,
+    "capacity": 72,
+    "geo_esg": 45,
+    "sourcing": 30,
+    "network": 52
+   }
+  ],
+  "status": "active"
+ }
+]

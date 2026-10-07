@@ -1,0 +1,1268 @@
+[
+ {
+  "id": "WO-2601",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 204143",
+  "customer_id": "CUS-03",
+  "induction_date": "2026-10-28",
+  "target_redelivery": "2027-01-06",
+  "slot": "Engine shop line E-17",
+  "float_days": 19,
+  "ld_per_day_usd": 12000,
+  "bom_lines": [
+   {
+    "line": "WO-2601-0010",
+    "part_id": "ENG-4471-130",
+    "qty": 30,
+    "po_line_id": "4500018251-00010"
+   },
+   {
+    "line": "WO-2601-0020",
+    "part_id": "ENG-6003-270",
+    "qty": 7,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2601-0030",
+    "part_id": "ENG-1245-010",
+    "qty": 8,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2601-0040",
+    "part_id": "ENG-6251-290",
+    "qty": 7,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2601-0050",
+    "part_id": "ENG-3429-990",
+    "qty": 6,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2601-0060",
+    "part_id": "SEA-1058-020",
+    "qty": 7,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2601-0070",
+    "part_id": "SEA-1549-290",
+    "qty": 3,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2602",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 204170",
+  "customer_id": "CUS-02",
+  "induction_date": "2026-11-04",
+  "target_redelivery": "2027-01-13",
+  "slot": "Engine shop line E-18",
+  "float_days": 25,
+  "ld_per_day_usd": 1500,
+  "bom_lines": [
+   {
+    "line": "WO-2602-0010",
+    "part_id": "ENG-4471-120",
+    "qty": 40,
+    "po_line_id": "4500018226-00010"
+   },
+   {
+    "line": "WO-2602-0020",
+    "part_id": "ENG-5210-110",
+    "qty": 2,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2602-0030",
+    "part_id": "ENG-2978-080",
+    "qty": 3,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2602-0040",
+    "part_id": "ENG-7602-690",
+    "qty": 5,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2602-0050",
+    "part_id": "FST-3309-480",
+    "qty": 2,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2602-0060",
+    "part_id": "FST-6666-680",
+    "qty": 4,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2603",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 204209",
+  "customer_id": "CUS-01",
+  "induction_date": "2026-11-10",
+  "target_redelivery": "2027-01-14",
+  "slot": "Engine shop line E-18",
+  "float_days": 14,
+  "ld_per_day_usd": 9000,
+  "bom_lines": [
+   {
+    "line": "WO-2603-0010",
+    "part_id": "ENG-5210-110",
+    "qty": 24,
+    "po_line_id": "4500018304-00010"
+   },
+   {
+    "line": "WO-2603-0020",
+    "part_id": "ENG-6003-270",
+    "qty": 9,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2603-0030",
+    "part_id": "ENG-5663-240",
+    "qty": 2,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2603-0040",
+    "part_id": "ENG-7602-690",
+    "qty": 6,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2604",
+  "kind": "nacelle",
+  "asset_ref": "Nacelle set NS-1961",
+  "customer_id": "CUS-05",
+  "induction_date": "2026-11-06",
+  "target_redelivery": "2026-12-11",
+  "slot": "Nacelle cell N-02",
+  "float_days": 6,
+  "ld_per_day_usd": 2500,
+  "bom_lines": [
+   {
+    "line": "WO-2604-0010",
+    "part_id": "NAC-7100-110",
+    "qty": 4,
+    "po_line_id": "4500018351-00010"
+   },
+   {
+    "line": "WO-2604-0020",
+    "part_id": "NAC-5503-480",
+    "qty": 11,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2604-0030",
+    "part_id": "NAC-7500-320",
+    "qty": 2,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2604-0040",
+    "part_id": "FST-7615-440",
+    "qty": 3,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2604-0050",
+    "part_id": "FST-1715-430",
+    "qty": 8,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2605",
+  "kind": "airframe",
+  "asset_ref": "Tail TX-OER",
+  "customer_id": "CUS-05",
+  "induction_date": "2026-10-20",
+  "target_redelivery": "2026-11-17",
+  "slot": "Hangar 5 bay 1",
+  "float_days": 6,
+  "ld_per_day_usd": 3000,
+  "bom_lines": [
+   {
+    "line": "WO-2605-0010",
+    "part_id": "FST-2110-010",
+    "qty": 2400,
+    "po_line_id": "4500018391-00010"
+   },
+   {
+    "line": "WO-2605-0020",
+    "part_id": "CON-2771-900",
+    "qty": 9,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2605-0030",
+    "part_id": "CON-5001-140",
+    "qty": 1,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2605-0040",
+    "part_id": "CON-2937-610",
+    "qty": 7,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2605-0050",
+    "part_id": "SEA-4302-170",
+    "qty": 9,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2606",
+  "kind": "airframe",
+  "asset_ref": "Tail TX-MMQ",
+  "customer_id": "CUS-07",
+  "induction_date": "2026-10-18",
+  "target_redelivery": "2026-11-11",
+  "slot": "Hangar 3 bay 2",
+  "float_days": 2,
+  "ld_per_day_usd": 4000,
+  "bom_lines": [
+   {
+    "line": "WO-2606-0010",
+    "part_id": "FST-2110-020",
+    "qty": 3600,
+    "po_line_id": "4500018417-00010"
+   },
+   {
+    "line": "WO-2606-0020",
+    "part_id": "CON-5523-020",
+    "qty": 3,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2606-0030",
+    "part_id": "CON-2359-950",
+    "qty": 4,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2606-0040",
+    "part_id": "FST-3321-340",
+    "qty": 2,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2606-0050",
+    "part_id": "FST-1452-620",
+    "qty": 2,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2607",
+  "kind": "nacelle",
+  "asset_ref": "Nacelle set NS-5967",
+  "customer_id": "CUS-04",
+  "induction_date": "2026-10-12",
+  "target_redelivery": "2026-11-11",
+  "slot": "Nacelle cell N-02",
+  "float_days": 1,
+  "ld_per_day_usd": 6000,
+  "bom_lines": [
+   {
+    "line": "WO-2607-0010",
+    "part_id": "NAC-7200-210",
+    "qty": 3,
+    "po_line_id": "4500018425-00010"
+   },
+   {
+    "line": "WO-2607-0020",
+    "part_id": "NAC-7719-300",
+    "qty": 1,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2607-0030",
+    "part_id": "NAC-5443-950",
+    "qty": 9,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2608",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 204474",
+  "customer_id": "CUS-01",
+  "induction_date": "2026-10-10",
+  "target_redelivery": "2026-12-11",
+  "slot": "Engine shop line E-17",
+  "float_days": 4,
+  "ld_per_day_usd": 9000,
+  "bom_lines": [
+   {
+    "line": "WO-2608-0010",
+    "part_id": "SEA-3100-510",
+    "qty": 400,
+    "po_line_id": "4500018457-00010"
+   },
+   {
+    "line": "WO-2608-0020",
+    "part_id": "ENG-8204-060",
+    "qty": 10,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2608-0030",
+    "part_id": "ENG-2120-230",
+    "qty": 9,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2608-0040",
+    "part_id": "ENG-7278-280",
+    "qty": 2,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2609",
+  "kind": "nacelle",
+  "asset_ref": "Nacelle set NS-9135",
+  "customer_id": "CUS-03",
+  "induction_date": "2026-10-29",
+  "target_redelivery": "2026-12-08",
+  "slot": "Nacelle cell N-04",
+  "float_days": 10,
+  "ld_per_day_usd": 12000,
+  "bom_lines": [
+   {
+    "line": "WO-2609-0010",
+    "part_id": "NAC-7500-310",
+    "qty": 2,
+    "po_line_id": "4500018464-00010"
+   },
+   {
+    "line": "WO-2609-0020",
+    "part_id": "NAC-3091-950",
+    "qty": 11,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2609-0030",
+    "part_id": "NAC-7500-320",
+    "qty": 10,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2610",
+  "kind": "nacelle",
+  "asset_ref": "Nacelle set NS-9978",
+  "customer_id": "CUS-06",
+  "induction_date": "2026-10-27",
+  "target_redelivery": "2026-11-26",
+  "slot": "Nacelle cell N-02",
+  "float_days": 3,
+  "ld_per_day_usd": 2000,
+  "bom_lines": [
+   {
+    "line": "WO-2610-0010",
+    "part_id": "NAC-7300-210",
+    "qty": 16,
+    "po_line_id": "4500018506-00010"
+   },
+   {
+    "line": "WO-2610-0020",
+    "part_id": "FST-6554-250",
+    "qty": 7,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2610-0030",
+    "part_id": "FST-4952-490",
+    "qty": 1,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2611",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 204681",
+  "customer_id": "CUS-02",
+  "induction_date": "2026-11-12",
+  "target_redelivery": "2027-01-19",
+  "slot": "Engine shop line E-21",
+  "float_days": 12,
+  "ld_per_day_usd": 5000,
+  "bom_lines": [
+   {
+    "line": "WO-2611-0010",
+    "part_id": "ENG-4902-410",
+    "qty": 30,
+    "po_line_id": "4500018574-00010"
+   },
+   {
+    "line": "WO-2611-0020",
+    "part_id": "ENG-6003-270",
+    "qty": 7,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2611-0030",
+    "part_id": "ENG-2978-080",
+    "qty": 6,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2611-0040",
+    "part_id": "ENG-7865-530",
+    "qty": 2,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2612",
+  "kind": "component",
+  "asset_ref": "S/N HX-61537",
+  "customer_id": "CUS-08",
+  "induction_date": "2026-11-18",
+  "target_redelivery": "2026-12-18",
+  "slot": "Component shop C-11",
+  "float_days": 30,
+  "ld_per_day_usd": 1000,
+  "bom_lines": [
+   {
+    "line": "WO-2612-0010",
+    "part_id": "RAW-9100-050",
+    "qty": 40,
+    "po_line_id": "4500018629-00010"
+   },
+   {
+    "line": "WO-2612-0020",
+    "part_id": "RAW-2043-080",
+    "qty": 4,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2613",
+  "kind": "airframe",
+  "asset_ref": "Tail TX-INB",
+  "customer_id": "CUS-05",
+  "induction_date": "2026-10-19",
+  "target_redelivery": "2026-11-09",
+  "slot": "Hangar 3 bay 2",
+  "float_days": 5,
+  "ld_per_day_usd": 3000,
+  "bom_lines": [
+   {
+    "line": "WO-2613-0010",
+    "part_id": "CON-8100-110",
+    "qty": 300,
+    "po_line_id": "4500018648-00010"
+   },
+   {
+    "line": "WO-2613-0020",
+    "part_id": "CON-2566-460",
+    "qty": 2,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2613-0030",
+    "part_id": "CON-1349-600",
+    "qty": 6,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2614",
+  "kind": "airframe",
+  "asset_ref": "Tail TX-DLV",
+  "customer_id": "CUS-07",
+  "induction_date": "2026-10-16",
+  "target_redelivery": "2026-11-11",
+  "slot": "Hangar 5 bay 1",
+  "float_days": 3,
+  "ld_per_day_usd": 4000,
+  "bom_lines": [
+   {
+    "line": "WO-2614-0010",
+    "part_id": "CON-8200-210",
+    "qty": 180,
+    "po_line_id": "4500018687-00010"
+   },
+   {
+    "line": "WO-2614-0020",
+    "part_id": "SEA-5111-200",
+    "qty": 4,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2614-0030",
+    "part_id": "SEA-4135-920",
+    "qty": 12,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2615",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 204878",
+  "customer_id": "CUS-06",
+  "induction_date": "2026-11-30",
+  "target_redelivery": "2027-01-29",
+  "slot": "Engine shop line E-17",
+  "float_days": 14,
+  "ld_per_day_usd": 0,
+  "bom_lines": [
+   {
+    "line": "WO-2615-0010",
+    "part_id": "SEA-3100-510",
+    "qty": 120,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2615-0020",
+    "part_id": "ENG-5663-240",
+    "qty": 7,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2615-0030",
+    "part_id": "ENG-5473-380",
+    "qty": 2,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2615-0040",
+    "part_id": "ENG-5210-110",
+    "qty": 10,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2616",
+  "kind": "component",
+  "asset_ref": "S/N HX-83360",
+  "customer_id": "CUS-04",
+  "induction_date": "2026-11-16",
+  "target_redelivery": "2026-12-14",
+  "slot": "Component shop C-07",
+  "float_days": 20,
+  "ld_per_day_usd": 2000,
+  "bom_lines": [
+   {
+    "line": "WO-2616-0010",
+    "part_id": "RAW-9300-610",
+    "qty": 60,
+    "po_line_id": "4500018694-00010"
+   }
+  ]
+ },
+ {
+  "id": "WO-2617",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 204955",
+  "customer_id": "CUS-03",
+  "induction_date": "2026-10-26",
+  "target_redelivery": "2026-12-31",
+  "slot": "Engine shop line E-21",
+  "float_days": 6,
+  "ld_per_day_usd": 12000,
+  "bom_lines": [
+   {
+    "line": "WO-2617-0010",
+    "part_id": "CON-8400-310",
+    "qty": 45,
+    "po_line_id": "4500018722-00010"
+   },
+   {
+    "line": "WO-2617-0020",
+    "part_id": "ENG-5663-240",
+    "qty": 12,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2617-0030",
+    "part_id": "ENG-1040-920",
+    "qty": 7,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2618",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 204962",
+  "customer_id": "CUS-01",
+  "induction_date": "2026-11-08",
+  "target_redelivery": "2027-01-19",
+  "slot": "Engine shop line E-14",
+  "float_days": 16,
+  "ld_per_day_usd": 9000,
+  "bom_lines": [
+   {
+    "line": "WO-2618-0010",
+    "part_id": "ENG-4810-310",
+    "qty": 36,
+    "po_line_id": "4500018746-00010"
+   },
+   {
+    "line": "WO-2618-0020",
+    "part_id": "ENG-1298-410",
+    "qty": 12,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2618-0030",
+    "part_id": "ENG-8146-440",
+    "qty": 11,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2618-0040",
+    "part_id": "ENG-1271-660",
+    "qty": 12,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2619",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 204993",
+  "customer_id": "CUS-02",
+  "induction_date": "2026-11-03",
+  "target_redelivery": "2027-01-12",
+  "slot": "Engine shop line E-18",
+  "float_days": 8,
+  "ld_per_day_usd": 5000,
+  "bom_lines": [
+   {
+    "line": "WO-2619-0010",
+    "part_id": "ENG-6120-210",
+    "qty": 28,
+    "po_line_id": "4500018783-00010"
+   },
+   {
+    "line": "WO-2619-0020",
+    "part_id": "ENG-8978-230",
+    "qty": 11,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2619-0030",
+    "part_id": "ENG-6295-510",
+    "qty": 3,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2620",
+  "kind": "airframe",
+  "asset_ref": "Tail TX-FFS",
+  "customer_id": "CUS-07",
+  "induction_date": "2026-10-19",
+  "target_redelivery": "2026-11-12",
+  "slot": "Hangar 3 bay 4",
+  "float_days": 4,
+  "ld_per_day_usd": 4000,
+  "bom_lines": [
+   {
+    "line": "WO-2620-0010",
+    "part_id": "FST-2120-030",
+    "qty": 12000,
+    "po_line_id": "4500018858-00010"
+   }
+  ]
+ },
+ {
+  "id": "WO-2621",
+  "kind": "nacelle",
+  "asset_ref": "Nacelle set NS-5240",
+  "customer_id": "CUS-05",
+  "induction_date": "2026-10-21",
+  "target_redelivery": "2026-11-20",
+  "slot": "Nacelle cell N-04",
+  "float_days": 5,
+  "ld_per_day_usd": 2500,
+  "bom_lines": [
+   {
+    "line": "WO-2621-0010",
+    "part_id": "NAC-7600-410",
+    "qty": 14,
+    "po_line_id": "4500018891-00010"
+   }
+  ]
+ },
+ {
+  "id": "WO-2622",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 205123",
+  "customer_id": "CUS-04",
+  "induction_date": "2026-10-19",
+  "target_redelivery": "2026-12-18",
+  "slot": "Engine shop line E-17",
+  "float_days": 1,
+  "ld_per_day_usd": 6000,
+  "bom_lines": [
+   {
+    "line": "WO-2622-0010",
+    "part_id": "SEA-3100-520",
+    "qty": 40,
+    "po_line_id": "4500018894-00010"
+   },
+   {
+    "line": "WO-2622-0020",
+    "part_id": "ENG-2120-230",
+    "qty": 8,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2622-0030",
+    "part_id": "ENG-6863-360",
+    "qty": 9,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2623",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 205147",
+  "customer_id": "CUS-01",
+  "induction_date": "2026-10-30",
+  "target_redelivery": "2027-01-02",
+  "slot": "Engine shop line E-21",
+  "float_days": 22,
+  "ld_per_day_usd": 9000,
+  "bom_lines": [
+   {
+    "line": "WO-2623-0010",
+    "part_id": "ENG-5600-710",
+    "qty": 12,
+    "po_line_id": "4500018854-00010"
+   },
+   {
+    "line": "WO-2623-0020",
+    "part_id": "ENG-4902-420",
+    "qty": 5,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2623-0030",
+    "part_id": "ENG-3567-720",
+    "qty": 1,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2624",
+  "kind": "airframe",
+  "asset_ref": "Tail TX-BIQ",
+  "customer_id": "CUS-06",
+  "induction_date": "2026-10-14",
+  "target_redelivery": "2026-11-01",
+  "slot": "Hangar 3 bay 4",
+  "float_days": 4,
+  "ld_per_day_usd": 1500,
+  "bom_lines": [
+   {
+    "line": "WO-2624-0010",
+    "part_id": "CON-8300-410",
+    "qty": 220,
+    "po_line_id": "4500018822-00010"
+   },
+   {
+    "line": "WO-2624-0020",
+    "part_id": "CON-3320-190",
+    "qty": 11,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2624-0030",
+    "part_id": "CON-4210-680",
+    "qty": 5,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2630",
+  "kind": "airframe",
+  "asset_ref": "Tail TX-AAS",
+  "customer_id": "CUS-02",
+  "induction_date": "2026-12-21",
+  "target_redelivery": "2027-01-25",
+  "slot": "Hangar 3 bay 2",
+  "float_days": 5,
+  "ld_per_day_usd": 4000,
+  "bom_lines": [
+   {
+    "line": "WO-2630-0010",
+    "part_id": "CON-2937-610",
+    "qty": 5,
+    "po_line_id": "4500019455-00050"
+   },
+   {
+    "line": "WO-2630-0020",
+    "part_id": "CON-8300-410",
+    "qty": 3,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2630-0030",
+    "part_id": "CON-8100-110",
+    "qty": 1,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2630-0040",
+    "part_id": "CON-2771-900",
+    "qty": 1,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2636",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 205308",
+  "customer_id": "CUS-08",
+  "induction_date": "2026-12-12",
+  "target_redelivery": "2027-02-09",
+  "slot": "Engine shop line E-18",
+  "float_days": 14,
+  "ld_per_day_usd": 2500,
+  "bom_lines": [
+   {
+    "line": "WO-2636-0010",
+    "part_id": "ENG-2978-080",
+    "qty": 102,
+    "po_line_id": "4500020298-00050"
+   },
+   {
+    "line": "WO-2636-0020",
+    "part_id": "FST-3321-340",
+    "qty": 394,
+    "po_line_id": "4500019281-00030"
+   },
+   {
+    "line": "WO-2636-0030",
+    "part_id": "ENG-9691-930",
+    "qty": 1,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2636-0040",
+    "part_id": "ENG-3678-270",
+    "qty": 10,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2637",
+  "kind": "component",
+  "asset_ref": "S/N HX-72273",
+  "customer_id": "CUS-08",
+  "induction_date": "2026-12-11",
+  "target_redelivery": "2027-01-17",
+  "slot": "Component shop C-07",
+  "float_days": 18,
+  "ld_per_day_usd": 2500,
+  "bom_lines": [
+   {
+    "line": "WO-2637-0010",
+    "part_id": "FST-5036-800",
+    "qty": 223,
+    "po_line_id": "4500019281-00010"
+   },
+   {
+    "line": "WO-2637-0020",
+    "part_id": "CON-5001-140",
+    "qty": 12,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2637-0030",
+    "part_id": "CON-3760-370",
+    "qty": 2,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2637-0040",
+    "part_id": "CON-6269-850",
+    "qty": 8,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2639",
+  "kind": "component",
+  "asset_ref": "S/N HX-14463",
+  "customer_id": "CUS-03",
+  "induction_date": "2026-10-29",
+  "target_redelivery": "2026-11-23",
+  "slot": "Component shop C-07",
+  "float_days": 5,
+  "ld_per_day_usd": 2500,
+  "bom_lines": [
+   {
+    "line": "WO-2639-0010",
+    "part_id": "ENG-8501-050",
+    "qty": 5,
+    "po_line_id": "4500019240-00060"
+   },
+   {
+    "line": "WO-2639-0020",
+    "part_id": "ENG-9691-930",
+    "qty": 9,
+    "po_line_id": "4500019835-00020"
+   },
+   {
+    "line": "WO-2639-0030",
+    "part_id": "ENG-5600-710",
+    "qty": 13,
+    "po_line_id": "4500019845-00010"
+   },
+   {
+    "line": "WO-2639-0040",
+    "part_id": "CON-6269-850",
+    "qty": 3,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2639-0050",
+    "part_id": "CON-3320-190",
+    "qty": 3,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2639-0060",
+    "part_id": "CON-2771-900",
+    "qty": 10,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2640",
+  "kind": "nacelle",
+  "asset_ref": "Nacelle set NS-8987",
+  "customer_id": "CUS-06",
+  "induction_date": "2026-11-13",
+  "target_redelivery": "2026-12-13",
+  "slot": "Nacelle cell N-04",
+  "float_days": 24,
+  "ld_per_day_usd": 0,
+  "bom_lines": [
+   {
+    "line": "WO-2640-0010",
+    "part_id": "CON-4210-680",
+    "qty": 820,
+    "po_line_id": "4500020022-00040"
+   },
+   {
+    "line": "WO-2640-0020",
+    "part_id": "CON-9370-570",
+    "qty": 31,
+    "po_line_id": "4500019455-00020"
+   },
+   {
+    "line": "WO-2640-0030",
+    "part_id": "CON-9370-570",
+    "qty": 8,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2643",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 205486",
+  "customer_id": "CUS-08",
+  "induction_date": "2026-12-02",
+  "target_redelivery": "2027-02-04",
+  "slot": "Engine shop line E-21",
+  "float_days": 5,
+  "ld_per_day_usd": 1500,
+  "bom_lines": [
+   {
+    "line": "WO-2643-0010",
+    "part_id": "ENG-6003-270",
+    "qty": 13,
+    "po_line_id": "4500019845-00030"
+   },
+   {
+    "line": "WO-2643-0020",
+    "part_id": "FST-1452-620",
+    "qty": 345,
+    "po_line_id": "4500018945-00020"
+   },
+   {
+    "line": "WO-2643-0030",
+    "part_id": "CON-8256-900",
+    "qty": 1255,
+    "po_line_id": "4500020022-00020"
+   },
+   {
+    "line": "WO-2643-0040",
+    "part_id": "ENG-1522-720",
+    "qty": 1,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2643-0050",
+    "part_id": "ENG-6681-050",
+    "qty": 1,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2643-0060",
+    "part_id": "ENG-6495-300",
+    "qty": 12,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2644",
+  "kind": "component",
+  "asset_ref": "S/N HX-94820",
+  "customer_id": "CUS-05",
+  "induction_date": "2026-10-08",
+  "target_redelivery": "2026-10-27",
+  "slot": "Component shop C-07",
+  "float_days": 11,
+  "ld_per_day_usd": 0,
+  "bom_lines": [
+   {
+    "line": "WO-2644-0010",
+    "part_id": "CON-8300-410",
+    "qty": 66,
+    "po_line_id": "4500020228-00040"
+   },
+   {
+    "line": "WO-2644-0020",
+    "part_id": "ENG-7865-530",
+    "qty": 45,
+    "po_line_id": "4500020098-00040"
+   },
+   {
+    "line": "WO-2644-0030",
+    "part_id": "CON-2359-950",
+    "qty": 3,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2644-0040",
+    "part_id": "CON-2348-780",
+    "qty": 1,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2646",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 205626",
+  "customer_id": "CUS-08",
+  "induction_date": "2026-10-09",
+  "target_redelivery": "2026-12-07",
+  "slot": "Engine shop line E-14",
+  "float_days": 5,
+  "ld_per_day_usd": 2500,
+  "bom_lines": [
+   {
+    "line": "WO-2646-0010",
+    "part_id": "ENG-6003-270",
+    "qty": 4,
+    "po_line_id": "4500019109-00030"
+   },
+   {
+    "line": "WO-2646-0020",
+    "part_id": "ENG-2120-230",
+    "qty": 4,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2646-0030",
+    "part_id": "ENG-6120-210",
+    "qty": 1,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2650",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 205718",
+  "customer_id": "CUS-08",
+  "induction_date": "2026-11-01",
+  "target_redelivery": "2027-01-19",
+  "slot": "Engine shop line E-17",
+  "float_days": 17,
+  "ld_per_day_usd": 2500,
+  "bom_lines": [
+   {
+    "line": "WO-2650-0010",
+    "part_id": "CON-2016-370",
+    "qty": 376,
+    "po_line_id": "4500020022-00030"
+   },
+   {
+    "line": "WO-2650-0020",
+    "part_id": "ENG-5600-710",
+    "qty": 32,
+    "po_line_id": "4500019835-00040"
+   },
+   {
+    "line": "WO-2650-0030",
+    "part_id": "ENG-5210-120",
+    "qty": 9,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2650-0040",
+    "part_id": "ENG-3581-900",
+    "qty": 6,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2650-0050",
+    "part_id": "ENG-1298-410",
+    "qty": 10,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2654",
+  "kind": "engine",
+  "asset_ref": "NT-26 ESN 205782",
+  "customer_id": "CUS-03",
+  "induction_date": "2026-10-03",
+  "target_redelivery": "2026-12-18",
+  "slot": "Engine shop line E-14",
+  "float_days": 19,
+  "ld_per_day_usd": 0,
+  "bom_lines": [
+   {
+    "line": "WO-2654-0010",
+    "part_id": "ENG-3567-720",
+    "qty": 34,
+    "po_line_id": "4500019827-00040"
+   },
+   {
+    "line": "WO-2654-0020",
+    "part_id": "CON-3760-370",
+    "qty": 181,
+    "po_line_id": "4500020264-00030"
+   },
+   {
+    "line": "WO-2654-0030",
+    "part_id": "FST-1029-650",
+    "qty": 4209,
+    "po_line_id": "4500019281-00040"
+   },
+   {
+    "line": "WO-2654-0040",
+    "part_id": "ENG-5473-380",
+    "qty": 6,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2660",
+  "kind": "airframe",
+  "asset_ref": "Tail TX-NJM",
+  "customer_id": "CUS-04",
+  "induction_date": "2026-11-23",
+  "target_redelivery": "2026-12-31",
+  "slot": "Hangar 5 bay 1",
+  "float_days": 13,
+  "ld_per_day_usd": 6000,
+  "bom_lines": [
+   {
+    "line": "WO-2660-0010",
+    "part_id": "SEA-1085-940",
+    "qty": 2656,
+    "po_line_id": "4500019310-00030"
+   },
+   {
+    "line": "WO-2660-0020",
+    "part_id": "RAW-1719-170",
+    "qty": 170,
+    "po_line_id": "4500019149-00010"
+   },
+   {
+    "line": "WO-2660-0030",
+    "part_id": "ENG-5600-710",
+    "qty": 6,
+    "po_line_id": "4500019845-00020"
+   },
+   {
+    "line": "WO-2660-0040",
+    "part_id": "CON-9370-570",
+    "qty": 12,
+    "po_line_id": null
+   },
+   {
+    "line": "WO-2660-0050",
+    "part_id": "CON-5523-020",
+    "qty": 3,
+    "po_line_id": null
+   }
+  ]
+ },
+ {
+  "id": "WO-2663",
+  "kind": "component",
+  "asset_ref": "S/N HX-21661",
+  "customer_id": "CUS-04",
+  "induction_date": "2026-11-19",
+  "target_redelivery": "2026-12-12",
+  "slot": "Component shop C-07",
+  "float_days": 9,
+  "ld_per_day_usd": 4000,
+  "bom_lines": [
+   {
+    "line": "WO-2663-0010",
+    "part_id": "CON-7797-900",
+    "qty": 62,
+    "po_line_id": "4500020264-00010"
+   },
+   {
+    "line": "WO-2663-0020",
+    "part_id": "CON-9370-570",
+    "qty": 2,
+    "po_line_id": null
+   }
+  ]
+ }
+]
