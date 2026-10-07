@@ -1,0 +1,167 @@
+{
+  "signal_id": "SIG-0008",
+  "summary": "Rolling 48 hour strikes at Garonne Aerostructures' Blagnac sites through October push 10 open lines worth USD 1.17M by up to 41 days. Only one is tied to a work order: 16 thrust reverser brackets for WO-2610 now land 1 Nov against a 27 Oct induction, moving Selatan Air Charter's redelivery 2 days. On three of the unworked lines, approved alternates beat Garonne's new dates and cost less.",
+  "impact": {
+    "cost": {
+      "usd": 1353510,
+      "severity": 65,
+      "rationale": "USD 1.17M of open Garonne PO value across 4 POs and 10 lines, a USD 178K expedite estimate and USD 10K of LD exposure on WO-2610. Most of the value sits in cascade segments and inlet lip skins with no work order attached yet."
+    },
+    "delay": {
+      "days": 2,
+      "severity": 30,
+      "rationale": "WO-2610 needs 16 thrust reverser brackets at its 27 Oct induction; the rescheduled ETA of 1 Nov is a 5 day slip against 3 days of float, so the Selatan Air Charter redelivery moves from 26 Nov to 28 Nov."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 1,
+      "severity": 51,
+      "rationale": "One work-order line (WO-2610-0010) is short and Nacelle cell N-02 is at risk. The other nine lines carry no work order yet, but eight of them now land after their need dates."
+    },
+    "reputation": {
+      "weighted_usd": 3000,
+      "severity": 2,
+      "rationale": "Selatan Air Charter is a standard-tier customer at USD 2K per day of LDs, so the tier-weighted exposure is only USD 3K."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Air expedite the WO-2610 brackets and resource three later lines",
+      "mechanism": "Garonne ships the 16 brackets on the first non-strike shift and Gallic Air Freight flies them to SIN by 29 Oct; cascade segments move to Weser, inlet lip skins to Arden and blocker doors to Cebu Composite Works, all cheaper and earlier than Garonne's new dates.",
+      "cost_usd": -40218,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 3,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "raise_expedite",
+          "label": "Raise air expedite with Gallic Air Freight: 16 brackets TLS to SIN, next flight out after the first non-strike shift",
+          "payload": { "forwarder": "Gallic Air Freight", "origin": "TLS", "destination": "SIN", "service": "next_flight_out", "po_line": "4500018506-00010", "pieces": 16, "est_cost_usd": 10080 }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Garonne to prioritise the 16 brackets for WO-2610 and confirm cancellation of three lines",
+          "payload": { "to": "Garonne Aerostructures SARL", "lifnr": "100162", "priority_line": "4500018506-00010", "cancel_lines": ["4500019806-00010", "4500020108-00060", "4500019806-00020"], "reason": "Rescheduled dates miss need; resourced to approved alternates", "response_due": "2026-10-09" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create POs: Weser 9 cascade segments, Arden 6 inlet lip skins, Cebu Composite Works 6 blocker doors",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "orders": [
+              { "lifnr": "100154", "matnr": "NAC-3091-950", "qty": 9, "unit_price_usd": 18533, "net_value_usd": 166797, "delivery": "2026-12-09", "replaces": "4500019806-00010" },
+              { "lifnr": "100168", "matnr": "NAC-2492-310", "qty": 6, "unit_price_usd": 26464, "net_value_usd": 158784, "delivery": "2027-01-08", "replaces": "4500020108-00060" },
+              { "lifnr": "100165", "matnr": "NAC-8068-460", "qty": 6, "unit_price_usd": 5103, "net_value_usd": 30618, "delivery": "2026-12-11", "replaces": "4500019806-00020" }
+            ]
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "cancel_po_lines",
+          "label": "Set deletion flag on the three Garonne lines once replacement POs are released",
+          "payload": { "lifnr": "100162", "po_lines": ["4500019806-00010", "4500020108-00060", "4500019806-00020"], "deletion_indicator": "L" }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2610 bracket ETA moves to 29 Oct, inside float",
+          "payload": { "work_orders": ["WO-2610"], "eta": "2026-10-29", "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Air expedite the WO-2610 brackets only",
+      "mechanism": "Same priority shipment and Gallic Air Freight flight for the 16 brackets, leaving the rest of the book with Garonne at its rescheduled dates.",
+      "cost_usd": 10080,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 3,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "raise_expedite",
+          "label": "Raise air expedite with Gallic Air Freight: 16 brackets TLS to SIN",
+          "payload": { "forwarder": "Gallic Air Freight", "origin": "TLS", "destination": "SIN", "service": "next_flight_out", "po_line": "4500018506-00010", "pieces": 16, "est_cost_usd": 10080 }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Garonne to ship the 16 brackets on the first non-strike shift",
+          "payload": { "to": "Garonne Aerostructures SARL", "lifnr": "100162", "priority_line": "4500018506-00010", "requested_ship": "2026-10-27" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Re-sequence WO-2610 so the brackets fit late",
+      "mechanism": "Induct NS-9978 on 27 Oct as planned and move the thrust reverser bracket installation behind strip and inspection, so a 1 Nov arrival by standard freight does not stop the cell.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "resequence_tasks",
+          "label": "Move the WO-2610 bracket install task to after 1 Nov in Nacelle cell N-02",
+          "payload": { "work_order": "WO-2610", "bom_line": "WO-2610-0010", "task_earliest_start": "2026-11-02", "slot": "Nacelle cell N-02" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Accept the slip and agree a revised redelivery",
+      "mechanism": "Take Garonne's 1 Nov date and agree a 28 Nov redelivery with Selatan Air Charter, paying 2 days of LDs.",
+      "cost_usd": 4000,
+      "residual_delay_days": 2,
+      "risk": "low",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Selatan Air Charter a revised redelivery of 28 Nov for NS-9978",
+          "payload": { "customer": "CUS-06", "work_order": "WO-2610", "new_redelivery": "2026-11-28", "ld_days": 2, "ld_usd": 4000 }
+        },
+        {
+          "system": "SAP MM",
+          "action": "update_delivery_date",
+          "label": "Update the confirmed date on PO line 4500018506-00010 to 1 Nov",
+          "payload": { "po_line": "4500018506-00010", "lifnr": "100162", "new_confirmed": "2026-11-01" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "USD 10K of air freight holds the Selatan Air Charter redelivery even if another 48 hour strike lands before 27 Oct, and moving three unworked lines to Weser, Arden and Cebu Composite Works saves USD 50K while landing each one earlier than Garonne's new date. Re-sequencing the bracket install costs nothing but bets 3 days of float on a strike calendar Garonne itself says can slip up to two weeks. The cost of the recommendation is a harder conversation with a strategic nacelle supplier about three cancelled lines.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Air expedite the WO-2610 brackets and resource three later lines to cheaper approved sources (saves USD 40K net, no redelivery slip, recommended), air expedite the brackets only (USD 10K, no slip), re-sequence WO-2610 so the brackets fit late (no cost but high risk under rolling strikes), or accept the slip and pay 2 days of LDs to Selatan Air Charter (USD 4K, 2 day move)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "The recommended option is the cheapest: Weser cascade segments are USD 1,074 below Garonne, Arden inlet lip skins USD 6,327 below and Cebu blocker doors USD 445 below, saving USD 50.3K across 21 parts. Net of USD 10K air freight on the brackets it saves USD 40.2K. Among options that touch only WO-2610, re-sequencing costs nothing but carries the most risk."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "There is no close precedent for a labour strike at a nacelle supplier. The nearest is the 2023 Johor machine shop administration (PRE-02), where brackets and housings were resourced to India and took 6 weeks to requalify. Here the alternates are already approved, so no first-article inspection is needed."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2610 needs 16 thrust reverser brackets at induction on 27 Oct. Garonne's rescheduled delivery lands them on 1 Nov, a 5 day slip against 3 days of work-order float, so the NS-9978 redelivery to Selatan Air Charter moves 2 days to 28 Nov. Prairie Composites is approved for the bracket but quotes 60 days, which is no help this side of December."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

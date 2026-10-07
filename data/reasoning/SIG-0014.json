@@ -1,0 +1,140 @@
+{
+  "signal_id": "SIG-0014",
+  "summary": "China now requires export licences for samarium-cobalt magnets, with 30 to 45 day processing for aerospace end users. Our only exposure is one sole-source Suzhou Rare Magnetics line of 60 magnet sets for Kestrel Bay Cargo's actuator job WO-2616, now due 2 Dec and still inside 20 days of float. If the licence clock only starts when the parts are ready to ship, a 45 day licence pushes the redelivery 11 days, so the lever is to start the paperwork now.",
+  "impact": {
+    "cost": {
+      "usd": 121700,
+      "severity": 27,
+      "rationale": "USD 69K of open PO value on 1 Suzhou PO, a USD 21K expedite estimate and USD 32K of LD exposure if the 16 day slip landed on WO-2616's redelivery."
+    },
+    "delay": {
+      "days": 0,
+      "severity": 0,
+      "rationale": "Magnet sets for WO-2616 now arrive 2 Dec, 16 days after the 16 Nov induction against 20 days of float, so the 14 Dec redelivery holds with 4 days to spare."
+    },
+    "ops": {
+      "slots": 0,
+      "lines": 1,
+      "severity": 38,
+      "rationale": "One work-order line (WO-2616-0010, 60 magnet sets) is at risk in component shop C-07 with no stock on hand; no slot is lost yet."
+    },
+    "reputation": {
+      "weighted_usd": 19200,
+      "severity": 10,
+      "rationale": "Kestrel Bay Cargo is a key customer with an LD clause of USD 2K per day, worth USD 32K at the unmitigated slip and USD 22K if a 45 day licence moves the redelivery 11 days."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "File the licence now, in bulk, and air on release",
+      "mechanism": "Give Suzhou our end-user statement this week so it files one licence for this PO and Q1 2027 magnet demand while the sets are still in production, then fly them on release; a 30 to 45 day licence lands the sets 12 to 27 Nov, inside float.",
+      "cost_usd": 1800,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 3,
+      "precedent_id": "PRE-08",
+      "actions": [
+        {
+          "system": "Email",
+          "action": "send_end_user_statement",
+          "label": "Send Suzhou Rare Magnetics a signed end-user statement and ask it to file one licence covering this PO and Q1 2027 demand by 10 Oct",
+          "payload": { "to": "Suzhou Rare Magnetics Co Ltd", "lifnr": "100253", "po_line": "4500018694-00010", "matnr": "RAW-9300-610", "qty": 60, "end_use": "actuator motor overhaul, civil aircraft", "licence_scope": "this PO plus Q1 2027 forecast", "file_by": "2026-10-10" }
+        },
+        {
+          "system": "Forwarder",
+          "action": "book_air_freight",
+          "label": "Pre-book Formosa Air Cargo PVG to SIN for 60 magnet sets on licence release",
+          "payload": { "forwarder": "Formosa Air Cargo", "origin": "PVG", "destination": "SIN", "po_line": "4500018694-00010", "pieces": 60, "trigger": "licence granted", "est_cost_usd": 1800 }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2616 magnet ETA window 12 to 27 Nov, float ends 6 Dec",
+          "payload": { "work_order": "WO-2616", "eta_earliest": "2026-11-12", "eta_latest": "2026-11-27", "float_end": "2026-12-06", "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Bulk licence plus one job set of buffer stock",
+      "mechanism": "Do OPT-1 and add a second order of 60 magnet sets on the same licence, held as buffer so the next actuator job does not wait on a fresh licence; carrying cost about 3% of the USD 69K.",
+      "cost_usd": 3870,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 90,
+      "precedent_id": "PRE-08",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Suzhou Rare Magnetics for 60 more SmCo magnet sets as buffer stock",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100253", "matnr": "RAW-9300-610", "qty": 60, "unit_price_usd": 1150, "net_value_usd": 69000, "storage_location": "SG01-B-11", "purpose": "buffer stock" }
+        },
+        {
+          "system": "Email",
+          "action": "send_end_user_statement",
+          "label": "Send Suzhou one end-user statement covering both orders",
+          "payload": { "to": "Suzhou Rare Magnetics Co Ltd", "lifnr": "100253", "po_lines": ["4500018694-00010", "buffer order"], "file_by": "2026-10-10" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Inspect and reuse serviceable magnet sets",
+      "mechanism": "Where the component maintenance manual allows, flux-test the magnet sets removed from the units on WO-2616 and reuse those that pass, so fewer new sets are needed at induction.",
+      "cost_usd": 2400,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 10,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "create_task",
+          "label": "Add a flux test and reuse disposition step to WO-2616 for removed magnet sets",
+          "payload": { "work_order": "WO-2616", "bom_line": "WO-2616-0010", "task": "magnet flux test per CMM limits", "est_cost_usd": 2400, "sets": 60 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Wait for the standard licence process",
+      "mechanism": "Leave Suzhou to file when the sets are ready on 2 Nov; a 30 day licence holds the redelivery but a 45 day licence lands the sets 17 Dec and moves Kestrel Bay Cargo 11 days.",
+      "cost_usd": 22000,
+      "residual_delay_days": 11,
+      "risk": "high",
+      "speed_days": 0,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "set_watch",
+          "label": "Flag WO-2616 magnet line for weekly review against the 6 Dec float end",
+          "payload": { "work_order": "WO-2616", "po_line": "4500018694-00010", "eta": "2026-12-02", "float_end": "2026-12-06" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Filing the licence now while the sets are still in production costs about USD 1.8K of air freight and lands them inside WO-2616's float even at a 45 day licence, while waiting risks USD 22K of LDs and an 11 day move for Kestrel Bay Cargo. Adding a buffer job set costs another USD 2K a quarter and ties up USD 69K for a part with no other approved source, which is worth doing only if licensing tightens further. The 2025 sensor licence delay (PRE-08) taught us to file per quarter in bulk rather than per consignment.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. File the licence now in bulk and fly on release (about USD 1.8K, no slip, recommended), add a 60 set buffer on the same licence (about USD 3.9K, no slip), flux-test and reuse removed magnet sets where the CMM allows (about USD 2.4K, uncertain yield), or wait for the standard process (nil at a 30 day licence, USD 22K and 11 days at 45 days)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Filing now and flying on release is cheapest at about USD 1.8K of air freight. Waiting costs nothing if the licence takes 30 days but USD 22K if it takes 45, and the sets are sole source with no stock on hand."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2025 export licence processing for a dual-use sensor family stretched to five weeks (PRE-08). We covered two engines from Singapore distributor stock for USD 52K with 3 days of slip, but there is no distributor source for these magnets. The lesson we can use is to file licences per quarter in bulk rather than per consignment."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "No induction moves today. WO-2616 needs 60 SmCo magnet sets at its 16 Nov induction, and PO 4500018694-00010 now lands 2 Dec, 16 days late against 20 days of float. If Suzhou only files when the sets are ready and the licence takes 45 days, they land 17 Dec and the 14 Dec redelivery moves 11 days."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

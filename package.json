@@ -16,7 +16,8 @@
     "test:e2e": "playwright test",
     "seed": "tsx scripts/seed.ts",
     "gen:reasoning": "tsx scripts/generate-reasoning.ts",
-    "validate:reasoning": "tsx scripts/validate-reasoning.ts"
+    "validate:reasoning": "tsx scripts/index-reasoning.ts && tsx scripts/validate-reasoning.ts",
+    "index:reasoning": "tsx scripts/index-reasoning.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

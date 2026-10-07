@@ -1,0 +1,161 @@
+{
+  "signal_id": "SIG-0016",
+  "summary": "A three week health closure of the Haiphong industrial zone has stopped Haiphong Wire and Harness, slipping 10 open lines worth USD 209K by up to 46 days. The exposure that matters is 45 ignition lead harness kits for Tanjong Pacific's engine on WO-2617, now due 3 Nov against a 26 Oct induction, which moves redelivery 2 days at USD 12K per day. We hold 93 free, released kits of the same part in SG01, which covers WO-2617 outright.",
+  "impact": {
+    "cost": {
+      "usd": 336715,
+      "severity": 40,
+      "rationale": "USD 209K of open Haiphong PO value across 3 POs and 10 lines, a USD 31K expedite estimate and USD 96K of LD exposure on WO-2617."
+    },
+    "delay": {
+      "days": 2,
+      "severity": 30,
+      "rationale": "WO-2617 needs 45 ignition lead harness kits at its 26 Oct induction; the closure moves the ETA to 3 Nov, an 8 day slip against 6 days of float, so Tanjong Pacific's redelivery moves from 31 Dec to 2 Jan."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 1,
+      "severity": 51,
+      "rationale": "One work-order line (WO-2617-0010) is short and Engine shop line E-21 is at risk. The other nine lines are consumables and spare kits with no work order attached, though three of them are already past need date."
+    },
+    "reputation": {
+      "weighted_usd": 96000,
+      "severity": 37,
+      "rationale": "Tanjong Pacific is a strategic customer with an LD clause of USD 12K per day, worth USD 96K across the full 8 day slip."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Issue the kits from free stock and move three overdue consumable lines",
+      "mechanism": "Issue 45 released kits from INV-0029 (93 free) to WO-2617 and let the Haiphong delivery refill stock; move penetrant to Klang Chemical, solvent wipe to Jurong Aero Consumables and masking tape to Rheinland Aero Chemie, each landing weeks before Haiphong's new dates.",
+      "cost_usd": -1468,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 1,
+      "precedent_id": "PRE-09",
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "reallocate_stock",
+          "label": "Reserve 45 ignition lead harness kits from INV-0029 for WO-2617-0010",
+          "payload": { "inventory_id": "INV-0029", "matnr": "CON-8400-310", "batch": "227-26-0434", "qty": 45, "to_work_order": "WO-2617", "bom_line": "WO-2617-0010", "free_after": 48 }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create POs: Klang Chemical 301 penetrant, Jurong Aero Consumables 848 solvent wipes, Rheinland Aero Chemie 13 masking tape",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "orders": [
+              { "lifnr": "100224", "matnr": "CON-2771-900", "qty": 301, "unit_price_usd": 54, "net_value_usd": 16254, "delivery": "2026-10-11", "replaces": "4500020198-00040" },
+              { "lifnr": "100221", "matnr": "CON-2016-370", "qty": 848, "unit_price_usd": 27, "net_value_usd": 22896, "delivery": "2026-10-30", "replaces": "4500020198-00010" },
+              { "lifnr": "100230", "matnr": "CON-7797-900", "qty": 13, "unit_price_usd": 299, "net_value_usd": 3887, "delivery": "2026-11-06", "replaces": "4500020198-00020" }
+            ]
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "cancel_po_lines",
+          "label": "Set deletion flag on Haiphong lines 4500020198-00010, -00020 and -00040",
+          "payload": { "lifnr": "100227", "po_lines": ["4500020198-00010", "4500020198-00020", "4500020198-00040"], "deletion_indicator": "L" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Tell Haiphong Wire and Harness which lines stand and which are cancelled, and ask for a restart date",
+          "payload": { "to": "Haiphong Wire and Harness JSC", "lifnr": "100227", "keep_lines": ["4500018722-00010", "4500019884-00030", "4500019884-00040"], "cancel_lines": ["4500020198-00010", "4500020198-00020", "4500020198-00040"], "response_due": "2026-10-14" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Distributor buy from Seletar Engine Parts",
+      "mechanism": "Buy the 45 kits from Seletar Engine Parts at USD 2,900 against USD 2,300, landing 28 Oct, a 2 day slip inside WO-2617's 6 days of float.",
+      "cost_usd": 27000,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 21,
+      "precedent_id": "PRE-11",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Seletar Engine Parts for 45 ignition lead harness kits, delivery 28 Oct",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100127", "matnr": "CON-8400-310", "qty": 45, "unit_price_usd": 2900, "net_value_usd": 130500, "delivery": "2026-10-28", "replaces": "4500018722-00010" }
+        },
+        {
+          "system": "Forwarder",
+          "action": "book_local_delivery",
+          "label": "Book Island Logistics road delivery from Seletar to SG01 on 28 Oct",
+          "payload": { "forwarder": "Island Logistics", "origin": "Seletar", "destination": "SG01", "service": "same_day_road", "pieces": 45, "pickup": "2026-10-28" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "update_po_line",
+          "label": "Reduce Haiphong line 4500018722-00010 to stock replenishment with no work-order link",
+          "payload": { "po_line": "4500018722-00010", "lifnr": "100227", "unlink_work_order": "WO-2617", "new_confirmed": "2026-11-03" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Re-sequence WO-2617 so the ignition leads fit at final assembly",
+      "mechanism": "Induct ESN 204955 on 26 Oct and move the ignition lead installation to engine dress at the end of the visit, so a 3 Nov arrival does not hold the line.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 2,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "resequence_tasks",
+          "label": "Move the WO-2617 ignition lead install task to after 3 Nov on Engine shop line E-21",
+          "payload": { "work_order": "WO-2617", "bom_line": "WO-2617-0010", "task_earliest_start": "2026-11-04", "slot": "Engine shop line E-21" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Accept the slip and agree a revised redelivery",
+      "mechanism": "Take Haiphong's 3 Nov date and agree a 2 Jan redelivery with Tanjong Pacific, paying 2 days of LDs.",
+      "cost_usd": 24000,
+      "residual_delay_days": 2,
+      "risk": "medium",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Tanjong Pacific a revised redelivery of 2 Jan for ESN 204955",
+          "payload": { "customer": "CUS-03", "work_order": "WO-2617", "new_redelivery": "2027-01-02", "ld_days": 2, "ld_usd": 24000 }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "We already hold 93 free, released kits of the same Haiphong part, so issuing 45 to WO-2617 holds Tanjong Pacific's 31 Dec redelivery at no cost and still leaves 48 kits against the 10 due on the other two kit lines. The Seletar distributor buy is the next best and also holds the date, but it costs USD 27K for kits we do not need to buy. Moving the three overdue consumable lines saves a further USD 1.5K and lands them weeks earlier than Haiphong's new dates.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Issue the 45 kits from free stock and move three overdue consumable lines (saves USD 1.5K, no slip, recommended), buy the kits from Seletar Engine Parts (USD 27K, no slip), re-sequence WO-2617 so the leads fit at final assembly (no cost, medium risk if the closure is extended), or accept a 2 day slip and pay Tanjong Pacific USD 24K in LDs."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "The recommended option is the cheapest: issuing from stock costs nothing, and Klang penetrant at USD 54 and Rheinland masking tape at USD 299 save USD 3.2K, against a USD 1.7K premium on Jurong solvent wipes. Net it saves USD 1,468. The cheapest option that buys new kits is the Seletar distributor buy at USD 27K."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2022 a health closure shut a harness plant for four weeks (PRE-11); we bought from a distributor for the first two engines and repaired serviceable leads for the rest, for USD 31K and 2 days of slip, and every engine redelivered on time. This time free stock covers WO-2617, which matches the 2024 seal batch case (PRE-09): reallocating released stock of the same part is the fastest lever. Keep the PRE-11 repair route in reserve if the closure runs past three weeks."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2617 needs 45 ignition lead harness kits at induction on 26 Oct, and the scoring ties them to PO line 4500018722-00010, which the closure moves to 3 Nov. That is an 8 day slip against 6 days of float, so Tanjong Pacific's redelivery moves 2 days to 2 Jan. The scoring does not net free stock, which is why issuing from INV-0029 removes the move entirely."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

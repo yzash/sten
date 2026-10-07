@@ -1,0 +1,170 @@
+{
+  "signal_id": "SIG-0009",
+  "summary": "Kemuning Machining's rating fell from BB to B with a covenant breach on its working capital facility and supplier payables stretched from 48 to 81 days. It still ships, but its two open lines feed Coralline Air's engine WO-2611, whose brackets already slip 8 days inside 12 days of float. Bengaluru Aero Machining can deliver brackets in 45 days, so the last order date that still protects WO-2611 is 10 Oct.",
+  "impact": {
+    "cost": {
+      "usd": 232050,
+      "severity": 34,
+      "rationale": "USD 167K of open PO value across 2 Kemuning POs, a USD 25K expedite estimate and USD 40K of LD exposure if the 8 day bracket slip landed on WO-2611's redelivery."
+    },
+    "delay": {
+      "days": 0,
+      "severity": 0,
+      "rationale": "Compressor case brackets for WO-2611 now arrive 20 Nov, 8 days after induction against 12 days of float, so the Coralline Air redelivery holds at 19 Jan for now."
+    },
+    "ops": {
+      "slots": 0,
+      "lines": 1,
+      "severity": 38,
+      "rationale": "One work-order line (WO-2611-0010, 30 brackets) is at risk on engine shop line E-21 with only 4 days of float left; no slot is lost yet."
+    },
+    "reputation": {
+      "weighted_usd": 24000,
+      "severity": 12,
+      "rationale": "Coralline Air is a key customer with an LD clause of USD 5K per day; exposure is USD 40K at the current slip, rising to about USD 100K if Kemuning stops shipping in late October."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Split the bracket line 50/50 to Bengaluru and start first article now",
+      "mechanism": "Move 15 of the 30 brackets on 4500018574-00010 to Bengaluru Aero Machining at USD 150 a unit more, landing 21 Nov inside WO-2611's float, and keep 15 with Kemuning paid on goods receipt only.",
+      "cost_usd": 2250,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 2,
+      "precedent_id": "PRE-02",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_split_po",
+          "label": "Split 4500018574-00010 50/50: Kemuning 15 brackets, Bengaluru Aero Machining 15 brackets",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "source_line": "4500018574-00010",
+            "matnr": "ENG-4902-410",
+            "split": [
+              { "lifnr": "100124", "share": 0.5, "qty": 15, "unit_price_usd": 3800 },
+              { "lifnr": "100134", "share": 0.5, "qty": 15, "unit_price_usd": 3950, "lead_time_days": 45, "delivery_date": "2026-11-21" }
+            ],
+            "net_value_usd": 116250
+          }
+        },
+        {
+          "system": "Email",
+          "action": "request_first_article",
+          "label": "Ask Bengaluru Aero Machining to run first-article inspection on the first 2 brackets",
+          "payload": { "to": "Bengaluru Aero Machining Pvt Ltd", "lifnr": "100134", "matnr": "ENG-4902-410", "fai_qty": 2, "fai_due": "2026-11-07" }
+        },
+        {
+          "system": "SAP FI",
+          "action": "set_payment_condition",
+          "label": "Pay Kemuning (vendor 100124) on goods receipt only; no advances while the covenant waiver is open",
+          "payload": { "lifnr": "100124", "company_code": "SG10", "condition": "pay_on_gr_only", "advances_allowed": false, "review_date": "2026-11-15" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Kemuning to confirm WIP and ship dates for both open lines by 10 Oct",
+          "payload": { "to": "Kemuning Machining Sdn Bhd", "lifnr": "100124", "po_lines": ["4500018574-00010", "4500018600-00010"], "response_due": "2026-10-10" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Resource both lines away from Kemuning",
+      "mechanism": "Move all 30 brackets to Bengaluru (lands 21 Nov) and all 20 bearing housing covers to Laem Chabang Precision (lands 16 Nov), then cancel both Kemuning lines.",
+      "cost_usd": 7500,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 3,
+      "precedent_id": "PRE-02",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create POs to Bengaluru Aero Machining (30 brackets) and Laem Chabang Precision (20 covers)",
+          "payload": {
+            "doc_type": "NB",
+            "lines": [
+              { "lifnr": "100134", "matnr": "ENG-4902-410", "qty": 30, "unit_price_usd": 3950, "delivery_date": "2026-11-21" },
+              { "lifnr": "100145", "matnr": "ENG-4902-420", "qty": 20, "unit_price_usd": 2800, "delivery_date": "2026-11-16" }
+            ],
+            "net_value_usd": 174500
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "change_po",
+          "label": "Cancel Kemuning lines 4500018574-00010 and 4500018600-00010",
+          "payload": { "lifnr": "100124", "lines": [{ "po_line": "4500018574-00010", "change": "delete" }, { "po_line": "4500018600-00010", "change": "delete" }], "reason": "Supplier credit risk; resourced to approved alternates" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Early payment to Kemuning for a discount",
+      "mechanism": "Offer to pay both lines 10 days after goods receipt instead of Net 60 in return for a 2% discount and a firm ship date, easing Kemuning's cash squeeze without any advance.",
+      "cost_usd": -3340,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 5,
+      "precedent_id": "PRE-12",
+      "actions": [
+        {
+          "system": "SAP FI",
+          "action": "change_payment_terms",
+          "label": "Change Kemuning terms on the two open lines from Net 60 to 2/10 after goods receipt",
+          "payload": { "lifnr": "100124", "company_code": "SG10", "po_lines": ["4500018574-00010", "4500018600-00010"], "terms_from": "Net 60", "terms_to": "2/10 after GR", "est_discount_usd": 3340 }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Offer Kemuning faster payment in exchange for firm ship dates of 20 Nov and 11 Dec",
+          "payload": { "to": "Kemuning Machining Sdn Bhd", "po_lines": ["4500018574-00010", "4500018600-00010"], "firm_dates": ["2026-11-20", "2026-12-11"] }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Hold and monitor",
+      "mechanism": "Leave both lines with Kemuning and watch the covenant waiver; this costs nothing while Kemuning ships, but after 10 Oct a Bengaluru reorder can no longer land inside WO-2611's float.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 0,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "set_watch",
+          "label": "Flag WO-2611 bracket line for daily review until Kemuning ships on 20 Nov",
+          "payload": { "work_order": "WO-2611", "bom_line": "WO-2611-0010", "po_line": "4500018574-00010", "eta": "2026-11-20", "float_end": "2026-11-24", "last_resource_date": "2026-10-10" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Splitting the brackets with Bengaluru costs USD 2K and keeps WO-2611 inside float even if Kemuning stops shipping, whereas holding costs nothing only until 10 Oct and then leaves up to USD 100K of Coralline Air LDs exposed. A full resource costs USD 7.5K and pulls volume from a supplier that is still shipping, which can tip a covenant breach into failure. The 2023 Johor administration at the same supplier (PRE-02) showed that machined brackets take six weeks to requalify, so first article has to start now.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Split the bracket line 50/50 with Bengaluru Aero Machining (USD 2K, no slip, recommended), resource both lines to Bengaluru and Laem Chabang Precision (USD 7.5K, no slip), pay Kemuning early for a 2% discount (saves about USD 3K but does not fix its lender problem), or hold and monitor (free until 10 Oct, then exposed)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Early payment on goods receipt is cheapest: a 2% discount on USD 167K saves about USD 3K. It helps only if Kemuning's lender grants the waiver, and it does nothing for WO-2611 if production stops. Of the options that protect WO-2611 whatever happens, the cheapest is the recommended 50/50 split at USD 2K."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2023 Kemuning, the same Johor machine shop, entered administration with 22 open lines of brackets and housings (PRE-02). We resourced to Bengaluru within 6 weeks for USD 64K and two inductions absorbed a 9 day slip in float. The lesson was that machined brackets requalify in 6 weeks, so first article should start the day the credit alert lands."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "No induction moves yet. WO-2611 needs 30 compressor case brackets at its 12 Nov induction, and Kemuning's slipping line lands 20 Nov, 8 days late against 12 days of float. If Kemuning stops shipping after 10 Oct, a 45 day Bengaluru reorder would land after the 24 Nov float end and Coralline Air's redelivery would move."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

@@ -1,0 +1,158 @@
+{
+  "signal_id": "SIG-0005",
+  "summary": "Japan's revised dual-use list now requires an individual export licence per consignment for Hokushin Sensor Works' N2 speed sensors, with processing at 4 to 6 weeks. The 28 sensors for Coralline Air's engine WO-2619 move from 21 Oct to 20 Nov, 9 days beyond float on line E-18. Seletar Engine Parts holds the same sensor in Singapore at 14 days, outside the licence regime.",
+  "impact": {
+    "cost": {
+      "usd": 1471987,
+      "severity": 67,
+      "rationale": "USD 1.14M of open PO value across 3 Hokushin POs, a USD 247K expedite estimate and USD 85K of LD exposure if the full 17 day slip lands on WO-2619."
+    },
+    "delay": {
+      "days": 9,
+      "severity": 53,
+      "rationale": "N2 sensors for WO-2619 now arrive 20 Nov, 17 days after the 3 Nov induction against 8 days of float, so the Coralline Air redelivery moves from 12 Jan to 21 Jan."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 1,
+      "severity": 51,
+      "rationale": "One work-order line (WO-2619-0010, 28 N2 sensors) is short and engine shop line E-18 is at risk; only 4 released sensors are free in SG02-A-14."
+    },
+    "reputation": {
+      "weighted_usd": 51000,
+      "severity": 26,
+      "rationale": "Coralline Air is a key customer with an LD clause of USD 5K per day, worth USD 85K at the unmitigated slip and USD 45K on the 9 days beyond float."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Buy the shortfall from Seletar distributor stock",
+      "mechanism": "Kit the 4 free sensors from stock, buy 24 from Seletar Engine Parts at USD 9,400 (14 days, lands 21 Oct) and cut the licensed Hokushin line to 4 units to backfill stock.",
+      "cost_usd": 60000,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 14,
+      "precedent_id": "PRE-08",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Seletar Engine Parts for 24 N2 speed sensors (ENG-6120-210)",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100127", "matnr": "ENG-6120-210", "qty": 24, "unit_price_usd": 9400, "net_value_usd": 225600, "delivery_date": "2026-10-21", "doc_check": "FAA 8130-3 per unit" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "change_po",
+          "label": "Reduce Hokushin line 4500018783-00010 from 28 to 4 sensors to backfill stock",
+          "payload": { "po_line": "4500018783-00010", "lifnr": "100131", "matnr": "ENG-6120-210", "qty_from": 28, "qty_to": 4 }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_reservation",
+          "label": "Reserve the 4 free sensors in SG02-A-14 for WO-2619",
+          "payload": { "inventory_id": "INV-0006", "matnr": "ENG-6120-210", "batch": "131-26-0343", "qty": 4, "work_order": "WO-2619", "bom_line": "WO-2619-0010" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Hokushin to file one licence for the reduced line and 4500018814-00010, and confirm the four non-sensor lines are outside the control list",
+          "payload": { "to": "Hokushin Sensor Works KK", "lifnr": "100131", "licence_lines": ["4500018783-00010", "4500018814-00010"], "confirm_uncontrolled": ["4500019463-00010", "4500019463-00020", "4500019463-00030", "4500019463-00060"], "response_due": "2026-10-10" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Wait for the licence and agree a revised redelivery",
+      "mechanism": "Keep the Hokushin order, push Hokushin to file immediately and in bulk, and agree the 9 day move with Coralline Air; a six week licence stretches it to 21 days.",
+      "cost_usd": 45000,
+      "residual_delay_days": 9,
+      "risk": "medium",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "reschedule_redelivery",
+          "label": "Move WO-2619 redelivery from 12 Jan to 21 Jan on line E-18",
+          "payload": { "work_order": "WO-2619", "slot": "Engine shop line E-18", "from": "2027-01-12", "to": "2027-01-21", "part_eta": "2026-11-20" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Coralline Air a revised redelivery of 21 Jan citing the export licence requirement",
+          "payload": { "customer": "CUS-02", "work_order": "WO-2619", "new_redelivery": "2027-01-21", "ld_days": 9, "ld_usd": 45000 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Borrow sensors from Coralline Air's spares pool",
+      "mechanism": "Ask Coralline Air to loan 24 N2 sensors from its own pool for WO-2619, repaid from the Hokushin delivery on 20 Nov, at an estimated loan and recertification fee of USD 690 a unit.",
+      "cost_usd": 16560,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 10,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "request_customer_approval",
+          "label": "Ask Coralline Air technical records to loan 24 N2 sensors against repayment on 20 Nov",
+          "payload": { "customer": "CUS-02", "matnr": "ENG-6120-210", "qty": 24, "work_order": "WO-2619", "repay_from_po_line": "4500018783-00010", "repay_date": "2026-11-20", "response_due": "2026-10-14" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_inspection_lot",
+          "label": "Create receiving inspection lot for the loaned sensors with trace review",
+          "payload": { "matnr": "ENG-6120-210", "qty": 24, "inspection_type": "01", "trace_review": true }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Take the whole quarter off licence via Seletar",
+      "mechanism": "Buy 40 sensors from Seletar to cover WO-2619 and the December line, cancel 4500018814-00010 and cut 4500018783-00010 to 4, so no Q4 sensor depends on a Japanese licence.",
+      "cost_usd": 100000,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 14,
+      "precedent_id": "PRE-08",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Seletar Engine Parts for 40 N2 speed sensors",
+          "payload": { "doc_type": "NB", "lifnr": "100127", "matnr": "ENG-6120-210", "qty": 40, "unit_price_usd": 9400, "net_value_usd": 376000 }
+        },
+        {
+          "system": "SAP MM",
+          "action": "change_po",
+          "label": "Cancel 4500018814-00010 and reduce 4500018783-00010 to 4 sensors",
+          "payload": { "lifnr": "100131", "lines": [{ "po_line": "4500018814-00010", "change": "delete" }, { "po_line": "4500018783-00010", "qty_to": 4 }] }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Buying 24 sensors from Seletar costs USD 60K of premium and holds the Coralline Air redelivery, while waiting costs USD 45K at a four week licence and USD 105K at six weeks. The customer pool loan is cheaper at about USD 17K but needs Coralline Air to agree and adds a trace review on loaned units, which could take most of the 8 days of float. The 2025 licence delay on the same Hokushin sensor family (PRE-08) was covered from Seletar stock the same way.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Buy the 24 sensor shortfall from Seletar Engine Parts (USD 60K, no slip, recommended), wait for the licence and move the redelivery (USD 45K at 9 days, up to USD 105K if the licence takes six weeks), borrow sensors from Coralline Air's pool (about USD 17K, needs customer agreement), or buy the whole quarter from Seletar (USD 100K, no licence dependency in Q4)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Borrowing from Coralline Air's spares pool is cheapest at an estimated USD 17K in loan and recertification fees, repaid from the Hokushin delivery on 20 Nov. It only works if Coralline Air agrees within about a week and the loaned units pass trace review. The cheapest option that does not depend on the customer is the Seletar buy at USD 60K."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2025 export licence processing for Hokushin's sensor family stretched to five weeks (PRE-08). We bought from Seletar Engine Parts distributor stock for USD 52K, covered two engines with 3 days of slip, and the licences arrived in week five. The lesson was to file licences per quarter in bulk rather than per consignment."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2619 needs 28 N2 speed sensors at induction on 3 Nov. Without a licence Hokushin holds the consignment at origin, moving PO 4500018783-00010 to 20 Nov, 17 days late against 8 days of work-order float, so Coralline Air's redelivery moves 9 days to 21 Jan. Only 4 sensors are free in stock."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

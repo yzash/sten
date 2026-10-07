@@ -1,0 +1,145 @@
+{
+  "signal_id": "LIB-03",
+  "summary": "A terminal strike at Rotterdam is holding Lowlands Ocean Freight sailings about 8 days, which delays SHP-880509 with 40 Maas Elastomers gearbox carbon face seals. Kestrel Bay Cargo's engine WO-2622 inducts on line E-17 on 19 Oct with 1 day of float and moves 2 days beyond it if the seals arrive on 22 Oct.",
+  "impact": {
+    "cost": {
+      "usd": 47440,
+      "severity": 12,
+      "rationale": "USD 26K of open PO value on one Maas line, a USD 4K expedite estimate and USD 18K of LD exposure on WO-2622."
+    },
+    "delay": {
+      "days": 2,
+      "severity": 30,
+      "rationale": "WO-2622 needs 40 carbon face seals at induction on 19 Oct; the strike moves them to 22 Oct, a 3 day slip against 1 day of float, so the Kestrel Bay Cargo redelivery moves from 18 Dec to 20 Dec."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 1,
+      "severity": 51,
+      "rationale": "One kit line is short and Engine shop line E-17 is at risk; there is no SEA-3100-520 stock on hand at SG01-A-03."
+    },
+    "reputation": {
+      "weighted_usd": 10800,
+      "severity": 5,
+      "rationale": "Kestrel Bay Cargo is a key customer with an LD clause of USD 6K per day, worth USD 18K at the unmitigated 3 day slip."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Pull the seals from the sea consolidation and fly from AMS",
+      "mechanism": "Have Lowlands Ocean Freight retrieve the 40 seals before they reach the struck terminal, truck them to Amsterdam and fly AMS to SIN, landing about 11 Oct.",
+      "cost_usd": 3840,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 4,
+      "precedent_id": "PRE-01",
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "reroute_shipment",
+          "label": "Reroute SHP-880509: pull from Lowlands Ocean Freight consolidation, road RTM to AMS, air AMS to SIN",
+          "payload": {
+            "shipment_id": "SHP-880509",
+            "po_line": "4500018894-00010",
+            "from_carrier": "Lowlands Ocean Freight",
+            "new_legs": [
+              { "from": "RTM", "to": "AMS", "mode": "road" },
+              { "from": "AMS", "to": "SIN", "mode": "air" }
+            ],
+            "pieces": 40,
+            "est_cost_usd": 3840,
+            "new_eta": "2026-10-11"
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "update_confirmation",
+          "label": "Update confirmation on 4500018894-00010 to 11 Oct delivery",
+          "payload": { "po_line": "4500018894-00010", "lifnr": "100204", "confirmed_date": "2026-10-11", "conf_category": "AB" }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2622 seals land 11 Oct, E-17 induction holds on 19 Oct",
+          "payload": { "work_order": "WO-2622", "line": "WO-2622-0010", "eta": "2026-10-11", "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Reroute the container via Antwerp",
+      "mechanism": "Truck the box to Antwerp for the next Lowlands Ocean Freight sailing, landing about 17 Oct if the Antwerp schedule holds under diverted volume.",
+      "cost_usd": 1900,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 3,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "reroute_shipment",
+          "label": "Move SHP-880509 to the next Antwerp sailing with Lowlands Ocean Freight",
+          "payload": { "shipment_id": "SHP-880509", "carrier": "Lowlands Ocean Freight", "new_legs": [{ "from": "RTM", "to": "ANR", "mode": "road" }, { "from": "ANR", "to": "SIN", "mode": "sea" }], "est_cost_usd": 1900, "target_eta": "2026-10-17" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Wait for the strike to end",
+      "mechanism": "Leave SHP-880509 on its sailing, take delivery about 22 Oct and accept 2 days of LDs on WO-2622.",
+      "cost_usd": 12000,
+      "residual_delay_days": 2,
+      "risk": "medium",
+      "speed_days": 8,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Kestrel Bay Cargo a revised ESN 205123 redelivery of 20 Dec",
+          "payload": { "customer": "CUS-04", "work_order": "WO-2622", "old_redelivery": "2026-12-18", "new_redelivery": "2026-12-20" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Induct on time and fit the seals at gearbox build",
+      "mechanism": "Induct ESN 205123 on 19 Oct and re-sequence so the gearbox carbon face seals are only needed at module build-up after 22 Oct.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "resequence_tasks",
+          "label": "Move the WO-2622 seal requirement from induction to gearbox module build after 22 Oct",
+          "payload": { "work_order": "WO-2622", "slot": "Engine shop line E-17", "induction": "2026-10-19", "constrained_line": "WO-2622-0010", "constraint_lifts": "2026-10-22" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Pulling the 40 seals out of the sea consolidation and flying them from AMS lands them on 11 Oct for about USD 3.8K, a week ahead of the induction, against USD 12K of LDs if we wait. The Antwerp reroute is USD 1.9K cheaper but lands only 2 days before need and depends on a port absorbing diverted strike volume. The 2022 Frankfurt crunch (PRE-01) showed that trucking to AMS and flying is the reliable fallback when a European gateway closes.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Pull the seals out of the consolidation and fly from AMS (about USD 3.8K, no slip, recommended), reroute the box via Antwerp (about USD 1.9K, lands 17 Oct if Antwerp holds), wait for the strike to end (USD 12K of LDs, Kestrel Bay moves 2 days), or induct on time and fit the seals at gearbox build (no cost if planning confirms the seals are not needed in the first 3 days)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Re-sequencing the gearbox build costs nothing, but it uses the single day of float and needs planning to confirm the seal is not on the early critical path. The cheapest freight option is Antwerp at about USD 1.9K, which leaves 2 days of margin; the recommended AMS air route costs about USD 3.8K and leaves 8."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "There is no Rotterdam strike precedent, but in 2022 freighter capacity out of FRA collapsed and six nacelle and chemical shipments were stuck at the gateway (PRE-01). We trucked them to AMS and flew from there for USD 21.4K, all six landed within 2 days of plan and no induction moved."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2622 inducts on Engine shop line E-17 on 19 Oct and needs 40 gearbox carbon face seals from PO line 4500018894-00010. The strike moves SHP-880509 to 22 Oct, a 3 day slip against 1 day of float, so the Kestrel Bay Cargo redelivery moves 2 days from 18 Dec to 20 Dec."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

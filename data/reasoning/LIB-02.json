@@ -1,0 +1,149 @@
+{
+  "signal_id": "LIB-02",
+  "summary": "A signal 3 cyclone warning closes the Mactan economic zone for about 7 days, adding a week to all 10 open Cebu Composite Works lines worth USD 1.50M. The only work-order exposure is 14 composite access panels for Monsoonal Air's nacelle on WO-2621, now due 22 Oct against a 21 Oct induction, which stays inside 5 days of float. Most of the PO value was already confirmed after need before the cyclone, so the closure adds to an existing backlog rather than creating one.",
+  "impact": {
+    "cost": {
+      "usd": 1733057,
+      "severity": 71,
+      "rationale": "USD 1.50M of open Cebu Composite Works PO value across 3 POs and 10 lines, a USD 226K expedite estimate and USD 2.5K of LD exposure on WO-2621. Nine of the ten lines were already confirmed after their need dates."
+    },
+    "delay": {
+      "days": 0,
+      "severity": 0,
+      "rationale": "WO-2621 needs 14 composite access panels at its 21 Oct induction; the closure moves the ETA to 22 Oct, a 1 day slip against 5 days of float, so Monsoonal Air's 20 Nov redelivery holds."
+    },
+    "ops": {
+      "slots": 0,
+      "lines": 1,
+      "severity": 38,
+      "rationale": "One work-order line (WO-2621-0010) is short by a day and Nacelle cell N-04 keeps its slot. The other nine lines carry no work order yet."
+    },
+    "reputation": {
+      "weighted_usd": 750,
+      "severity": 0,
+      "rationale": "Monsoonal Air is a standard-tier customer at USD 2.5K per day of LDs, and no LD falls due while the slip stays inside float."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Absorb in float with a first-flight booking and a close-up fallback",
+      "mechanism": "Pre-book Visayas Air Cargo uplift for the 14 panels on the first flight out of Mactan after reopening, and if Cebu has not confirmed shipment by 15 Oct, move the access panel fit to WO-2621 close-up.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "reserve_capacity",
+          "label": "Reserve Visayas Air Cargo space CEB to SIN for 14 panels on the first flight after the zone reopens",
+          "payload": { "forwarder": "Visayas Air Cargo", "origin": "CEB", "destination": "SIN", "service": "first_available_standard_rate", "po_line": "4500018891-00010", "pieces": 14 }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Cebu Composite Works for a post-cyclone damage report and a ship date for the 14 panels by 15 Oct",
+          "payload": { "to": "Cebu Composite Works Inc", "lifnr": "100165", "priority_line": "4500018891-00010", "response_due": "2026-10-15" }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2621 panel ETA 22 Oct, inside float; close-up fallback if no ship date by 15 Oct",
+          "payload": { "work_orders": ["WO-2621"], "eta": "2026-10-22", "trigger": "No Cebu ship confirmation by 2026-10-15", "fallback": "Move WO-2621-0010 fit to close-up", "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Paid air expedite on reopening",
+      "mechanism": "Pay for next flight out with Visayas Air Cargo at expedite rates for the 14 panels, gaining at most a day over a standard first-flight booking.",
+      "cost_usd": 13440,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 8,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "raise_expedite",
+          "label": "Raise air expedite with Visayas Air Cargo: 14 panels CEB to SIN, next flight out",
+          "payload": { "forwarder": "Visayas Air Cargo", "origin": "CEB", "destination": "SIN", "service": "next_flight_out", "po_line": "4500018891-00010", "pieces": 14, "est_cost_usd": 13440 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Resource three later lines to approved alternates",
+      "mechanism": "Move both access door lines to Rhone Acoustique (lands 17 Dec) and the 4 fan cowl panels on 4500019770-00040 to Halvorsen Composites (lands 26 Dec), each well ahead of Cebu's post-cyclone dates but at a price premium.",
+      "cost_usd": 38620,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 71,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create POs: Rhone Acoustique 85 access door assemblies, Halvorsen Composites 4 fan cowl panels",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "orders": [
+              { "lifnr": "100151", "matnr": "NAC-5503-480", "qty": 63, "unit_price_usd": 3602, "net_value_usd": 226926, "delivery": "2026-12-17", "replaces": "4500019770-00010" },
+              { "lifnr": "100151", "matnr": "NAC-5503-480", "qty": 22, "unit_price_usd": 3602, "net_value_usd": 79244, "delivery": "2026-12-17", "replaces": "4500019770-00020" },
+              { "lifnr": "100158", "matnr": "NAC-7200-210", "qty": 4, "unit_price_usd": 38500, "net_value_usd": 154000, "delivery": "2026-12-26", "replaces": "4500019770-00040" }
+            ]
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "cancel_po_lines",
+          "label": "Set deletion flag on the three Cebu lines once replacement POs are released",
+          "payload": { "lifnr": "100165", "po_lines": ["4500019770-00010", "4500019770-00020", "4500019770-00040"], "deletion_indicator": "L" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Wait for the zone to reopen",
+      "mechanism": "Accept Cebu's post-cyclone dates and let WO-2621's float absorb the 1 day slip; no bookings or orders change.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 0,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "update_delivery_date",
+          "label": "Update confirmed date on PO line 4500018891-00010 to 22 Oct",
+          "payload": { "po_line": "4500018891-00010", "lifnr": "100165", "new_confirmed": "2026-10-22" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "The panels slip 1 day against 5 days of float, so the job is to protect the remaining 4 days if cyclone damage keeps the zone shut longer: a first-flight booking and a 15 Oct trigger to fit the panels at close-up do that at no cost. Waiting with no booking is equally cheap but leaves the panels competing for post-closure uplift out of Mactan. Resourcing the later lines buys earlier dates on 89 parts for USD 38.6K and can be decided separately once Cebu reports its damage.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Absorb the slip in float with a Visayas Air Cargo first-flight booking and a close-up fallback (no cost, no slip, recommended), pay for next flight out at expedite rates (USD 13.4K, no slip), resource the access door and fan cowl lines to Rhone Acoustique and Halvorsen (USD 38.6K premium, earlier dates on unworked lines), or wait with no action (no cost, but no protection if the closure runs long)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "The recommended option and plain waiting both cost nothing, because WO-2621's 5 days of float covers the 1 day slip. The recommendation adds a standard-rate booking and a planning trigger, so it is the cheapest option with a fallback. Paid air expedite costs USD 13.4K at the scored 15% rate and gains at most a day."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "The closest case is the 2024 north Taiwan typhoon that closed two fastener plants for 8 days (PRE-06), where we pulled forward from US distributor stock at a 35% premium. That does not transfer here: no distributor holds these composite panels, and the only alternate, Halvorsen, quotes 45 days. With the slip inside float, booking first uplift is the better lever."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "The induction does not move. WO-2621 needs 14 composite access panels on 21 Oct and the closure moves the ETA to 22 Oct, a 1 day slip against 5 days of float, so Monsoonal Air's 20 Nov redelivery holds. It would only move if the zone stays closed more than about 4 days past the 7 day estimate."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

@@ -1,0 +1,182 @@
+{
+  "signal_id": "SIG-0024",
+  "summary": "Arden Nacelle Services, the sole source for the NAC-7500-310 translating sleeve repair kit, has 7 invoices over 60 days totalling USD 412K and 4 open price disputes, up from 1 in June, and its account manager has flagged possible shipment holds. Two open POs worth USD 354K are exposed, including the sleeve kits for Tanjong Pacific's nacelle set NS-9135 (WO-2609), which already slip 7 days and have only 3 days of float left.",
+  "impact": {
+    "cost": {
+      "usd": 519900,
+      "severity": 51,
+      "rationale": "USD 354K of open PO value across 2 Arden POs, a USD 82K expedite estimate if the supplier holds shipments and USD 84K of LD exposure on WO-2609."
+    },
+    "delay": {
+      "days": 0,
+      "severity": 0,
+      "rationale": "WO-2609's sleeve kits slip 7 days to 5 Nov against 10 days of float, so the Tanjong Pacific redelivery holds at 8 Dec; any shipment hold longer than 3 days would breach that float."
+    },
+    "ops": {
+      "slots": 0,
+      "lines": 1,
+      "severity": 38,
+      "rationale": "One work-order line (WO-2609-0010, two sleeve kits) is at risk and no slot is lost yet; Nacelle cell N-04 stays on plan for the 29 Oct induction."
+    },
+    "reputation": {
+      "weighted_usd": 84000,
+      "severity": 34,
+      "rationale": "Tanjong Pacific Airlines is a strategic customer with an LD clause of USD 12K per day, worth USD 84K if the 7 day slip is not absorbed."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Early payment of undisputed invoices for a 2% discount, with a 30 day dispute plan",
+      "mechanism": "Pay the undisputed value of the 7 ageing invoices this week against a 2% early payment discount, park the 4 disputed price items in a settlement plan closing by 6 Nov, and fast-track release of the 2 quarantined sleeve kits as a hedge.",
+      "cost_usd": -8200,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 3,
+      "precedent_id": "PRE-12",
+      "actions": [
+        {
+          "system": "SAP FI",
+          "action": "release_payment",
+          "label": "Release payment on Arden's undisputed open items over 60 days, net of the 4 disputed items",
+          "payload": { "lifnr": "100168", "company_code": "SG10", "scope": "Open items over 60 days without dispute flag", "ageing_balance_usd": 412000, "excluded_items": "4 open price disputes", "payment_method": "T", "value_date": "2026-10-09" }
+        },
+        {
+          "system": "SAP FI",
+          "action": "apply_discount_terms",
+          "label": "Apply 2% cash discount to the early payment run for vendor 100168",
+          "payload": { "lifnr": "100168", "company_code": "SG10", "cash_discount_pct": 2, "est_discount_usd": 8200, "reference": "Early payment agreement Oct 2026" }
+        },
+        {
+          "system": "Email",
+          "action": "propose_settlement_plan",
+          "label": "Send Arden the early payment offer and a 30 day plan to close the 4 price disputes",
+          "payload": { "to": "100168", "discount_pct": 2, "disputes_open": 4, "settlement_deadline": "2026-11-06", "condition": "No shipment holds on 4500018464-00010 and 4500018467-00010", "po_lines": ["4500018464-00010", "4500018467-00010"] }
+        },
+        {
+          "system": "SAP MM",
+          "action": "expedite_inspection",
+          "label": "Fast-track QM disposition of 2 quarantined sleeve kits at SG02-A-14 (batch 168-25-0850)",
+          "payload": { "matnr": "NAC-7500-310", "inventory_id": "INV-0016", "batch": "168-25-0850", "location": "SG02-A-14", "qty": 2, "candidate_work_order": "WO-2609" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Agree the payment plan Arden asked for",
+      "mechanism": "Pay the USD 412K ageing balance in three tranches over six weeks at no discount, with the disputes worked in parallel.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 5,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP FI",
+          "action": "create_payment_plan",
+          "label": "Schedule three payment tranches to Arden over six weeks",
+          "payload": { "lifnr": "100168", "company_code": "SG10", "total_usd": 412000, "tranches": [{ "date": "2026-10-14", "pct": 34 }, { "date": "2026-10-28", "pct": 33 }, { "date": "2026-11-18", "pct": 33 }] }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Confirm the tranche plan to the Arden account manager",
+          "payload": { "to": "100168", "plan": "3 tranches over 6 weeks", "disputes_open": 4 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Hold position until the disputes settle",
+      "mechanism": "Keep paying at term and release nothing on the disputed invoices until all 4 price disputes close, accepting the risk that Arden holds the sleeve kits.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 0,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Reply to Arden that payment follows dispute resolution at contract terms",
+          "payload": { "to": "100168", "disputes_open": 4, "position": "Pay at term after resolution" }
+        },
+        {
+          "system": "Planning",
+          "action": "set_watch",
+          "label": "Watch WO-2609 sleeve kit ETA: escalate if 4500018464-00010 moves past 8 Nov",
+          "payload": { "work_order": "WO-2609", "po_line": "4500018464-00010", "current_eta": "2026-11-05", "float_breach_date": "2026-11-08" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Offer supply chain finance",
+      "mechanism": "Enrol Arden in the bank-funded supplier finance programme so it can draw early cash on approved invoices while we keep standard terms.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 21,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP FI",
+          "action": "flag_vendor_scf",
+          "label": "Flag vendor 100168 for the supplier finance programme and share approved invoices",
+          "payload": { "lifnr": "100168", "company_code": "SG10", "programme": "supplier_finance", "eligible": "Approved undisputed invoices" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Invite Arden to onboard to the supplier finance programme",
+          "payload": { "to": "100168", "onboarding_days": 21 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-5",
+      "name": "Move the cascade overhaul to Prairie Composites",
+      "mechanism": "Resource the 3 thrust reverser cascade overhauls on 4500018467-00010 to Prairie Composites at USD 61K each to reduce exposure; the sleeve kits stay sole source with Arden.",
+      "cost_usd": 21000,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 70,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Prairie Composites for 3 NAC-7500-320 cascade overhauls",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100171", "matnr": "NAC-7500-320", "qty": 3, "unit_price_usd": 61000, "net_value_usd": 183000, "lead_time_days": 70 }
+        },
+        {
+          "system": "SAP MM",
+          "action": "cancel_po_line",
+          "label": "Cancel Arden line 4500018467-00010",
+          "payload": { "po_line": "4500018467-00010", "lifnr": "100168", "reason": "Resourced to approved alternate 100171" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Paying the undisputed items early earns about USD 8.2K of discount and gives Arden the cash it is asking for, which keeps the sole-source sleeve kits for Tanjong Pacific moving while the 4 disputes are settled on our timetable. The tranche plan Arden proposed is the next best option and costs nothing, but it pays the disputed value as well and gives away our leverage for no discount. The 2025 nacelle repair vendor case (PRE-12) used the same split and shipments kept flowing.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Five options. Pay undisputed invoices early for a 2% discount with a 30 day dispute plan (saves about USD 8.2K, recommended), agree Arden's tranche plan (no cost, no discount), hold position until disputes settle (no cost but high risk of a shipment hold on the sole-source sleeve kits), offer supply chain finance (no cost, 21 days to onboard), or move the cascade overhauls to Prairie Composites (USD 21K premium and 70 day lead)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "The recommended early payment is the cheapest because it is a saving: 2% on the cleared balance is worth about USD 8.2K, against nothing for the tranche plan or supply chain finance. The real cost of getting this wrong is not the discount but a hold on the sleeve kits: beyond 8 Nov every day costs USD 12K of Tanjong Pacific LDs."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2025 the same strategic nacelle repair vendor came under cash pressure and threatened to hold shipments over disputed invoices (PRE-12). We paid the undisputed items early for a 2% discount and settled the disputes within 30 days, a net saving of USD 8.2K, and shipments continued. The lesson was to separate undisputed from disputed items because paying the clean ones fast buys goodwill at a profit."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "The induction does not move today. WO-2609 inducts into Nacelle cell N-04 on 29 Oct and the sleeve kits on 4500018464-00010 now arrive 5 Nov, a 7 day slip inside 10 days of float, so the 8 Dec redelivery holds. If Arden holds the kits more than 3 more days, the Tanjong Pacific redelivery starts to move at USD 12K per day."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

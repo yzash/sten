@@ -1,0 +1,155 @@
+{
+  "signal_id": "SIG-0010",
+  "summary": "Sendai Titanium Bar has put Ti-6Al-4V bar on allocation through Q1 2027 and quoted 155 day lead times, up from 120. The 40 bars for Altamira Aircraft Leasing's component job WO-2612 now land 10 Dec, 22 days late but inside 30 days of float, and the six nickel, cobalt and A286 alloy lines with Sendai slip 26 to 38 days with no work order pegged. Plzen Alloy Distribution holds the same bar at 45 days, which gives us until 2 Nov to decide before WO-2612's redelivery is at risk.",
+  "impact": {
+    "cost": {
+      "usd": 556502,
+      "severity": 52,
+      "rationale": "USD 465K of open PO value across 3 Sendai POs, a USD 70K expedite estimate and USD 22K of LD exposure if the 22 day bar slip landed on WO-2612's redelivery."
+    },
+    "delay": {
+      "days": 0,
+      "severity": 0,
+      "rationale": "Ti-6Al-4V bar for WO-2612 now arrives 10 Dec, 22 days after the 18 Nov induction against 30 days of float, so the 18 Dec redelivery holds with 8 days to spare."
+    },
+    "ops": {
+      "slots": 0,
+      "lines": 1,
+      "severity": 38,
+      "rationale": "One work-order line (WO-2612-0010, 40 bars) is at risk in component shop C-11; only 2 bars are free in SG01-B-11 and no slot is lost yet."
+    },
+    "reputation": {
+      "weighted_usd": 6600,
+      "severity": 3,
+      "rationale": "Altamira Aircraft Leasing is a standard-tier customer with an LD clause of USD 1K per day, worth USD 22K at the unmitigated slip."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Hold Sendai, reserve Plzen stock and book Q1 allocation now",
+      "mechanism": "Get Sendai to confirm the 40 bars inside its Q4 allocation and place Q1 2027 bar demand now at 155 days, while Plzen holds 40 bars against a firm order decision on 2 Nov, the last date its 45 day lead still lands inside WO-2612's float.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 3,
+      "precedent_id": "PRE-05",
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Sendai to confirm the 40 bars on 4500018629-00010 sit inside our Q4 allocation for 10 Dec delivery",
+          "payload": { "to": "Sendai Titanium Bar Co", "lifnr": "100247", "po_line": "4500018629-00010", "matnr": "RAW-9100-050", "qty": 40, "eta": "2026-12-10", "also_confirm": ["4500019399-00010", "4500019399-00020", "4500019399-00030", "4500019413-00010", "4500019413-00020", "4500019413-00030"], "response_due": "2026-10-14" }
+        },
+        {
+          "system": "Email",
+          "action": "request_quote",
+          "label": "Ask Plzen Alloy Distribution to hold 40 Ti-6Al-4V bars at USD 3,050 until 2 Nov",
+          "payload": { "to": "Plzen Alloy Distribution s.r.o.", "lifnr": "100250", "matnr": "RAW-9100-050", "qty": 40, "unit_price_usd": 3050, "lead_time_days": 45, "hold_until": "2026-11-02" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_scheduling_agreement",
+          "label": "Place Q1 2027 Ti-6Al-4V bar demand with Sendai now so it enters the allocation queue",
+          "payload": { "doc_type": "LP", "lifnr": "100247", "matnr": "RAW-9100-050", "horizon": "2027-Q1", "lead_time_days": 155, "source": "planning forecast" }
+        },
+        {
+          "system": "Planning",
+          "action": "set_watch",
+          "label": "Set a 2 Nov decision point on WO-2612 bar supply: order from Plzen if Sendai has not confirmed",
+          "payload": { "work_order": "WO-2612", "bom_line": "WO-2612-0010", "decision_date": "2026-11-02", "float_end": "2026-12-18", "fallback_lifnr": "100250" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Move the WO-2612 bar line to Plzen now",
+      "mechanism": "Buy all 40 bars from Plzen at USD 450 a bar more, landing 21 Nov, and cancel the Sendai line, which takes WO-2612 off allocation entirely.",
+      "cost_usd": 18000,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 2,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Plzen Alloy Distribution for 40 Ti-6Al-4V bars (RAW-9100-050)",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100250", "matnr": "RAW-9100-050", "qty": 40, "unit_price_usd": 3050, "net_value_usd": 122000, "delivery_date": "2026-11-21" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "change_po",
+          "label": "Cancel Sendai line 4500018629-00010",
+          "payload": { "lifnr": "100247", "po_line": "4500018629-00010", "change": "delete", "reason": "Supplier allocation; resourced to approved distributor" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Split the bar line 60/40 Sendai and Plzen",
+      "mechanism": "Keep 24 bars with Sendai and buy 16 from Plzen at USD 450 a bar more, halving how much of WO-2612 rides on Sendai's allocation.",
+      "cost_usd": 7200,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 2,
+      "precedent_id": "PRE-05",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_split_po",
+          "label": "Split 4500018629-00010 60/40: Sendai 24 bars, Plzen 16 bars",
+          "payload": {
+            "doc_type": "NB",
+            "source_line": "4500018629-00010",
+            "matnr": "RAW-9100-050",
+            "split": [
+              { "lifnr": "100247", "share": 0.6, "qty": 24, "unit_price_usd": 2600, "delivery_date": "2026-12-10" },
+              { "lifnr": "100250", "share": 0.4, "qty": 16, "unit_price_usd": 3050, "delivery_date": "2026-11-21" }
+            ],
+            "net_value_usd": 111200
+          }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Buy a Q1 buffer of 20 bars from Plzen",
+      "mechanism": "Leave WO-2612 with Sendai and add 20 Plzen bars to stock as cover for Q1 component jobs while Sendai's allocation lasts.",
+      "cost_usd": 9000,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 45,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Plzen Alloy Distribution for 20 Ti-6Al-4V bars as Q1 buffer stock",
+          "payload": { "doc_type": "NB", "lifnr": "100250", "matnr": "RAW-9100-050", "qty": 20, "unit_price_usd": 3050, "net_value_usd": 61000, "storage_location": "SG01-B-11", "purpose": "buffer stock" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "WO-2612 has 8 days of float left after Sendai's revised date, and Plzen's 45 day lead means a fallback order on 2 Nov still lands by 17 Dec, so holding Sendai with Plzen stock on reserve protects the redelivery at no cost today. The 60/40 split costs USD 7.2K up front to hedge LDs of only USD 1K per day, and moving the whole line costs USD 18K and gives up our place in Sendai's allocation. Booking Q1 demand now follows the 2024 allocation lesson (PRE-05) that slots sell out within 10 days of the notice.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Hold Sendai while Plzen reserves stock to a 2 Nov decision and book Q1 allocation now (no cost today, recommended), move the whole bar line to Plzen (USD 18K), split it 60/40 between Sendai and Plzen (USD 7.2K), or add a 20 bar Plzen buffer for Q1 jobs (USD 9K). None of them moves a redelivery."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "The recommended hold is cheapest at nothing today; if Sendai cannot confirm by 2 Nov, the Plzen fallback costs USD 18K. Of the options that spend money now, the 60/40 split is cheapest at USD 7.2K. Resourcing the other alloy lines barely helps: every approved alternate is slower than Sendai's revised dates except Monongahela on the 6 sheets of Haynes-type 188 on 4500019413-00030, which would land 18 Dec instead of 22 Jan."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2024 a US mill cut nickel superalloy allocation by 35% for Q3 (PRE-05). We split 60/40 to a second casting source at an 8% premium for USD 118K and engine inductions held. The lesson was to lock second-source slots in the same week the allocation notice lands, because they sell out within 10 days."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "No induction moves. WO-2612 needs 40 Ti-6Al-4V bars at its 18 Nov induction, and Sendai's allocation moves PO 4500018629-00010 to 10 Dec, 22 days late against 30 days of float. The redelivery only moves if Sendai slips more than 8 further days, which the 2 Nov Plzen decision point is set to catch."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

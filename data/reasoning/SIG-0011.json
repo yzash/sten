@@ -1,0 +1,146 @@
+{
+  "signal_id": "SIG-0011",
+  "summary": "Kansai Industrial Supply in Sakai has paused for up to five days of structural inspections after the M6.1 earthquake, slipping five consumable lines worth USD 79K by up to 5 days. The only work-order exposure is 300 units of blast media for WO-2613, which now lands 20 Oct against a 19 Oct induction and stays inside 5 days of float. Jurong Aero Consumables can cover the blast media in 3 days if Kansai's restart slips further.",
+  "impact": {
+    "cost": {
+      "usd": 88925,
+      "severity": 22,
+      "rationale": "USD 79K of open Kansai PO value across 2 POs and 5 consumable lines, a USD 7K expedite estimate and USD 3K of LD exposure on WO-2613."
+    },
+    "delay": {
+      "days": 0,
+      "severity": 0,
+      "rationale": "WO-2613 needs 300 units of aluminium oxide blast media at its 19 Oct induction; the post-inspection ETA of 20 Oct is a 1 day slip against 5 days of float, so Monsoonal Air's 9 Nov redelivery holds."
+    },
+    "ops": {
+      "slots": 0,
+      "lines": 1,
+      "severity": 38,
+      "rationale": "One work-order line (WO-2613-0010) is short by a day and Hangar 3 bay 2 keeps its slot. The turbine oil line 4500018980-00030 slips 5 days but has no work order attached."
+    },
+    "reputation": {
+      "weighted_usd": 900,
+      "severity": 0,
+      "rationale": "Monsoonal Air is a standard-tier customer at USD 3K per day of LDs, and no LD falls due while the slip stays inside float."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Hold Kansai with a Jurong standby and move the turbine oil line",
+      "mechanism": "Keep the blast media with Kansai but park a standby PO with Jurong Aero Consumables, released only if Kansai has not confirmed a ship date by 13 Oct; move turbine oil line 4500018980-00030 to Rheinland Aero Chemie, which is cheaper and lands 18 Oct.",
+      "cost_usd": -1464,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create standby PO to Jurong Aero Consumables for 300 units of blast media, held until 13 Oct",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100221", "matnr": "CON-8100-110", "qty": 300, "unit_price_usd": 52, "net_value_usd": 15600, "release_strategy": "hold_until_trigger", "trigger": "No Kansai ship confirmation by 2026-10-13", "delivery": "2026-10-16" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Rheinland Aero Chemie for 732 units of turbine oil, replacing line 4500018980-00030",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100230", "matnr": "CON-5523-020", "qty": 732, "unit_price_usd": 26, "net_value_usd": 19032, "delivery": "2026-10-18", "replaces": "4500018980-00030" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Kansai for its inspection outcome and a firm ship date for the blast media by 13 Oct",
+          "payload": { "to": "Kansai Industrial Supply KK", "lifnr": "100233", "po_lines": ["4500018648-00010", "4500018980-00020", "4500018980-00030"], "cancel_lines": ["4500018980-00030"], "response_due": "2026-10-13" }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2613 blast media ETA 20 Oct, inside float; penetrant need covered from stock INV-0166",
+          "payload": { "work_orders": ["WO-2613"], "eta": "2026-10-20", "stock_cover": { "inventory_id": "INV-0166", "matnr": "CON-7838-210", "qty": 40 }, "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Buy the blast media locally now",
+      "mechanism": "Place the 300 units with Jurong Aero Consumables today at USD 52 against USD 45, landing 10 Oct, and cancel the Kansai line.",
+      "cost_usd": 2100,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 3,
+      "precedent_id": "PRE-06",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Jurong Aero Consumables for 300 units of blast media, delivery 10 Oct",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100221", "matnr": "CON-8100-110", "qty": 300, "unit_price_usd": 52, "net_value_usd": 15600, "delivery": "2026-10-10", "replaces": "4500018648-00010" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "cancel_po_lines",
+          "label": "Set deletion flag on Kansai line 4500018648-00010",
+          "payload": { "lifnr": "100233", "po_lines": ["4500018648-00010"], "deletion_indicator": "L" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Wait for the Kansai restart",
+      "mechanism": "Accept Kansai's revised dates and let WO-2613's float absorb the 1 day slip; no orders change.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 0,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "update_delivery_date",
+          "label": "Update confirmed dates on the Kansai lines to the post-inspection ETAs",
+          "payload": { "lifnr": "100233", "lines": [{ "po_line": "4500018648-00010", "new_confirmed": "2026-10-20" }, { "po_line": "4500018980-00020", "new_confirmed": "2026-10-28" }, { "po_line": "4500018980-00030", "new_confirmed": "2026-11-10" }] }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Air expedite from Sakai on restart",
+      "mechanism": "Book Kanto Air Express next flight out of KIX for the blast media as soon as Kansai clears inspection, recovering 2 to 3 days of transit.",
+      "cost_usd": 2025,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 6,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "raise_expedite",
+          "label": "Raise air expedite with Kanto Air Express: 300 units of blast media KIX to SIN on restart",
+          "payload": { "forwarder": "Kanto Air Express", "origin": "KIX", "destination": "SIN", "service": "next_flight_out", "po_line": "4500018648-00010", "pieces": 300, "est_cost_usd": 2025 }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "The blast media slip is 1 day against 5 days of float, so paying USD 2.1K to buy locally today is insurance against a risk the standby PO covers for nothing: Jurong's 3 day lead time still lands by 16 Oct if Kansai misses the 13 Oct trigger. Moving the turbine oil line to Rheinland saves USD 1.5K and lands 23 days earlier than Kansai's new date. Waiting with no standby is just as cheap on paper but leaves only 4 days of margin if aftershocks extend the inspections.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Hold Kansai with a Jurong standby PO and move the turbine oil line to Rheinland (saves USD 1.5K, no slip, recommended), buy the blast media from Jurong now (USD 2.1K, no slip), wait for the Kansai restart (no cost, no slip unless inspections run long), or air expedite from Sakai on restart (USD 2K, no slip, depends on the restart date)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "The recommended option is the cheapest: Rheinland turbine oil is USD 26 against Kansai's USD 28, saving USD 1,464 on 732 units. The Jurong standby only costs the USD 7 per unit premium, USD 2.1K in total, if Kansai misses the 13 Oct trigger. Waiting for the restart costs nothing but carries no fallback."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2024 a typhoon closed two north Taiwan fastener plants for 8 days (PRE-06), and we pulled forward from US distributor stock at a 35% premium to hold two heavy checks. Here the local Jurong premium on blast media is about 16% and the float is wider, which is why the recommendation parks the local buy as a standby rather than placing it now."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "The induction does not move. WO-2613 needs 300 units of blast media on 19 Oct and Kansai's post-inspection ETA is 20 Oct, a 1 day slip against 5 days of float, so Monsoonal Air's 9 Nov redelivery holds. It would only move if inspections ran past roughly 13 Oct without a local fallback in place."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

@@ -1,0 +1,197 @@
+{
+  "signal_id": "SIG-0002",
+  "summary": "Brightwater Castings has lost 40% of its Q4 nickel superalloy melt and is moving our NGV castings four to five weeks. Seven open lines worth USD 736K slip, but only the 24 stage 1 castings on PO 4500018304-00010 feed a work order. Halcyra Airways' engine WO-2603 on line E-18 moves 7 days beyond float unless the stage 1 castings land by 24 Nov.",
+  "impact": {
+    "cost": {
+      "usd": 1035751,
+      "severity": 60,
+      "rationale": "USD 736K of open PO value across 3 Brightwater POs, a USD 110K expedite estimate and USD 189K of LD exposure if the full 21 day slip lands on WO-2603."
+    },
+    "delay": {
+      "days": 7,
+      "severity": 50,
+      "rationale": "Stage 1 NGV castings for WO-2603 now arrive 1 Dec, 21 days after the 10 Nov induction against 14 days of float, so the Halcyra Airways redelivery moves from 14 Jan to 21 Jan."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 1,
+      "severity": 51,
+      "rationale": "One work-order line (WO-2603-0010, 24 stage 1 castings) is short and engine shop line E-18 is at risk; the six other Brightwater lines have no work order pegged today."
+    },
+    "reputation": {
+      "weighted_usd": 189000,
+      "severity": 54,
+      "rationale": "Halcyra Airways is a strategic customer with an LD clause of USD 9K per day, worth USD 189K at the unmitigated slip and USD 63K on the 7 days beyond float."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Re-prioritise Brightwater melt to stage 1 and move stage 2 to Takamori",
+      "mechanism": "Kit the 6 free stage 1 castings from stock, ask Brightwater to put the remaining 18 at the front of its cut allocation and air them by 24 Nov, and free that melt by moving both stage 2 lines (25 castings) to Takamori at USD 700 a unit more.",
+      "cost_usd": 23300,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 2,
+      "precedent_id": "PRE-05",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Takamori Precision Castings for 25 stage 2 NGV castings (ENG-5210-120) at 70 days",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "lifnr": "100116",
+            "matnr": "ENG-5210-120",
+            "qty": 25,
+            "unit_price_usd": 8100,
+            "net_value_usd": 202500,
+            "delivery_date": "2026-12-16",
+            "replaces_lines": ["4500018324-00010", "4500019372-00010"]
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "change_po",
+          "label": "Cancel the two Brightwater stage 2 lines once Takamori confirms its slot",
+          "payload": {
+            "lifnr": "100241",
+            "lines": [
+              { "po_line": "4500018324-00010", "matnr": "ENG-5210-120", "qty": 18, "change": "delete" },
+              { "po_line": "4500019372-00010", "matnr": "ENG-5210-120", "qty": 7, "change": "delete" }
+            ],
+            "reason": "Supplier cannot meet confirmed date; volume moved to approved second source"
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_reservation",
+          "label": "Reserve the 6 free stage 1 castings in SG01-K-02 for WO-2603",
+          "payload": { "inventory_id": "INV-0004", "matnr": "ENG-5210-110", "batch": "241-26-0008", "qty": 6, "work_order": "WO-2603", "bom_line": "WO-2603-0010" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Brightwater to ship the remaining 18 stage 1 castings by 21 Nov using the melt released from stage 2",
+          "payload": { "to": "Brightwater Castings Ltd", "lifnr": "100241", "po_line": "4500018304-00010", "matnr": "ENG-5210-110", "qty": 18, "requested_ship_date": "2026-11-21", "response_due": "2026-10-09" }
+        },
+        {
+          "system": "Forwarder",
+          "action": "book_air_freight",
+          "label": "Book Thames Air Freight LHR to SIN for 18 stage 1 castings, landing by 24 Nov",
+          "payload": { "forwarder": "Thames Air Freight", "origin": "LHR", "destination": "SIN", "po_line": "4500018304-00010", "pieces": 18, "latest_arrival": "2026-11-24", "est_cost_usd": 5800 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Re-prioritise Brightwater melt only",
+      "mechanism": "Kit the 6 stock castings and ask Brightwater to pull the 18 remaining stage 1 castings ahead of our stage 2 lines, with no second source to release melt.",
+      "cost_usd": 5800,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 2,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Brightwater to resequence our open lines so stage 1 ships before stage 2",
+          "payload": { "to": "Brightwater Castings Ltd", "lifnr": "100241", "priority_line": "4500018304-00010", "deprioritised_lines": ["4500018324-00010", "4500019372-00010"], "requested_ship_date": "2026-11-21" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_reservation",
+          "label": "Reserve the 6 free stage 1 castings in SG01-K-02 for WO-2603",
+          "payload": { "inventory_id": "INV-0004", "matnr": "ENG-5210-110", "qty": 6, "work_order": "WO-2603" }
+        },
+        {
+          "system": "Forwarder",
+          "action": "book_air_freight",
+          "label": "Book Thames Air Freight LHR to SIN for 18 stage 1 castings",
+          "payload": { "forwarder": "Thames Air Freight", "origin": "LHR", "destination": "SIN", "pieces": 18, "est_cost_usd": 5800 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Split all NGV volume to Takamori as in 2024",
+      "mechanism": "Move both NGV part numbers to Takamori, but its 70 day lead time lands stage 1 on 16 Dec, 15 days after Brightwater's revised date.",
+      "cost_usd": 232300,
+      "residual_delay_days": 22,
+      "risk": "medium",
+      "speed_days": 70,
+      "precedent_id": "PRE-05",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Takamori for 24 stage 1 and 25 stage 2 NGV castings",
+          "payload": {
+            "doc_type": "NB",
+            "lifnr": "100116",
+            "lines": [
+              { "matnr": "ENG-5210-110", "qty": 24, "unit_price_usd": 9500 },
+              { "matnr": "ENG-5210-120", "qty": 25, "unit_price_usd": 8100 }
+            ],
+            "net_value_usd": 430500,
+            "delivery_date": "2026-12-16"
+          }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2603 stage 1 castings move to 16 Dec and redelivery to 5 Feb",
+          "payload": { "work_order": "WO-2603", "eta": "2026-12-16", "new_redelivery": "2027-02-05", "redelivery_change_days": 22 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Accept Brightwater dates and agree a revised redelivery",
+      "mechanism": "Keep every line with Brightwater, sequence NGV installation as late as the WO-2603 build allows, and negotiate the 7 day move with Halcyra Airways.",
+      "cost_usd": 63000,
+      "residual_delay_days": 7,
+      "risk": "low",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "reschedule_redelivery",
+          "label": "Move WO-2603 redelivery from 14 Jan to 21 Jan on line E-18",
+          "payload": { "work_order": "WO-2603", "slot": "Engine shop line E-18", "from": "2027-01-14", "to": "2027-01-21", "part_eta": "2026-12-01" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Halcyra Airways a revised redelivery of 21 Jan with the supplier allocation notice attached",
+          "payload": { "customer": "CUS-01", "work_order": "WO-2603", "new_redelivery": "2027-01-21", "ld_days": 7, "ld_usd": 63000 }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Moving the stage 2 castings to Takamori costs USD 23K and gives Brightwater the melt it needs to ship our 18 stage 1 castings inside WO-2603's float, against USD 63K of LDs for accepting the slip. Asking Brightwater to resequence without releasing any volume saves USD 17.5K but gives it no reason to agree, since it allocates by order date. Repeating the 2024 Takamori split (PRE-05) does not work for stage 1 this time because a new Takamori order lands after Brightwater's revised date.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Move stage 2 to Takamori so Brightwater can prioritise stage 1 (USD 23K, no redelivery slip, recommended), ask Brightwater to resequence without a second source (USD 6K but likely refused), split all NGV volume to Takamori (USD 232K and a 22 day slip because of its 70 day lead time), or accept the dates and agree a 7 day move with Halcyra Airways (USD 63K in LDs)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Resequencing Brightwater's queue without a second source is cheapest at about USD 6K of air freight. It depends on Brightwater moving our stage 1 castings ahead of its date-of-order rule with no melt released, which it has little reason to do. The cheapest option that frees real melt and holds the redelivery is the recommended Takamori move at USD 23K."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2024 a US mill cut nickel superalloy allocation by 35% and Brightwater re-sequenced orders by contract priority (PRE-05). We split 60/40 to Takamori Precision Castings at an 8% premium for USD 118K, and engine inductions held. The lesson was to lock second-source casting slots in the same week the notice lands, because slots sell out within 10 days."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2603 needs 24 stage 1 NGV castings at induction on 10 Nov. Brightwater's melt cut moves PO 4500018304-00010 to 1 Dec, 21 days late against 14 days of work-order float, so the Halcyra Airways redelivery moves 7 days to 21 Jan. The other six Brightwater lines slip 15 to 36 days but have no work order pegged, so no other redelivery moves today."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

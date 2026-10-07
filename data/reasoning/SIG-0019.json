@@ -1,0 +1,164 @@
+{
+  "signal_id": "SIG-0019",
+  "summary": "Receiving inspection rejected all 400 fuel nozzle O-ring seals in Daejeon batch DSL-26-0918 (durometer out of tolerance on 3 of 5 samples), leaving Halcyra Airways' engine WO-2608 kit-short 400 seals for its 10 Oct induction on line E-17. Waiting for Daejeon's replacement moves the redelivery 6 days beyond float, but 400 released seals from batch DSL-26-0811 sit at SG01-K-02 reserved for WO-2615, which does not induct until 30 Nov.",
+  "impact": {
+    "cost": {
+      "usd": 414455,
+      "severity": 45,
+      "rationale": "USD 282K of open PO value across 4 Daejeon POs is now in question, with a USD 42K expedite estimate and USD 90K of LD exposure on WO-2608."
+    },
+    "delay": {
+      "days": 6,
+      "severity": 46,
+      "rationale": "WO-2608 needs 400 seals at induction on 10 Oct; a Daejeon replacement lands 20 Oct, a 10 day slip against 4 days of float, so the Halcyra Airways redelivery moves from 11 Dec to 17 Dec."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 1,
+      "severity": 51,
+      "rationale": "One kit line is short and Engine shop line E-17 is at risk, with WO-2622 due onto the same line on 19 Oct."
+    },
+    "reputation": {
+      "weighted_usd": 90000,
+      "severity": 36,
+      "rationale": "Halcyra Airways is a strategic customer with an LD clause of USD 9K per day, worth USD 90K at the unmitigated 10 day slip."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Reallocate released seals from WO-2615 and hold GR on the rejected batch",
+      "mechanism": "Move 400 released seals from batch DSL-26-0811 to WO-2608, return DSL-26-0918 to Daejeon under QM notification Q2 0010043, and backfill WO-2615 with the Daejeon replacement due 20 Oct, with Ohio Valley Seal as the backstop.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 1,
+      "precedent_id": "PRE-09",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "transfer_reservation",
+          "label": "Move 400 seals of batch DSL-26-0811 at SG01-K-02 from WO-2615 to WO-2608",
+          "payload": { "matnr": "SEA-3100-510", "inventory_id": "INV-0023", "batch": "DSL-26-0811", "location": "SG01-K-02", "qty": 400, "from_work_order": "WO-2615", "from_line": "WO-2615-0010", "to_work_order": "WO-2608", "to_line": "WO-2608-0010" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "return_to_vendor",
+          "label": "Hold GR and return rejected batch DSL-26-0918 (400 seals) to Daejeon Seal Technologies",
+          "payload": { "matnr": "SEA-3100-510", "batch": "DSL-26-0918", "qty": 400, "location": "SG01-QM-BLK", "po_line": "4500018457-00010", "lifnr": "100201", "movement_type": "122", "inspection_lot": "0400012877", "qm_notification": "Q2 0010043", "defect_code": "D14", "credit_value_usd": 34000 }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Daejeon to ship a replacement batch by 20 Oct with durometer certificates, freight at vendor cost",
+          "payload": { "to": "100201", "po_line": "4500018457-00010", "qm_notification": "Q2 0010043", "qty": 400, "replacement_due": "2026-10-20", "required_docs": ["FAA 8130-3", "durometer test report"] }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Prepare backstop PO to Ohio Valley Seal for 400 seals, released only if the Daejeon replacement fails inspection",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100207", "matnr": "SEA-3100-510", "qty": 400, "unit_price_usd": 112, "net_value_usd": 44800, "lead_time_days": 18, "work_order": "WO-2615", "release_strategy": "hold_until_triggered", "trigger": "Daejeon replacement rejected or late past 2026-10-22" }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2608 kit complete for 10 Oct induction; WO-2615 seals backfilled by 20 Oct for 30 Nov",
+          "payload": { "work_orders": ["WO-2608", "WO-2615"], "wo_2608_kit_status": "complete", "wo_2615_backfill_eta": "2026-10-20", "wo_2615_need": "2026-11-30", "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Accept the rejected batch under concession",
+      "mechanism": "Ask Halcyra Airways and the OEM to accept DSL-26-0918 under a concession and change the usage decision to accept; durometer failed on 3 of 5 samples, so this is not airworthy without a formal deviation.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 3,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "request_customer_approval",
+          "label": "Request concession from Halcyra Airways technical records for batch DSL-26-0918",
+          "payload": { "customer": "CUS-01", "work_order": "WO-2608", "matnr": "SEA-3100-510", "batch": "DSL-26-0918", "defect": "Durometer out of tolerance, 3 of 5 samples", "response_due": "2026-10-09" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "change_usage_decision",
+          "label": "Change usage decision on inspection lot 0400012877 to accept under concession, only on signed deviation",
+          "payload": { "inspection_lot": "0400012877", "batch": "DSL-26-0918", "from_code": "R", "to_code": "A", "condition": "Signed customer and OEM deviation on file" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Air freight from Ohio Valley Seal",
+      "mechanism": "Buy 400 seals from Ohio Valley Seal at USD 112 and fly them to SIN; their 18 day lead lands them 25 Oct, later than the Daejeon replacement.",
+      "cost_usd": 109800,
+      "residual_delay_days": 11,
+      "risk": "medium",
+      "speed_days": 18,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Ohio Valley Seal for 400 SEA-3100-510 seals for WO-2608",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100207", "matnr": "SEA-3100-510", "qty": 400, "unit_price_usd": 112, "net_value_usd": 44800, "delivery_date": "2026-10-25", "work_order": "WO-2608" }
+        },
+        {
+          "system": "Forwarder",
+          "action": "raise_expedite",
+          "label": "Raise air expedite with Transpac Air Logistics: Ohio Valley Seal CAK to SIN",
+          "payload": { "forwarder": "Transpac Air Logistics", "origin": "CAK", "destination": "SIN", "service": "next_flight_out", "pieces": 400 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Wait for the Daejeon replacement batch",
+      "mechanism": "Return the rejected batch, wait for the replacement on 20 Oct and move the WO-2608 induction, accepting 6 days of LDs.",
+      "cost_usd": 54000,
+      "residual_delay_days": 6,
+      "risk": "medium",
+      "speed_days": 13,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "reschedule_induction",
+          "label": "Move WO-2608 induction from 10 Oct to 16 Oct on Engine shop line E-17",
+          "payload": { "work_order": "WO-2608", "from": "2026-10-10", "to": "2026-10-16", "slot": "Engine shop line E-17" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Halcyra Airways a revised ESN 204474 redelivery of 17 Dec",
+          "payload": { "customer": "CUS-01", "work_order": "WO-2608", "old_redelivery": "2026-12-11", "new_redelivery": "2026-12-17" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Reallocating the 400 released DSL-26-0811 seals completes the WO-2608 kit tomorrow at no incremental cost, and WO-2615 has until 30 Nov, so the Daejeon replacement due 20 Oct backfills it with six weeks to spare and Ohio Valley at 18 days is still in time if that batch fails too. Waiting for the replacement is the next best option and costs USD 54K of Halcyra LDs for no benefit, while a concession on seals that failed durometer puts an airworthiness finding on a strategic customer's engine. The 2024 seal rejection (PRE-09) was solved the same way with the induction held.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Reallocate 400 released seals from WO-2615 and return the rejected batch (no incremental cost, no slip, recommended), accept the rejected batch under concession (no cost but high airworthiness risk after a durometer failure), air freight from Ohio Valley Seal (USD 109.8K including LDs, lands 25 Oct, still 11 days beyond float), or wait for the Daejeon replacement (USD 54K of LDs, Halcyra moves 6 days)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "The reallocation is the cheapest at no incremental cost: the seals are already released stock, Daejeon credits the USD 34K rejected batch, and the replacement backfills WO-2615 at the original USD 85 price. Only if the replacement also fails do we release the Ohio Valley backstop, which adds USD 10.8K of price premium at USD 112 a seal."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2024 a batch of O-ring seals failed durometer checks at receiving and short-shipped an engine kit (PRE-09). We reallocated released stock from a later work order and backfilled it from the US source for USD 9.8K; the induction held and the later work order was backfilled two weeks before need. The lesson was that reallocation is the fastest lever when a later work order holds released stock of the same batch family."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2608 inducts on Engine shop line E-17 on 10 Oct and needs 400 SEA-3100-510 seals, but all 400 in batch DSL-26-0918 failed receiving inspection. Without the reallocation the next good seals are Daejeon's replacement on 20 Oct, a 10 day slip against 4 days of float, so the Halcyra Airways redelivery moves 6 days from 11 Dec to 17 Dec."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

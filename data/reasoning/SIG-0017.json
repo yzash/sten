@@ -1,0 +1,192 @@
+{
+  "signal_id": "SIG-0017",
+  "summary": "An unplanned six week rebuild of vacuum furnace 3 at Lindqvist Rotating Parts cuts LPT seal ring segment output to 40%, slipping seven open lines worth USD 1.61M by 28 to 51 days. Halcyra Airways' engine on WO-2618 loses its 36 segments until 6 Dec against an 8 Nov induction, moving redelivery 12 days at USD 9K per day. Takamori and Cascadia are approved for the segment but quote 84 and 90 days, so they can rescue the 2027 line, not WO-2618 directly.",
+  "impact": {
+    "cost": {
+      "usd": 2105450,
+      "severity": 77,
+      "rationale": "USD 1.61M of open Lindqvist PO value across 3 POs and 7 lines, a USD 242K expedite estimate and USD 252K of LD exposure on WO-2618."
+    },
+    "delay": {
+      "days": 12,
+      "severity": 58,
+      "rationale": "WO-2618 needs 36 LPT seal ring segments at its 8 Nov induction; Lindqvist's revised ETA of 6 Dec is a 28 day slip against 16 days of float, so the Halcyra Airways redelivery moves from 19 Jan to 31 Jan."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 1,
+      "severity": 51,
+      "rationale": "One work-order line (WO-2618-0010) is short and Engine shop line E-14 is at risk. The other six lines carry no work order yet, but every one now lands after its need date."
+    },
+    "reputation": {
+      "weighted_usd": 252000,
+      "severity": 58,
+      "rationale": "Halcyra Airways is a strategic customer with an LD clause of USD 9K per day, worth USD 252K across the full 28 day slip and USD 108K at the 12 days beyond float."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Split the 2027 seal ring line and put WO-2618 first in Lindqvist's queue",
+      "mechanism": "Move the 51 segment line 60/40 to Takamori (31) and Cascadia (20) and the fuel nozzle line to Laem Chabang, then use the freed capacity to have Lindqvist ship WO-2618's 36 segments first after the rebuild on 20 Nov, flown by Kattegat Air Cargo to land 22 Nov.",
+      "cost_usd": 49540,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 7,
+      "precedent_id": "PRE-05",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_split_po",
+          "label": "Create split PO 60/40 for line 4500019717-00010: Takamori 31 segments, Cascadia 20 segments",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "matnr": "ENG-4810-310",
+            "source_lines": ["4500019717-00010"],
+            "split": [
+              { "lifnr": "100116", "share": 0.6, "qty": 31, "unit_price_usd": 6700, "lead_time_days": 84, "delivery": "2026-12-30" },
+              { "lifnr": "100138", "share": 0.4, "qty": 20, "unit_price_usd": 6550, "lead_time_days": 90, "delivery": "2027-01-05" }
+            ],
+            "net_value_usd": 338700
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Laem Chabang Precision for 7 fuel nozzle assemblies, replacing line 4500020067-00030",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100145", "matnr": "ENG-6776-690", "qty": 7, "unit_price_usd": 10223, "net_value_usd": 71561, "delivery": "2027-01-27", "replaces": "4500020067-00030" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Lindqvist to ship WO-2618's 36 segments first after the furnace rebuild, by 20 Nov",
+          "payload": { "to": "Lindqvist Rotating Parts AB", "lifnr": "100110", "priority_line": "4500018746-00010", "requested_ship": "2026-11-20", "cancel_lines": ["4500019717-00010", "4500020067-00030"], "response_due": "2026-10-12" }
+        },
+        {
+          "system": "Forwarder",
+          "action": "raise_expedite",
+          "label": "Raise air expedite with Kattegat Air Cargo: 36 segments GOT to SIN on 20 Nov",
+          "payload": { "forwarder": "Kattegat Air Cargo", "origin": "GOT", "destination": "SIN", "service": "next_flight_out", "po_line": "4500018746-00010", "pieces": 36, "est_cost_usd": 33480 }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2618 segment ETA 22 Nov, 14 days late against 16 days of float",
+          "payload": { "work_orders": ["WO-2618"], "eta": "2026-11-22", "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Split the 2027 line only and accept the WO-2618 slip",
+      "mechanism": "Same 60/40 split and fuel nozzle move to protect the 2027 book, leaving WO-2618 on Lindqvist's 6 Dec date and paying 12 days of LDs to Halcyra Airways.",
+      "cost_usd": 124060,
+      "residual_delay_days": 12,
+      "risk": "low",
+      "speed_days": 7,
+      "precedent_id": "PRE-05",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_split_po",
+          "label": "Create split PO 60/40 for line 4500019717-00010: Takamori 31 segments, Cascadia 20 segments",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "matnr": "ENG-4810-310",
+            "source_lines": ["4500019717-00010"],
+            "split": [
+              { "lifnr": "100116", "share": 0.6, "qty": 31, "unit_price_usd": 6700, "lead_time_days": 84 },
+              { "lifnr": "100138", "share": 0.4, "qty": 20, "unit_price_usd": 6550, "lead_time_days": 90 }
+            ],
+            "net_value_usd": 338700
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Laem Chabang Precision for 7 fuel nozzle assemblies, replacing line 4500020067-00030",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100145", "matnr": "ENG-6776-690", "qty": 7, "unit_price_usd": 10223, "net_value_usd": 71561, "delivery": "2027-01-27", "replaces": "4500020067-00030" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Halcyra Airways a revised redelivery of 31 Jan for ESN 204962",
+          "payload": { "customer": "CUS-01", "work_order": "WO-2618", "new_redelivery": "2027-01-31", "ld_days": 12, "ld_usd": 108000 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Re-sequence WO-2618 so the LPT module builds last",
+      "mechanism": "Induct ESN 204962 on 8 Nov and move LPT module build to the back of the visit, recovering about 7 of the 12 days with Lindqvist's 6 Dec date unchanged.",
+      "cost_usd": 45000,
+      "residual_delay_days": 5,
+      "risk": "medium",
+      "speed_days": 2,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "resequence_tasks",
+          "label": "Move the WO-2618 LPT module build to start after 6 Dec on Engine shop line E-14",
+          "payload": { "work_order": "WO-2618", "bom_line": "WO-2618-0010", "task_earliest_start": "2026-12-07", "slot": "Engine shop line E-14", "expected_redelivery": "2027-01-24" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Warn Halcyra Airways of a likely 5 day move to 24 Jan",
+          "payload": { "customer": "CUS-01", "work_order": "WO-2618", "new_redelivery": "2027-01-24", "ld_days": 5, "ld_usd": 45000 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Accept Lindqvist's dates and agree a revised redelivery",
+      "mechanism": "Leave all seven lines with Lindqvist and agree a 31 Jan redelivery with Halcyra Airways, paying 12 days of LDs.",
+      "cost_usd": 108000,
+      "residual_delay_days": 12,
+      "risk": "low",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Halcyra Airways a revised redelivery of 31 Jan for ESN 204962",
+          "payload": { "customer": "CUS-01", "work_order": "WO-2618", "new_redelivery": "2027-01-31", "ld_days": 12, "ld_usd": 108000 }
+        },
+        {
+          "system": "SAP MM",
+          "action": "update_delivery_date",
+          "label": "Update confirmed date on PO line 4500018746-00010 to 6 Dec",
+          "payload": { "po_line": "4500018746-00010", "lifnr": "100110", "new_confirmed": "2026-12-06" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Taking the 51 segment 2027 line off Lindqvist's constrained furnace is what makes a 20 Nov ship of WO-2618's 36 segments credible, and for USD 49.5K that holds Halcyra Airways' 19 Jan redelivery with 2 days of float to spare. Re-sequencing alone is USD 4.5K cheaper but still moves Halcyra 5 days and depends on the shop compressing the LPT build. The main risk is Lindqvist declining to re-queue, so ask for written confirmation by 12 Oct and fall back to OPT-3 if it does not come.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Split the 2027 seal ring line 60/40 to Takamori and Cascadia and have Lindqvist ship WO-2618 first after the rebuild (USD 49.5K, no redelivery slip, recommended), split the 2027 line only and accept the slip (USD 124K including 12 days of LDs), re-sequence WO-2618 so the LPT module builds last (USD 45K, 5 day slip), or accept Lindqvist's dates (USD 108K in LDs, 12 day slip)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Re-sequencing is the cheapest at USD 45K, all of it 5 days of expected LDs at USD 9K per day. The recommended option costs USD 49.5K: USD 22.5K of Takamori and Cascadia price premium on 51 segments and USD 33.5K of air freight, less USD 6.4K saved by moving the fuel nozzles to Laem Chabang. It is the cheapest option that holds the 19 Jan redelivery."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2024 a US mill cut nickel superalloy allocation by 35% and we split 60/40 to Takamori Precision Castings at an 8% premium (PRE-05), which held the engine inductions. Takamori's seal ring price is again 8% over the incumbent. The lesson was to lock second-source slots the same week the notice lands, because they sell out within 10 days."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2618 needs 36 LPT seal ring segments at induction on 8 Nov. With furnace 3 down for six weeks, Lindqvist re-confirmed them for 6 Dec, a 28 day slip against 16 days of work-order float, so Halcyra Airways' redelivery moves 12 days to 31 Jan. Takamori and Cascadia quote 84 and 90 days, landing 30 Dec and 5 Jan, so moving WO-2618 itself to them would make it worse."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

@@ -1,0 +1,202 @@
+{
+  "signal_id": "SIG-0015",
+  "summary": "Nordvik Air Cargo has suspended its FRA to SIN freighter rotation from 6 Oct, leaving three shipments (SHP-880436, SHP-880451, SHP-880471) waiting about 6 days for the next capacity. Only the three Halvorsen fan cowl panels on SHP-880436 matter: Kestrel Bay Cargo's nacelle set NS-5967 (WO-2607) has 1 day of float and moves 2 days beyond it unless the panels are rerouted.",
+  "impact": {
+    "cost": {
+      "usd": 279839,
+      "severity": 37,
+      "rationale": "USD 240K of open PO value across 3 POs is sitting at the FRA gateway, with a USD 19K expedite estimate for all three shipments and USD 21K of LD exposure on WO-2607 and WO-2624."
+    },
+    "delay": {
+      "days": 2,
+      "severity": 30,
+      "rationale": "WO-2607 needs the fan cowl panels on 12 Oct; waiting for the next rotation moves them to 15 Oct, a 3 day slip against 1 day of float, so the Kestrel Bay Cargo redelivery moves from 11 Nov to 13 Nov."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 2,
+      "severity": 55,
+      "rationale": "Two work-order lines are short and Nacelle cell N-02 is at risk; the corrosion compound for WO-2624 slips 2 days inside 4 days of float and the WO-2623 forgings still land 13 days early."
+    },
+    "reputation": {
+      "weighted_usd": 11700,
+      "severity": 6,
+      "rationale": "Kestrel Bay Cargo is a key customer with an LD clause of USD 6K per day, worth USD 18K at the unmitigated 3 day slip."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Reroute the fan cowl panels by truck to AMS and fly",
+      "mechanism": "Pull SHP-880436 off the FRA queue, truck it to Amsterdam and fly AMS to SIN, landing 11 Oct; SHP-880451 and SHP-880471 wait for the next rotation inside their float.",
+      "cost_usd": 4800,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 2,
+      "precedent_id": "PRE-01",
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "reroute_shipment",
+          "label": "Reroute SHP-880436 with Nordvik Air Cargo: road FRA to AMS, then air AMS to SIN, ETA 11 Oct",
+          "payload": {
+            "shipment_id": "SHP-880436",
+            "carrier": "Nordvik Air Cargo",
+            "po_line": "4500018425-00010",
+            "suspended_leg": "FRA-SIN",
+            "new_legs": [
+              { "from": "FRA", "to": "AMS", "mode": "road" },
+              { "from": "AMS", "to": "SIN", "mode": "air" }
+            ],
+            "handling": ["Time critical", "Oversize ULD"],
+            "est_cost_usd": 4800,
+            "new_eta": "2026-10-11"
+          }
+        },
+        {
+          "system": "Forwarder",
+          "action": "confirm_rebooking",
+          "label": "Keep SHP-880451 and SHP-880471 on the next FRA to SIN rotation",
+          "payload": { "carrier": "Nordvik Air Cargo", "shipment_ids": ["SHP-880451", "SHP-880471"], "corridor": "FRA-SIN", "expected_eta": { "SHP-880451": "2026-10-16", "SHP-880471": "2026-10-17" } }
+        },
+        {
+          "system": "SAP MM",
+          "action": "update_confirmation",
+          "label": "Update confirmation on 4500018425-00010 to 11 Oct delivery",
+          "payload": { "po_line": "4500018425-00010", "lifnr": "100158", "confirmed_date": "2026-10-11", "conf_category": "AB" }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2607 panels land 11 Oct, N-02 induction holds on 12 Oct; WO-2624 compound lands 16 Oct",
+          "payload": { "work_orders": ["WO-2607", "WO-2624", "WO-2623"], "eta_panels": "2026-10-11", "eta_compound": "2026-10-16", "eta_forgings": "2026-10-17", "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Reroute both time-sensitive shipments via AMS",
+      "mechanism": "Truck SHP-880436 and the DG class 9 compound on SHP-880451 to AMS and fly both, so WO-2624 keeps its full 4 days of float.",
+      "cost_usd": 9600,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 2,
+      "precedent_id": "PRE-01",
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "reroute_shipment",
+          "label": "Reroute SHP-880436 and SHP-880451 with Nordvik Air Cargo via AMS, DG-accepted truck for the compound",
+          "payload": {
+            "carrier": "Nordvik Air Cargo",
+            "shipment_ids": ["SHP-880436", "SHP-880451"],
+            "new_legs": [
+              { "from": "FRA", "to": "AMS", "mode": "road" },
+              { "from": "AMS", "to": "SIN", "mode": "air" }
+            ],
+            "dg_class": "9",
+            "est_cost_usd": 9600,
+            "new_eta": { "SHP-880436": "2026-10-11", "SHP-880451": "2026-10-12" }
+          }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2607 and WO-2624 parts land 11 and 12 Oct",
+          "payload": { "work_orders": ["WO-2607", "WO-2624"], "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Wait for the next rotation",
+      "mechanism": "Leave all three shipments with Nordvik Air Cargo for the next FRA to SIN capacity, about 6 days, and accept 2 days of LDs on WO-2607.",
+      "cost_usd": 12000,
+      "residual_delay_days": 2,
+      "risk": "medium",
+      "speed_days": 6,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "confirm_rebooking",
+          "label": "Confirm all three shipments on the next FRA to SIN rotation",
+          "payload": { "carrier": "Nordvik Air Cargo", "shipment_ids": ["SHP-880436", "SHP-880451", "SHP-880471"], "corridor": "FRA-SIN", "expected_eta_panels": "2026-10-15" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Kestrel Bay Cargo a revised NS-5967 redelivery of 13 Nov",
+          "payload": { "customer": "CUS-04", "work_order": "WO-2607", "old_redelivery": "2026-11-11", "new_redelivery": "2026-11-13" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Split the shipments via DOH",
+      "mechanism": "Move the three shipments onto connecting capacity through Doha, landing about 3 days after plan; the oversize ULD on SHP-880436 may not transfer onto a connecting aircraft.",
+      "cost_usd": 18600,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 3,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "reroute_shipment",
+          "label": "Request DOH split routing for SHP-880436, SHP-880451 and SHP-880471 with ULD fit check",
+          "payload": {
+            "carrier": "Nordvik Air Cargo",
+            "shipment_ids": ["SHP-880436", "SHP-880451", "SHP-880471"],
+            "new_legs": [
+              { "from": "FRA", "to": "DOH", "mode": "air" },
+              { "from": "DOH", "to": "SIN", "mode": "air" }
+            ],
+            "uld_fit_check": "SHP-880436 oversize",
+            "est_cost_usd": 18600,
+            "target_eta": "2026-10-12"
+          }
+        }
+      ]
+    },
+    {
+      "id": "OPT-5",
+      "name": "Induct WO-2607 on time and fit the panels last",
+      "mechanism": "Induct NS-5967 into N-02 on 12 Oct, work the other nacelle lines first and fit the fan cowl panels when the next rotation lands them on 15 Oct.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "resequence_tasks",
+          "label": "Re-sequence WO-2607 so fan cowl panel fit starts after 15 Oct",
+          "payload": { "work_order": "WO-2607", "slot": "Nacelle cell N-02", "induction": "2026-10-12", "constrained_line": "WO-2607-0010", "constraint_lifts": "2026-10-15" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Trucking only the fan cowl panels to AMS and flying them lands SHP-880436 on 11 Oct for USD 4.8K and holds the Kestrel Bay Cargo redelivery, against USD 12K of LDs if we wait for the rotation. Rerouting the compound as well doubles the cost to USD 9.6K for no LD saving, because WO-2624 absorbs its 2 day slip in float. The 2022 Frankfurt crunch (PRE-01) used the same AMS gateway and landed all six shipments within 2 days of plan.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Five options. Reroute the fan cowl panels by truck to AMS and fly (USD 4.8K, no slip, recommended), reroute both the panels and the compound via AMS (USD 9.6K, no slip), wait for the next rotation (USD 12K of LDs, Kestrel Bay moves 2 days), split all three via DOH (about USD 18.6K, oversize ULD transfer risk), or induct on time and fit the panels last (no cost if the panels are off the critical path for the first 3 days)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Re-sequencing WO-2607 costs nothing, but it only works if planning confirms the cowl panel fit can wait until 15 Oct without consuming the single day of float. The cheapest option with no planning risk is the recommended AMS reroute at USD 4.8K, which the forwarder has already quoted."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2022 freighter capacity out of FRA collapsed for three weeks and six nacelle and chemical shipments were stuck at the gateway (PRE-01). We trucked them to AMS and flew from there for USD 21.4K; all six landed within 2 days of plan and no induction moved. The lesson was to pre-agree an AMS fallback rate with the forwarder so the reroute is a one-click booking."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2607 inducts into Nacelle cell N-02 on 12 Oct and needs three fan cowl panels from Halvorsen on SHP-880436. The suspended rotation moves their arrival from 9 Oct to 15 Oct, a 3 day slip against 1 day of float, so the Kestrel Bay Cargo redelivery moves from 11 Nov to 13 Nov. WO-2624 slips 2 days inside 4 days of float and the WO-2623 forgings arrive well before the 30 Oct induction."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

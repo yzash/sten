@@ -1,0 +1,168 @@
+{
+  "signal_id": "LIB-01",
+  "summary": "A fire in the heat-treat line at Shah Alam Fasteners has suspended deliveries for two weeks, slipping 16 open lines worth USD 415K by 4 to 20 days. Orchid Regional Airways' check on WO-2620 loses its 12,000 monel blind rivets until 27 Oct against a 19 Oct induction, moving redelivery 4 days. Saone Rivets is the only other approved rivet source and quotes 28 days, so the near-term fix is stock and sequencing, not resourcing.",
+  "impact": {
+    "cost": {
+      "usd": 509425,
+      "severity": 51,
+      "rationale": "USD 415K of open Shah Alam PO value across 5 POs and 16 lines, a USD 62K expedite estimate and USD 32K of LD exposure on WO-2620."
+    },
+    "delay": {
+      "days": 4,
+      "severity": 38,
+      "rationale": "WO-2620 needs 12,000 blind rivets at its 19 Oct induction; the post-fire ETA of 27 Oct is an 8 day slip against 4 days of float, so Orchid Regional Airways' redelivery moves from 12 Nov to 16 Nov."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 1,
+      "severity": 51,
+      "rationale": "One work-order line (WO-2620-0010) is short and Hangar 3 bay 4 is at risk. The other 15 lines are stock replenishment with no work order attached, and every one now lands after its need date."
+    },
+    "reputation": {
+      "weighted_usd": 19200,
+      "severity": 10,
+      "rationale": "Orchid Regional Airways is a key customer with an LD clause of USD 4K per day, worth USD 32K across the full 8 day slip and USD 16K at the 4 days beyond float."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Bridge WO-2620 from stock and resource four pin lines",
+      "mechanism": "Start WO-2620 on 704 rivets from INV-0021 (249 free plus 455 borrowed from the WO-2611 allocation and repaid from the 27 Oct delivery) with riveting sequenced after 27 Oct; move two shear pin lines to Hsinchu and Kingsbury and two clevis pin lines to Saone, all cheaper and earlier than Shah Alam's new dates.",
+      "cost_usd": -17899,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 2,
+      "precedent_id": "PRE-09",
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "reallocate_stock",
+          "label": "Issue 704 blind rivets from INV-0021 to WO-2620, repaying 455 to WO-2611 from the 27 Oct delivery",
+          "payload": { "inventory_id": "INV-0021", "matnr": "FST-2120-030", "batch": "193-25-0441", "qty_free": 249, "qty_borrowed": 455, "from_work_order": "WO-2611", "to_work_order": "WO-2620", "backfill_po_line": "4500018858-00010", "backfill_eta": "2026-10-27" }
+        },
+        {
+          "system": "Planning",
+          "action": "resequence_tasks",
+          "label": "Sequence WO-2620 structural riveting to start after 27 Oct in Hangar 3 bay 4",
+          "payload": { "work_order": "WO-2620", "bom_line": "WO-2620-0010", "task_earliest_start": "2026-10-28", "slot": "Hangar 3 bay 4" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create POs: Hsinchu 269 shear pins, Kingsbury 269 shear pins, Saone Rivets 325 clevis pins",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "orders": [
+              { "lifnr": "100181", "matnr": "FST-8574-360", "qty": 269, "unit_price_usd": 127, "net_value_usd": 34163, "delivery": "2026-10-20", "replaces": "4500019606-00030" },
+              { "lifnr": "100187", "matnr": "FST-8574-360", "qty": 269, "unit_price_usd": 121, "net_value_usd": 32549, "delivery": "2026-11-04", "replaces": "4500019606-00010" },
+              { "lifnr": "100190", "matnr": "FST-4398-880", "qty": 120, "unit_price_usd": 158, "net_value_usd": 18960, "delivery": "2026-11-23", "replaces": "4500020032-00030" },
+              { "lifnr": "100190", "matnr": "FST-4398-880", "qty": 205, "unit_price_usd": 158, "net_value_usd": 32390, "delivery": "2026-11-23", "replaces": "4500020032-00040" }
+            ]
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "cancel_po_lines",
+          "label": "Set deletion flag on the four Shah Alam pin lines once replacement POs are released",
+          "payload": { "lifnr": "100193", "po_lines": ["4500019606-00030", "4500019606-00010", "4500020032-00030", "4500020032-00040"], "deletion_indicator": "L" }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Tell Shah Alam Fasteners the rivet line for WO-2620 stands and four pin lines are moved",
+          "payload": { "to": "Shah Alam Fasteners Sdn Bhd", "lifnr": "100193", "priority_line": "4500018858-00010", "cancel_lines": ["4500019606-00030", "4500019606-00010", "4500020032-00030", "4500020032-00040"], "response_due": "2026-10-09" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Bridge WO-2620 from stock only",
+      "mechanism": "Same stock bridge and riveting sequence for WO-2620, leaving every other line with Shah Alam at its post-fire dates.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 2,
+      "precedent_id": "PRE-09",
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "reallocate_stock",
+          "label": "Issue 704 blind rivets from INV-0021 to WO-2620, repaying 455 to WO-2611 from the 27 Oct delivery",
+          "payload": { "inventory_id": "INV-0021", "matnr": "FST-2120-030", "qty_free": 249, "qty_borrowed": 455, "from_work_order": "WO-2611", "to_work_order": "WO-2620", "backfill_po_line": "4500018858-00010" }
+        },
+        {
+          "system": "Planning",
+          "action": "resequence_tasks",
+          "label": "Sequence WO-2620 structural riveting to start after 27 Oct",
+          "payload": { "work_order": "WO-2620", "task_earliest_start": "2026-10-28", "slot": "Hangar 3 bay 4" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Priority restart batch by dedicated truck",
+      "mechanism": "Pay Shah Alam to put the 12,000 rivets in the first heat-treat batch after restart and run them to SG01 by Causeway Trucking, landing 25 Oct, 2 days beyond float.",
+      "cost_usd": 15200,
+      "residual_delay_days": 2,
+      "risk": "medium",
+      "speed_days": 14,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "raise_expedite",
+          "label": "Book a dedicated Causeway Trucking run Shah Alam to SG01 on the first post-restart batch",
+          "payload": { "forwarder": "Causeway Trucking", "origin": "Shah Alam", "destination": "SG01", "service": "dedicated_road", "po_line": "4500018858-00010", "pieces": 12000, "est_cost_usd": 7200 }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Shah Alam Fasteners to put line 4500018858-00010 first in the restart batch",
+          "payload": { "to": "Shah Alam Fasteners Sdn Bhd", "lifnr": "100193", "priority_line": "4500018858-00010", "requested_ship": "2026-10-24" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Accept the slip and agree a revised redelivery",
+      "mechanism": "Take Shah Alam's 27 Oct date and agree a 16 Nov redelivery with Orchid Regional Airways, paying 4 days of LDs.",
+      "cost_usd": 16000,
+      "residual_delay_days": 4,
+      "risk": "low",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Orchid Regional Airways a revised redelivery of 16 Nov for TX-FFS",
+          "payload": { "customer": "CUS-07", "work_order": "WO-2620", "new_redelivery": "2026-11-16", "ld_days": 4, "ld_usd": 16000 }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "The 704 rivets in INV-0021 let Orchid Regional Airways' check start on 19 Oct with riveting sequenced after the 27 Oct delivery, and moving four pin lines to approved sources that are both cheaper and earlier saves USD 17.9K. The stock bridge alone holds the date at no cost, so the trade-off is USD 17.9K of savings against moving four lines away from a local supplier that is only out for two weeks. The priority truck is the fallback if the hangar cannot hold riveting until 28 Oct, but it still leaves a 2 day slip.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Bridge WO-2620 from stock with riveting sequenced after 27 Oct and move four pin lines to cheaper approved sources (saves USD 17.9K, no slip, recommended), the stock bridge alone (no cost, no slip), a priority restart batch by Causeway Trucking (USD 15.2K including 2 days of LDs), or accept the slip and pay Orchid Regional Airways USD 16K in LDs."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "The recommended option is the cheapest at a USD 17.9K net saving. Hsinchu shear pins are USD 20 below Shah Alam, Kingsbury USD 26 below and Saone clevis pins USD 17 below, across 863 pins on four lines. The stock bridge for WO-2620 itself costs nothing."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2024 a seal batch failed receiving and we reallocated released stock from a later work order, then backfilled two weeks before it was needed (PRE-09); the induction held. The same lever works here because WO-2611 does not induct until 12 Nov and the 27 Oct delivery repays it. The 2024 Taiwan typhoon case (PRE-06) used US distributor stock, but no approved distributor holds these rivets."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2620 needs 12,000 monel blind rivets at induction on 19 Oct. The fire moves Shah Alam's delivery to 27 Oct, an 8 day slip against 4 days of float, so Orchid Regional Airways' redelivery moves 4 days to 16 Nov. Saone Rivets quotes 28 days, landing 4 Nov, so switching source would make it worse."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

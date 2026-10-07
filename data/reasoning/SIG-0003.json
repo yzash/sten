@@ -1,0 +1,179 @@
+{
+  "signal_id": "SIG-0003",
+  "summary": "From 1 Nov the US adds 25% duty on EU-origin composite acoustic panels routed through US bonded facilities. Six open Rhone Acoustique and Weser Nacelle panel lines worth USD 907K would carry USD 227K of duty if they cross US bonded transit after that date, and brokers expect 2 to 4 day classification holds. Nothing has hit yet: five of the six lots ship after 1 Nov, so routing and timing can still be changed.",
+  "impact": {
+    "cost": {
+      "usd": 1409402,
+      "severity": 66,
+      "rationale": "USD 1.36M of open PO value across 5 POs with Rhone Acoustique and Weser Nacelle, of which USD 907K is acoustic panels that would attract USD 227K of duty at 25%, plus a USD 51K expedite estimate."
+    },
+    "delay": {
+      "days": 0,
+      "severity": 0,
+      "rationale": "No redelivery moves: the WO-2604 inlet panels land 6 Nov against 6 days of float, which absorbs the 2 to 4 day classification holds brokers expect at US entry."
+    },
+    "ops": {
+      "slots": 0,
+      "lines": 0,
+      "severity": 0,
+      "rationale": "No work-order lines or induction slots are at risk; nacelle cell N-02 keeps its 6 Nov induction for WO-2604."
+    },
+    "reputation": {
+      "weighted_usd": 0,
+      "severity": 0,
+      "rationale": "No customer LD exposure; Monsoonal Air's WO-2604 is the only pegged work order and stays inside float."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Pull the November lots forward and route the rest direct EU to SIN",
+      "mechanism": "Ship the two November lots (USD 518K) through US entry before 1 Nov on their current booking, confirm the 27 Oct lot clears before 1 Nov, and route the three later lots direct from Lyon and Bremen to SIN so they never enter US bonded transit.",
+      "cost_usd": 12000,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 5,
+      "precedent_id": "PRE-07",
+      "actions": [
+        {
+          "system": "Email",
+          "action": "request_pull_forward",
+          "label": "Ask Rhone Acoustique and Weser Nacelle to dispatch the two November panel lots by 27 Oct",
+          "payload": {
+            "lines": [
+              { "po_line": "4500018351-00010", "lifnr": "100151", "matnr": "NAC-7100-110", "qty": 4, "confirmed": "2026-11-03", "requested_dispatch": "2026-10-27" },
+              { "po_line": "4500018359-00010", "lifnr": "100154", "matnr": "NAC-7100-120", "qty": 6, "confirmed": "2026-11-12", "requested_dispatch": "2026-10-27" }
+            ],
+            "fallback": "route direct EU to SIN if dispatch by 27 Oct is not possible",
+            "response_due": "2026-10-12"
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "change_po",
+          "label": "Bring forward delivery dates on 4500018351-00010 and 4500018359-00010 to 30 Oct",
+          "payload": { "lines": ["4500018351-00010", "4500018359-00010"], "new_delivery_date": "2026-10-30", "reason": "Pull forward ahead of 1 Nov duty change" }
+        },
+        {
+          "system": "Forwarder",
+          "action": "change_routing",
+          "label": "Rebook three later panel lots direct to SIN with Gallic Air Freight (Lyon) and Alpen Cargo (Bremen)",
+          "payload": {
+            "lots": [
+              { "po_line": "4500018374-00010", "forwarder": "Gallic Air Freight", "origin": "LYS", "destination": "SIN" },
+              { "po_line": "4500020251-00010", "forwarder": "Alpen Cargo", "origin": "MUC", "destination": "SIN" },
+              { "po_line": "4500020251-00030", "forwarder": "Alpen Cargo", "origin": "MUC", "destination": "SIN" }
+            ],
+            "avoid": "US bonded transit",
+            "est_cost_usd": 6000
+          }
+        },
+        {
+          "system": "Forwarder",
+          "action": "confirm_entry_date",
+          "label": "Confirm the 27 Oct Weser exhaust panel lot clears US entry before 1 Nov",
+          "payload": { "po_line": "4500020251-00040", "matnr": "NAC-7100-130", "eta": "2026-10-30", "must_clear_before": "2026-11-01" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Route every unshipped panel lot direct EU to SIN",
+      "mechanism": "Rebook all five lots that ship after 1 Nov on direct EU to SIN routing at about USD 2K a lot, removing the duty without asking suppliers to ship early.",
+      "cost_usd": 10000,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 7,
+      "precedent_id": "PRE-07",
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "change_routing",
+          "label": "Rebook five panel lots direct to SIN, avoiding US bonded transit",
+          "payload": {
+            "lots": ["4500018351-00010", "4500018359-00010", "4500018374-00010", "4500020251-00010", "4500020251-00030"],
+            "forwarders": ["Gallic Air Freight", "Alpen Cargo"],
+            "destination": "SIN",
+            "avoid": "US bonded transit",
+            "est_cost_usd": 10000
+          }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Tell Rhone Acoustique and Weser Nacelle to hand panel lots to the new direct booking",
+          "payload": { "suppliers": ["100151", "100154"], "effective": "2026-10-15", "routing": "direct EU to SIN" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Pull forward only and absorb duty on the rest",
+      "mechanism": "Ship the two November lots before 1 Nov and leave the three later lots on current routing, paying 25% on USD 335K of panels.",
+      "cost_usd": 89625,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 5,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "change_po",
+          "label": "Bring forward delivery dates on 4500018351-00010 and 4500018359-00010 to 30 Oct",
+          "payload": { "lines": ["4500018351-00010", "4500018359-00010"], "new_delivery_date": "2026-10-30" }
+        },
+        {
+          "system": "SAP FI",
+          "action": "accrue_duty",
+          "label": "Accrue USD 84K duty on three later panel lots",
+          "payload": { "company_code": "SG10", "po_lines": ["4500018374-00010", "4500020251-00010", "4500020251-00030"], "dutiable_value_usd": 334500, "duty_rate": 0.25, "amount_usd": 83625 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Absorb the duty and move 2027 buys to Prairie Composites",
+      "mechanism": "Pay 25% on all six open panel lots and shift 2027 inlet panel and fan cowl liner demand to Prairie Composites, whose US-origin price premium of 9.6 to 10.2% is below the duty.",
+      "cost_usd": 226625,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP FI",
+          "action": "accrue_duty",
+          "label": "Accrue USD 227K duty on six open acoustic panel lots",
+          "payload": { "company_code": "SG10", "dutiable_value_usd": 906500, "duty_rate": 0.25, "amount_usd": 226625 }
+        },
+        {
+          "system": "SAP MM",
+          "action": "update_source_list",
+          "label": "Make Prairie Composites the preferred source for NAC-7100-110 and NAC-7100-120 from 2027",
+          "payload": { "lifnr": "100171", "materials": [{ "matnr": "NAC-7100-110", "price_usd": 74500, "lead_time_days": 130 }, { "matnr": "NAC-7100-120", "price_usd": 45200, "lead_time_days": 120 }], "valid_from": "2027-01-01" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Pulling the two November lots forward and routing the three later lots direct removes all USD 227K of duty for about USD 12K. Routing all five lots direct is USD 2K cheaper but means rebooking the WO-2604 inlet panels inside four weeks of dispatch, with only 6 days of float if the new booking slips. The 2025 aerostructures tariff (PRE-07) was solved the same way, and its lesson holds here: the exposure comes from US bonded transit, not origin.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Pull the November lots forward and route the rest direct (USD 12K, no duty, recommended), route all five unshipped lots direct (USD 10K, no duty, more rebooking risk on the WO-2604 lot), pull forward only and pay duty on the three later lots (USD 90K), or absorb the full USD 227K and move 2027 buys to Prairie Composites."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Routing all five unshipped lots direct EU to SIN is cheapest at about USD 10K and avoids the duty entirely. It needs Rhone Acoustique to hand the WO-2604 inlet panels to a new booking within four weeks of dispatch. The recommended mix costs USD 2K more and keeps that lot on its existing booking."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2025 a tariff change hit EU aerostructures routed via US facilities, including Rhone Acoustique panels (PRE-07). We pulled shipments ahead of the effective date and routed the rest direct EU to SIN for USD 46K, avoiding duty on 80% of the volume with no delay. The lesson was to check routing first, because most exposure came from US bonded transit rather than origin."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "No induction moves. WO-2604 needs 4 inlet panels from PO 4500018351-00010 at its 6 Nov induction in nacelle cell N-02, and they land 6 Nov with 6 days of float to absorb the 2 to 4 day classification holds. The risk on this signal is cost, not schedule."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

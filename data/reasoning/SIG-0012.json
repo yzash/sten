@@ -1,0 +1,168 @@
+{
+  "signal_id": "SIG-0012",
+  "summary": "A typhoon has shut Hsinchu Fastener Industrial (force majeure on deliveries due 6 Oct to 20 Oct) and Taoyuan Aero Fasteners for an estimated 10 days, stranding 23 open lines worth USD 620K across 7 POs. Only two lines feed work orders: Orchid Regional Airways' check on TX-MMQ (WO-2606) loses its 3,600 lockbolt collars and moves 2 days beyond float, while Monsoonal Air's WO-2605 absorbs a 4 day pin slip inside 6 days of float.",
+  "impact": {
+    "cost": {
+      "usd": 730278,
+      "severity": 55,
+      "rationale": "USD 620K of open PO value across 7 POs with the two Taiwan plants, a USD 82K expedite estimate if every line is pulled forward, and USD 28K of LD exposure on WO-2605 and WO-2606."
+    },
+    "delay": {
+      "days": 2,
+      "severity": 30,
+      "rationale": "WO-2606 needs 3,600 lockbolt collars at induction on 18 Oct; the Taoyuan restart moves them to 22 Oct, a 4 day slip against 2 days of float, so the Orchid Regional Airways redelivery moves from 11 Nov to 13 Nov."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 2,
+      "severity": 55,
+      "rationale": "Two work-order fastener lines are short and Hangar 3 bay 2 is at risk; WO-2605 in Hangar 5 bay 1 slips 4 days inside its 6 days of float."
+    },
+    "reputation": {
+      "weighted_usd": 13200,
+      "severity": 7,
+      "rationale": "Orchid Regional Airways is a key customer with an LD clause of USD 4K per day, worth USD 16K at the unmitigated 4 day slip; Monsoonal Air is standard tier and stays inside float."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Pull forward WO-2606 collars from Kingsbury stock",
+      "mechanism": "Kit WO-2606 with the 102 free collars on hand and call off the balance of 3,498 from Kingsbury Fastening Systems (approved OEM, Torrance) ex-stock by air, cutting the Taoyuan line to 102 for replenishment.",
+      "cost_usd": 17200,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 5,
+      "precedent_id": "PRE-06",
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Kingsbury Fastening Systems for 3,498 lockbolt collars FST-2110-020, released only on ex-stock confirmation",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100187", "matnr": "FST-2110-020", "qty": 3498, "unit_price_usd": 15, "net_value_usd": 52470, "delivery_date": "2026-10-12", "release_strategy": "hold_until_stock_confirmed", "work_order": "WO-2606" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "change_po_quantity",
+          "label": "Reduce Taoyuan line 4500018417-00010 from 3,600 to 102 collars under the force majeure notice",
+          "payload": { "po_line": "4500018417-00010", "lifnr": "100184", "old_qty": 3600, "new_qty": 102, "reason": "Force majeure; volume moved to approved source 100187" }
+        },
+        {
+          "system": "Forwarder",
+          "action": "raise_expedite",
+          "label": "Raise air expedite with Transpac Air Logistics: Kingsbury LAX to SIN, next flight out",
+          "payload": { "forwarder": "Transpac Air Logistics", "origin": "LAX", "destination": "SIN", "service": "next_flight_out", "pieces": 3498, "est_cost_usd": 3200 }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2606 collars land 12 Oct, induction in Hangar 3 bay 2 holds on 18 Oct",
+          "payload": { "work_order": "WO-2606", "line": "WO-2606-0010", "eta": "2026-10-12", "redelivery_change_days": 0, "watch": "WO-2605 pins: Hsinchu restart beyond 22 Oct breaches float" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Induct WO-2606 on a partial kit and re-sequence tasks",
+      "mechanism": "Start the TX-MMQ check on 18 Oct with the 214 collars on hand at SG01-B-11 and move collar-intensive structural tasks behind the 22 Oct Taoyuan delivery.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "medium",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Planning",
+          "action": "resequence_tasks",
+          "label": "Re-sequence WO-2606 so structural repair tasks using FST-2110-020 start after 22 Oct",
+          "payload": { "work_order": "WO-2606", "slot": "Hangar 3 bay 2", "induction": "2026-10-18", "constrained_line": "WO-2606-0010", "constraint_lifts": "2026-10-22" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "transfer_reservation",
+          "label": "Reserve all 214 on-hand collars (batch 184-24-0866) to WO-2606",
+          "payload": { "matnr": "FST-2110-020", "inventory_id": "INV-0020", "batch": "184-24-0866", "location": "SG01-B-11", "qty": 214, "work_order": "WO-2606" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Wait for the Taiwan restart",
+      "mechanism": "Hold all lines with Hsinchu and Taoyuan, take the 22 Oct and 24 Oct deliveries and accept 2 days of LDs on WO-2606.",
+      "cost_usd": 8000,
+      "residual_delay_days": 2,
+      "risk": "medium",
+      "speed_days": 0,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Orchid Regional Airways a revised TX-MMQ redelivery of 13 Nov",
+          "payload": { "customer": "CUS-07", "work_order": "WO-2606", "old_redelivery": "2026-11-11", "new_redelivery": "2026-11-13", "cause": "Typhoon force majeure at fastener supplier" }
+        },
+        {
+          "system": "Email",
+          "action": "request_restart_date",
+          "label": "Ask Hsinchu Fastener and Taoyuan Aero Fasteners for committed restart and ship dates",
+          "payload": { "suppliers": ["100181", "100184"], "po_lines": ["4500018391-00010", "4500018417-00010"], "response_due": "2026-10-09" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Split short-lead later lines away from Hsinchu",
+      "mechanism": "Move the 5,742 taper-lok bolts on 4500019619-00010 to Kingsbury (USD 6, 8 days) and the 201 self-locking nuts on 4500019619-00040 to Saone Rivets (USD 207, 11 days); neither feeds a work order today.",
+      "cost_usd": -516,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 8,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_split_po",
+          "label": "Resource two Hsinchu lines: 5,742 taper-lok bolts to Kingsbury, 201 self-locking nuts to Saone Rivets",
+          "payload": {
+            "doc_type": "NB",
+            "purch_org": "SG10",
+            "plant": "SG01",
+            "source_lines": ["4500019619-00010", "4500019619-00040"],
+            "split": [
+              { "lifnr": "100187", "matnr": "FST-4969-490", "qty": 5742, "unit_price_usd": 6, "lead_time_days": 8 },
+              { "lifnr": "100190", "matnr": "FST-7301-680", "qty": 201, "unit_price_usd": 207, "lead_time_days": 11 }
+            ],
+            "net_value_usd": 76059
+          }
+        },
+        {
+          "system": "SAP MM",
+          "action": "cancel_po_line",
+          "label": "Cancel Hsinchu lines 4500019619-00010 and 4500019619-00040 under the force majeure notice",
+          "payload": { "lifnr": "100181", "po_lines": ["4500019619-00010", "4500019619-00040"], "reason": "Force majeure 6 Oct to 20 Oct; resourced" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Calling off 3,498 collars from Kingsbury holds the Orchid Regional Airways slot for USD 17.2K and removes WO-2606 from a restart date that Taoyuan has not committed to, where every extra day costs USD 4K on a key customer. Re-sequencing on a partial kit costs nothing but only works if Taoyuan really ships on 22 Oct and planning can keep crews busy on 214 collars, so keep it as the fallback if Kingsbury cannot confirm stock. The 2024 typhoon (PRE-06) was solved the same way at a 35% premium on 6,000 fasteners.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Pull forward WO-2606 collars from Kingsbury stock by air (USD 17.2K, no slip, recommended), induct WO-2606 on the 214 collars on hand and re-sequence tasks (no cost, holds only if Taoyuan ships on 22 Oct), wait for the restart (USD 8K of LDs, Orchid Regional moves 2 days), or move two later Hsinchu lines to Kingsbury and Saone Rivets (saves USD 516 and de-risks lines that feed no work order yet)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Splitting the later taper-lok and nut lines is the cheapest at a USD 516 net saving, because Kingsbury's taper-lok bolt is USD 1 cheaper than Hsinchu's, but it does nothing for WO-2606. The partial-kit re-sequence costs nothing and protects WO-2606 if the 22 Oct date holds. The recommended Kingsbury call-off costs USD 14K of price premium plus about USD 3.2K of LAX to SIN freight."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2024 a typhoon closed two north Taiwan fastener plants for 8 days while airframe checks needed pins and collars inside a week (PRE-06). We pulled 6,000 fasteners forward from US distributor stock at a 35% premium, for USD 38.5K and 1 day of slip, and both heavy checks held their slots. The lesson was to keep a standing price agreement with the US fastener source for emergency volume."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2606 inducts into Hangar 3 bay 2 on 18 Oct and needs 3,600 lockbolt collars from Taoyuan line 4500018417-00010. The typhoon shutdown moves the delivery to 22 Oct, a 4 day slip against 2 days of float, so the Orchid Regional Airways redelivery moves from 11 Nov to 13 Nov. WO-2605 slips 4 days on Hsinchu pins but has 6 days of float, so its 17 Nov redelivery holds."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}

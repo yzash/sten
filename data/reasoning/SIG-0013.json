@@ -1,0 +1,160 @@
+{
+  "signal_id": "SIG-0013",
+  "summary": "Berth congestion at Port Klang Westport is holding Selat Feeder Lines sailings 7 to 9 days, which strands SHP-880488 with 180 units of Klang Chemical aqueous cleaning concentrate. Orchid Regional Airways' check on TX-DLV (WO-2614) inducts on 16 Oct with 3 days of float and moves 2 days beyond it if the feeder delay runs to 21 Oct.",
+  "impact": {
+    "cost": {
+      "usd": 32834,
+      "severity": 8,
+      "rationale": "USD 11K of open PO value on one line, a USD 2K expedite estimate and USD 20K of LD exposure on WO-2614; the money at stake is small next to the slot."
+    },
+    "delay": {
+      "days": 2,
+      "severity": 30,
+      "rationale": "WO-2614 needs the concentrate on 16 Oct; the feeder delay moves SHP-880488 from 12 Oct to 21 Oct, a 5 day slip against 3 days of float, so the Orchid Regional Airways redelivery moves from 11 Nov to 13 Nov."
+    },
+    "ops": {
+      "slots": 1,
+      "lines": 1,
+      "severity": 51,
+      "rationale": "One work-order consumable line is short and Hangar 5 bay 1 is at risk; only 2 units are free at SG01-K-02 against a need of 180."
+    },
+    "reputation": {
+      "weighted_usd": 12000,
+      "severity": 6,
+      "rationale": "Orchid Regional Airways is a key customer with an LD clause of USD 4K per day, worth USD 20K at the unmitigated 5 day slip."
+    }
+  },
+  "options": [
+    {
+      "id": "OPT-1",
+      "name": "Truck the container via the Johor causeway",
+      "mechanism": "Pull SHP-880488 out of the Westport feeder queue and move it Klang to Singapore by road with Causeway Trucking, landing about 10 Oct.",
+      "cost_usd": 1700,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 3,
+      "precedent_id": "PRE-10",
+      "actions": [
+        {
+          "system": "Forwarder",
+          "action": "reroute_shipment",
+          "label": "Switch SHP-880488 from Selat Feeder Lines to Causeway Trucking, Klang to SIN by road, ETA 10 Oct",
+          "payload": {
+            "shipment_id": "SHP-880488",
+            "po_line": "4500018687-00010",
+            "from_carrier": "Selat Feeder Lines",
+            "to_carrier": "Causeway Trucking",
+            "new_legs": [{ "from": "PKG", "to": "SIN", "mode": "road", "via": "Johor causeway" }],
+            "est_cost_usd": 1700,
+            "new_eta": "2026-10-10"
+          }
+        },
+        {
+          "system": "Email",
+          "action": "notify_supplier",
+          "label": "Ask Klang Chemical Supplies to release the cargo from Westport to the road haulier",
+          "payload": { "to": "100224", "po_line": "4500018687-00010", "shipment_id": "SHP-880488", "request": "Terminal release to Causeway Trucking by 8 Oct" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "update_confirmation",
+          "label": "Update confirmation on 4500018687-00010 to 10 Oct delivery",
+          "payload": { "po_line": "4500018687-00010", "lifnr": "100224", "confirmed_date": "2026-10-10", "conf_category": "AB" }
+        },
+        {
+          "system": "Planning",
+          "action": "notify_planning",
+          "label": "Notify planning: WO-2614 concentrate lands 10 Oct, Hangar 5 bay 1 induction holds on 16 Oct",
+          "payload": { "work_order": "WO-2614", "line": "WO-2614-0010", "eta": "2026-10-10", "redelivery_change_days": 0 }
+        }
+      ]
+    },
+    {
+      "id": "OPT-2",
+      "name": "Buy locally from Jurong Aero Consumables",
+      "mechanism": "Place a 180 unit PO with Jurong Aero Consumables at USD 70 (4 days) for WO-2614 and roll the Klang lot into stock for WO-2640 when it lands.",
+      "cost_usd": 1440,
+      "residual_delay_days": 0,
+      "risk": "low",
+      "speed_days": 4,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "create_po",
+          "label": "Create PO to Jurong Aero Consumables for 180 units of CON-8200-210",
+          "payload": { "doc_type": "NB", "purch_org": "SG10", "plant": "SG01", "lifnr": "100221", "matnr": "CON-8200-210", "qty": 180, "unit_price_usd": 70, "net_value_usd": 12600, "delivery_date": "2026-10-11", "work_order": "WO-2614" }
+        },
+        {
+          "system": "SAP MM",
+          "action": "change_account_assignment",
+          "label": "Re-point Klang line 4500018687-00010 to unassigned stock",
+          "payload": { "po_line": "4500018687-00010", "old_work_order": "WO-2614", "new_assignment": "stock" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-3",
+      "name": "Wait for the feeder sailing",
+      "mechanism": "Leave SHP-880488 with Selat Feeder Lines, take delivery about 21 Oct and accept 2 days of LDs on WO-2614.",
+      "cost_usd": 8000,
+      "residual_delay_days": 2,
+      "risk": "medium",
+      "speed_days": 9,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "Email",
+          "action": "notify_customer",
+          "label": "Send Orchid Regional Airways a revised TX-DLV redelivery of 13 Nov",
+          "payload": { "customer": "CUS-07", "work_order": "WO-2614", "old_redelivery": "2026-11-11", "new_redelivery": "2026-11-13" }
+        }
+      ]
+    },
+    {
+      "id": "OPT-4",
+      "name": "Start WO-2614 on stock and re-sequence the wash",
+      "mechanism": "Borrow the 20 units on hand (18 reserved for WO-2640, 2 free) to start the TX-DLV wash on 16 Oct and push the remaining cleaning tasks behind the 21 Oct feeder arrival.",
+      "cost_usd": 0,
+      "residual_delay_days": 0,
+      "risk": "high",
+      "speed_days": 1,
+      "precedent_id": null,
+      "actions": [
+        {
+          "system": "SAP MM",
+          "action": "transfer_reservation",
+          "label": "Move 18 units of CON-8200-210 (batch 224-25-0817) from WO-2640 to WO-2614",
+          "payload": { "matnr": "CON-8200-210", "inventory_id": "INV-0028", "batch": "224-25-0817", "location": "SG01-K-02", "qty": 18, "from_work_order": "WO-2640", "to_work_order": "WO-2614" }
+        },
+        {
+          "system": "Planning",
+          "action": "resequence_tasks",
+          "label": "Re-sequence WO-2614 cleaning tasks to run after 21 Oct",
+          "payload": { "work_order": "WO-2614", "slot": "Hangar 5 bay 1", "constrained_line": "WO-2614-0010", "constraint_lifts": "2026-10-21" }
+        }
+      ]
+    }
+  ],
+  "recommended_id": "OPT-1",
+  "rationale": "Trucking the container through the causeway lands the concentrate on 10 Oct for about USD 1.7K and keeps one PO and one lot, against USD 8K of LDs if we wait for the feeder. Buying locally from Jurong is USD 260 cheaper on net premium but commits USD 12.6K of cash to duplicate stock and lands a day later. The 2025 Port Klang congestion (PRE-10) was solved the same way in 2 days by road.",
+  "qa": [
+    {
+      "prompt_id": "options",
+      "answer": "Four options. Truck the container via the Johor causeway (about USD 1.7K, no slip, recommended), buy 180 units locally from Jurong Aero Consumables (USD 1.4K net premium, USD 12.6K new PO), wait for the feeder (USD 8K of LDs, Orchid Regional moves 2 days), or start WO-2614 on the 20 units in stock and re-sequence the wash (no cost, but it strips WO-2640 and depends on the feeder landing by 21 Oct)."
+    },
+    {
+      "prompt_id": "cheapest",
+      "answer": "Re-sequencing on stock is the cheapest at no cost, but 20 units against a need of 180 leaves the check exposed to any further berth delay. Of the options that hold the redelivery without planning risk, the Jurong buy has the lowest net premium at USD 1,440, USD 8 a unit above Klang, while the causeway truck costs about USD 1.7K and avoids a second PO."
+    },
+    {
+      "prompt_id": "last_time",
+      "answer": "In 2025 berth waits at Port Klang reached 10 days for feeder sailings (PRE-10). We trucked the consumables via the Johor causeway for USD 6.2K and they landed in 2 days by road. The lesson was that road via the causeway beats feeder sailings whenever berth waits pass 4 days, and today's wait is 7 to 9 days."
+    },
+    {
+      "prompt_id": "why_move",
+      "answer": "WO-2614 inducts into Hangar 5 bay 1 on 16 Oct and needs 180 units of cleaning concentrate from PO line 4500018687-00010. The feeder delay moves SHP-880488 from 12 Oct to 21 Oct, a 5 day slip against 3 days of float, so the Orchid Regional Airways redelivery moves 2 days from 11 Nov to 13 Nov."
+    }
+  ],
+  "generated": { "by": "Claude Code, offline authoring against the v1 contract", "at": "2026-10-07T00:00:00Z", "prompt_version": "v1" }
+}
