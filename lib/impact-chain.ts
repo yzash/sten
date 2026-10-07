@@ -31,6 +31,9 @@ export interface ChainNode {
   title: string;
   sub: string;
   meta?: string;
+  /** Compact labels for narrow layouts. */
+  short: string;
+  short2: string;
   highlight?: boolean;
   href?: string;
 }
@@ -121,7 +124,7 @@ export function buildImpactChain(
   const nodes: ChainNode[] = [];
   const edges: ChainEdge[] = [];
   const sigNode = `n:${signal.id}`;
-  nodes.push({ id: sigNode, kind: "signal", layer: 0, title: signal.id, sub: truncate(signal.headline, 54) });
+  nodes.push({ id: sigNode, kind: "signal", layer: 0, title: signal.id, sub: truncate(signal.headline, 54), short: signal.id.replace(/^SIG-0*/, "SIG "), short2: `+${signal.est_delay_days}d` });
 
   const linked = lines.filter((l) => l.work_order_ids.length > 0);
   const unlinked = lines
@@ -140,6 +143,8 @@ export function buildImpactChain(
       layer: 1,
       title: s?.name ?? sid,
       sub: `LIFNR ${sid} · Tier ${s?.tier ?? "?"}`,
+      short: (s?.name ?? sid).split(" ")[0].slice(0, 9),
+      short2: `T${s?.tier ?? "?"} ${s?.country_code ?? ""}`,
       href: `/suppliers/${sid}`,
     });
     edges.push({ from: sigNode, to: `s:${sid}`, slip_days: null });
@@ -159,6 +164,8 @@ export function buildImpactChain(
       title: `${li.line.ebeln} / ${li.line.ebelp}`,
       sub: `${li.line.qty} × ${p?.id ?? li.line.part_id}`,
       meta: `ETA ${fmtDate(li.base_date)} → ${fmtDate(li.new_eta)}`,
+      short: `…${li.line.ebeln.slice(-4)}/${li.line.ebelp.slice(-2, -1)}`,
+      short2: `${li.line.qty} pcs`,
     });
     edges.push({ from: `s:${li.line.supplier_id}`, to: lid, slip_days: signal.est_delay_days });
     nodes.push({
@@ -168,6 +175,8 @@ export function buildImpactChain(
       title: truncate(p?.description ?? li.line.part_id, 30),
       sub: `Need ${fmtDate(li.line.needed_date)}`,
       meta: li.work_order_ids.length ? `MRP dependent` : `Stock replenishment`,
+      short: li.line.part_id.replace(/^[A-Z]+-/, ""),
+      short2: fmtDate(li.line.needed_date),
     });
     edges.push({ from: lid, to: rid, slip_days: li.slip_days, highlight: hot });
     for (const woId of li.work_order_ids) {
@@ -183,6 +192,8 @@ export function buildImpactChain(
       layer: 2,
       title: `+${hidden.length} more lines`,
       sub: `USD ${Math.round(value / 1000).toLocaleString("en-US")}K · no work-order link`,
+      short: `+${hidden.length} lines`,
+      short2: `USD ${Math.round(value / 1000).toLocaleString("en-US")}K`,
     });
     edges.push({ from: sigNode, to: "agg", slip_days: null });
   }
@@ -197,6 +208,8 @@ export function buildImpactChain(
       title: `${w.wo.id} · ${w.wo.asset_ref}`,
       sub: `${w.customer.name} · induct ${fmtDate(w.wo.induction_date)}`,
       meta: `Float ${w.wo.float_days}d · slip ${w.slip_days}d`,
+      short: w.wo.id,
+      short2: `fl ${w.wo.float_days}d`,
       highlight: hot,
     });
     const mid = `m:${w.wo.id}`;
@@ -209,6 +222,8 @@ export function buildImpactChain(
         ? `${fmtDate(w.wo.target_redelivery)} → ${fmtDate(w.new_redelivery)}`
         : `${fmtDate(w.wo.target_redelivery)} · absorbed by float`,
       meta: w.wo.slot,
+      short: hot ? `+${w.beyond_float_days}d` : "Holds",
+      short2: fmtDate(w.new_redelivery),
       highlight: hot,
     });
     edges.push({ from: wid, to: mid, slip_days: w.beyond_float_days, highlight: hot });

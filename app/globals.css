@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* DevX Doctrine tokens (PRD 9). Hairlines, sharp corners, no shadows, accent reserved. */
+:root {
+  --paper: #fbfbf9;
+  --paper-2: #f4f4f0;
+  --ink: #0e1116;
+  --ink-2: #474e59;
+  --ink-3: #7b828d;
+  --rule: rgba(14, 17, 22, 0.12);
+  --rule-2: rgba(14, 17, 22, 0.24);
+  --accent: #1e6fff;
+  --accent-ink: #1757cc;
+  --accent-wash: rgba(30, 111, 255, 0.07);
+  --sev-low: #5f8b6f;
+  --sev-medium: #b29a43;
+  --sev-high: #c27a3e;
+  --sev-critical: #ad4a40;
+  --st-queued: #8a9099;
+  --st-writing: #1e6fff;
+  --st-confirmed: #3f8a5c;
+  --st-failed: #ad4a40;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-rule: var(--rule);
+  --color-rule-2: var(--rule-2);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-wash: var(--accent-wash);
+  --color-sev-low: var(--sev-low);
+  --color-sev-medium: var(--sev-medium);
+  --color-sev-high: var(--sev-high);
+  --color-sev-critical: var(--sev-critical);
+  --color-st-queued: var(--st-queued);
+  --color-st-writing: var(--st-writing);
+  --color-st-confirmed: var(--st-confirmed);
+  --color-st-failed: var(--st-failed);
+  --font-sans: var(--font-inter-tight), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), ui-serif, Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+  --radius-none: 0;
+}
+
+* {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  min-width: 1280px;
+}
+
+::selection {
+  background: var(--accent-wash);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  font-feature-settings: "zero" 0;
+}
+
+.tnum {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.accent-line {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.hairline {
+  border-color: var(--rule);
+}
+
+/* Scrollbars stay quiet */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rule-2) transparent;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 1px;
+}
